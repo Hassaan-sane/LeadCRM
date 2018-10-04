@@ -1,24 +1,25 @@
 package com.example.hassaan.leadcrm.TableClasses;
 
+
 public class Leads {
     public static final String TABLE_NAME = "LEADS";
-    public static final String KEY_LeadOwner = "Lead Owner";
+    public static final String KEY_LeadOwner = "Lead_Owner";
     public static final String KEY_ID = "ID";
     public static final String KEY_Title = "Title";
-    public static final String KEY_Phone = "Phone#";
-    public static final String KEY_Mobile = "Mobile#";
-    public static final String KEY_LeadSource = "Lead Source";
+    public static final String KEY_Phone = "Phone";
+    public static final String KEY_Mobile = "Mobile";
+    public static final String KEY_LeadSource = "Lead_Source";
     public static final String KEY_Industry = "Industry";
-    public static final String KEY_AnnualRevenue = "Annual Revenue";
-    public static final String KEY_ModifiedBy = "Modified By";
-    public static final String KEY_CompanyName = "Company Name";
-    public static final String KEY_LeadName = "Lead Name";
+    public static final String KEY_AnnualRevenue = "Annual_Revenue";
+    public static final String KEY_ModifiedBy = "Modified_By";
+    public static final String KEY_CompanyName = "Company_Name";
+    public static final String KEY_LeadName = "Lead_Name";
     public static final String KEY_Email = "Email";
     public static final String KEY_Website = "Website";
-    public static final String KEY_LeadStatus = "Lead Status";
-    public static final String KEY_No_of_Employees = "No of Employees";
-    public static final String KEY_CreatedBy = "Created By";
-    public static final String KEY_SkypeID = "Skype ID";
+    public static final String KEY_LeadStatus = "Lead_Status";
+    public static final String KEY_No_of_Employees = "No_of_Employees";
+    public static final String KEY_CreatedBy = "Created_By";
+    public static final String KEY_SkypeID = "Skype_ID";
     public static final String KEY_Street = "Street";
     public static final String KEY_State = "State";
     public static final String KEY_City = "City";

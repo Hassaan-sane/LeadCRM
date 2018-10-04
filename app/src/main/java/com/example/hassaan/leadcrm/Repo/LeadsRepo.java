@@ -3,6 +3,7 @@ package com.example.hassaan.leadcrm.Repo;
 import com.example.hassaan.leadcrm.TableClasses.Leads;
 
 public class LeadsRepo {
+
     private Leads leads;
     public LeadsRepo() {
         leads = new Leads();
@@ -10,7 +11,7 @@ public class LeadsRepo {
 
     public static String createTable() {
         return "CREATE TABLE " + Leads.TABLE_NAME +
-                " (" + Leads.KEY_ID + " INTEGER PRIMARY KEY AUTO INCREMENT," +
+                " (" + Leads.KEY_ID + " INTEGER PRIMARY KEY AUTOINCREMENT, " +
                 Leads.KEY_LeadOwner + " VARCHAR, " +
                 Leads.KEY_Title + " VARCHAR, " +
                 Leads.KEY_Phone + " VARCHAR, "+
