@@ -2,7 +2,7 @@ package com.example.hassaan.leadcrm.TableClasses;
 
 
 public class Leads {
-    public static final String TABLE_NAME = "LEADS";
+    public static final String TABLE_NAME = "tbl_Lead";
     public static final String KEY_LeadOwner = "LeadOwner";
     public static final String KEY_ID = "ID";
     public static final String KEY_Title = "Ttile";

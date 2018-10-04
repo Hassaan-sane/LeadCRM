@@ -19,7 +19,7 @@ public class LeadsRepo {
                 Leads.KEY_LeadSource + " VARCHAR, "+
                 Leads.KEY_Industry + " VARCHAR, "+
                 Leads.KEY_AnnualRevenue + " INTEGER, "+
-                Leads.KEY_ModifiedBy + " DATE, "+
+                Leads.KEY_ModifiedBy + " DATETIME, "+
                 Leads.KEY_CompanyName+ " VARCHAR, "+
                 Leads.KEY_LeadName + " VARCHAR, "+
                 Leads.KEY_Email + " VARCHAR, "+
@@ -27,6 +27,6 @@ public class LeadsRepo {
                 Leads.KEY_LeadStatus + " INTEGER, "+
                 Leads.KEY_No_of_Employees+ " INTEGER, "+
                 Leads.KEY_CreatedBy + " VARCHAR, "+
-                Leads.KEY_SkypeID + " VARCHAR)";
+                Leads.KEY_SkypeID + " VARCHAR )";
     }
 }
