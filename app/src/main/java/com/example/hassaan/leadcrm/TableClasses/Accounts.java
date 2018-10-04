@@ -1,5 +1,7 @@
 package com.example.hassaan.leadcrm.TableClasses;
 
+import java.util.Date;
+
 public class Accounts {
 
     public static final String TABLE_NAME = "tbl_Accounts";
@@ -16,33 +18,33 @@ public class Accounts {
     public static final String KEY_Desigination = "Desigination";
 
 
-    public String Name = "Name";
-    public String ID = "ID";
-    public String Address = "Address";
-    public String PhoneNO = "PhoneNo";
-    public String BOD = "BOD";
-    public String Password = "Password";
-    public String Salt = "Salt";
-    public String DateCreated = "DateCreated";
-    public String RoleID = "RoleID";
-    public String Email = "Email";
-    public String Desigination = "Desigination";
+    public String Name;
+    public Integer ID;
+    public String Address;
+    public String PhoneNO;
+    public Date BOD;
+    public String Password;
+    public String Salt;
+    public Date DateCreated;
+    public Integer RoleID;
+    public String Email;
+    public String Desigination;
 
 
 
 
-    public Accounts(String Name,String ID, String Address, String PhoneNO, String BOD, String Password, String Salt, String DateCreated, String RoleID, String Email, String Desigination) {
-        this.Name = "Name";
-        this.ID = "ID";
-        this.Address = "Address";
-        this.PhoneNO = "PhoneNo";
-        this.BOD = "BOD";
-        this.Password = "Password";
-        this.Salt = "Salt";
-        this.DateCreated = "DateCreated";
-        this.RoleID = "RoleID";
-        this.Email = "Email";
-        this.Desigination = "Desigination";
+    public Accounts(String Name,Integer ID, String Address, String PhoneNo, Date BOD, String Password, String Salt, Date DateCreated, Integer RoleID, String Email, String Desigination) {
+        this.Name = Name;
+        this.ID = ID;
+        this.Address = Address;
+        this.PhoneNO = PhoneNo;
+        this.BOD = BOD;
+        this.Password = Password;
+        this.Salt = Salt;
+        this.DateCreated = DateCreated;
+        this.RoleID = RoleID;
+        this.Email = Email;
+        this.Desigination = Desigination;
     }
 
     public Accounts() {
@@ -57,11 +59,11 @@ public class Accounts {
         Name = name;
     }
 
-    public String getID() {
+    public Integer getID() {
         return ID;
     }
 
-    public void setID(String ID) {
+    public void setID(Integer ID) {
         this.ID = ID;
     }
 
@@ -81,11 +83,11 @@ public class Accounts {
         PhoneNO = phoneNO;
     }
 
-    public String getBOD() {
+    public Date getBOD() {
         return BOD;
     }
 
-    public void setBOD(String BOD) {
+    public void setBOD(Date BOD) {
         this.BOD = BOD;
     }
 
@@ -105,19 +107,19 @@ public class Accounts {
         Salt = salt;
     }
 
-    public String getDateCreated() {
+    public Date getDateCreated() {
         return DateCreated;
     }
 
-    public void setDateCreated(String dateCreated) {
+    public void setDateCreated(Date dateCreated) {
         DateCreated = dateCreated;
     }
 
-    public String getRoleID() {
+    public Integer getRoleID() {
         return RoleID;
     }
 
-    public void setRoleID(String roleID) {
+    public void setRoleID(Integer roleID) {
         RoleID = roleID;
     }
 

@@ -24,7 +24,6 @@ public class LeadsRepo {
                 Leads.KEY_LeadName + " VARCHAR, "+
                 Leads.KEY_Email + " VARCHAR, "+
                 Leads.KEY_Website + " VARCHAR, "+
-                Leads.KEY_LeadStatus + " INTEGER, "+
                 Leads.KEY_No_of_Employees+ " INTEGER, "+
                 Leads.KEY_CreatedBy + " VARCHAR, "+
                 Leads.KEY_SkypeID + " VARCHAR )";

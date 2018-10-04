@@ -1,6 +1,8 @@
 package com.example.hassaan.leadcrm.TableClasses;
 
 
+import java.util.Date;
+
 public class Leads {
     public static final String TABLE_NAME = "tbl_Lead";
     public static final String KEY_LeadOwner = "LeadOwner";
@@ -16,7 +18,6 @@ public class Leads {
     public static final String KEY_LeadName = "LeadName";
     public static final String KEY_Email = "LeadEmail";
     public static final String KEY_Website = "Website";
-    public static final String KEY_LeadStatus = "LeadStatus";
     public static final String KEY_No_of_Employees = "NoOfEmployee";
     public static final String KEY_CreatedBy = "CreatedBy";
     public static final String KEY_SkypeID = "SkypeID";
@@ -28,31 +29,25 @@ public class Leads {
 
 
     public String LeadOwner;
-    public String ID;
+    public Integer ID;
     public String Title;
     public String Phone;
     public String Mobile;
     public String LeadSource;
     public String Industry;
     public String AnnualRevenue;
-    public String ModifiedBy;
+    public Date ModifiedBy;
     public String CompanyName;
     public String LeadName;
     public String Email;
     public String Website;
-    public String LeadStatus;
     public String No_of_Employees;
-    public String CreatedBy;
+    public Date CreatedBy;
     public String SkypeID;
-//    public String Street;
-//    public String State;
-//    public String City;
-//    public String ZipCode;
-//    public String Country;
 
-    public Leads(String LeadOwner, String ID, String Title, String Phone, String Mobile, String LeadSource, String Industry,
-                 String AnnualRevenue, String ModifiedBy, String CompanyName, String LeadName, String Email, String Website, String LeadStatus,
-                 String No_of_Employees, String CreatedBy, String SkypeID) {
+    public Leads(String LeadOwner, Integer ID, String Title, String Phone, String Mobile, String LeadSource, String Industry,
+                 String AnnualRevenue, Date ModifiedBy, String CompanyName, String LeadName, String Email, String Website,
+                 String No_of_Employees, Date CreatedBy, String SkypeID) {
         this.LeadOwner = LeadOwner;
         this.ID = ID;
         this.Title = Title;
@@ -66,15 +61,9 @@ public class Leads {
         this.LeadName = LeadName;
         this.Email = Email;
         this.Website = Website;
-        this.LeadStatus = LeadStatus;
         this.No_of_Employees =No_of_Employees;
         this.CreatedBy=CreatedBy;
         this.SkypeID=SkypeID;
-//        this.Street=Street;
-//        this.State=State;
-//        this.City=City;
-//        this.ZipCode=ZipCode;
-//        this.Country=Country;
     }
 
     public Leads() {
@@ -87,14 +76,6 @@ public class Leads {
 
     public void setLeadOwner(String leadOwner) {
         LeadOwner = leadOwner;
-    }
-
-    public String getID() {
-        return ID;
-    }
-
-    public void setID(String ID) {
-        this.ID = ID;
     }
 
     public String getTitle() {
@@ -145,13 +126,6 @@ public class Leads {
         AnnualRevenue = annualRevenue;
     }
 
-    public String getModifiedBy() {
-        return ModifiedBy;
-    }
-
-    public void setModifiedBy(String modifiedBy) {
-        ModifiedBy = modifiedBy;
-    }
 
     public String getCompanyName() {
         return CompanyName;
@@ -185,12 +159,12 @@ public class Leads {
         Website = website;
     }
 
-    public String getLeadStatus() {
-        return LeadStatus;
+    public Integer getID() {
+        return ID;
     }
 
-    public void setLeadStatus(String leadStatus) {
-        LeadStatus = leadStatus;
+    public void setID(Integer ID) {
+        this.ID = ID;
     }
 
     public String getNo_of_Employees() {
@@ -201,11 +175,19 @@ public class Leads {
         No_of_Employees = no_of_Employees;
     }
 
-    public String getCreatedBy() {
+    public Date getModifiedBy() {
+        return ModifiedBy;
+    }
+
+    public void setModifiedBy(Date modifiedBy) {
+        ModifiedBy = modifiedBy;
+    }
+
+    public Date getCreatedBy() {
         return CreatedBy;
     }
 
-    public void setCreatedBy(String createdBy) {
+    public void setCreatedBy(Date createdBy) {
         CreatedBy = createdBy;
     }
 
