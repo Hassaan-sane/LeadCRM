@@ -18,4 +18,20 @@ public class POIStatus {
     public POIStatus() {
 
     }
+
+    public String getPOIStatusName() {
+        return POIStatusName;
+    }
+
+    public void setPOIStatusName(String POIStatusName) {
+        this.POIStatusName = POIStatusName;
+    }
+
+    public Integer getID() {
+        return ID;
+    }
+
+    public void setID(Integer ID) {
+        this.ID = ID;
+    }
 }
