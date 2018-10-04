@@ -9,11 +9,11 @@ public class Note {
     public static final String KEY_LEADID = "LeadID";
     public static final String CREATED_DATE = "CreatedDate";
 
-    public String ID;
-    public String TitleName;
-    public String Details;
-    public String LeadID;
-    public String CreatedDate;
+    private String ID;
+    private String TitleName;
+    private String Details;
+    private String LeadID;
+    private String CreatedDate;
 
     public Note(String ID, String titleName, String details, String leadID, String createdDate) {
         this.ID = ID;
