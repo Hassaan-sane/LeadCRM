@@ -12,12 +12,12 @@ public class Activity {
     public static final String KEY_ActivityStatus = "ActivityStatus";
 
 
-    public String Subject;
-    public Integer ID;
-    public Integer TaskID;
-    public Integer EventID;
-    public Date ModifiedDate;
-    public String ActivityStatus;
+    private String Subject;
+    private Integer ID;
+    private Integer TaskID;
+    private Integer EventID;
+    private Date ModifiedDate;
+    private String ActivityStatus;
 
     public Activity(String Subject, Integer ID, Integer TaskID, Integer EventID, Date ModifiedDate, String ActivityStatus) {
 

@@ -6,8 +6,8 @@ public class LeadStatus {
     public static final String KEY_ID = "ID";
 
 
-    public String LeadStatusName;
-    public Integer ID;
+    private String LeadStatusName;
+    private Integer ID;
 
     public LeadStatus(String LeadStatusName,Integer ID ) {
 

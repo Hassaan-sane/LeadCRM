@@ -18,17 +18,17 @@ public class Accounts {
     public static final String KEY_Desigination = "Desigination";
 
 
-    public String Name;
-    public Integer ID;
-    public String Address;
-    public String PhoneNO;
-    public Date BOD;
-    public String Password;
-    public String Salt;
-    public Date DateCreated;
-    public Integer RoleID;
-    public String Email;
-    public String Desigination;
+    private String Name;
+    private Integer ID;
+    private String Address;
+    private String PhoneNO;
+    private Date BOD;
+    private String Password;
+    private String Salt;
+    private Date DateCreated;
+    private Integer RoleID;
+    private String Email;
+    private String Desigination;
 
 
 

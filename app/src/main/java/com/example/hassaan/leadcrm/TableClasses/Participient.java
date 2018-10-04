@@ -6,8 +6,8 @@ public class Participient {
     public static final String KEY_ID = "ID";
 
 
-    public String Name;
-    public Integer ID;
+    private String Name;
+    private Integer ID;
 
     public Participient(String Name, Integer ID ) {
 
@@ -24,7 +24,7 @@ public class Participient {
     }
 
     public void setName(String name) {
-        Name = name;
+        this.Name = name;
     }
 
     public Integer getID() {

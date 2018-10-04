@@ -11,14 +11,14 @@ public class Event {
     public static final String KEY_STARTTIME = "StartTime";
     public static final String KEY_ENDTIME = "EndTime";
 
-    public String ID;
-    public String Location;
-    public String StartDate;
-    public String EndDate;
-    public String HostName;
-    public String EventName;
-    public String StartTime;
-    public String EndTime;
+    private String ID;
+    private String Location;
+    private String StartDate;
+    private String EndDate;
+    private String HostName;
+    private String EventName;
+    private String StartTime;
+    private String EndTime;
 
     public Event(String ID, String location, String startDate, String endDate, String hostName, String eventName, String startTime, String endTime) {
         this.ID = ID;

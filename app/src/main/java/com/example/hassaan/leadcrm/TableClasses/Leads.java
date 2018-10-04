@@ -21,29 +21,24 @@ public class Leads {
     public static final String KEY_No_of_Employees = "NoOfEmployee";
     public static final String KEY_CreatedBy = "CreatedBy";
     public static final String KEY_SkypeID = "SkypeID";
-//    public static final String KEY_Street = "Street";
-//    public static final String KEY_State = "State";
-//    public static final String KEY_City = "City";
-//    public static final String KEY_ZipCode = "ZipCode";
-//    public static final String KEY_Country = "Country";
 
 
-    public String LeadOwner;
-    public Integer ID;
-    public String Title;
-    public String Phone;
-    public String Mobile;
-    public String LeadSource;
-    public String Industry;
-    public String AnnualRevenue;
-    public Date ModifiedBy;
-    public String CompanyName;
-    public String LeadName;
-    public String Email;
-    public String Website;
-    public String No_of_Employees;
-    public Date CreatedBy;
-    public String SkypeID;
+    private String LeadOwner;
+    private Integer ID;
+    private String Title;
+    private String Phone;
+    private String Mobile;
+    private String LeadSource;
+    private String Industry;
+    private String AnnualRevenue;
+    private Date ModifiedBy;
+    private String CompanyName;
+    private String LeadName;
+    private String Email;
+    private String Website;
+    private String No_of_Employees;
+    private Date CreatedBy;
+    private String SkypeID;
 
     public Leads(String LeadOwner, Integer ID, String Title, String Phone, String Mobile, String LeadSource, String Industry,
                  String AnnualRevenue, Date ModifiedBy, String CompanyName, String LeadName, String Email, String Website,

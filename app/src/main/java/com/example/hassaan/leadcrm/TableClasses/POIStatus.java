@@ -6,8 +6,8 @@ public class POIStatus {
     public static final String KEY_ID = "ID";
 
 
-    public String POIStatusName;
-    public Integer ID;
+    private String POIStatusName;
+    private Integer ID;
 
     public POIStatus(String POIStatusName,Integer ID ) {
 

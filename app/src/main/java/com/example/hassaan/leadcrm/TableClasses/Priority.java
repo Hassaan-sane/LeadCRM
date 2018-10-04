@@ -5,9 +5,8 @@ public class Priority {
     public static final String KEY_Name = "Name";
     public static final String KEY_ID = "ID";
 
-
-    public String Name;
-    public Integer ID;
+    private String Name;
+    private Integer ID;
 
     public Priority(String Name,Integer ID ) {
 
