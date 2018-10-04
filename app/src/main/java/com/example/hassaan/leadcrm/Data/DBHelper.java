@@ -5,6 +5,7 @@ import android.database.sqlite.SQLiteDatabase;
 import android.database.sqlite.SQLiteOpenHelper;
 
 import com.example.hassaan.leadcrm.App.app;
+import com.example.hassaan.leadcrm.Repo.LeadsRepo;
 
 public class DBHelper extends SQLiteOpenHelper {
     //version number to upgrade database version
@@ -17,15 +18,15 @@ public class DBHelper extends SQLiteOpenHelper {
 
 
 
-    public DBHelper() {
-        super(app.getContext(), DATABASE_NAME, null, DATABASE_VERSION);
-        context=app.getContext();
+    public DBHelper(Context context) {
+        super(context, DATABASE_NAME, null, DATABASE_VERSION);
+       // this.context=context;
     }
 
     @Override
     public void onCreate(SQLiteDatabase db) {
 
-//        db.execSQL(ExpenseRepo.createTable());
+        db.execSQL(LeadsRepo.createTable());
 //        db.execSQL(ExpenseTypeRepo.createTable());
 //        db.execSQL(IncomeRepo.createTable());
 //        db.execSQL(IncomeTypeRepo.createTable());

@@ -16,7 +16,7 @@ public class app extends Application {
     public void onCreate() {
         super.onCreate();
         context = this.getApplicationContext();
-        dbHelper = new DBHelper();
+        dbHelper = new DBHelper(context);
         DatabaseManager.initializeInstance(dbHelper);
         SharedPreferences wmbPreference = PreferenceManager.getDefaultSharedPreferences(this);
         boolean isFirstRun = wmbPreference.getBoolean("FIRSTRUN", true);
