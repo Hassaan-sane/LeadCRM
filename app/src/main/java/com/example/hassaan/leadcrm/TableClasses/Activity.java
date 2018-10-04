@@ -1,5 +1,7 @@
 package com.example.hassaan.leadcrm.TableClasses;
 
+import java.util.Date;
+
 public class Activity {
     public static final String TABLE_NAME = "tbl_Activity";
     public static final String KEY_Subject = "Subject";
@@ -10,14 +12,14 @@ public class Activity {
     public static final String KEY_ActivityStatus = "ActivityStatus";
 
 
-    public String Subject;
-    public String ID;
-    public String TaskID;
-    public String EventID;
-    public String ModifiedDate;
-    public String ActivityStatus;
+    private String Subject;
+    private Integer ID;
+    private Integer TaskID;
+    private Integer EventID;
+    private Date ModifiedDate;
+    private String ActivityStatus;
 
-    public Activity(String Subject, String ID, String TaskID, String EventID, String ModifiedDate, String ActivityStatus) {
+    public Activity(String Subject, Integer ID, Integer TaskID, Integer EventID, Date ModifiedDate, String ActivityStatus) {
 
         this.Subject = Subject;
         this.ID = ID;
@@ -39,35 +41,35 @@ public class Activity {
         Subject = subject;
     }
 
-    public String getID() {
+    public Integer getID() {
         return ID;
     }
 
-    public void setID(String ID) {
+    public void setID(Integer ID) {
         this.ID = ID;
     }
 
-    public String getTaskID() {
+    public Integer getTaskID() {
         return TaskID;
     }
 
-    public void setTaskID(String taskID) {
+    public void setTaskID(Integer taskID) {
         TaskID = taskID;
     }
 
-    public String getEventID() {
+    public Integer getEventID() {
         return EventID;
     }
 
-    public void setEventID(String eventID) {
+    public void setEventID(Integer eventID) {
         EventID = eventID;
     }
 
-    public String getModifiedDate() {
+    public Date getModifiedDate() {
         return ModifiedDate;
     }
 
-    public void setModifiedDate(String modifiedDate) {
+    public void setModifiedDate(Date modifiedDate) {
         ModifiedDate = modifiedDate;
     }
 
