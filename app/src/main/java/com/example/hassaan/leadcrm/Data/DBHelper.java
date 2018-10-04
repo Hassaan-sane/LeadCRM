@@ -1,14 +1,10 @@
-package com.example.hassaan.leadcrm;
+package com.example.hassaan.leadcrm.Data;
 
 import android.content.Context;
 import android.database.sqlite.SQLiteDatabase;
 import android.database.sqlite.SQLiteOpenHelper;
 
-import com.arascow.aras.kharchi.App.app;
-import com.arascow.aras.kharchi.Data.Repo.ExpenseRepo;
-import com.arascow.aras.kharchi.Data.Repo.ExpenseTypeRepo;
-import com.arascow.aras.kharchi.Data.Repo.IncomeRepo;
-import com.arascow.aras.kharchi.Data.Repo.IncomeTypeRepo;
+import com.example.hassaan.leadcrm.App.app;
 
 public class DBHelper extends SQLiteOpenHelper {
     //version number to upgrade database version
@@ -22,8 +18,8 @@ public class DBHelper extends SQLiteOpenHelper {
 
 
     public DBHelper() {
-        super(this, DATABASE_NAME, null, DATABASE_VERSION);
-       // context=app.getContext();
+        super(app.getContext(), DATABASE_NAME, null, DATABASE_VERSION);
+        context=app.getContext();
     }
 
     @Override
