@@ -7,7 +7,9 @@ import android.database.sqlite.SQLiteDatabase;
 import android.database.sqlite.SQLiteOpenHelper;
 
 import com.example.hassaan.leadcrm.App.app;
+import com.example.hassaan.leadcrm.Repo.EventRepo;
 import com.example.hassaan.leadcrm.Repo.LeadsRepo;
+import com.example.hassaan.leadcrm.TableClasses.Event;
 import com.example.hassaan.leadcrm.TableClasses.Leads;
 
 public class DBHelper extends SQLiteOpenHelper {
@@ -30,7 +32,7 @@ public class DBHelper extends SQLiteOpenHelper {
     public void onCreate(SQLiteDatabase db) {
 
         db.execSQL(LeadsRepo.createTable());
-//        db.execSQL(ExpenseTypeRepo.createTable());
+        db.execSQL(EventRepo.createTable());
 //        db.execSQL(IncomeRepo.createTable());
 //        db.execSQL(IncomeTypeRepo.createTable());
 
@@ -39,7 +41,7 @@ public class DBHelper extends SQLiteOpenHelper {
 
     @Override
     public void onUpgrade(SQLiteDatabase db, int oldVersion, int newVersion) {
-        db.execSQL(" DROP TABLE IF EXISTS " + Leads.TABLE_NAME);
+        db.execSQL(" DROP TABLE IF EXISTS " + Leads.TABLE_NAME + Event.TABLE_NAME);
         onCreate(db);
     }
 
