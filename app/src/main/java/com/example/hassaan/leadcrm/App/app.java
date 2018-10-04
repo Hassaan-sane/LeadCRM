@@ -4,11 +4,13 @@ import android.app.Application;
 import android.content.Context;
 import android.content.SharedPreferences;
 import android.preference.PreferenceManager;
+import android.util.Log;
 
 import com.example.hassaan.leadcrm.Data.DBHelper;
 import com.example.hassaan.leadcrm.Data.DatabaseManager;
 
 public class app extends Application {
+    /*
     private static Context context;
     private static DBHelper dbHelper;
 
@@ -20,6 +22,7 @@ public class app extends Application {
         DatabaseManager.initializeInstance(dbHelper);
         SharedPreferences wmbPreference = PreferenceManager.getDefaultSharedPreferences(this);
         boolean isFirstRun = wmbPreference.getBoolean("FIRSTRUN", true);
+        Log.e("OnCreate","App");
         if (isFirstRun)
         {
             SharedPreferences.Editor editor = wmbPreference.edit();
@@ -33,5 +36,5 @@ public class app extends Application {
 
     public static Context getContext() {
         return context;
-    }
+    }*/
 }

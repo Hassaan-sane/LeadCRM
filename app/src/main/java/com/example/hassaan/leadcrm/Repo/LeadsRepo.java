@@ -27,11 +27,6 @@ public class LeadsRepo {
                 Leads.KEY_LeadStatus + " INTEGER, "+
                 Leads.KEY_No_of_Employees+ " INTEGER, "+
                 Leads.KEY_CreatedBy + " VARCHAR, "+
-                Leads.KEY_SkypeID + " VARCHAR, "+
-                Leads.KEY_Street + " VARCHAR, "+
-                Leads.KEY_State + " VARCHAR, "+
-                Leads.KEY_City + " VARCHAR, "+
-                Leads.KEY_ZipCode + " VARCHAR, "+
-                Leads.KEY_Country + " VARCHAR)";
+                Leads.KEY_SkypeID + " VARCHAR)";
     }
 }

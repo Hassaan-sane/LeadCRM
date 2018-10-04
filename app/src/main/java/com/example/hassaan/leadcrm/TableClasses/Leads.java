@@ -3,28 +3,28 @@ package com.example.hassaan.leadcrm.TableClasses;
 
 public class Leads {
     public static final String TABLE_NAME = "LEADS";
-    public static final String KEY_LeadOwner = "Lead_Owner";
+    public static final String KEY_LeadOwner = "LeadOwner";
     public static final String KEY_ID = "ID";
-    public static final String KEY_Title = "Title";
-    public static final String KEY_Phone = "Phone";
-    public static final String KEY_Mobile = "Mobile";
-    public static final String KEY_LeadSource = "Lead_Source";
+    public static final String KEY_Title = "Ttile";
+    public static final String KEY_Phone = "PhoneNo";
+    public static final String KEY_Mobile = "MobileNo";
+    public static final String KEY_LeadSource = "LeadSource";
     public static final String KEY_Industry = "Industry";
-    public static final String KEY_AnnualRevenue = "Annual_Revenue";
-    public static final String KEY_ModifiedBy = "Modified_By";
-    public static final String KEY_CompanyName = "Company_Name";
-    public static final String KEY_LeadName = "Lead_Name";
-    public static final String KEY_Email = "Email";
+    public static final String KEY_AnnualRevenue = "AnnualRevenue";
+    public static final String KEY_ModifiedBy = "ModifiedDate";
+    public static final String KEY_CompanyName = "GroupName";
+    public static final String KEY_LeadName = "LeadName";
+    public static final String KEY_Email = "LeadEmail";
     public static final String KEY_Website = "Website";
-    public static final String KEY_LeadStatus = "Lead_Status";
-    public static final String KEY_No_of_Employees = "No_of_Employees";
-    public static final String KEY_CreatedBy = "Created_By";
-    public static final String KEY_SkypeID = "Skype_ID";
-    public static final String KEY_Street = "Street";
-    public static final String KEY_State = "State";
-    public static final String KEY_City = "City";
-    public static final String KEY_ZipCode = "ZipCode";
-    public static final String KEY_Country = "Country";
+    public static final String KEY_LeadStatus = "LeadStatus";
+    public static final String KEY_No_of_Employees = "NoOfEmployee";
+    public static final String KEY_CreatedBy = "CreatedBy";
+    public static final String KEY_SkypeID = "SkypeID";
+//    public static final String KEY_Street = "Street";
+//    public static final String KEY_State = "State";
+//    public static final String KEY_City = "City";
+//    public static final String KEY_ZipCode = "ZipCode";
+//    public static final String KEY_Country = "Country";
 
 
     public String LeadOwner;
@@ -44,15 +44,15 @@ public class Leads {
     public String No_of_Employees;
     public String CreatedBy;
     public String SkypeID;
-    public String Street;
-    public String State;
-    public String City;
-    public String ZipCode;
-    public String Country;
+//    public String Street;
+//    public String State;
+//    public String City;
+//    public String ZipCode;
+//    public String Country;
 
     public Leads(String LeadOwner, String ID, String Title, String Phone, String Mobile, String LeadSource, String Industry,
                  String AnnualRevenue, String ModifiedBy, String CompanyName, String LeadName, String Email, String Website, String LeadStatus,
-                 String No_of_Employees, String CreatedBy, String SkypeID, String Street, String State, String City, String ZipCode, String Country) {
+                 String No_of_Employees, String CreatedBy, String SkypeID) {
         this.LeadOwner = LeadOwner;
         this.ID = ID;
         this.Title = Title;
@@ -70,11 +70,11 @@ public class Leads {
         this.No_of_Employees =No_of_Employees;
         this.CreatedBy=CreatedBy;
         this.SkypeID=SkypeID;
-        this.Street=Street;
-        this.State=State;
-        this.City=City;
-        this.ZipCode=ZipCode;
-        this.Country=Country;
+//        this.Street=Street;
+//        this.State=State;
+//        this.City=City;
+//        this.ZipCode=ZipCode;
+//        this.Country=Country;
     }
 
     public Leads() {
@@ -217,43 +217,5 @@ public class Leads {
         SkypeID = skypeID;
     }
 
-    public String getStreet() {
-        return Street;
-    }
 
-    public void setStreet(String street) {
-        Street = street;
-    }
-
-    public String getState() {
-        return State;
-    }
-
-    public void setState(String state) {
-        State = state;
-    }
-
-    public String getCity() {
-        return City;
-    }
-
-    public void setCity(String city) {
-        City = city;
-    }
-
-    public String getZipCode() {
-        return ZipCode;
-    }
-
-    public void setZipCode(String zipCode) {
-        ZipCode = zipCode;
-    }
-
-    public String getCountry() {
-        return Country;
-    }
-
-    public void setCountry(String country) {
-        Country = country;
-    }
 }
