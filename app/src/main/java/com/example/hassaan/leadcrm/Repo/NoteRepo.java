@@ -13,10 +13,10 @@ public class NoteRepo {
 
     public static String createTable (){
         return "CREATE TABLE" + Note.TABLE_NAME +
-                " (" + Note.KEY_ID + "INTEGER PRIMARY KEY AUTOINCREMENT , " +
+                " (" + Note.KEY_ID + "INTEGER PRIMARY KEY AUTOINCREMENT, " +
                 Note.KEY_TITLENAME + "VARCHAR, " +
                 Note.KEY_DETAILS + "VARCHAR, " +
                 Note.KEY_LEADID + "INTEGER, " +
-                Note.CREATED_DATE + "DATETIME ,FOREIGN KEY(" + Note.KEY_LEADID + ")REFERENCES " + Leads.TABLE_NAME + "(" +Leads.KEY_ID + ") )" ;
+                Note.CREATED_DATE + "DATETIME, FOREIGN KEY(" + Note.KEY_LEADID + ")REFERENCES " + Leads.TABLE_NAME + "(" +Leads.KEY_ID + ") )" ;
     }
 }

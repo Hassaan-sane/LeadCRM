@@ -10,8 +10,8 @@ public class ReminderRepo {
 
     public static String createTable() {
         return "CREATE TABLE " + Reminder.TABLE_NAME +
-                " (" + Reminder.KEY_ID + " INTEGER PRIMARY KEY AUTOINCREMENT, " +
-                Reminder.KEY_TIME + " DATETIME, " +
+                " (" + Reminder.KEY_ID + "INTEGER PRIMARY KEY AUTOINCREMENT, " +
+                Reminder.KEY_TIME + "DATETIME, " +
                 Reminder.KEY_REPEAT + "VARCHAR, " +
                 Reminder.KEY_AlERT + "VARCHAR " +
                 ")";
