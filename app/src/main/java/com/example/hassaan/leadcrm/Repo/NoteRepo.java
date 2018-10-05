@@ -1,6 +1,6 @@
 package com.example.hassaan.leadcrm.Repo;
 
-import com.example.hassaan.leadcrm.TableClasses.Event;
+import com.example.hassaan.leadcrm.TableClasses.Leads;
 import com.example.hassaan.leadcrm.TableClasses.Note;
 
 public class NoteRepo {
@@ -17,6 +17,6 @@ public class NoteRepo {
                 Note.KEY_TITLENAME + "VARCHAR, " +
                 Note.KEY_DETAILS + "VARCHAR, " +
                 Note.KEY_LEADID + "INTEGER, " +
-                Note.CREATED_DATE + "DATETIME )" ;
+                Note.CREATED_DATE + "DATETIME ,FOREIGN KEY(" + Note.KEY_LEADID + ")REFERENCES " + Leads.TABLE_NAME + "(" +Leads.KEY_ID + ") )" ;
     }
 }

@@ -10,6 +10,7 @@ public class Activity {
     public static final String KEY_EventID = "EventID";
     public static final String KEY_ModifiedDate = "ModifiedDate";
     public static final String KEY_ActivityStatus = "ActivityStatus";
+    public static final String KEY_LeadID = "LeadID";
 
 
     private String Subject;
@@ -18,8 +19,9 @@ public class Activity {
     private Integer EventID;
     private Date ModifiedDate;
     private String ActivityStatus;
+    private Integer LeadID;
 
-    public Activity(String Subject, Integer ID, Integer TaskID, Integer EventID, Date ModifiedDate, String ActivityStatus) {
+    public Activity(String Subject, Integer ID, Integer TaskID, Integer EventID, Date ModifiedDate, String ActivityStatus,Integer LeadID) {
 
         this.Subject = Subject;
         this.ID = ID;
@@ -27,6 +29,7 @@ public class Activity {
         this.EventID = EventID;
         this.ModifiedDate = ModifiedDate;
         this.ActivityStatus = ActivityStatus;
+        this.LeadID = LeadID;
     }
 
     public Activity() {

@@ -1,7 +1,7 @@
 package com.example.hassaan.leadcrm.Repo;
 
 import com.example.hassaan.leadcrm.TableClasses.Accounts;
-import com.example.hassaan.leadcrm.TableClasses.Leads;
+import com.example.hassaan.leadcrm.TableClasses.Role;
 
 public class AccountsRepo {
     private Accounts accounts;
@@ -21,6 +21,6 @@ public class AccountsRepo {
                 Accounts.KEY_Salt + " VARCHAR, "+
                 Accounts.KEY_DateCreated + " DATETIME, "+
                 Accounts.KEY_RoleID + " INTEGER, "+
-                Accounts.KEY_Desigination + " VARCHAR)";
+                Accounts.KEY_Desigination + " VARCHAR ,FOREIGN KEY(" + Accounts.KEY_ID + ")REFERENCES " + Role.TABLE_NAME + "(" + Role.KEY_ID + ") )";
     }
 }
