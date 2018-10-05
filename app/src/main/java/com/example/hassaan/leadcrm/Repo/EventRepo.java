@@ -12,7 +12,7 @@ public class EventRepo {
 
     public static String createTable(){
         return "CREATE TABLE" + Event.TABLE_NAME +
-                " (" + Event.KEY_ID + "INTEGER PRIMARY KEY AUTOINCREMENT , " +
+                " (" + Event.KEY_ID + "INTEGER PRIMARY KEY AUTOINCREMENT, " +
                 Event.KEY_LOCATIONS + "VARCHAR, " +
                 Event.KEY_STARTDATE + "DATETIME, " +
                 Event.KEY_ENDDATE + "DATETIME, " +

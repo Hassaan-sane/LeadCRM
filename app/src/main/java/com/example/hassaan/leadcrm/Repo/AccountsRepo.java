@@ -21,6 +21,6 @@ public class AccountsRepo {
                 Accounts.KEY_Salt + " VARCHAR, "+
                 Accounts.KEY_DateCreated + " DATETIME, "+
                 Accounts.KEY_RoleID + " INTEGER, "+
-                Accounts.KEY_Desigination + " VARCHAR ,FOREIGN KEY(" + Accounts.KEY_ID + ")REFERENCES " + Role.TABLE_NAME + "(" + Role.KEY_ID + ") )";
+                Accounts.KEY_Desigination + " VARCHAR, FOREIGN KEY(" + Accounts.KEY_ID + ")REFERENCES " + Role.TABLE_NAME + "(" + Role.KEY_ID + ") )";
     }
 }
