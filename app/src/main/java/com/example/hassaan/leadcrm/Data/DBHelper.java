@@ -7,10 +7,33 @@ import android.database.sqlite.SQLiteDatabase;
 import android.database.sqlite.SQLiteOpenHelper;
 
 import com.example.hassaan.leadcrm.App.app;
+import com.example.hassaan.leadcrm.Repo.AccountsRepo;
+import com.example.hassaan.leadcrm.Repo.ActivityRepo;
+import com.example.hassaan.leadcrm.Repo.EventParticipientRepo;
 import com.example.hassaan.leadcrm.Repo.EventRepo;
+import com.example.hassaan.leadcrm.Repo.LeadStatusRepo;
 import com.example.hassaan.leadcrm.Repo.LeadsRepo;
+import com.example.hassaan.leadcrm.Repo.NoteRepo;
+import com.example.hassaan.leadcrm.Repo.POIStatusRepo;
+import com.example.hassaan.leadcrm.Repo.ParticipientRepo;
+import com.example.hassaan.leadcrm.Repo.PriorityRepo;
+import com.example.hassaan.leadcrm.Repo.ReminderRepo;
+import com.example.hassaan.leadcrm.Repo.RoleRepo;
+import com.example.hassaan.leadcrm.Repo.StatusRepo;
+import com.example.hassaan.leadcrm.Repo.TaskRepo;
+import com.example.hassaan.leadcrm.TableClasses.Accounts;
+import com.example.hassaan.leadcrm.TableClasses.Activity;
 import com.example.hassaan.leadcrm.TableClasses.Event;
+import com.example.hassaan.leadcrm.TableClasses.LeadStatus;
 import com.example.hassaan.leadcrm.TableClasses.Leads;
+import com.example.hassaan.leadcrm.TableClasses.Note;
+import com.example.hassaan.leadcrm.TableClasses.POIStatus;
+import com.example.hassaan.leadcrm.TableClasses.Participient;
+import com.example.hassaan.leadcrm.TableClasses.Priority;
+import com.example.hassaan.leadcrm.TableClasses.Reminder;
+import com.example.hassaan.leadcrm.TableClasses.Role;
+import com.example.hassaan.leadcrm.TableClasses.Status;
+import com.example.hassaan.leadcrm.TableClasses.Task;
 
 public class DBHelper extends SQLiteOpenHelper {
     //version number to upgrade database version
@@ -30,11 +53,20 @@ public class DBHelper extends SQLiteOpenHelper {
 
     @Override
     public void onCreate(SQLiteDatabase db) {
-
-        db.execSQL(LeadsRepo.createTable());
+        db.execSQL(ParticipientRepo.createTable());
+        db.execSQL(POIStatusRepo.createTable());
+        db.execSQL(PriorityRepo.createTable());
+        db.execSQL(ReminderRepo.createTable());
+        db.execSQL(RoleRepo.createTable());
+        db.execSQL(StatusRepo.createTable());
+        db.execSQL(TaskRepo.createTable());
+        db.execSQL(AccountsRepo.createTable());
         db.execSQL(EventRepo.createTable());
-//        db.execSQL(IncomeRepo.createTable());
-//        db.execSQL(IncomeTypeRepo.createTable());
+        db.execSQL(LeadsRepo.createTable());
+        db.execSQL(EventParticipientRepo.createTable());
+        db.execSQL(NoteRepo.createTable());
+        db.execSQL(LeadStatusRepo.createTable());
+        db.execSQL(ActivityRepo.createTable());
 
 
     }
