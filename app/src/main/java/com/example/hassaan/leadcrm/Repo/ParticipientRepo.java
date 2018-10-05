@@ -11,6 +11,6 @@ public class ParticipientRepo {
     public static String createTable() {
         return "CREATE TABLE " + Participient.TABLE_NAME +
                 " (" + Participient.KEY_ID + " INTEGER PRIMARY KEY AUTOINCREMENT, " +
-                Participient.KEY_Name + " VARCHAR)";
+                Participient.KEY_Name + " VARCHAR )";
     }
 }

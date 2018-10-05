@@ -5,6 +5,7 @@ import android.content.Context;
 import android.database.Cursor;
 import android.database.sqlite.SQLiteDatabase;
 import android.database.sqlite.SQLiteOpenHelper;
+import android.util.Log;
 
 import com.example.hassaan.leadcrm.App.app;
 import com.example.hassaan.leadcrm.Repo.AccountsRepo;
@@ -48,26 +49,33 @@ public class DBHelper extends SQLiteOpenHelper {
 
     public DBHelper(Context context) {
         super(context, DATABASE_NAME, null, DATABASE_VERSION);
+        Log.e("Tag","In Constructor");
        // this.context=context;
     }
 
     @Override
     public void onCreate(SQLiteDatabase db) {
+        Log.e("Tag","OnCreate");
         db.execSQL(ParticipientRepo.createTable());
         db.execSQL(POIStatusRepo.createTable());
         db.execSQL(PriorityRepo.createTable());
         db.execSQL(ReminderRepo.createTable());
         db.execSQL(RoleRepo.createTable());
         db.execSQL(StatusRepo.createTable());
+        Log.e("Tag","AfterSatus");
         db.execSQL(TaskRepo.createTable());
+        Log.e("Tag","Aftertask");
         db.execSQL(AccountsRepo.createTable());
+        Log.e("Tag","AfterAccounts");
         db.execSQL(EventRepo.createTable());
+        Log.e("Tag","AfterEventRepo");
         db.execSQL(LeadsRepo.createTable());
+        Log.e("Tag","AfterLeadsRepo");
         db.execSQL(EventParticipientRepo.createTable());
         db.execSQL(NoteRepo.createTable());
         db.execSQL(LeadStatusRepo.createTable());
         db.execSQL(ActivityRepo.createTable());
-
+        Log.e("Tag","Finish OnCreate");
 
     }
 

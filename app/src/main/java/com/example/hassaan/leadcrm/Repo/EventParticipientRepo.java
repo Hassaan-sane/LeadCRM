@@ -12,9 +12,11 @@ public class EventParticipientRepo {
     }
 
     public static String createTable() {
-        return "CREATE TABLE " + Participient.TABLE_NAME +
+        return "CREATE TABLE " + EventParticipents.TABLE_NAME +
                 " (" + EventParticipents.KEY_ID + " INTEGER PRIMARY KEY AUTOINCREMENT, " +
-                EventParticipents.KEY_PARTICIPENTSID + " VARCHAR, FOREIGN KEY(" + EventParticipents.KEY_PARTICIPENTSID + ")REFERENCES " + Participient.TABLE_NAME + "(" + Participient.KEY_ID + ")" +
-                EventParticipents.KEY_EVENTID + "VARCHAR, FOREIGN KEY(" + EventParticipents.KEY_EVENTID + ")REFERENCES " + Event.TABLE_NAME + "(" + Event.KEY_ID + ") )";
+                EventParticipents.KEY_PARTICIPENTSID + " VARCHAR, " +
+                EventParticipents.KEY_EVENTID + " VARCHAR, "+
+                "FOREIGN KEY (" + EventParticipents.KEY_PARTICIPENTSID + ") REFERENCES " + Participient.TABLE_NAME + "(" + Participient.KEY_ID + "), " +
+                "FOREIGN KEY(" + EventParticipents.KEY_EVENTID + ") REFERENCES " + Event.TABLE_NAME + "(" + Event.KEY_ID + ") )";
     }
 }
