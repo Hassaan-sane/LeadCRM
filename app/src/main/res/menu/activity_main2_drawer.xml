@@ -1,0 +1,71 @@
+<?xml version="1.0" encoding="utf-8"?>
+<menu xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:tools="http://schemas.android.com/tools"
+    tools:showIn="navigation_view">
+
+    <group android:checkableBehavior="single">
+
+        <item
+            android:id="@+id/nav_home"
+            android:icon="@drawable/ic_menu_camera"
+            android:title="Home" />
+        <item
+            android:id="@+id/nav_feeds"
+            android:icon="@drawable/ic_menu_gallery"
+            android:title="Feeds" />
+
+    </group>
+
+    <group android:checkableBehavior="single">
+        <item android:title="Modules">
+        <menu>
+        <item
+            android:id="@+id/nav_leads"
+            android:icon="@drawable/ic_menu_camera"
+            android:title="Leads" />
+        <item
+            android:id="@+id/nav_contacts"
+            android:icon="@drawable/ic_menu_gallery"
+            android:title="Contacts" />
+            <item
+                android:id="@+id/nav_accounts"
+                android:icon="@drawable/ic_menu_gallery"
+                android:title="Accounts" />
+            <item
+                android:id="@+id/nav_deals"
+                android:icon="@drawable/ic_menu_gallery"
+                android:title="Deals" />
+            <item
+                android:id="@+id/nav_tasks"
+                android:icon="@drawable/ic_menu_gallery"
+                android:title="Tasks" />
+            <item
+                android:id="@+id/nav_events"
+                android:icon="@drawable/ic_menu_gallery"
+                android:title="Events" />
+            <item
+                android:id="@+id/nav_Calls"
+                android:icon="@drawable/ic_menu_gallery"
+                android:title="Calls" />
+        </menu>
+        </item>
+    </group>
+
+    <item android:title="Settings">
+        <menu>
+            <item
+                android:id="@+id/nav_settings"
+                android:icon="@drawable/ic_menu_share"
+                android:title="Settings" />
+            <item
+                android:id="@+id/nav_feedback"
+                android:icon="@drawable/ic_menu_send"
+                android:title="Feedback" />
+            <item
+                android:id="@+id/nav_aboutus"
+                android:icon="@drawable/ic_menu_send"
+                android:title="About Us" />
+        </menu>
+    </item>
+
+</menu>
