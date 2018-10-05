@@ -1,9 +1,12 @@
 package com.example.hassaan.leadcrm;
 
 import android.database.Cursor;
+import android.net.Uri;
 import android.os.Bundle;
 import android.support.design.widget.FloatingActionButton;
 import android.support.design.widget.Snackbar;
+import android.support.v4.app.FragmentManager;
+import android.support.v4.app.Fragment;
 import android.view.View;
 import android.support.design.widget.NavigationView;
 import android.support.v4.view.GravityCompat;
@@ -19,6 +22,17 @@ import android.widget.TextView;
 import android.widget.Toast;
 
 import com.example.hassaan.leadcrm.Data.DBHelper;
+import com.example.hassaan.leadcrm.Fragments.AboutusFragment;
+import com.example.hassaan.leadcrm.Fragments.AccountsFragment;
+import com.example.hassaan.leadcrm.Fragments.CallsFragment;
+import com.example.hassaan.leadcrm.Fragments.ContactsFragment;
+import com.example.hassaan.leadcrm.Fragments.DealsFragment;
+import com.example.hassaan.leadcrm.Fragments.EventsFragment;
+import com.example.hassaan.leadcrm.Fragments.FeedbackFragment;
+import com.example.hassaan.leadcrm.Fragments.HomeFragment;
+import com.example.hassaan.leadcrm.Fragments.LeadsFragment;
+import com.example.hassaan.leadcrm.Fragments.SettingsFragment;
+import com.example.hassaan.leadcrm.Fragments.TasksFragment;
 
 public class Main2Activity extends AppCompatActivity
         implements NavigationView.OnNavigationItemSelectedListener {
@@ -136,19 +150,67 @@ public class Main2Activity extends AppCompatActivity
         // Handle navigation view item clicks here.
         int id = item.getItemId();
 
-//        if (id == R.id.nav_camera) {
-//            // Handle the camera action
-//        } else if (id == R.id.nav_gallery) {
-//
-//        } else if (id == R.id.nav_slideshow) {
-//
-//        } else if (id == R.id.nav_manage) {
-//
-//        } else if (id == R.id.nav_share) {
-//
-//        } else if (id == R.id.nav_send) {
-//
-//        }
+        if (id == R.id.nav_home) {
+            HomeFragment homeFragment = new HomeFragment();
+            FragmentManager fragmentManager = getSupportFragmentManager();
+            fragmentManager.beginTransaction().replace(R.id.drawer_layout,homeFragment).commit();
+
+        } else if (id == R.id.nav_feeds) {
+            FeedbackFragment feedbackFragment = new FeedbackFragment();
+            FragmentManager fragmentManager = getSupportFragmentManager();
+            fragmentManager.beginTransaction().replace(R.id.drawer_layout,feedbackFragment).commit();
+
+        } else if (id == R.id.nav_leads) {
+            LeadsFragment leadsFragment = new LeadsFragment();
+            FragmentManager fragmentManager = getSupportFragmentManager();
+            fragmentManager.beginTransaction().replace(R.id.drawer_layout,leadsFragment).commit();
+
+        } else if (id == R.id.nav_contacts) {
+            ContactsFragment contactsFragment = new ContactsFragment();
+            FragmentManager fragmentManager = getSupportFragmentManager();
+            fragmentManager.beginTransaction().replace(R.id.drawer_layout,contactsFragment).commit();
+
+        } else if (id == R.id.nav_accounts) {
+            AccountsFragment accountsFragment = new AccountsFragment();
+            FragmentManager fragmentManager = getSupportFragmentManager();
+            fragmentManager.beginTransaction().replace(R.id.drawer_layout,accountsFragment).commit();
+
+        } else if (id == R.id.nav_deals) {
+            DealsFragment dealsFragment = new DealsFragment();
+            FragmentManager fragmentManager = getSupportFragmentManager();
+            fragmentManager.beginTransaction().replace(R.id.drawer_layout,dealsFragment).commit();
+
+        }else if (id == R.id.nav_tasks) {
+            TasksFragment tasksFragment = new TasksFragment();
+            FragmentManager fragmentManager = getSupportFragmentManager();
+            fragmentManager.beginTransaction().replace(R.id.drawer_layout,tasksFragment).commit();
+
+        }else if (id == R.id.nav_events) {
+            EventsFragment eventsFragment = new EventsFragment();
+            FragmentManager fragmentManager = getSupportFragmentManager();
+            fragmentManager.beginTransaction().replace(R.id.drawer_layout,eventsFragment).commit();
+
+        }else if (id == R.id.nav_Calls) {
+            CallsFragment callsFragment = new CallsFragment();
+            FragmentManager fragmentManager = getSupportFragmentManager();
+            fragmentManager.beginTransaction().replace(R.id.drawer_layout,callsFragment).commit();
+
+        }else if (id == R.id.nav_settings) {
+            SettingsFragment settingsFragment = new SettingsFragment();
+            FragmentManager fragmentManager = getSupportFragmentManager();
+            fragmentManager.beginTransaction().replace(R.id.drawer_layout,settingsFragment).commit();
+
+        }else if (id == R.id.nav_feedback) {
+            FeedbackFragment feedbackFragment = new FeedbackFragment();
+            FragmentManager fragmentManager = getSupportFragmentManager();
+            fragmentManager.beginTransaction().replace(R.id.drawer_layout,feedbackFragment).commit();
+
+        }else if (id == R.id.nav_aboutus) {
+            AboutusFragment aboutusFragment = new AboutusFragment();
+            FragmentManager fragmentManager = getSupportFragmentManager();
+            fragmentManager.beginTransaction().replace(R.id.drawer_layout,aboutusFragment).commit();
+
+        }
 
         DrawerLayout drawer = (DrawerLayout) findViewById(R.id.drawer_layout);
         drawer.closeDrawer(GravityCompat.START);
@@ -169,4 +231,5 @@ public class Main2Activity extends AppCompatActivity
             Toast.makeText(Main2Activity.this,"Data NOT Inserted",Toast.LENGTH_SHORT).show();
         }
     }
+
 }
