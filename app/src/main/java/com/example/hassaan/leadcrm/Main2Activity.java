@@ -38,10 +38,11 @@ public class Main2Activity extends AppCompatActivity
         implements NavigationView.OnNavigationItemSelectedListener {
 
     DBHelper dbHelper;
+    DrawerLayout drawer;
 
     EditText edit1, edit2, edit3;
 
-    Button button, button2 ;
+    Button button, button2;
 
     TextView view1, view2, view3;
 
@@ -76,14 +77,13 @@ public class Main2Activity extends AppCompatActivity
             @Override
             public void onClick(View view) {
                 Cursor res = dbHelper.getAllData();
-                if(res.getCount() == 0)
-                {
+                if (res.getCount() == 0) {
                     Toast.makeText(Main2Activity.this, "No Data Found", Toast.LENGTH_SHORT).show();
                     return;
                 }
 
                 StringBuffer stringBuffer = new StringBuffer();
-                while(res.moveToNext()){
+                while (res.moveToNext()) {
                     stringBuffer.append("Title :" + res.getString(2) + "\n");
                     stringBuffer.append("Phone :" + res.getString(3) + "\n");
                     stringBuffer.append("Mobile :" + res.getString(4) + "\n");
@@ -92,7 +92,7 @@ public class Main2Activity extends AppCompatActivity
                 view1.setText(stringBuffer.toString());
             }
         });
-            //self code ends here
+        //self code ends here
 //        FloatingActionButton fab = (FloatingActionButton) findViewById(R.id.fab);
 //        fab.setOnClickListener(new View.OnClickListener() {
 //            @Override
@@ -102,7 +102,7 @@ public class Main2Activity extends AppCompatActivity
 //            }
 //        });
 
-        DrawerLayout drawer = (DrawerLayout) findViewById(R.id.drawer_layout);
+        drawer = (DrawerLayout) findViewById(R.id.drawer_layout);
         ActionBarDrawerToggle toggle = new ActionBarDrawerToggle(
                 this, drawer, toolbar, R.string.navigation_drawer_open, R.string.navigation_drawer_close);
         drawer.addDrawerListener(toggle);
@@ -150,65 +150,52 @@ public class Main2Activity extends AppCompatActivity
         // Handle navigation view item clicks here.
         int id = item.getItemId();
 
+        FragmentManager fragmentManager = getSupportFragmentManager();
+
         if (id == R.id.nav_home) {
-            HomeFragment homeFragment = new HomeFragment();
-            FragmentManager fragmentManager = getSupportFragmentManager();
-            fragmentManager.beginTransaction().replace(R.id.drawer_layout,homeFragment).commit();
+            fragmentManager.beginTransaction().replace(R.id.container, new HomeFragment()).commit();
 
         } else if (id == R.id.nav_feeds) {
-            FeedbackFragment feedbackFragment = new FeedbackFragment();
-            FragmentManager fragmentManager = getSupportFragmentManager();
-            fragmentManager.beginTransaction().replace(R.id.drawer_layout,feedbackFragment).commit();
+
+            fragmentManager.beginTransaction().replace(R.id.container, new FeedbackFragment()).commit();
 
         } else if (id == R.id.nav_leads) {
-            LeadsFragment leadsFragment = new LeadsFragment();
-            FragmentManager fragmentManager = getSupportFragmentManager();
-            fragmentManager.beginTransaction().replace(R.id.drawer_layout,leadsFragment).commit();
+
+            fragmentManager.beginTransaction().replace(R.id.container, new LeadsFragment()).commit();
 
         } else if (id == R.id.nav_contacts) {
-            ContactsFragment contactsFragment = new ContactsFragment();
-            FragmentManager fragmentManager = getSupportFragmentManager();
-            fragmentManager.beginTransaction().replace(R.id.drawer_layout,contactsFragment).commit();
+
+            fragmentManager.beginTransaction().replace(R.id.container, new ContactsFragment()).commit();
 
         } else if (id == R.id.nav_accounts) {
-            AccountsFragment accountsFragment = new AccountsFragment();
-            FragmentManager fragmentManager = getSupportFragmentManager();
-            fragmentManager.beginTransaction().replace(R.id.drawer_layout,accountsFragment).commit();
+            fragmentManager.beginTransaction().replace(R.id.container, new AccountsFragment()).commit();
 
         } else if (id == R.id.nav_deals) {
-            DealsFragment dealsFragment = new DealsFragment();
-            FragmentManager fragmentManager = getSupportFragmentManager();
-            fragmentManager.beginTransaction().replace(R.id.drawer_layout,dealsFragment).commit();
+            fragmentManager.beginTransaction().replace(R.id.container, new DealsFragment()).commit();
 
-        }else if (id == R.id.nav_tasks) {
-            TasksFragment tasksFragment = new TasksFragment();
-            FragmentManager fragmentManager = getSupportFragmentManager();
-            fragmentManager.beginTransaction().replace(R.id.drawer_layout,tasksFragment).commit();
+        } else if (id == R.id.nav_tasks) {
 
-        }else if (id == R.id.nav_events) {
-            EventsFragment eventsFragment = new EventsFragment();
-            FragmentManager fragmentManager = getSupportFragmentManager();
-            fragmentManager.beginTransaction().replace(R.id.drawer_layout,eventsFragment).commit();
+            fragmentManager.beginTransaction().replace(R.id.container, new TasksFragment()).commit();
 
-        }else if (id == R.id.nav_Calls) {
-            CallsFragment callsFragment = new CallsFragment();
-            FragmentManager fragmentManager = getSupportFragmentManager();
-            fragmentManager.beginTransaction().replace(R.id.drawer_layout,callsFragment).commit();
+        } else if (id == R.id.nav_events) {
 
-        }else if (id == R.id.nav_settings) {
-            SettingsFragment settingsFragment = new SettingsFragment();
-            FragmentManager fragmentManager = getSupportFragmentManager();
-            fragmentManager.beginTransaction().replace(R.id.drawer_layout,settingsFragment).commit();
+            fragmentManager.beginTransaction().replace(R.id.container, new EventsFragment()).commit();
 
-        }else if (id == R.id.nav_feedback) {
-            FeedbackFragment feedbackFragment = new FeedbackFragment();
-            FragmentManager fragmentManager = getSupportFragmentManager();
-            fragmentManager.beginTransaction().replace(R.id.drawer_layout,feedbackFragment).commit();
+        } else if (id == R.id.nav_Calls) {
 
-        }else if (id == R.id.nav_aboutus) {
-            AboutusFragment aboutusFragment = new AboutusFragment();
-            FragmentManager fragmentManager = getSupportFragmentManager();
-            fragmentManager.beginTransaction().replace(R.id.drawer_layout,aboutusFragment).commit();
+            fragmentManager.beginTransaction().replace(R.id.container, new CallsFragment()).commit();
+
+        } else if (id == R.id.nav_settings) {
+
+            fragmentManager.beginTransaction().replace(R.id.container, new SettingsFragment()).commit();
+
+        } else if (id == R.id.nav_feedback) {
+
+            fragmentManager.beginTransaction().replace(R.id.container, new FeedbackFragment()).commit();
+
+        } else if (id == R.id.nav_aboutus) {
+
+            fragmentManager.beginTransaction().replace(R.id.container, new AboutusFragment()).commit();
 
         }
 
@@ -216,19 +203,17 @@ public class Main2Activity extends AppCompatActivity
         drawer.closeDrawer(GravityCompat.START);
         return true;
     }
+
     private void updateData() {
         String a = edit1.getText().toString();
         String b = edit2.getText().toString();
         String c = edit3.getText().toString();
 
-        boolean isInserted = dbHelper.insertData(a,b,c);
-        if (isInserted)
-        {
-            Toast.makeText(Main2Activity.this,"Data Inserted",Toast.LENGTH_SHORT).show();
-        }
-        else
-        {
-            Toast.makeText(Main2Activity.this,"Data NOT Inserted",Toast.LENGTH_SHORT).show();
+        boolean isInserted = dbHelper.insertData(a, b, c);
+        if (isInserted) {
+            Toast.makeText(Main2Activity.this, "Data Inserted", Toast.LENGTH_SHORT).show();
+        } else {
+            Toast.makeText(Main2Activity.this, "Data NOT Inserted", Toast.LENGTH_SHORT).show();
         }
     }
 

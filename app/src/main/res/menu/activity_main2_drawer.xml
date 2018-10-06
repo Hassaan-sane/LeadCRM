@@ -14,9 +14,6 @@
             android:icon="@drawable/ic_menu_feeds"
             android:title="Feeds" />
 
-    </group>
-
-    <group android:checkableBehavior="single">
         <item android:title="Modules">
         <menu>
         <item
