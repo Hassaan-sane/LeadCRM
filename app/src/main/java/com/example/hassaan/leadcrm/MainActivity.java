@@ -1,12 +1,10 @@
 package com.example.hassaan.leadcrm;
 
 import android.database.Cursor;
-import android.net.Uri;
 import android.os.Bundle;
 import android.support.design.widget.FloatingActionButton;
 import android.support.design.widget.Snackbar;
 import android.support.v4.app.FragmentManager;
-import android.support.v4.app.Fragment;
 import android.view.View;
 import android.support.design.widget.NavigationView;
 import android.support.v4.view.GravityCompat;
@@ -14,7 +12,6 @@ import android.support.v4.widget.DrawerLayout;
 import android.support.v7.app.ActionBarDrawerToggle;
 import android.support.v7.app.AppCompatActivity;
 import android.support.v7.widget.Toolbar;
-import android.view.Menu;
 import android.view.MenuItem;
 import android.widget.Button;
 import android.widget.EditText;
@@ -29,23 +26,22 @@ import com.example.hassaan.leadcrm.Fragments.ContactsFragment;
 import com.example.hassaan.leadcrm.Fragments.DealsFragment;
 import com.example.hassaan.leadcrm.Fragments.EventsFragment;
 import com.example.hassaan.leadcrm.Fragments.FeedbackFragment;
-import com.example.hassaan.leadcrm.Fragments.FeedsFragment;
 import com.example.hassaan.leadcrm.Fragments.HomeFragment;
 import com.example.hassaan.leadcrm.Fragments.LeadsFragment;
 import com.example.hassaan.leadcrm.Fragments.SettingsFragment;
 import com.example.hassaan.leadcrm.Fragments.TasksFragment;
 
-public class Main2Activity extends AppCompatActivity
+public class MainActivity extends AppCompatActivity
         implements NavigationView.OnNavigationItemSelectedListener {
 
     DBHelper dbHelper;
     DrawerLayout drawer;
-
-    EditText edit1, edit2, edit3;
-
-    Button button, button2;
-
-    TextView view1, view2, view3;
+//
+//    EditText edit1, edit2, edit3;
+//
+//    Button button, button2;
+//
+//    TextView view1, view2, view3;
 
     @Override
     protected void onCreate(Bundle savedInstanceState) {
@@ -56,7 +52,8 @@ public class Main2Activity extends AppCompatActivity
 
         //self code
         dbHelper = new DBHelper(this);
-
+        FragmentManager fragmentManager = getSupportFragmentManager();
+        fragmentManager.beginTransaction().replace(R.id.container, new HomeFragment()).commit();
 //        edit1 = findViewById(R.id.et1);
 //        edit2 = findViewById(R.id.et2);
 //        edit3 = findViewById(R.id.et3);
@@ -79,7 +76,7 @@ public class Main2Activity extends AppCompatActivity
 //            public void onClick(View view) {
 //                Cursor res = dbHelper.getAllData();
 //                if (res.getCount() == 0) {
-//                    Toast.makeText(Main2Activity.this, "No Data Found", Toast.LENGTH_SHORT).show();
+//                    Toast.makeText(MainActivity.this, "No Data Found", Toast.LENGTH_SHORT).show();
 //                    return;
 //                }
 //
@@ -158,7 +155,7 @@ public class Main2Activity extends AppCompatActivity
 
         } else if (id == R.id.nav_feeds) {
 
-            fragmentManager.beginTransaction().replace(R.id.container, new FeedsFragment()).commit();
+            fragmentManager.beginTransaction().replace(R.id.container, new FeedbackFragment()).commit();
 
         } else if (id == R.id.nav_leads) {
 
@@ -206,16 +203,16 @@ public class Main2Activity extends AppCompatActivity
     }
 
     private void updateData() {
-        String a = edit1.getText().toString();
-        String b = edit2.getText().toString();
-        String c = edit3.getText().toString();
-
-        boolean isInserted = dbHelper.insertData(a, b, c);
-        if (isInserted) {
-            Toast.makeText(Main2Activity.this, "Data Inserted", Toast.LENGTH_SHORT).show();
-        } else {
-            Toast.makeText(Main2Activity.this, "Data NOT Inserted", Toast.LENGTH_SHORT).show();
-        }
+//        String a = edit1.getText().toString();
+//        String b = edit2.getText().toString();
+//        String c = edit3.getText().toString();
+//
+//        boolean isInserted = dbHelper.insertData(a, b, c);
+//        if (isInserted) {
+//            Toast.makeText(MainActivity.this, "Data Inserted", Toast.LENGTH_SHORT).show();
+//        } else {
+//            Toast.makeText(MainActivity.this, "Data NOT Inserted", Toast.LENGTH_SHORT).show();
+//        }
     }
 
 }
