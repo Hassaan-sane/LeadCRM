@@ -1,5 +1,7 @@
 package com.example.hassaan.leadcrm.TableClasses;
 
+import java.util.Date;
+
 public class Note {
 
     public static final String TABLE_NAME = "tbl_Note";
@@ -7,15 +9,15 @@ public class Note {
     public static final String KEY_TITLENAME = "TitleName";
     public static final String KEY_DETAILS = "Details";
     public static final String KEY_LEADID = "LeadID";
-    public static final String CREATED_DATE = "CreatedDate";
+    public static final String KEY_CREATED_DATE = "CreatedDate";
 
-    private String ID;
+    private Integer ID;
     private String TitleName;
     private String Details;
-    private String LeadID;
-    private String CreatedDate;
+    private Integer LeadID;
+    private Date CreatedDate;
 
-    public Note(String ID, String titleName, String details, String leadID, String createdDate) {
+    public Note(Integer ID, String titleName, String details, Integer leadID, Date createdDate) {
         this.ID = ID;
         this.TitleName = titleName;
         this.Details = details;
@@ -26,11 +28,11 @@ public class Note {
     public Note()
     {}
 
-    public String getID() {
+    public Integer getID() {
         return ID;
     }
 
-    public void setID(String ID) {
+    public void setID(Integer ID) {
         this.ID = ID;
     }
 
@@ -50,19 +52,19 @@ public class Note {
         Details = details;
     }
 
-    public String getLeadID() {
+    public Integer getLeadID() {
         return LeadID;
     }
 
-    public void setLeadID(String leadID) {
+    public void setLeadID(Integer leadID) {
         LeadID = leadID;
     }
 
-    public String getCreatedDate() {
+    public Date getCreatedDate() {
         return CreatedDate;
     }
 
-    public void setCreatedDate(String createdDate) {
+    public void setCreatedDate(Date createdDate) {
         CreatedDate = createdDate;
     }
 }

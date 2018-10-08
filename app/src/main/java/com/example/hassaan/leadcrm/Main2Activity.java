@@ -29,6 +29,7 @@ import com.example.hassaan.leadcrm.Fragments.ContactsFragment;
 import com.example.hassaan.leadcrm.Fragments.DealsFragment;
 import com.example.hassaan.leadcrm.Fragments.EventsFragment;
 import com.example.hassaan.leadcrm.Fragments.FeedbackFragment;
+import com.example.hassaan.leadcrm.Fragments.FeedsFragment;
 import com.example.hassaan.leadcrm.Fragments.HomeFragment;
 import com.example.hassaan.leadcrm.Fragments.LeadsFragment;
 import com.example.hassaan.leadcrm.Fragments.SettingsFragment;
@@ -56,42 +57,42 @@ public class Main2Activity extends AppCompatActivity
         //self code
         dbHelper = new DBHelper(this);
 
-        edit1 = findViewById(R.id.et1);
-        edit2 = findViewById(R.id.et2);
-        edit3 = findViewById(R.id.et3);
-
-        view1 = findViewById(R.id.tv1);
-        view2 = findViewById(R.id.tv2);
-        view3 = findViewById(R.id.tv3);
-
-        button = findViewById(R.id.btt1);
-        button.setOnClickListener(new View.OnClickListener() {
-            @Override
-            public void onClick(View view) {
-                updateData();
-            }
-        });
-
-        button2 = findViewById(R.id.btt2);
-        button2.setOnClickListener(new View.OnClickListener() {
-            @Override
-            public void onClick(View view) {
-                Cursor res = dbHelper.getAllData();
-                if (res.getCount() == 0) {
-                    Toast.makeText(Main2Activity.this, "No Data Found", Toast.LENGTH_SHORT).show();
-                    return;
-                }
-
-                StringBuffer stringBuffer = new StringBuffer();
-                while (res.moveToNext()) {
-                    stringBuffer.append("Title :" + res.getString(2) + "\n");
-                    stringBuffer.append("Phone :" + res.getString(3) + "\n");
-                    stringBuffer.append("Mobile :" + res.getString(4) + "\n");
-                }
-
-                view1.setText(stringBuffer.toString());
-            }
-        });
+//        edit1 = findViewById(R.id.et1);
+//        edit2 = findViewById(R.id.et2);
+//        edit3 = findViewById(R.id.et3);
+//
+//        view1 = findViewById(R.id.tv1);
+//        view2 = findViewById(R.id.tv2);
+//        view3 = findViewById(R.id.tv3);
+//
+//        button = findViewById(R.id.btt1);
+//        button.setOnClickListener(new View.OnClickListener() {
+//            @Override
+//            public void onClick(View view) {
+//                updateData();
+//            }
+//        });
+//
+//        button2 = findViewById(R.id.btt2);
+//        button2.setOnClickListener(new View.OnClickListener() {
+//            @Override
+//            public void onClick(View view) {
+//                Cursor res = dbHelper.getAllData();
+//                if (res.getCount() == 0) {
+//                    Toast.makeText(Main2Activity.this, "No Data Found", Toast.LENGTH_SHORT).show();
+//                    return;
+//                }
+//
+//                StringBuffer stringBuffer = new StringBuffer();
+//                while (res.moveToNext()) {
+//                    stringBuffer.append("Title :" + res.getString(2) + "\n");
+//                    stringBuffer.append("Phone :" + res.getString(3) + "\n");
+//                    stringBuffer.append("Mobile :" + res.getString(4) + "\n");
+//                }
+//
+//                view1.setText(stringBuffer.toString());
+//            }
+//        });
         //self code ends here
 //        FloatingActionButton fab = (FloatingActionButton) findViewById(R.id.fab);
 //        fab.setOnClickListener(new View.OnClickListener() {
@@ -157,7 +158,7 @@ public class Main2Activity extends AppCompatActivity
 
         } else if (id == R.id.nav_feeds) {
 
-            fragmentManager.beginTransaction().replace(R.id.container, new FeedbackFragment()).commit();
+            fragmentManager.beginTransaction().replace(R.id.container, new FeedsFragment()).commit();
 
         } else if (id == R.id.nav_leads) {
 

@@ -1,5 +1,7 @@
 package com.example.hassaan.leadcrm.TableClasses;
 
+import java.util.Date;
+
 public class Event {
     public static final String TABLE_NAME = "tbl_Event";
     public static final String KEY_ID = "ID";
@@ -11,16 +13,16 @@ public class Event {
     public static final String KEY_STARTTIME = "StartTime";
     public static final String KEY_ENDTIME = "EndTime";
 
-    private String ID;
+    private Integer ID;
     private String Location;
-    private String StartDate;
-    private String EndDate;
+    private Date StartDate;
+    private Date EndDate;
     private String HostName;
     private String EventName;
-    private String StartTime;
-    private String EndTime;
+    private Date StartTime;
+    private Date EndTime;
 
-    public Event(String ID, String location, String startDate, String endDate, String hostName, String eventName, String startTime, String endTime) {
+    public Event(Integer ID, String location, Date startDate, Date endDate, String hostName, String eventName, Date startTime, Date endTime) {
         this.ID = ID;
         this.Location = location;
         this.StartDate = startDate;
@@ -33,11 +35,11 @@ public class Event {
 
     public Event(){}
 
-    public String getID() {
+    public Integer getID() {
         return ID;
     }
 
-    public void setID(String ID) {
+    public void setID(Integer ID) {
         this.ID = ID;
     }
 
@@ -49,19 +51,19 @@ public class Event {
         Location = location;
     }
 
-    public String getStartDate() {
+    public Date getStartDate() {
         return StartDate;
     }
 
-    public void setStartDate(String startDate) {
+    public void setStartDate(Date startDate) {
         StartDate = startDate;
     }
 
-    public String getEndDate() {
+    public Date getEndDate() {
         return EndDate;
     }
 
-    public void setEndDate(String endDate) {
+    public void setEndDate(Date endDate) {
         EndDate = endDate;
     }
 
@@ -81,19 +83,19 @@ public class Event {
         EventName = eventName;
     }
 
-    public String getStartTime() {
+    public Date getStartTime() {
         return StartTime;
     }
 
-    public void setStartTime(String startTime) {
+    public void setStartTime(Date startTime) {
         StartTime = startTime;
     }
 
-    public String getEndTime() {
+    public Date getEndTime() {
         return EndTime;
     }
 
-    public void setEndTime(String endTime) {
+    public void setEndTime(Date endTime) {
         EndTime = endTime;
     }
 }

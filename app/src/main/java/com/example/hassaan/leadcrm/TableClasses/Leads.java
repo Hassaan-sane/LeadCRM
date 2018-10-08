@@ -30,19 +30,19 @@ public class Leads {
     private String Mobile;
     private String LeadSource;
     private String Industry;
-    private String AnnualRevenue;
+    private Integer AnnualRevenue;
     private Date ModifiedBy;
     private String CompanyName;
     private String LeadName;
     private String Email;
     private String Website;
-    private String No_of_Employees;
+    private Integer No_of_Employees;
     private Date CreatedBy;
     private String SkypeID;
 
     public Leads(String LeadOwner, Integer ID, String Title, String Phone, String Mobile, String LeadSource, String Industry,
-                 String AnnualRevenue, Date ModifiedBy, String CompanyName, String LeadName, String Email, String Website,
-                 String No_of_Employees, Date CreatedBy, String SkypeID) {
+                 Integer AnnualRevenue, Date ModifiedBy, String CompanyName, String LeadName, String Email, String Website,
+                 Integer No_of_Employees, Date CreatedBy, String SkypeID) {
         this.LeadOwner = LeadOwner;
         this.ID = ID;
         this.Title = Title;
@@ -113,11 +113,11 @@ public class Leads {
         Industry = industry;
     }
 
-    public String getAnnualRevenue() {
+    public Integer getAnnualRevenue() {
         return AnnualRevenue;
     }
 
-    public void setAnnualRevenue(String annualRevenue) {
+    public void setAnnualRevenue(Integer annualRevenue) {
         AnnualRevenue = annualRevenue;
     }
 
@@ -162,11 +162,11 @@ public class Leads {
         this.ID = ID;
     }
 
-    public String getNo_of_Employees() {
+    public Integer getNo_of_Employees() {
         return No_of_Employees;
     }
 
-    public void setNo_of_Employees(String no_of_Employees) {
+    public void setNo_of_Employees(Integer no_of_Employees) {
         No_of_Employees = no_of_Employees;
     }
 

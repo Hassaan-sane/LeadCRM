@@ -16,12 +16,14 @@ public class Activity {
     private String Subject;
     private Integer ID;
     private Integer TaskID;
+
+
     private Integer EventID;
     private Date ModifiedDate;
-    private String ActivityStatus;
+    private Boolean ActivityStatus;
     private Integer LeadID;
 
-    public Activity(String Subject, Integer ID, Integer TaskID, Integer EventID, Date ModifiedDate, String ActivityStatus,Integer LeadID) {
+    public Activity(String Subject, Integer ID, Integer TaskID, Integer EventID, Date ModifiedDate, Boolean ActivityStatus,Integer LeadID) {
 
         this.Subject = Subject;
         this.ID = ID;
@@ -76,11 +78,20 @@ public class Activity {
         ModifiedDate = modifiedDate;
     }
 
-    public String getActivityStatus() {
+    public Boolean getActivityStatus() {
         return ActivityStatus;
     }
 
-    public void setActivityStatus(String activityStatus) {
+    public void setActivityStatus(Boolean activityStatus) {
         ActivityStatus = activityStatus;
     }
+
+    public Integer getLeadID() {
+        return LeadID;
+    }
+
+    public void setLeadID(Integer leadID) {
+        LeadID = leadID;
+    }
+
 }

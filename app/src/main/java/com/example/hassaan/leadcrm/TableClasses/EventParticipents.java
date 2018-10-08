@@ -7,11 +7,11 @@ public class EventParticipents {
     public static final String KEY_PARTICIPENTSID = "ParticipentsID";
     public static final String KEY_EVENTID = "EventID";
 
-    public String ID;
-    public String ParticipentsID;
-    public String EventID;
+    public Integer ID;
+    public Integer ParticipentsID;
+    public Integer EventID;
 
-    public EventParticipents(String ID, String participentsID, String eventID) {
+    public EventParticipents(Integer ID, Integer participentsID, Integer eventID) {
         this.ID = ID;
         ParticipentsID = participentsID;
         EventID = eventID;
@@ -20,27 +20,27 @@ public class EventParticipents {
     public EventParticipents()
     {}
 
-    public String getID() {
+    public Integer getID() {
         return ID;
     }
 
-    public void setID(String ID) {
+    public void setID(Integer ID) {
         this.ID = ID;
     }
 
-    public String getParticipentsID() {
+    public Integer getParticipentsID() {
         return ParticipentsID;
     }
 
-    public void setParticipentsID(String participentsID) {
+    public void setParticipentsID(Integer participentsID) {
         ParticipentsID = participentsID;
     }
 
-    public String getEventID() {
+    public Integer getEventID() {
         return EventID;
     }
 
-    public void setEventID(String eventID) {
+    public void setEventID(Integer eventID) {
         EventID = eventID;
     }
 }

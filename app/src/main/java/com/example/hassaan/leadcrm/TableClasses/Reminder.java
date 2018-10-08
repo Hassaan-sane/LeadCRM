@@ -1,5 +1,7 @@
 package com.example.hassaan.leadcrm.TableClasses;
 
+import java.util.Date;
+
 public class Reminder {
 
     public static final String TABLE_NAME = "tbl_Reminder";
@@ -8,12 +10,12 @@ public class Reminder {
     public static final String KEY_REPEAT = "Repeat";
     public static final String KEY_AlERT = "Alert";
 
-    private String ID;
-    private String Time;
+    private Integer ID;
+    private Date Time;
     private String Repeat;
     private String Alert;
 
-    public Reminder(String ID, String time, String repeat, String alert) {
+    public Reminder(Integer ID, Date time, String repeat, String alert) {
         this.ID = ID;
         Time = time;
         Repeat = repeat;
@@ -22,19 +24,19 @@ public class Reminder {
 
     public Reminder(){}
 
-    public String getID() {
+    public Integer getID() {
         return ID;
     }
 
-    public void setID(String ID) {
+    public void setID(Integer ID) {
         this.ID = ID;
     }
 
-    public String getTime() {
+    public Date getTime() {
         return Time;
     }
 
-    public void setTime(String time) {
+    public void setTime(Date time) {
         Time = time;
     }
 

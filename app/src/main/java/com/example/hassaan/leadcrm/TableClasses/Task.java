@@ -1,5 +1,7 @@
 package com.example.hassaan.leadcrm.TableClasses;
 
+import java.util.Date;
+
 public class Task {
     public static final String TABLE_NAME = "tbl_Task";
     public static final String KEY_ID = "ID";
@@ -9,14 +11,14 @@ public class Task {
     public static final String KEY_OWNERNAME = "OwnerName";
     public static final String KEY_STATUSID = "StatusID";
 
-    public String ID;
+    public Integer ID;
     public String Subject;
-    public String DueDate;
-    public String PriorityID;
+    public Date DueDate;
+    public Integer PriorityID;
     public String OwnerName;
-    public String StatusID;
+    public Integer StatusID;
 
-    public Task(String ID, String subject, String dueDate, String priorityID, String ownerName, String statusID) {
+    public Task(Integer ID, String subject, Date dueDate, Integer priorityID, String ownerName, Integer statusID) {
         this.ID = ID;
         Subject = subject;
         DueDate = dueDate;
@@ -27,11 +29,11 @@ public class Task {
 
     public Task(){}
 
-    public String getID() {
+    public Integer getID() {
         return ID;
     }
 
-    public void setID(String ID) {
+    public void setID(Integer ID) {
         this.ID = ID;
     }
 
@@ -43,19 +45,19 @@ public class Task {
         Subject = subject;
     }
 
-    public String getDueDate() {
+    public Date getDueDate() {
         return DueDate;
     }
 
-    public void setDueDate(String dueDate) {
+    public void setDueDate(Date dueDate) {
         DueDate = dueDate;
     }
 
-    public String getPriorityID() {
+    public Integer getPriorityID() {
         return PriorityID;
     }
 
-    public void setPriorityID(String priorityID) {
+    public void setPriorityID(Integer priorityID) {
         PriorityID = priorityID;
     }
 
@@ -67,11 +69,11 @@ public class Task {
         OwnerName = ownerName;
     }
 
-    public String getStatusID() {
+    public Integer getStatusID() {
         return StatusID;
     }
 
-    public void setStatusID(String statusID) {
+    public void setStatusID(Integer statusID) {
         StatusID = statusID;
     }
 }
