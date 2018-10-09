@@ -19,7 +19,8 @@
                 <category android:name="android.intent.category.LAUNCHER" />
             </intent-filter>
         </activity>
-        <activity android:name=".Activities.AddLead"></activity>
+        <activity android:name=".Activities.AddLead" />
+        <activity android:name=".Activities.ListViews"></activity>
     </application>
 
 </manifest>

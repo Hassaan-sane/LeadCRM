@@ -1,5 +1,6 @@
 package com.example.hassaan.leadcrm;
 
+import android.content.Intent;
 import android.database.Cursor;
 import android.os.Bundle;
 import android.support.design.widget.FloatingActionButton;
@@ -18,6 +19,7 @@ import android.widget.EditText;
 import android.widget.TextView;
 import android.widget.Toast;
 
+import com.example.hassaan.leadcrm.Activities.ListViews;
 import com.example.hassaan.leadcrm.Data.DBHelper;
 import com.example.hassaan.leadcrm.Fragments.AboutusFragment;
 import com.example.hassaan.leadcrm.Fragments.AccountsFragment;
@@ -161,7 +163,7 @@ public class MainActivity extends AppCompatActivity
             getSupportActionBar().setTitle("Feeds");
 
         } else if (id == R.id.nav_leads) {
-
+            
             fragmentManager.beginTransaction().replace(R.id.container, new LeadsFragment()).commit();
             getSupportActionBar().setTitle("Leads");
 
