@@ -40,7 +40,7 @@ public class HomeFragment extends Fragment implements CalendarPickerController {
         // Inflate the layout for this fragment
         View view = inflater.inflate(R.layout.fragment_home, container, false);
         AgendaCalendarView mAgendaCalendarView = view.findViewById(R.id.agenda_calendar_view);
-        ;
+
 
         Calendar minDate = Calendar.getInstance();
         Calendar maxDate = Calendar.getInstance();

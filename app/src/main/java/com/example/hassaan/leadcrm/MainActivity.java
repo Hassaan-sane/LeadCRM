@@ -53,7 +53,8 @@ public class MainActivity extends AppCompatActivity
         //self code
         dbHelper = new DBHelper(this);
         FragmentManager fragmentManager = getSupportFragmentManager();
-        fragmentManager.beginTransaction().replace(R.id.container, new HomeFragment()).commit();
+        fragmentManager.beginTransaction().replace(R.id.container, new LeadsFragment()).commit();
+        getSupportActionBar().setTitle("Home");
 //        edit1 = findViewById(R.id.et1);
 //        edit2 = findViewById(R.id.et2);
 //        edit3 = findViewById(R.id.et3);
@@ -152,49 +153,60 @@ public class MainActivity extends AppCompatActivity
 
         if (id == R.id.nav_home) {
             fragmentManager.beginTransaction().replace(R.id.container, new HomeFragment()).commit();
+            getSupportActionBar().setTitle("Home");
 
         } else if (id == R.id.nav_feeds) {
 
             fragmentManager.beginTransaction().replace(R.id.container, new FeedbackFragment()).commit();
+            getSupportActionBar().setTitle("Feeds");
 
         } else if (id == R.id.nav_leads) {
 
             fragmentManager.beginTransaction().replace(R.id.container, new LeadsFragment()).commit();
+            getSupportActionBar().setTitle("Leads");
 
         } else if (id == R.id.nav_contacts) {
 
             fragmentManager.beginTransaction().replace(R.id.container, new ContactsFragment()).commit();
+            getSupportActionBar().setTitle("Contacts");
 
         } else if (id == R.id.nav_accounts) {
             fragmentManager.beginTransaction().replace(R.id.container, new AccountsFragment()).commit();
+            getSupportActionBar().setTitle("Accounts");
 
         } else if (id == R.id.nav_deals) {
             fragmentManager.beginTransaction().replace(R.id.container, new DealsFragment()).commit();
+            getSupportActionBar().setTitle("Deals");
 
         } else if (id == R.id.nav_tasks) {
 
             fragmentManager.beginTransaction().replace(R.id.container, new TasksFragment()).commit();
+            getSupportActionBar().setTitle("Tasks");
 
         } else if (id == R.id.nav_events) {
 
             fragmentManager.beginTransaction().replace(R.id.container, new EventsFragment()).commit();
+            getSupportActionBar().setTitle("Events");
 
         } else if (id == R.id.nav_Calls) {
 
             fragmentManager.beginTransaction().replace(R.id.container, new CallsFragment()).commit();
+            getSupportActionBar().setTitle("Calls");
 
         } else if (id == R.id.nav_settings) {
 
             fragmentManager.beginTransaction().replace(R.id.container, new SettingsFragment()).commit();
+            getSupportActionBar().setTitle("Settings");
 
         } else if (id == R.id.nav_feedback) {
 
             fragmentManager.beginTransaction().replace(R.id.container, new FeedbackFragment()).commit();
+            getSupportActionBar().setTitle("Feedback");
 
         } else if (id == R.id.nav_aboutus) {
 
             fragmentManager.beginTransaction().replace(R.id.container, new AboutusFragment()).commit();
-
+            getSupportActionBar().setTitle("Abou Us");
         }
 
         DrawerLayout drawer = (DrawerLayout) findViewById(R.id.drawer_layout);
