@@ -53,7 +53,7 @@ public class MainActivity extends AppCompatActivity
         //self code
         dbHelper = new DBHelper(this);
         FragmentManager fragmentManager = getSupportFragmentManager();
-        fragmentManager.beginTransaction().replace(R.id.container, new LeadsFragment()).commit();
+        fragmentManager.beginTransaction().replace(R.id.container, new HomeFragment()).commit();
         getSupportActionBar().setTitle("Home");
 //        edit1 = findViewById(R.id.et1);
 //        edit2 = findViewById(R.id.et2);

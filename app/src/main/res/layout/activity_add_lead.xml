@@ -1,0 +1,344 @@
+<?xml version="1.0" encoding="utf-8"?>
+<ScrollView xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:fillViewport="true"
+    android:scrollbars = "vertical"
+    tools:context=".Activities.AddLead">
+
+    <LinearLayout
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        android:orientation="vertical">
+
+        <LinearLayout
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:orientation="vertical"
+            android:background="#d4d6d8"
+            android:id="@+id/Header">
+
+            <TextView
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:paddingTop="15dp"
+                android:paddingLeft="10dp"
+                android:paddingBottom="10dp"
+                android:text="LEAD INFORMATION"/>
+        </LinearLayout>
+
+        <LinearLayout
+            android:layout_width="match_parent"
+            android:layout_height="match_parent"
+            android:orientation="vertical">
+
+            <LinearLayout
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:orientation="horizontal">
+
+                <TextView
+                    android:id="@+id/tv_photo_lead"
+                    android:layout_width="150dp"
+                    android:layout_height="wrap_content"
+                    android:text="Photo"
+                    android:paddingTop="10dp"
+                    android:gravity="right"
+                    android:background="#edeff2"
+                    android:paddingRight="10dp"
+                    android:paddingBottom="50dp"/>
+                <ImageButton
+                    android:id="@+id/ib_image_lead"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:background="@drawable/ic_add_camera"
+                    android:paddingTop="20dp"
+                    android:paddingLeft="20dp"
+                    android:layout_marginHorizontal="20dp"
+                    android:layout_marginTop="10dp"
+                    />
+
+            </LinearLayout>
+
+            <LinearLayout
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:orientation="horizontal">
+
+                <TextView
+                    android:id="@+id/tv_leadOwner_lead"
+                    android:layout_width="150dp"
+                    android:layout_height="wrap_content"
+                    android:text="Lead Owner"
+                    android:paddingTop="20dp"
+                    android:gravity="right"
+                    android:background="#edeff2"
+                    android:paddingRight="10dp"
+                    android:paddingBottom="20dp"/>
+                <LinearLayout
+                    android:layout_width="match_parent"
+                    android:layout_height="match_parent"
+                    android:orientation="horizontal">
+                    <EditText
+                        android:id="@+id/et_leadOwner_lead"
+                        android:layout_width="match_parent"
+                        android:layout_height="match_parent"
+                        app:backgroundTint="#edeff2"/>
+                </LinearLayout>
+
+
+            </LinearLayout>
+
+            <LinearLayout
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:orientation="horizontal">
+
+                <TextView
+                    android:id="@+id/tv_company_lead"
+                    android:layout_width="150dp"
+                    android:layout_height="wrap_content"
+                    android:text="Company"
+                    android:paddingTop="20dp"
+                    android:gravity="right"
+                    android:background="#edeff2"
+                    android:paddingRight="10dp"
+                    android:paddingBottom="20dp"/>
+                <LinearLayout
+                    android:layout_width="match_parent"
+                    android:layout_height="match_parent"
+                    android:orientation="horizontal">
+                    <EditText
+                        android:id="@+id/et_company_lead"
+                        android:layout_width="match_parent"
+                        android:layout_height="match_parent"
+                        app:backgroundTint="#edeff2"/>
+                </LinearLayout>
+            </LinearLayout>
+
+            <LinearLayout
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:orientation="horizontal">
+
+                <TextView
+                    android:id="@+id/tv_title_lead"
+                    android:layout_width="150dp"
+                    android:layout_height="wrap_content"
+                    android:text="Title"
+                    android:paddingTop="20dp"
+                    android:gravity="right"
+                    android:background="#edeff2"
+                    android:paddingRight="10dp"
+                    android:paddingBottom="20dp"/>
+                <LinearLayout
+                    android:layout_width="match_parent"
+                    android:layout_height="match_parent"
+                    android:orientation="horizontal">
+                    <EditText
+                        android:id="@+id/et_title_lead"
+                        android:layout_width="match_parent"
+                        android:layout_height="match_parent"
+                        app:backgroundTint="#edeff2"/>
+                </LinearLayout>
+            </LinearLayout>
+
+            <LinearLayout
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:orientation="horizontal">
+
+                <TextView
+                    android:id="@+id/tv_mobile_lead"
+                    android:layout_width="150dp"
+                    android:layout_height="wrap_content"
+                    android:text="Mobile"
+                    android:paddingTop="20dp"
+                    android:gravity="right"
+                    android:background="#edeff2"
+                    android:paddingRight="10dp"
+                    android:paddingBottom="20dp"/>
+                <LinearLayout
+                    android:layout_width="match_parent"
+                    android:layout_height="match_parent"
+                    android:orientation="horizontal">
+                    <EditText
+                        android:id="@+id/et_mobile_lead"
+                        android:layout_width="match_parent"
+                        android:layout_height="match_parent"
+                        app:backgroundTint="#edeff2"/>
+                </LinearLayout>
+            </LinearLayout>
+
+            <LinearLayout
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:orientation="horizontal">
+
+                <TextView
+                    android:id="@+id/tv_phone_lead"
+                    android:layout_width="150dp"
+                    android:layout_height="wrap_content"
+                    android:text="Phone"
+                    android:paddingTop="20dp"
+                    android:gravity="right"
+                    android:background="#edeff2"
+                    android:paddingRight="10dp"
+                    android:paddingBottom="20dp"/>
+                <LinearLayout
+                    android:layout_width="match_parent"
+                    android:layout_height="match_parent"
+                    android:orientation="horizontal">
+                    <EditText
+                        android:id="@+id/et_phone_lead"
+                        android:layout_width="match_parent"
+                        android:layout_height="match_parent"
+                        app:backgroundTint="#edeff2"/>
+                </LinearLayout>
+            </LinearLayout>
+
+            <LinearLayout
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:orientation="horizontal">
+
+                <TextView
+                    android:id="@+id/tv_annualRevenue_lead"
+                    android:layout_width="150dp"
+                    android:layout_height="wrap_content"
+                    android:text="Annual Revenue"
+                    android:paddingTop="20dp"
+                    android:gravity="right"
+                    android:background="#edeff2"
+                    android:paddingRight="10dp"
+                    android:paddingBottom="20dp"/>
+                <LinearLayout
+                    android:layout_width="match_parent"
+                    android:layout_height="match_parent"
+                    android:orientation="horizontal">
+                    <EditText
+                        android:id="@+id/et_annualRevenue_lead"
+                        android:layout_width="match_parent"
+                        android:layout_height="match_parent"
+                        app:backgroundTint="#edeff2"/>
+                </LinearLayout>
+            </LinearLayout>
+
+            <LinearLayout
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:orientation="horizontal">
+
+                <TextView
+                    android:id="@+id/tv_email_lead"
+                    android:layout_width="150dp"
+                    android:layout_height="wrap_content"
+                    android:text="Email"
+                    android:paddingTop="20dp"
+                    android:gravity="right"
+                    android:background="#edeff2"
+                    android:paddingRight="10dp"
+                    android:paddingBottom="20dp"/>
+                <LinearLayout
+                    android:layout_width="match_parent"
+                    android:layout_height="match_parent"
+                    android:orientation="horizontal">
+                    <EditText
+                        android:id="@+id/et_email_lead"
+                        android:layout_width="match_parent"
+                        android:layout_height="match_parent"
+                        app:backgroundTint="#edeff2"/>
+                </LinearLayout>
+            </LinearLayout>
+
+            <LinearLayout
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:orientation="horizontal">
+
+                <TextView
+                    android:id="@+id/tv_website_lead"
+                    android:layout_width="150dp"
+                    android:layout_height="wrap_content"
+                    android:text="Website"
+                    android:paddingTop="20dp"
+                    android:gravity="right"
+                    android:background="#edeff2"
+                    android:paddingRight="10dp"
+                    android:paddingBottom="20dp"/>
+                <LinearLayout
+                    android:layout_width="match_parent"
+                    android:layout_height="match_parent"
+                    android:orientation="horizontal">
+                    <EditText
+                        android:id="@+id/et_website_lead"
+                        android:layout_width="match_parent"
+                        android:layout_height="match_parent"
+                        app:backgroundTint="#edeff2"/>
+                </LinearLayout>
+            </LinearLayout>
+
+            <LinearLayout
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:orientation="horizontal">
+
+                <TextView
+                    android:id="@+id/tv_noOfEmploye_lead"
+                    android:layout_width="150dp"
+                    android:layout_height="wrap_content"
+                    android:text="No Of Employees"
+                    android:paddingTop="20dp"
+                    android:gravity="right"
+                    android:background="#edeff2"
+                    android:paddingRight="10dp"
+                    android:paddingBottom="20dp"/>
+                <LinearLayout
+                    android:layout_width="match_parent"
+                    android:layout_height="match_parent"
+                    android:orientation="horizontal">
+                    <EditText
+                        android:id="@+id/et_noOfEmploye_lead"
+                        android:layout_width="match_parent"
+                        android:layout_height="match_parent"
+                        app:backgroundTint="#edeff2"/>
+                </LinearLayout>
+            </LinearLayout>
+
+            <LinearLayout
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:orientation="horizontal">
+
+                <TextView
+                    android:id="@+id/tv_skypeId_lead"
+                    android:layout_width="150dp"
+                    android:layout_height="wrap_content"
+                    android:text="Skype ID"
+                    android:paddingTop="20dp"
+                    android:gravity="right"
+                    android:background="#edeff2"
+                    android:paddingRight="10dp"
+                    android:paddingBottom="20dp"/>
+                <LinearLayout
+                    android:layout_width="match_parent"
+                    android:layout_height="match_parent"
+                    android:orientation="horizontal">
+                    <EditText
+                        android:id="@+id/et_skypeId_lead"
+                        android:layout_width="match_parent"
+                        android:layout_height="match_parent"
+                        app:backgroundTint="#edeff2"/>
+                </LinearLayout>
+            </LinearLayout>
+
+        </LinearLayout>
+
+    </LinearLayout>
+
+
+
+
+</ScrollView>

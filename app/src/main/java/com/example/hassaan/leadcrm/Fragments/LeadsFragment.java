@@ -1,6 +1,7 @@
 package com.example.hassaan.leadcrm.Fragments;
 
 import android.content.Context;
+import android.content.Intent;
 import android.graphics.Color;
 import android.net.Uri;
 import android.os.Bundle;
@@ -16,6 +17,7 @@ import android.widget.ArrayAdapter;
 import android.widget.Spinner;
 import android.widget.TextView;
 
+import com.example.hassaan.leadcrm.Activities.AddLead;
 import com.example.hassaan.leadcrm.R;
 
 public class LeadsFragment extends Fragment implements AdapterView.OnItemSelectedListener {
@@ -55,8 +57,8 @@ public class LeadsFragment extends Fragment implements AdapterView.OnItemSelecte
         fab.setOnClickListener(new View.OnClickListener() {
             @Override
             public void onClick(View view) {
-                Snackbar.make(view, "Replace with your own action", Snackbar.LENGTH_LONG)
-                        .setAction("Action", null).show();
+                Intent intent=new Intent(getContext(),AddLead.class);
+                startActivity(intent);
             }
         });
 
@@ -74,5 +76,5 @@ public class LeadsFragment extends Fragment implements AdapterView.OnItemSelecte
 
     }
 
-   
+
 }
