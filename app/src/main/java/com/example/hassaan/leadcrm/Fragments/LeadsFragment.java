@@ -2,14 +2,9 @@ package com.example.hassaan.leadcrm.Fragments;
 
 import android.content.Context;
 import android.content.Intent;
-import android.graphics.Color;
-import android.net.Uri;
 import android.os.Bundle;
 import android.support.design.widget.FloatingActionButton;
-import android.support.design.widget.Snackbar;
 import android.support.v4.app.Fragment;
-import android.support.v7.app.AppCompatActivity;
-import android.support.v7.widget.Toolbar;
 import android.view.LayoutInflater;
 import android.view.View;
 import android.view.ViewGroup;
@@ -18,7 +13,7 @@ import android.widget.ArrayAdapter;
 import android.widget.Spinner;
 import android.widget.TextView;
 
-import com.example.hassaan.leadcrm.Activities.AddLead;
+import com.example.hassaan.leadcrm.Activities.AddLeadActivity;
 import com.example.hassaan.leadcrm.R;
 
 public class LeadsFragment extends Fragment implements AdapterView.OnItemSelectedListener {
@@ -55,7 +50,7 @@ public class LeadsFragment extends Fragment implements AdapterView.OnItemSelecte
         fab.setOnClickListener(new View.OnClickListener() {
             @Override
             public void onClick(View view) {
-                Intent intent=new Intent(getContext(),AddLead.class);
+                Intent intent=new Intent(getContext(),AddLeadActivity.class);
                 startActivity(intent);
             }
         });
