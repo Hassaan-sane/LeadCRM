@@ -51,6 +51,7 @@ public class MainActivity extends AppCompatActivity
         setContentView(R.layout.activity_main2);
         Toolbar toolbar = (Toolbar) findViewById(R.id.toolbar);
         setSupportActionBar(toolbar);
+        getSupportActionBar().setDisplayShowHomeEnabled(true);
 
         //self code
         dbHelper = new DBHelper(this);
@@ -163,7 +164,10 @@ public class MainActivity extends AppCompatActivity
             getSupportActionBar().setTitle("Feeds");
 
         } else if (id == R.id.nav_leads) {
-            
+
+//            Intent intent=new Intent(this,ListViews.class);
+//            startActivity(intent);
+
             fragmentManager.beginTransaction().replace(R.id.container, new LeadsFragment()).commit();
             getSupportActionBar().setTitle("Leads");
 
