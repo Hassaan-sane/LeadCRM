@@ -1,12 +1,7 @@
 package com.example.hassaan.leadcrm;
 
-import android.content.Intent;
-import android.database.Cursor;
 import android.os.Bundle;
-import android.support.design.widget.FloatingActionButton;
-import android.support.design.widget.Snackbar;
 import android.support.v4.app.FragmentManager;
-import android.view.View;
 import android.support.design.widget.NavigationView;
 import android.support.v4.view.GravityCompat;
 import android.support.v4.widget.DrawerLayout;
@@ -14,12 +9,7 @@ import android.support.v7.app.ActionBarDrawerToggle;
 import android.support.v7.app.AppCompatActivity;
 import android.support.v7.widget.Toolbar;
 import android.view.MenuItem;
-import android.widget.Button;
-import android.widget.EditText;
-import android.widget.TextView;
-import android.widget.Toast;
 
-import com.example.hassaan.leadcrm.Activities.ListViews;
 import com.example.hassaan.leadcrm.Data.DBHelper;
 import com.example.hassaan.leadcrm.Fragments.AboutusFragment;
 import com.example.hassaan.leadcrm.Fragments.AccountsFragment;
@@ -165,7 +155,7 @@ public class MainActivity extends AppCompatActivity
 
         } else if (id == R.id.nav_leads) {
 
-//            Intent intent=new Intent(this,ListViews.class);
+//            Intent intent=new Intent(this,ListViewsActivity.class);
 //            startActivity(intent);
 
             fragmentManager.beginTransaction().replace(R.id.container, new LeadsFragment()).commit();
