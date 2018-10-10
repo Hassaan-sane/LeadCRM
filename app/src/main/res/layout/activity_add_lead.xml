@@ -85,7 +85,7 @@
                         android:id="@+id/et_leadOwner_lead"
                         android:layout_width="match_parent"
                         android:layout_height="match_parent"
-                        app:backgroundTint="#edeff2"/>
+                        android:backgroundTint="#edeff2"/>
                 </LinearLayout>
 
 
@@ -114,7 +114,7 @@
                         android:id="@+id/et_company_lead"
                         android:layout_width="match_parent"
                         android:layout_height="match_parent"
-                        app:backgroundTint="#edeff2"/>
+                        android:backgroundTint="#edeff2"/>
                 </LinearLayout>
             </LinearLayout>
 
@@ -141,7 +141,7 @@
                         android:id="@+id/et_title_lead"
                         android:layout_width="match_parent"
                         android:layout_height="match_parent"
-                        app:backgroundTint="#edeff2"/>
+                        android:backgroundTint="#edeff2"/>
                 </LinearLayout>
             </LinearLayout>
 
