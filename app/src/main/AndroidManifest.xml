@@ -19,9 +19,13 @@
                 <category android:name="android.intent.category.LAUNCHER" />
             </intent-filter>
         </activity>
-        <activity android:name=".Activities.AddLeadActivity"
-            android:parentActivityName=".Activities.AddLeadActivity"/>
-        <activity android:name=".Activities.ListViewsActivity"></activity>
+        <activity
+            android:name=".Activities.AddLeadActivity"
+            android:parentActivityName=".Activities.AddLeadActivity" />
+        <activity android:name=".Activities.ListViewsActivity" />
+        <activity android:name=".Activities.AddEventActivity"
+            android:parentActivityName=".Activities.AddEventActivity"
+            ></activity>
     </application>
 
 </manifest>

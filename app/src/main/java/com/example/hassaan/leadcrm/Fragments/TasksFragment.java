@@ -11,7 +11,6 @@ import android.view.View;
 import android.view.ViewGroup;
 import android.widget.SearchView;
 
-import com.example.hassaan.leadcrm.Activities.AddLead;
 import com.example.hassaan.leadcrm.Activities.AddTaskActivity;
 import com.example.hassaan.leadcrm.R;
 
