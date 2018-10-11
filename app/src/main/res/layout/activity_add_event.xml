@@ -1,0 +1,249 @@
+<?xml version="1.0" encoding="utf-8"?>
+<ScrollView xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:fillViewport="true"
+    android:scrollbars = "vertical"
+    tools:context=".Activities.AddEventActivity">
+
+    <LinearLayout
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        android:orientation="vertical">
+
+        <LinearLayout
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:orientation="vertical"
+            android:background="#d4d6d8"
+            android:id="@+id/Header">
+
+            <TextView
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:paddingTop="15dp"
+                android:paddingLeft="10dp"
+                android:paddingBottom="10dp"
+                android:text="LEAD INFORMATION"/>
+        </LinearLayout>
+
+        <LinearLayout
+            android:layout_width="match_parent"
+            android:layout_height="match_parent"
+            android:orientation="vertical">
+
+            <LinearLayout
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:orientation="horizontal">
+
+                <TextView
+                    android:id="@+id/tv_eventname_event"
+                    android:layout_width="150dp"
+                    android:layout_height="wrap_content"
+                    android:text="Title"
+                    android:paddingTop="20dp"
+                    android:gravity="right"
+                    android:background="#edeff2"
+                    android:paddingRight="10dp"
+                    android:paddingBottom="20dp"/>
+                <LinearLayout
+                    android:layout_width="match_parent"
+                    android:layout_height="match_parent"
+                    android:orientation="horizontal">
+                    <EditText
+                        android:id="@+id/et_eventname_event"
+                        android:layout_width="match_parent"
+                        android:layout_height="match_parent"
+                        android:backgroundTint="#edeff2"/>
+                </LinearLayout>
+
+
+            </LinearLayout>
+
+            <LinearLayout
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:orientation="horizontal">
+
+                <TextView
+                    android:id="@+id/tv_location_event"
+                    android:layout_width="150dp"
+                    android:layout_height="wrap_content"
+                    android:text="Location"
+                    android:paddingTop="20dp"
+                    android:gravity="right"
+                    android:background="#edeff2"
+                    android:paddingRight="10dp"
+                    android:paddingBottom="20dp"/>
+                <LinearLayout
+                    android:layout_width="match_parent"
+                    android:layout_height="match_parent"
+                    android:orientation="horizontal">
+                    <EditText
+                        android:id="@+id/et_location_event"
+                        android:layout_width="match_parent"
+                        android:layout_height="match_parent"
+                        android:backgroundTint="#edeff2"/>
+                </LinearLayout>
+            </LinearLayout>
+
+            <LinearLayout
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:orientation="horizontal">
+
+                <TextView
+                    android:id="@+id/tv_hostname_event"
+                    android:layout_width="150dp"
+                    android:layout_height="wrap_content"
+                    android:text="Host Name"
+                    android:paddingTop="20dp"
+                    android:gravity="right"
+                    android:background="#edeff2"
+                    android:paddingRight="10dp"
+                    android:paddingBottom="20dp"/>
+                <LinearLayout
+                    android:layout_width="match_parent"
+                    android:layout_height="match_parent"
+                    android:orientation="horizontal">
+                    <EditText
+                        android:id="@+id/et_hostname_event"
+                        android:layout_width="match_parent"
+                        android:layout_height="match_parent"
+                        android:backgroundTint="#edeff2"/>
+                </LinearLayout>
+            </LinearLayout>
+
+            <LinearLayout
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:orientation="horizontal">
+
+                <TextView
+                    android:id="@+id/tv_startdate_event"
+                    android:layout_width="150dp"
+                    android:layout_height="wrap_content"
+                    android:text="Start Date"
+                    android:paddingTop="20dp"
+                    android:gravity="right"
+                    android:background="#edeff2"
+                    android:paddingRight="10dp"
+                    android:paddingBottom="20dp"/>
+                <LinearLayout
+                    android:layout_width="match_parent"
+                    android:layout_height="match_parent"
+                    android:orientation="horizontal">
+                    <Button
+                        android:id="@+id/bt_startdate_event"
+                        android:layout_width="wrap_content"
+                        android:layout_height="match_parent"
+                        android:text="Select Start Date..."
+                        android:paddingLeft="20dp"
+                        android:textColor="#b0b1b2"
+                        android:background="@android:color/transparent"/>
+                </LinearLayout>
+            </LinearLayout>
+
+            <LinearLayout
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:orientation="horizontal">
+
+                <TextView
+                    android:id="@+id/tv_enddate_event"
+                    android:layout_width="150dp"
+                    android:layout_height="wrap_content"
+                    android:text="End Date"
+                    android:paddingTop="20dp"
+                    android:gravity="right"
+                    android:background="#edeff2"
+                    android:paddingRight="10dp"
+                    android:paddingBottom="20dp"/>
+                <LinearLayout
+                    android:layout_width="match_parent"
+                    android:layout_height="match_parent"
+                    android:orientation="horizontal">
+                    <Button
+                        android:id="@+id/bt_enddate_event"
+                        android:layout_width="wrap_content"
+                        android:layout_height="match_parent"
+                        android:text="Select End Date..."
+                        android:paddingLeft="20dp"
+                        android:textColor="#b0b1b2"
+                        android:background="@android:color/transparent"/>
+                </LinearLayout>
+            </LinearLayout>
+
+            <LinearLayout
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:orientation="horizontal">
+
+                <TextView
+                    android:id="@+id/tv_starttime_event"
+                    android:layout_width="150dp"
+                    android:layout_height="wrap_content"
+                    android:text="Start Time"
+                    android:paddingTop="20dp"
+                    android:gravity="right"
+                    android:background="#edeff2"
+                    android:paddingRight="10dp"
+                    android:paddingBottom="20dp"/>
+                <LinearLayout
+                    android:layout_width="match_parent"
+                    android:layout_height="match_parent"
+                    android:orientation="horizontal">
+                    <Button
+                        android:id="@+id/bt_starttime_event"
+                        android:layout_width="wrap_content"
+                        android:layout_height="match_parent"
+                        android:text="Select Start Time..."
+                        android:paddingLeft="20dp"
+                        android:textColor="#b0b1b2"
+                        android:background="@android:color/transparent"/>
+                </LinearLayout>
+            </LinearLayout>
+
+            <LinearLayout
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:orientation="horizontal">
+
+                <TextView
+                    android:id="@+id/tv_endtime_event"
+                    android:layout_width="150dp"
+                    android:layout_height="wrap_content"
+                    android:text="End Time"
+                    android:paddingTop="20dp"
+                    android:gravity="right"
+                    android:background="#edeff2"
+                    android:paddingRight="10dp"
+                    android:paddingBottom="20dp"/>
+                <LinearLayout
+                    android:layout_width="match_parent"
+                    android:layout_height="match_parent"
+                    android:orientation="horizontal">
+                    <Button
+                        android:id="@+id/bt_endtime_event"
+                        android:layout_width="wrap_content"
+                        android:layout_height="match_parent"
+                        android:text="Select End Time..."
+                        android:paddingLeft="20dp"
+                        android:textColor="#b0b1b2"
+                        android:background="@android:color/transparent"/>
+                </LinearLayout>
+            </LinearLayout>
+
+
+        </LinearLayout>
+
+
+    </LinearLayout>
+
+
+
+
+</ScrollView>
