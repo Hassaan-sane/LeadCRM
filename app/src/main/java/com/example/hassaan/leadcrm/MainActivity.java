@@ -18,6 +18,7 @@ import com.example.hassaan.leadcrm.Fragments.ContactsFragment;
 import com.example.hassaan.leadcrm.Fragments.DealsFragment;
 import com.example.hassaan.leadcrm.Fragments.EventsFragment;
 import com.example.hassaan.leadcrm.Fragments.FeedbackFragment;
+import com.example.hassaan.leadcrm.Fragments.FeedsFragment;
 import com.example.hassaan.leadcrm.Fragments.HomeFragment;
 import com.example.hassaan.leadcrm.Fragments.LeadsFragment;
 import com.example.hassaan.leadcrm.Fragments.SettingsFragment;
@@ -150,7 +151,7 @@ public class MainActivity extends AppCompatActivity
 
         } else if (id == R.id.nav_feeds) {
 
-            fragmentManager.beginTransaction().replace(R.id.container, new FeedbackFragment()).commit();
+            fragmentManager.beginTransaction().replace(R.id.container, new FeedsFragment()).commit();
             getSupportActionBar().setTitle("Feeds");
 
         } else if (id == R.id.nav_leads) {

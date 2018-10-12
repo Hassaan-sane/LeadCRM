@@ -23,9 +23,12 @@
             android:name=".Activities.AddLeadActivity"
             android:parentActivityName=".Activities.AddLeadActivity" />
         <activity android:name=".Activities.ListViewsActivity" />
-        <activity android:name=".Activities.AddEventActivity"
-            android:parentActivityName=".Activities.AddEventActivity"
-            ></activity>
+        <activity
+            android:name=".Activities.AddEventActivity"
+            android:parentActivityName=".Activities.AddEventActivity" />
+        <activity android:name=".Activities.AddFeedActivity"
+            android:parentActivityName=".Activities.AddFeedActivity">
+        </activity>
     </application>
 
 </manifest>

@@ -14,7 +14,7 @@ public class Leads {
     public static final String KEY_Industry = "Industry";
     public static final String KEY_AnnualRevenue = "AnnualRevenue";
     public static final String KEY_ModifiedBy = "ModifiedDate";
-    public static final String KEY_CompanyName = "GroupName";
+    public static final String KEY_CompanyName = "CompanyName";
     public static final String KEY_LeadName = "LeadName";
     public static final String KEY_Email = "LeadEmail";
     public static final String KEY_Website = "Website";
