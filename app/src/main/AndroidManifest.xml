@@ -26,9 +26,11 @@
         <activity
             android:name=".Activities.AddEventActivity"
             android:parentActivityName=".Activities.AddEventActivity" />
-        <activity android:name=".Activities.AddFeedActivity"
-            android:parentActivityName=".Activities.AddFeedActivity">
-        </activity>
+        <activity
+            android:name=".Activities.AddFeedActivity"
+            android:parentActivityName=".Activities.AddFeedActivity"></activity>
+        <activity android:name=".Activities.AddAccountActivity"
+            android:parentActivityName=".Activities.AddAccountActivity"></activity>
     </application>
 
 </manifest>

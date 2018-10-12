@@ -9,12 +9,10 @@ import android.view.LayoutInflater;
 import android.view.View;
 import android.view.ViewGroup;
 import android.widget.AdapterView;
-import android.widget.ArrayAdapter;
-import android.widget.Spinner;
 import android.widget.TextView;
 
 import com.example.hassaan.leadcrm.Activities.AddLeadActivity;
-import com.example.hassaan.leadcrm.Adapters.ListViewAdapter;
+import com.example.hassaan.leadcrm.Adapters.LeadListViewAdapter;
 import com.example.hassaan.leadcrm.R;
 
 import java.util.ArrayList;
@@ -51,7 +49,7 @@ public class LeadsFragment extends Fragment implements AdapterView.OnItemSelecte
         getsampledata();
 
         expandableStickyList = (ExpandableStickyListHeadersListView) view.findViewById(R.id.listView_leads);
-        StickyListHeadersAdapter adapter = new ListViewAdapter(getContext(),list);
+        StickyListHeadersAdapter adapter = new LeadListViewAdapter(getContext(),list);
         expandableStickyList.setAdapter(adapter);
         expandableStickyList.setOnHeaderClickListener(new StickyListHeadersListView.OnHeaderClickListener() {
             @Override
