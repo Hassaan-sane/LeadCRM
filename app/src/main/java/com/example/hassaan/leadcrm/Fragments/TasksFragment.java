@@ -34,7 +34,7 @@ public class TasksFragment extends Fragment {
         View view = inflater.inflate(R.layout.fragment_tasks, container, false);
 
         searchView = view.findViewById(R.id.searchViewTask);
-        searchView.setQueryHint("Search View");
+        searchView.setQueryHint("Search...");
         searchView.onActionViewExpanded();
 
         FloatingActionButton fab = view.findViewById(R.id.floating_Task);

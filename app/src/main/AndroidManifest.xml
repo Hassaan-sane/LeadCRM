@@ -29,6 +29,7 @@
         <activity android:name=".Activities.AddFeedActivity"
             android:parentActivityName=".Activities.AddFeedActivity">
         </activity>
+        <activity android:name=".Activities.AddContactsActivity"/>
     </application>
 
 </manifest>

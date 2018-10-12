@@ -203,7 +203,7 @@ public class MainActivity extends AppCompatActivity
         } else if (id == R.id.nav_aboutus) {
 
             fragmentManager.beginTransaction().replace(R.id.container, new AboutusFragment()).commit();
-            getSupportActionBar().setTitle("Abou Us");
+            getSupportActionBar().setTitle("About Us");
         }
 
         DrawerLayout drawer = (DrawerLayout) findViewById(R.id.drawer_layout);
