@@ -1,0 +1,93 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    android:layout_width="match_parent"
+    android:layout_height="wrap_content"
+    android:paddingBottom="15dp"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:orientation="vertical"
+    tools:context=".Fragments.FeedsFragment">
+
+    <RelativeLayout
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:background="@drawable/layout_design_recyclerview">
+
+        <ImageView
+            android:id="@+id/iv_image_feeds"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:background="@drawable/ic_menu_contacts"/>
+
+        <TextView
+            android:id="@+id/tv_name_feeds"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:text="Full name"
+            android:layout_alignTop="@+id/iv_image_feeds"
+            android:layout_alignParentStart="true"
+            android:layout_marginStart="40dp" />
+
+        <TextView
+            android:id="@+id/tv_posted_feeds"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:paddingBottom="10dp"
+            android:text="Posted something"
+            android:layout_alignTop="@+id/iv_image_feeds"
+            android:layout_alignParentStart="true"
+            android:layout_marginStart="40dp"
+            android:layout_marginTop="20dp"/>
+
+        <TextView
+            android:id="@+id/tv_time_feeds"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_alignTop="@+id/iv_image_feeds"
+            android:layout_alignParentEnd="true"
+            android:layout_marginTop="2dp"
+            android:text="2h ago" />
+    </RelativeLayout>
+
+    <!--<RelativeLayout-->
+        <!--android:layout_width="match_parent"-->
+        <!--android:layout_height="wrap_content"-->
+        <!--android:background="@drawable/layout_design">-->
+
+
+        <!--<TextView-->
+            <!--android:id="@+id/tv_namebefore_feeds"-->
+            <!--android:layout_width="wrap_content"-->
+            <!--android:layout_height="wrap_content"-->
+            <!--android:text="Full name"-->
+            <!--android:layout_alignParentStart="true"-->
+            <!--android:layout_marginStart="10dp" />-->
+
+        <!--<TextView-->
+            <!--android:id="@+id/tv_postedbefore_feeds"-->
+            <!--android:layout_width="wrap_content"-->
+            <!--android:layout_height="wrap_content"-->
+            <!--android:text="Posted something"-->
+            <!--android:layout_alignParentStart="true"-->
+            <!--android:layout_marginStart="10dp"-->
+            <!--android:layout_marginTop="20dp"/>-->
+
+
+    <!--</RelativeLayout>-->
+
+
+    <RelativeLayout
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:background="@drawable/layout_design_recyclerview">
+        <TextView
+            android:id="@+id/tv_message_feeds"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:paddingTop="10dp"
+            android:paddingBottom="10dp"
+            android:text="Message here"/>
+
+    </RelativeLayout>
+
+</LinearLayout>
