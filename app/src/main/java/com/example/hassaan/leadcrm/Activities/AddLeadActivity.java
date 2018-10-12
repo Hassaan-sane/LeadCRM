@@ -7,6 +7,7 @@ import android.util.Log;
 import android.view.View;
 import android.widget.Button;
 
+import com.example.hassaan.leadcrm.Fragments.LeadsFragment;
 import com.example.hassaan.leadcrm.R;
 
 import java.util.ArrayList;
@@ -28,7 +29,6 @@ public class AddLeadActivity extends AppCompatActivity implements View.OnClickLi
         industry=findViewById(R.id.bt_industry_lead);
         leadsource.setOnClickListener(this);
         industry.setOnClickListener(this);
-
         list.add("Red");
         list.add("Blue");
         list.add("Green");
