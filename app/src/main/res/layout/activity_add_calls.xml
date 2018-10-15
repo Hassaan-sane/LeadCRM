@@ -5,8 +5,8 @@
     android:layout_width="match_parent"
     android:layout_height="match_parent"
     android:fillViewport="true"
-    android:scrollbars = "vertical"
-    tools:context=".Activities.AddLeadActivity">
+    android:scrollbars="vertical"
+    tools:context=".Activities.AddCallActivity">
 
     <LinearLayout
         android:layout_width="match_parent"
@@ -14,19 +14,19 @@
         android:orientation="vertical">
 
         <LinearLayout
+            android:id="@+id/Header"
             android:layout_width="match_parent"
             android:layout_height="wrap_content"
-            android:orientation="vertical"
             android:background="#d4d6d8"
-            android:id="@+id/Header">
+            android:orientation="vertical">
 
             <TextView
                 android:layout_width="match_parent"
                 android:layout_height="wrap_content"
-                android:paddingTop="15dp"
                 android:paddingLeft="10dp"
+                android:paddingTop="15dp"
                 android:paddingBottom="10dp"
-                android:text="CALL INFORMATION"/>
+                android:text="CALL INFORMATION" />
         </LinearLayout>
 
         <LinearLayout
@@ -40,79 +40,24 @@
                 android:orientation="horizontal">
 
                 <TextView
-                    android:id="@+id/tv_photo_lead"
                     android:layout_width="150dp"
-                    android:layout_height="wrap_content"
-                    android:text="Type"
+                    android:layout_height="match_parent"
+                    android:background="#edeff2"
+                    android:gravity="right"
                     android:paddingTop="10dp"
-                    android:gravity="right"
-                    android:background="#edeff2"
                     android:paddingRight="10dp"
-                    android:paddingBottom="20dp"/>
-               <TextView
-                   android:layout_width="match_parent"
-                   android:layout_height="wrap_content"
-                   android:paddingTop="10dp"
-                   android:paddingRight="10dp"
-                   android:paddingBottom="20dp"
-                   android:drawableRight="@drawable/ic_chevron_right_black_24dp"/>
-
-            </LinearLayout>
-
-            <LinearLayout
-                android:layout_width="match_parent"
-                android:layout_height="wrap_content"
-                android:orientation="horizontal">
+                    android:paddingBottom="20dp"
+                    android:text="Type" />
 
                 <TextView
-                    android:id="@+id/tv_leadOwner_lead"
-                    android:layout_width="150dp"
-                    android:layout_height="wrap_content"
-                    android:text="Contact"
-                    android:paddingTop="20dp"
-                    android:gravity="right"
-                    android:background="#edeff2"
-                    android:paddingRight="10dp"
-                    android:paddingBottom="20dp"/>
-                <LinearLayout
+                    android:id="@+id/type_calls"
                     android:layout_width="match_parent"
                     android:layout_height="match_parent"
-                    android:orientation="horizontal">
-                    <EditText
-                        android:id="@+id/et_leadOwner_lead"
-                        android:layout_width="match_parent"
-                        android:layout_height="match_parent"
-                        android:backgroundTint="#edeff2"/>
-                </LinearLayout>
-
-
-            </LinearLayout>
-
-            <LinearLayout
-                android:layout_width="match_parent"
-                android:layout_height="wrap_content"
-                android:orientation="horizontal">
-
-                <TextView
-                    android:id="@+id/tv_company_lead"
-                    android:layout_width="150dp"
-                    android:layout_height="wrap_content"
-                    android:text="Subject"
-                    android:paddingTop="20dp"
-                    android:gravity="right"
-                    android:background="#edeff2"
+                    android:drawableRight="@drawable/ic_chevron_right_black_24dp"
+                    android:paddingTop="10dp"
                     android:paddingRight="10dp"
-                    android:paddingBottom="20dp"/>
-                <LinearLayout
-                    android:layout_width="match_parent"
-                    android:layout_height="match_parent"
-                    android:orientation="horizontal">
-                    <EditText
-                        android:id="@+id/et_company_lead"
-                        android:layout_width="match_parent"
-                        android:layout_height="match_parent"
-                        android:backgroundTint="#edeff2"/>
-                </LinearLayout>
+                    android:paddingBottom="20dp" />
+
             </LinearLayout>
 
             <LinearLayout
@@ -121,7 +66,6 @@
                 android:orientation="horizontal">
 
                 <TextView
-                    android:id="@+id/tv_title_lead"
                     android:layout_width="150dp"
                     android:layout_height="wrap_content"
                     android:background="#edeff2"
@@ -129,16 +73,52 @@
                     android:paddingTop="20dp"
                     android:paddingRight="10dp"
                     android:paddingBottom="20dp"
-                    android:text="First Name" />
+                    android:text="Contact" />
+
                 <LinearLayout
                     android:layout_width="match_parent"
                     android:layout_height="match_parent"
                     android:orientation="horizontal">
-                    <EditText
-                        android:id="@+id/et_title_lead"
+
+                    <TextView
+                        android:id="@+id/contact_calls"
                         android:layout_width="match_parent"
                         android:layout_height="match_parent"
-                        android:backgroundTint="#edeff2"/>
+                        android:drawableRight="@drawable/ic_chevron_right_black_24dp"
+                        android:paddingTop="10dp"
+                        android:paddingRight="10dp"
+                        android:paddingBottom="20dp" />
+
+                </LinearLayout>
+
+
+            </LinearLayout>
+
+            <LinearLayout
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:orientation="horizontal">
+
+                <TextView
+                    android:layout_width="150dp"
+                    android:layout_height="wrap_content"
+                    android:background="#edeff2"
+                    android:gravity="right"
+                    android:paddingTop="20dp"
+                    android:paddingRight="10dp"
+                    android:paddingBottom="20dp"
+                    android:text="Subject" />
+
+                <LinearLayout
+                    android:layout_width="match_parent"
+                    android:layout_height="match_parent"
+                    android:orientation="horizontal">
+
+                    <EditText
+                        android:id="@+id/et_subject_calls"
+                        android:layout_width="match_parent"
+                        android:layout_height="match_parent"
+                        android:backgroundTint="#edeff2" />
                 </LinearLayout>
             </LinearLayout>
 
@@ -148,24 +128,29 @@
                 android:orientation="horizontal">
 
                 <TextView
-                    android:id="@+id/tv_mobile_lead"
                     android:layout_width="150dp"
                     android:layout_height="wrap_content"
-                    android:text="Last Name"
-                    android:paddingTop="20dp"
-                    android:gravity="right"
                     android:background="#edeff2"
+                    android:gravity="right"
+                    android:paddingTop="20dp"
                     android:paddingRight="10dp"
-                    android:paddingBottom="20dp"/>
+                    android:paddingBottom="20dp"
+                    android:text="Call Purpose" />
+
                 <LinearLayout
                     android:layout_width="match_parent"
                     android:layout_height="match_parent"
                     android:orientation="horizontal">
-                    <EditText
-                        android:id="@+id/et_mobile_lead"
+
+                    <TextView
+                        android:id="@+id/call_purpose_calls"
                         android:layout_width="match_parent"
                         android:layout_height="match_parent"
-                        app:backgroundTint="#edeff2"/>
+                        android:drawableRight="@drawable/ic_chevron_right_black_24dp"
+                        android:paddingTop="10dp"
+                        android:paddingRight="10dp"
+                        android:paddingBottom="20dp" />
+
                 </LinearLayout>
             </LinearLayout>
 
@@ -175,24 +160,29 @@
                 android:orientation="horizontal">
 
                 <TextView
-                    android:id="@+id/tv_phone_lead"
                     android:layout_width="150dp"
                     android:layout_height="wrap_content"
-                    android:text="Account Name"
-                    android:paddingTop="20dp"
-                    android:gravity="right"
                     android:background="#edeff2"
+                    android:gravity="right"
+                    android:paddingTop="20dp"
                     android:paddingRight="10dp"
-                    android:paddingBottom="20dp"/>
+                    android:paddingBottom="20dp"
+                    android:text="Account" />
+
                 <LinearLayout
                     android:layout_width="match_parent"
                     android:layout_height="match_parent"
                     android:orientation="horizontal">
-                    <EditText
-                        android:id="@+id/et_phone_lead"
+
+                    <TextView
+                        android:id="@+id/account_calls"
                         android:layout_width="match_parent"
                         android:layout_height="match_parent"
-                        app:backgroundTint="#edeff2"/>
+                        android:drawableRight="@drawable/ic_chevron_right_black_24dp"
+                        android:paddingTop="10dp"
+                        android:paddingRight="10dp"
+                        android:paddingBottom="20dp" />
+
                 </LinearLayout>
             </LinearLayout>
 
@@ -202,24 +192,29 @@
                 android:orientation="horizontal">
 
                 <TextView
-                    android:id="@+id/tv_annualRevenue_lead"
                     android:layout_width="150dp"
                     android:layout_height="wrap_content"
-                    android:text="Email"
-                    android:paddingTop="20dp"
-                    android:gravity="right"
                     android:background="#edeff2"
+                    android:gravity="right"
+                    android:paddingTop="20dp"
                     android:paddingRight="10dp"
-                    android:paddingBottom="20dp"/>
+                    android:paddingBottom="20dp"
+                    android:text="Call Type" />
+
                 <LinearLayout
                     android:layout_width="match_parent"
                     android:layout_height="match_parent"
                     android:orientation="horizontal">
-                    <EditText
-                        android:id="@+id/et_annualRevenue_lead"
+
+                    <TextView
+                        android:id="@+id/calltype_calls"
                         android:layout_width="match_parent"
                         android:layout_height="match_parent"
-                        app:backgroundTint="#edeff2"/>
+                        android:drawableRight="@drawable/ic_chevron_right_black_24dp"
+                        android:paddingTop="10dp"
+                        android:paddingRight="10dp"
+                        android:paddingBottom="20dp" />
+
                 </LinearLayout>
             </LinearLayout>
 
@@ -229,24 +224,25 @@
                 android:orientation="horizontal">
 
                 <TextView
-                    android:id="@+id/tv_email_lead"
                     android:layout_width="150dp"
                     android:layout_height="wrap_content"
-                    android:text="Title"
-                    android:paddingTop="20dp"
-                    android:gravity="right"
                     android:background="#edeff2"
+                    android:gravity="right"
+                    android:paddingTop="20dp"
                     android:paddingRight="10dp"
-                    android:paddingBottom="20dp"/>
+                    android:paddingBottom="20dp"
+                    android:text="Call Start Time" />
+
                 <LinearLayout
                     android:layout_width="match_parent"
                     android:layout_height="match_parent"
                     android:orientation="horizontal">
-                    <EditText
-                        android:id="@+id/et_email_lead"
+
+                    <DatePicker
+                        android:id="@+id/cst_calls"
                         android:layout_width="match_parent"
                         android:layout_height="match_parent"
-                        app:backgroundTint="#edeff2"/>
+                        app:backgroundTint="#edeff2" />
                 </LinearLayout>
             </LinearLayout>
 
@@ -256,24 +252,25 @@
                 android:orientation="horizontal">
 
                 <TextView
-                    android:id="@+id/tv_website_lead"
                     android:layout_width="150dp"
                     android:layout_height="wrap_content"
-                    android:text="Department"
-                    android:paddingTop="20dp"
-                    android:gravity="right"
                     android:background="#edeff2"
+                    android:gravity="right"
+                    android:paddingTop="20dp"
                     android:paddingRight="10dp"
-                    android:paddingBottom="20dp"/>
+                    android:paddingBottom="20dp"
+                    android:text="Call Duration" />
+
                 <LinearLayout
                     android:layout_width="match_parent"
                     android:layout_height="match_parent"
                     android:orientation="horizontal">
+
                     <EditText
-                        android:id="@+id/et_website_lead"
+                        android:id="@+id/callDuration_calls"
                         android:layout_width="match_parent"
                         android:layout_height="match_parent"
-                        app:backgroundTint="#edeff2"/>
+                        app:backgroundTint="#edeff2" />
                 </LinearLayout>
             </LinearLayout>
 
@@ -283,24 +280,25 @@
                 android:orientation="horizontal">
 
                 <TextView
-                    android:id="@+id/tv_noOfEmploye_lead"
                     android:layout_width="150dp"
                     android:layout_height="wrap_content"
-                    android:text="Phone"
-                    android:paddingTop="20dp"
-                    android:gravity="right"
                     android:background="#edeff2"
+                    android:gravity="right"
+                    android:paddingTop="20dp"
                     android:paddingRight="10dp"
-                    android:paddingBottom="20dp"/>
+                    android:paddingBottom="20dp"
+                    android:text="Description" />
+
                 <LinearLayout
                     android:layout_width="match_parent"
                     android:layout_height="match_parent"
                     android:orientation="horizontal">
+
                     <EditText
-                        android:id="@+id/et_noOfEmploye_lead"
+                        android:id="@+id/description_calls"
                         android:layout_width="match_parent"
                         android:layout_height="match_parent"
-                        app:backgroundTint="#edeff2"/>
+                        app:backgroundTint="#edeff2" />
                 </LinearLayout>
             </LinearLayout>
 
@@ -310,24 +308,25 @@
                 android:orientation="horizontal">
 
                 <TextView
-                    android:id="@+id/tv_skypeId_lead"
                     android:layout_width="150dp"
                     android:layout_height="wrap_content"
-                    android:text="Home Phone"
-                    android:paddingTop="20dp"
-                    android:gravity="right"
                     android:background="#edeff2"
+                    android:gravity="right"
+                    android:paddingTop="20dp"
                     android:paddingRight="10dp"
-                    android:paddingBottom="20dp"/>
+                    android:paddingBottom="20dp"
+                    android:text="Call Result" />
+
                 <LinearLayout
                     android:layout_width="match_parent"
                     android:layout_height="match_parent"
                     android:orientation="horizontal">
+
                     <EditText
-                        android:id="@+id/et_skypeId_lead"
+                        android:id="@+id/callResult_calls"
                         android:layout_width="match_parent"
                         android:layout_height="match_parent"
-                        app:backgroundTint="#edeff2"/>
+                        app:backgroundTint="#edeff2" />
                 </LinearLayout>
             </LinearLayout>
 
@@ -337,29 +336,59 @@
                 android:orientation="horizontal">
 
                 <TextView
-                    android:id="@+id/tv_leadSource_lead"
                     android:layout_width="150dp"
                     android:layout_height="wrap_content"
-                    android:text="Other Phone"
-                    android:paddingTop="20dp"
-                    android:gravity="right"
                     android:background="#edeff2"
+                    android:gravity="right"
+                    android:paddingTop="20dp"
                     android:paddingRight="10dp"
-                    android:paddingBottom="20dp"/>
+                    android:paddingBottom="20dp"
+                    android:text="Billable" />
+
                 <LinearLayout
                     android:layout_width="match_parent"
                     android:layout_height="match_parent"
                     android:orientation="horizontal">
-                    <Button
-                        android:id="@+id/bt_leadSource_lead"
-                        android:layout_width="wrap_content"
+
+                    <Switch
+                        android:id="@+id/billable_calls"
+                        android:layout_width="match_parent"
                         android:layout_height="match_parent"
-                        android:text="Select Lead Source..."
-                        android:textColor="#b0b1b2"
-                        android:paddingLeft="20dp"
-                        android:background="@android:color/transparent"/>
+                        app:backgroundTint="#edeff2" />
                 </LinearLayout>
             </LinearLayout>
-    </LinearLayout>
+
+            <LinearLayout
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:orientation="horizontal">
+
+                <TextView
+                    android:layout_width="150dp"
+                    android:layout_height="wrap_content"
+                    android:background="#edeff2"
+                    android:gravity="right"
+                    android:paddingTop="20dp"
+                    android:paddingRight="10dp"
+                    android:paddingBottom="20dp"
+                    android:text="Reminder" />
+
+                <LinearLayout
+                    android:layout_width="match_parent"
+                    android:layout_height="match_parent"
+                    android:orientation="horizontal">
+
+                    <TextView
+                        android:id="@+id/reminder_calls"
+                        android:layout_width="match_parent"
+                        android:layout_height="match_parent"
+                        android:drawableRight="@drawable/ic_chevron_right_black_24dp"
+                        android:paddingTop="10dp"
+                        android:paddingRight="10dp"
+                        android:paddingBottom="20dp" />
+
+                </LinearLayout>
+            </LinearLayout>
+        </LinearLayout>
     </LinearLayout>
 </ScrollView>

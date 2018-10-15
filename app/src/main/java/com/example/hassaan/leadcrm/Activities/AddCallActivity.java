@@ -22,12 +22,12 @@ public class AddCallActivity extends AppCompatActivity implements View.OnClickLi
     @Override
     protected void onCreate(Bundle savedInstanceState) {
         super.onCreate(savedInstanceState);
-        setContentView(R.layout.activity_add_contacts);
+        setContentView(R.layout.activity_add_calls);
 
-        leadsource=findViewById(R.id.bt_leadSource_lead);
-        industry=findViewById(R.id.bt_industry_lead);
-        leadsource.setOnClickListener(this);
-        industry.setOnClickListener(this);
+//        leadsource=findViewById(R.id.bt_leadSource_lead);
+//        industry=findViewById(R.id.bt_industry_lead);
+//        leadsource.setOnClickListener(this);
+//        industry.setOnClickListener(this);
 
         list.add("Red");
         list.add("Blue");
