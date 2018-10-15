@@ -9,29 +9,18 @@ import android.view.LayoutInflater;
 import android.view.View;
 import android.view.ViewGroup;
 import android.widget.AdapterView;
+import android.widget.ArrayAdapter;
+import android.widget.Spinner;
 import android.widget.TextView;
 
 import com.example.hassaan.leadcrm.Activities.AddLeadActivity;
-import com.example.hassaan.leadcrm.Adapters.LeadListViewAdapter;
 import com.example.hassaan.leadcrm.R;
-
-import java.util.ArrayList;
-import java.util.List;
-
-import se.emilsjolander.stickylistheaders.ExpandableStickyListHeadersListView;
-import se.emilsjolander.stickylistheaders.StickyListHeadersAdapter;
-import se.emilsjolander.stickylistheaders.StickyListHeadersListView;
 
 public class LeadsFragment extends Fragment implements AdapterView.OnItemSelectedListener {
 
-    //public String[] sample={"Red","Blue","Green","Yellow","White","Black","Orange","Purple","Blue","Pink"};
-
-    private List<String> list=new ArrayList<String>();
+    public String[] sample={"Red","Blue","Green","Yellow","White","Black","Orange","Purple","Blue","Pink"};
     private Context context;
-
-    ExpandableStickyListHeadersListView expandableStickyList;
-
-
+    Spinner spinner;
     public LeadsFragment() {
         // Required empty public constructor
     }
@@ -45,22 +34,13 @@ public class LeadsFragment extends Fragment implements AdapterView.OnItemSelecte
     public View onCreateView(LayoutInflater inflater, ViewGroup container,
                              Bundle savedInstanceState) {
         // Inflate the layout for this fragment
-        View view=inflater.inflate(R.layout.fragment_leads, container, false);
-        getsampledata();
+       View view=inflater.inflate(R.layout.fragment_leads, container, false);
+//        spinner=view.findViewById(R.id.spinner);
+//        spinner.setOnItemSelectedListener(this);
+//        ArrayAdapter arrayAdapter=new ArrayAdapter<String>(getActivity(), android.R.layout.simple_spinner_item,sample);
+//        arrayAdapter.setDropDownViewResource(android.R.layout.simple_spinner_dropdown_item);
+//        spinner.setAdapter(arrayAdapter);
 
-        expandableStickyList = (ExpandableStickyListHeadersListView) view.findViewById(R.id.listView_leads);
-        StickyListHeadersAdapter adapter = new LeadListViewAdapter(getContext(),list);
-        expandableStickyList.setAdapter(adapter);
-        expandableStickyList.setOnHeaderClickListener(new StickyListHeadersListView.OnHeaderClickListener() {
-            @Override
-            public void onHeaderClick(StickyListHeadersListView l, View header, int itemPosition, long headerId, boolean currentlySticky) {
-                if(expandableStickyList.isHeaderCollapsed(headerId)){
-                    expandableStickyList.expand(headerId);
-                }else {
-                    expandableStickyList.collapse(headerId);
-                }
-            }
-        });
 
         //((AppCompatActivity)getActivity()).getSupportActionBar().setDisplayHomeAsUpEnabled(true);
 
@@ -79,8 +59,6 @@ public class LeadsFragment extends Fragment implements AdapterView.OnItemSelecte
     }
 
 
-
-
     @Override
     public void onItemSelected(AdapterView<?> parent, View view, int position, long id) {
         ((TextView) parent.getChildAt(0)).setTextColor(getResources().getColor(R.color.colorPrimary));
@@ -91,18 +69,5 @@ public class LeadsFragment extends Fragment implements AdapterView.OnItemSelecte
 
     }
 
-    public void getsampledata() {
-        //public String[] sample={"Red","Blue","Green","Yellow","White","Black","Orange","Purple","Blue","Pink"};
-        list.add("Red");
-        list.add("Blue");
-        list.add("Green");
-        list.add("Yellow");
-        list.add("White");
-        list.add("Black");
-        list.add("Orange");
-        list.add("Purple");
-        list.add("Blue");
-        list.add("Pink");
-        java.util.Collections.sort(list);
-    }
+
 }

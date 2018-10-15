@@ -27,6 +27,10 @@ import java.util.Locale;
 
 public class HomeFragment extends Fragment implements CalendarPickerController {
 
+    Calendar minDate, maxDate;
+    List<CalendarEvent> eventList = new ArrayList<>();
+    AgendaCalendarView mAgendaCalendarView;
+
     public HomeFragment() {
         // Required empty public constructor
     }
@@ -41,20 +45,17 @@ public class HomeFragment extends Fragment implements CalendarPickerController {
                              Bundle savedInstanceState) {
         // Inflate the layout for this fragment
         View view = inflater.inflate(R.layout.fragment_home, container, false);
-        AgendaCalendarView mAgendaCalendarView = view.findViewById(R.id.agenda_calendar_view);
 
-        Calendar minDate = Calendar.getInstance();
-        Calendar maxDate = Calendar.getInstance();
+        mAgendaCalendarView = view.findViewById(R.id.agenda_calendar_view);
 
-        minDate.add(Calendar.MONTH, -1);
-        minDate.set(Calendar.DAY_OF_MONTH, 1);
-        maxDate.add(Calendar.YEAR, 1);
+//        Calendar minDate = Calendar.getInstance();
+//        Calendar maxDate = Calendar.getInstance();
+//
+//
+//        List<CalendarEvent> eventList = new ArrayList<>();
+           new MyAsyncTask().execute(eventList);
+//        mAgendaCalendarView.init(eventList, minDate, maxDate, Locale.getDefault(), this);
 
-        List<CalendarEvent> eventList = new ArrayList<>();
-        new MyAsyncTask().execute(eventList);
-
-
-        mAgendaCalendarView.init(eventList, minDate, maxDate, Locale.getDefault(), this);
         return view;
     }
 
@@ -78,10 +79,15 @@ public class HomeFragment extends Fragment implements CalendarPickerController {
 
         @Override
         protected Long doInBackground(List<CalendarEvent>... lists) {
-            List<CalendarEvent> eventList = new ArrayList<>();
+
+            mAgendaCalendarView.init(eventList, minDate, maxDate, Locale.getDefault(), (CalendarPickerController) this);
+
+            //List<CalendarEvent> eventList = new ArrayList<>();
             Calendar startTime1 = Calendar.getInstance();
             Calendar endTime1 = Calendar.getInstance();
+
             endTime1.add(Calendar.MONTH, 1);
+
             BaseCalendarEvent event1 = new BaseCalendarEvent("Thibault travels in Iceland", "A wonderful journey!", "Iceland",
                     ContextCompat.getColor(getContext(), R.color.orange_dark), startTime1, endTime1, true);
             eventList.add(event1);
@@ -91,10 +97,42 @@ public class HomeFragment extends Fragment implements CalendarPickerController {
             Calendar endTime2 = Calendar.getInstance();
             endTime2.add(Calendar.DAY_OF_YEAR, 3);
             BaseCalendarEvent event2 = new BaseCalendarEvent("Visit to Dalvík", "A beautiful small town", "Dalvík",
-                    ContextCompat.getColor(getContext(), R.color.yellow), startTime2, endTime2, true);
+                    ContextCompat.getColor(getContext(), R.color.blue_selected), startTime2, endTime2, true);
             eventList.add(event2);
 
             return null;
+        }
+
+        @Override
+        protected void onPreExecute() {
+            super.onPreExecute();
+            minDate = Calendar.getInstance();
+            maxDate = Calendar.getInstance();
+
+            minDate.add(Calendar.MONTH, -1);
+            minDate.set(Calendar.DAY_OF_MONTH, 1);
+            maxDate.add(Calendar.YEAR, 1);
+
+        }
+
+        @Override
+        protected void onPostExecute(Long aLong) {
+            super.onPostExecute(aLong);
+        }
+
+        @Override
+        protected void onProgressUpdate(Integer... values) {
+            super.onProgressUpdate(values);
+        }
+
+        @Override
+        protected void onCancelled(Long aLong) {
+            super.onCancelled(aLong);
+        }
+
+        @Override
+        protected void onCancelled() {
+            super.onCancelled();
         }
     }
 }
