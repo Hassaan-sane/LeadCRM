@@ -28,13 +28,14 @@
             android:parentActivityName=".Activities.AddEventActivity" />
         <activity
             android:name=".Activities.AddFeedActivity"
-            android:parentActivityName=".Activities.AddFeedActivity"></activity>
-        <activity android:name=".Activities.AddAccountActivity"
-            android:parentActivityName=".Activities.AddAccountActivity"></activity>
-        <activity android:name=".Activities.SignInActivity"></activity>
-        <activity android:name=".Activities.SignUpActivity"></activity>
-        <activity android:name=".Activities.AddContactsActivity"></activity>
-        
+            android:parentActivityName=".Activities.AddFeedActivity" />
+        <activity
+            android:name=".Activities.AddAccountActivity"
+            android:parentActivityName=".Activities.AddAccountActivity" />
+        <activity android:name=".Activities.SignInActivity" />
+        <activity android:name=".Activities.SignUpActivity" />
+        <activity android:name=".Activities.AddContactsActivity" />
+        <activity android:name=".Activities.StickyListView"></activity>
     </application>
 
 </manifest>

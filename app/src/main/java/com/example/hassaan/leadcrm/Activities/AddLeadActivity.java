@@ -1,11 +1,13 @@
 package com.example.hassaan.leadcrm.Activities;
 
 import android.content.Intent;
+import android.support.annotation.Nullable;
 import android.support.v7.app.AppCompatActivity;
 import android.os.Bundle;
 import android.util.Log;
 import android.view.View;
 import android.widget.Button;
+import android.widget.Toast;
 
 import com.example.hassaan.leadcrm.Fragments.LeadsFragment;
 import com.example.hassaan.leadcrm.R;
@@ -19,6 +21,7 @@ public class AddLeadActivity extends AppCompatActivity implements View.OnClickLi
 
     private List<String> list=new ArrayList<String>();
 
+    private String buttonName;
 
     @Override
     protected void onCreate(Bundle savedInstanceState) {
@@ -33,38 +36,49 @@ public class AddLeadActivity extends AppCompatActivity implements View.OnClickLi
         list.add("Blue");
         list.add("Green");
         list.add("Yellow");
+        list.add("Black");
+        java.util.Collections.sort(list);
     }
 
-    @Override
-    protected void onResume() {
-        super.onResume();
-        //Log.e("Position onResume","On Resume");
-        int value=getIntent().getIntExtra("Selected Position",-1);
-        Log.e("Position onResume",value+"");
-//        if(value!=-1){
-//            Log.e("Position onStart",value+"");
-//            if(getIntent().getStringExtra("Button").equals("LeadSource")){
-//                leadsource.setText(list.get(value));
-//            }
-//            else if(getIntent().getStringExtra("Button").equals("Industry")){
-//                industry.setText(list.get(value));
-//            }
-//        }
-    }
 
     @Override
     public void onClick(View v) {
-        Intent intent=new Intent(this,ListViewsActivity.class);
+        Intent intent=new Intent(this,StickyListView.class);
         if(v.getId()==R.id.bt_leadSource_lead)
         {
             intent.putStringArrayListExtra("list", (ArrayList<String>) list);
-            intent.putExtra("Button","LeadSource");
+            intent.putExtra("Button","leadSource");
         }
         else if(v.getId()==R.id.bt_industry_lead)
         {
             intent.putStringArrayListExtra("list", (ArrayList<String>) list);
-            intent.putExtra("Button","Industry");
+            intent.putExtra("Button","industry");
         }
-        startActivity(intent);
+        startActivityForResult(intent,2);
+    }
+
+    @Override
+    protected void onActivityResult(int requestCode, int resultCode, @Nullable Intent data) {
+        super.onActivityResult(requestCode, resultCode, data);
+        if (requestCode == 2) {
+            if(resultCode == RESULT_OK) {
+                int indexValue = data.getIntExtra("index",-1);
+                buttonName=data.getStringExtra("Button");
+                //Toast.makeText(AddLeadActivity.this, "item clicked "+indexValue, Toast.LENGTH_SHORT).show();
+                Log.e("index",""+indexValue);
+                Log.e("Button",buttonName);
+                setData(indexValue);
+            }
+        }
+
+    }
+
+    private void setData(int indexValue) {
+        if(buttonName.equals("leadSource")){
+            leadsource.setText(list.get(indexValue));
+        }
+        else if(buttonName.equals("industry")){
+            industry.setText(list.get(indexValue));
+        }
     }
 }
