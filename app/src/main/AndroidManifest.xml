@@ -31,6 +31,9 @@
             android:parentActivityName=".Activities.AddFeedActivity"></activity>
         <activity android:name=".Activities.AddAccountActivity"
             android:parentActivityName=".Activities.AddAccountActivity"></activity>
+        <activity android:name=".Activities.SignInActivity"></activity>
+        <activity android:name=".Activities.SignUpActivity"></activity>
+        <activity android:name=".Activities.AddContactsActivity"></activity>
     </application>
 
 </manifest>
