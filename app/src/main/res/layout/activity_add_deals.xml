@@ -6,7 +6,7 @@
     android:layout_height="match_parent"
     android:fillViewport="true"
     android:scrollbars = "vertical"
-    tools:context=".Activities.AddLeadActivity">
+    tools:context=".Activities.AddDealsActivity">
 
     <LinearLayout
         android:layout_width="match_parent"
@@ -40,7 +40,36 @@
                 android:orientation="horizontal">
 
                 <TextView
-                    android:id="@+id/tv_leadOwner_lead"
+                    android:id="@+id/tv_prediction_deals"
+                    android:layout_width="150dp"
+                    android:layout_height="wrap_content"
+                    android:text="Prediction"
+                    android:paddingTop="20dp"
+                    android:gravity="right"
+                    android:background="#edeff2"
+                    android:paddingRight="10dp"
+                    android:paddingBottom="20dp"/>
+                <LinearLayout
+                    android:layout_width="match_parent"
+                    android:layout_height="match_parent"
+                    android:orientation="horizontal">
+                    <EditText
+                        android:id="@+id/et_prediction_deals"
+                        android:layout_width="match_parent"
+                        android:layout_height="match_parent"
+                        android:background="@drawable/button_design"/>
+                </LinearLayout>
+
+            </LinearLayout>
+
+
+            <LinearLayout
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:orientation="horizontal">
+
+                <TextView
+                    android:id="@+id/tv_dealOwner_deals"
                     android:layout_width="150dp"
                     android:layout_height="wrap_content"
                     android:text="Deal Owner"
@@ -53,14 +82,12 @@
                     android:layout_width="match_parent"
                     android:layout_height="match_parent"
                     android:orientation="horizontal">
-                    <TextView
-                        android:drawableRight="@drawable/ic_chevron_right_black_24dp"
-                        android:id="@+id/et_leadOwner_lead"
+                    <EditText
+                        android:id="@+id/et_dealOwner_deals"
                         android:layout_width="match_parent"
                         android:layout_height="match_parent"
-                        android:backgroundTint="#edeff2"/>
+                        android:background="@drawable/button_design"/>
                 </LinearLayout>
-
 
             </LinearLayout>
 
@@ -70,7 +97,7 @@
                 android:orientation="horizontal">
 
                 <TextView
-                    android:id="@+id/tv_company_lead"
+                    android:id="@+id/tv_amount_deals"
                     android:layout_width="150dp"
                     android:layout_height="wrap_content"
                     android:text="Amount"
@@ -84,11 +111,12 @@
                     android:layout_height="match_parent"
                     android:orientation="horizontal">
                     <EditText
-                        android:id="@+id/et_company_lead"
+                        android:id="@+id/et_amount_deals"
                         android:layout_width="match_parent"
                         android:layout_height="match_parent"
-                        android:backgroundTint="#edeff2"/>
+                        android:background="@drawable/button_design"/>
                 </LinearLayout>
+
             </LinearLayout>
 
             <LinearLayout
@@ -97,7 +125,7 @@
                 android:orientation="horizontal">
 
                 <TextView
-                    android:id="@+id/tv_title_lead"
+                    android:id="@+id/tv_dealName_deals"
                     android:layout_width="150dp"
                     android:layout_height="wrap_content"
                     android:text="Deal Name"
@@ -111,12 +139,14 @@
                     android:layout_height="match_parent"
                     android:orientation="horizontal">
                     <EditText
-                        android:id="@+id/et_title_lead"
+                        android:id="@+id/et_dealName_deals"
                         android:layout_width="match_parent"
                         android:layout_height="match_parent"
-                        android:backgroundTint="#edeff2"/>
+                        android:background="@drawable/button_design"/>
                 </LinearLayout>
+
             </LinearLayout>
+
 
             <LinearLayout
                 android:layout_width="match_parent"
@@ -124,7 +154,7 @@
                 android:orientation="horizontal">
 
                 <TextView
-                    android:id="@+id/tv_mobile_lead"
+                    android:id="@+id/tv_closingDate_deals"
                     android:layout_width="150dp"
                     android:layout_height="wrap_content"
                     android:text="Closing Date"
@@ -137,11 +167,15 @@
                     android:layout_width="match_parent"
                     android:layout_height="match_parent"
                     android:orientation="horizontal">
-                    <DatePicker
-                        android:id="@+id/et_mobile_lead"
+                    <Button
+                        android:id="@+id/bt_closingDate_deals"
                         android:layout_width="match_parent"
                         android:layout_height="match_parent"
-                        app:backgroundTint="#edeff2"/>
+                        android:text="Select Closing Date..."
+                        android:gravity="fill"
+                        android:paddingLeft="20dp"
+                        android:textColor="#b0b1b2"
+                        android:background="@drawable/button_design"/>
                 </LinearLayout>
             </LinearLayout>
 
@@ -151,7 +185,7 @@
                 android:orientation="horizontal">
 
                 <TextView
-                    android:id="@+id/tv_phone_lead"
+                    android:id="@+id/tv_accountName_deals"
                     android:layout_width="150dp"
                     android:layout_height="wrap_content"
                     android:text="Account Name"
@@ -164,12 +198,15 @@
                     android:layout_width="match_parent"
                     android:layout_height="match_parent"
                     android:orientation="horizontal">
-                    <TextView
-                        android:drawableRight="@drawable/ic_chevron_right_black_24dp"
-                        android:id="@+id/et_phone_lead"
+                    <Button
+                        android:id="@+id/bt_accountName_deals"
                         android:layout_width="match_parent"
                         android:layout_height="match_parent"
-                        app:backgroundTint="#edeff2"/>
+                        android:text="Select Account Name..."
+                        android:gravity="fill"
+                        android:paddingLeft="20dp"
+                        android:textColor="#b0b1b2"
+                        android:background="@drawable/button_design"/>
                 </LinearLayout>
             </LinearLayout>
 
@@ -179,7 +216,7 @@
                 android:orientation="horizontal">
 
                 <TextView
-                    android:id="@+id/tv_annualRevenue_lead"
+                    android:id="@+id/tv_stage_deals"
                     android:layout_width="150dp"
                     android:layout_height="wrap_content"
                     android:text="Stage"
@@ -192,12 +229,15 @@
                     android:layout_width="match_parent"
                     android:layout_height="match_parent"
                     android:orientation="horizontal">
-                    <TextView
-                        android:drawableRight="@drawable/ic_chevron_right_black_24dp"
-                        android:id="@+id/et_annualRevenue_lead"
+                    <Button
+                        android:id="@+id/bt_stage_deals"
                         android:layout_width="match_parent"
                         android:layout_height="match_parent"
-                        app:backgroundTint="#edeff2"/>
+                        android:text="Select Stage..."
+                        android:gravity="fill"
+                        android:paddingLeft="20dp"
+                        android:textColor="#b0b1b2"
+                        android:background="@drawable/button_design"/>
                 </LinearLayout>
             </LinearLayout>
 
@@ -207,7 +247,7 @@
                 android:orientation="horizontal">
 
                 <TextView
-                    android:id="@+id/tv_email_lead"
+                    android:id="@+id/tv_type_deals"
                     android:layout_width="150dp"
                     android:layout_height="wrap_content"
                     android:text="Type"
@@ -220,14 +260,18 @@
                     android:layout_width="match_parent"
                     android:layout_height="match_parent"
                     android:orientation="horizontal">
-                    <TextView
-                        android:drawableRight="@drawable/ic_chevron_right_black_24dp"
-                        android:id="@+id/et_email_lead"
+                    <Button
+                        android:id="@+id/bt_type_deals"
                         android:layout_width="match_parent"
                         android:layout_height="match_parent"
-                        app:backgroundTint="#edeff2"/>
+                        android:text="Select Type..."
+                        android:gravity="fill"
+                        android:paddingLeft="20dp"
+                        android:textColor="#b0b1b2"
+                        android:background="@drawable/button_design"/>
                 </LinearLayout>
             </LinearLayout>
+
 
             <LinearLayout
                 android:layout_width="match_parent"
@@ -235,10 +279,10 @@
                 android:orientation="horizontal">
 
                 <TextView
-                    android:id="@+id/tv_website_lead"
+                    android:id="@+id/tv_probability_deals"
                     android:layout_width="150dp"
                     android:layout_height="wrap_content"
-                    android:text="Probability (%)"
+                    android:text="Probability(%)"
                     android:paddingTop="20dp"
                     android:gravity="right"
                     android:background="#edeff2"
@@ -249,10 +293,11 @@
                     android:layout_height="match_parent"
                     android:orientation="horizontal">
                     <EditText
-                        android:id="@+id/et_website_lead"
+                        android:id="@+id/et_probability_deals"
                         android:layout_width="match_parent"
                         android:layout_height="match_parent"
-                        app:backgroundTint="#edeff2"/>
+                        android:inputType="number"
+                        android:background="@drawable/button_design"/>
                 </LinearLayout>
             </LinearLayout>
 
@@ -262,7 +307,7 @@
                 android:orientation="horizontal">
 
                 <TextView
-                    android:id="@+id/tv_noOfEmploye_lead"
+                    android:id="@+id/tv_nextstep_deals"
                     android:layout_width="150dp"
                     android:layout_height="wrap_content"
                     android:text="Next Step"
@@ -276,21 +321,12 @@
                     android:layout_height="match_parent"
                     android:orientation="horizontal">
                     <EditText
-                        android:id="@+id/et_noOfEmploye_lead"
+                        android:id="@+id/et_nextstep_deals"
                         android:layout_width="match_parent"
                         android:layout_height="match_parent"
-                        app:backgroundTint="#edeff2"/>
+                        android:background="@drawable/button_design"/>
                 </LinearLayout>
             </LinearLayout>
-
-            <TextView
-                android:layout_width="match_parent"
-                android:layout_height="wrap_content"
-                android:text="EXPECTED REVENUE"
-                android:paddingTop="15dp"
-                android:paddingLeft="10dp"
-                android:paddingBottom="10dp"
-                />
 
             <LinearLayout
                 android:layout_width="match_parent"
@@ -298,7 +334,33 @@
                 android:orientation="horizontal">
 
                 <TextView
-                    android:id="@+id/tv_skypeId_lead"
+                    android:layout_width="150dp"
+                    android:layout_height="wrap_content"
+                    android:hint="Expected Revenue"
+                    android:paddingTop="20dp"
+                    android:gravity="right"
+                    android:background="#edeff2"
+                    android:paddingRight="10dp"
+                    android:paddingBottom="20dp"/>
+                <LinearLayout
+                    android:layout_width="match_parent"
+                    android:layout_height="match_parent"
+                    android:orientation="horizontal">
+                    <TextView
+                        android:id="@+id/tv_expectedRevenue_deals"
+                        android:layout_width="match_parent"
+                        android:layout_height="match_parent"
+                        android:background="@drawable/button_design"/>
+                </LinearLayout>
+            </LinearLayout>
+
+            <LinearLayout
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:orientation="horizontal">
+
+                <TextView
+                    android:id="@+id/tv_leadSource_deals"
                     android:layout_width="150dp"
                     android:layout_height="wrap_content"
                     android:text="Lead Source"
@@ -311,12 +373,15 @@
                     android:layout_width="match_parent"
                     android:layout_height="match_parent"
                     android:orientation="horizontal">
-                    <TextView
-                        android:id="@+id/et_skypeId_lead"
+                    <Button
+                        android:id="@+id/bt_leadSource_deals"
                         android:layout_width="match_parent"
                         android:layout_height="match_parent"
-                        android:drawableRight="@drawable/ic_chevron_right_black_24dp"
-                        app:backgroundTint="#edeff2"/>
+                        android:text="Select Lead Source..."
+                        android:gravity="fill"
+                        android:paddingLeft="20dp"
+                        android:textColor="#b0b1b2"
+                        android:background="@drawable/button_design"/>
                 </LinearLayout>
             </LinearLayout>
 
@@ -326,7 +391,7 @@
                 android:orientation="horizontal">
 
                 <TextView
-                    android:id="@+id/tv_leadSource_lead"
+                    android:id="@+id/tv_campaignSource_deals"
                     android:layout_width="150dp"
                     android:layout_height="wrap_content"
                     android:text="Campaign Source"
@@ -339,14 +404,15 @@
                     android:layout_width="match_parent"
                     android:layout_height="match_parent"
                     android:orientation="horizontal">
-                    <TextView
-                        android:id="@+id/bt_leadSource_lead"
+                    <Button
+                        android:id="@+id/bt_campaignSource_deals"
                         android:layout_width="match_parent"
                         android:layout_height="match_parent"
-                        android:drawableRight="@drawable/ic_chevron_right_black_24dp"
-                        android:textColor="#b0b1b2"
+                        android:text="Select Campaign Source..."
+                        android:gravity="fill"
                         android:paddingLeft="20dp"
-                        android:background="@android:color/transparent"/>
+                        android:textColor="#b0b1b2"
+                        android:background="@drawable/button_design"/>
                 </LinearLayout>
             </LinearLayout>
 
@@ -356,7 +422,7 @@
                 android:orientation="horizontal">
 
                 <TextView
-                    android:id="@+id/tv_industry_lead"
+                    android:id="@+id/tv_contactName_deals"
                     android:layout_width="150dp"
                     android:layout_height="wrap_content"
                     android:text="Contact Name"
@@ -369,52 +435,64 @@
                     android:layout_width="match_parent"
                     android:layout_height="match_parent"
                     android:orientation="horizontal">
-                    <TextView
-                        android:id="@+id/bt_industry_lead"
+                    <Button
+                        android:id="@+id/bt_contactName_deals"
                         android:layout_width="match_parent"
                         android:layout_height="match_parent"
-                        android:drawableRight="@drawable/ic_chevron_right_black_24dp"
+                        android:text="Select Contact Name..."
+                        android:gravity="fill"
                         android:paddingLeft="20dp"
                         android:textColor="#b0b1b2"
-                        android:background="@android:color/transparent"/>
+                        android:background="@drawable/button_design"/>
                 </LinearLayout>
             </LinearLayout>
 
-            <TextView
-                android:layout_width="match_parent"
-                android:layout_height="wrap_content"
-                android:text="DESCRIPTION INFORMATION"
-                android:paddingTop="15dp"
-                android:paddingLeft="10dp"
-                android:paddingBottom="10dp"/>
-
-        </LinearLayout>
-
-        <LinearLayout
-            android:layout_width="match_parent"
-            android:layout_height="wrap_content"
-            android:orientation="horizontal">
-
-            <TextView
-                android:id="@+id/tv_mobile_contacts"
-                android:layout_width="150dp"
-                android:layout_height="wrap_content"
-                android:text="Description"
-                android:paddingTop="20dp"
-                android:gravity="right"
-                android:background="#edeff2"
-                android:paddingRight="10dp"
-                android:paddingBottom="20dp"/>
             <LinearLayout
                 android:layout_width="match_parent"
-                android:layout_height="match_parent"
+                android:layout_height="wrap_content"
+                android:orientation="vertical"
+                android:background="#d4d6d8"
+                android:id="@+id/header3">
+
+                <TextView
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:paddingTop="15dp"
+                    android:paddingLeft="10dp"
+                    android:paddingBottom="10dp"
+                    android:text="DESCRIPTION INFORMATION"/>
+            </LinearLayout>
+
+            <LinearLayout
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
                 android:orientation="horizontal">
-                <EditText
-                    android:id="@+id/et_mobile_contacts"
+
+                <TextView
+                    android:id="@+id/tv_description_deals"
+                    android:layout_width="150dp"
+                    android:layout_height="wrap_content"
+                    android:text="Description"
+                    android:paddingTop="20dp"
+                    android:gravity="right"
+                    android:background="#edeff2"
+                    android:paddingRight="10dp"
+                    android:paddingBottom="20dp"/>
+                <LinearLayout
                     android:layout_width="match_parent"
                     android:layout_height="match_parent"
-                    app:backgroundTint="#edeff2"/>
+                    android:orientation="horizontal">
+                    <EditText
+                        android:id="@+id/et_description_deals"
+                        android:layout_width="match_parent"
+                        android:layout_height="match_parent"
+                        android:background="@drawable/button_design"/>
+                </LinearLayout>
+
             </LinearLayout>
+
+
+
         </LinearLayout>
     </LinearLayout>
 </ScrollView>

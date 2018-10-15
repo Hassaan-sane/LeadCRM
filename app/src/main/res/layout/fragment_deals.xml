@@ -20,14 +20,14 @@
         android:layout_width="match_parent"
         android:layout_height="wrap_content"
         android:id="@+id/spinnerDeals"
-        android:layout_below="@+id/searchContacts"
+        android:layout_below="@+id/searchDeals"
         ></Spinner>
 
     <android.support.v7.widget.RecyclerView
         android:layout_width="match_parent"
         android:layout_height="wrap_content"
         android:id="@+id/recyclerDeals"
-        android:layout_below="@id/spinnerContacts"
+        android:layout_below="@id/spinnerDeals"
         ></android.support.v7.widget.RecyclerView>
 
     <android.support.design.widget.FloatingActionButton
