@@ -14,12 +14,12 @@ import java.util.List;
 
 import se.emilsjolander.stickylistheaders.StickyListHeadersAdapter;
 
-public class ListViewAdapter extends BaseAdapter implements StickyListHeadersAdapter {
+public class LeadListViewAdapter extends BaseAdapter implements StickyListHeadersAdapter {
     //private String[] countries;
     private List<String> list=new ArrayList<String>();
     private LayoutInflater inflater;
 
-    public ListViewAdapter(Context context,List<String> list) {
+    public LeadListViewAdapter(Context context, List<String> list) {
         inflater = LayoutInflater.from(context);
         this.list=list;
     }

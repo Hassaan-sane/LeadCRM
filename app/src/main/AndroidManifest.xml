@@ -23,7 +23,7 @@
             android:name=".Activities.AddLeadActivity"
             android:parentActivityName=".Activities.AddLeadActivity" />
         <activity android:name=".Activities.ListViewsActivity" />
-
+<<<<<<< Updated upstream
         <activity
             android:name=".Activities.AddEventActivity"
             android:parentActivityName=".Activities.AddEventActivity" />
@@ -31,7 +31,11 @@
             android:parentActivityName=".Activities.AddFeedActivity">
         </activity>
         <activity android:name=".Activities.AddContactsActivity"/>
-
+=======
+        <activity android:name=".Activities.AddEventActivity"
+            android:parentActivityName=".Activities.AddEventActivity"
+            ></activity>
+>>>>>>> Stashed changes
     </application>
 
 </manifest>
