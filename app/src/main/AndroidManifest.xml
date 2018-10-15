@@ -34,6 +34,7 @@
         <activity android:name=".Activities.SignInActivity"></activity>
         <activity android:name=".Activities.SignUpActivity"></activity>
         <activity android:name=".Activities.AddContactsActivity"></activity>
+        
     </application>
 
 </manifest>
