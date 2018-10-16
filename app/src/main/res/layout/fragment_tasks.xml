@@ -8,21 +8,31 @@
 
     <!-- TODO: Update blank fragment layout -->
 
-    <LinearLayout
+
+    <SearchView
+        android:id="@+id/searchViewTask"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:background="#fff"
+        android:elevation="1dp" />
+
+
+    <Spinner
         android:layout_width="match_parent"
         android:layout_height="wrap_content"
-        android:background="@drawable/layout_design"
-        android:orientation="vertical">
+        android:id="@+id/spinnerTask"
+        android:layout_below="@+id/searchViewTask"
+        android:layout_marginTop="20dp"
+        android:paddingLeft="15dp"
+        android:layout_marginBottom="20dp"
+        ></Spinner>
 
-        <SearchView
-            android:id="@+id/searchViewTask"
-            android:layout_width="wrap_content"
-            android:layout_height="wrap_content"
-            android:background="#fff"
-            android:elevation="2dp" />
-
-
-    </LinearLayout>
+    <android.support.v7.widget.RecyclerView
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        android:id="@+id/recyclerAccounts"
+        android:layout_below="@id/spinnerTask"
+        ></android.support.v7.widget.RecyclerView>
 
 
     <android.support.design.widget.FloatingActionButton

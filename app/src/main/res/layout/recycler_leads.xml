@@ -3,7 +3,8 @@
     xmlns:app="http://schemas.android.com/apk/res-auto"
     android:layout_width="match_parent"
     android:layout_height="wrap_content"
-    android:background="@drawable/button_design">
+    android:background="@drawable/button_design"
+    android:elevation="20dp">
 
     <TextView
         android:id="@+id/tv_name_leadrecycler"
@@ -12,6 +13,8 @@
         android:paddingLeft="20dp"
         android:paddingTop="10dp"
         android:text="Name"
+        android:textColor="#000"
+        android:textSize="16sp"
         android:textStyle="bold"/>
     <TextView
         android:id="@+id/tv_email_leadrecycler"
@@ -20,6 +23,8 @@
         android:layout_height="wrap_content"
         android:paddingLeft="20dp"
         android:paddingBottom="30dp"
+        android:textSize="14sp"
+        android:textColor="#000"
         android:text="email@gmail.com"
         android:textStyle="normal"/>
 

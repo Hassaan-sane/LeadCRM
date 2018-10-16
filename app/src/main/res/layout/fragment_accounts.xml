@@ -10,6 +10,8 @@
         android:id="@+id/searchAccounts"
         android:layout_width="match_parent"
         android:layout_height="wrap_content"
+        android:background="#fff"
+        android:elevation="1dp"
         >
 
     </android.support.v7.widget.SearchView>
@@ -19,11 +21,14 @@
         android:layout_height="wrap_content"
         android:id="@+id/spinnerAccounts"
         android:layout_below="@+id/searchAccounts"
+        android:layout_marginTop="20dp"
+        android:paddingLeft="15dp"
+        android:layout_marginBottom="20dp"
         ></Spinner>
 
     <android.support.v7.widget.RecyclerView
         android:layout_width="match_parent"
-        android:layout_height="wrap_content"
+        android:layout_height="match_parent"
         android:id="@+id/recyclerAccounts"
         android:layout_below="@id/spinnerAccounts"
         ></android.support.v7.widget.RecyclerView>

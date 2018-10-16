@@ -10,6 +10,10 @@
         android:id="@+id/tv_name_contactrecycler"
         android:paddingLeft="20dp"
         android:paddingTop="10dp"
+        android:textSize="14sp"
+        android:textColor="#000"
         android:paddingBottom="30dp"/>
+
+
 
 </LinearLayout>
