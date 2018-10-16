@@ -6,6 +6,8 @@ import android.net.Uri;
 import android.os.Bundle;
 import android.support.design.widget.FloatingActionButton;
 import android.support.v4.app.Fragment;
+import android.support.v7.widget.LinearLayoutManager;
+import android.support.v7.widget.RecyclerView;
 import android.support.v7.widget.SearchView;
 import android.view.LayoutInflater;
 import android.view.View;
@@ -13,10 +15,15 @@ import android.view.ViewGroup;
 import android.widget.AdapterView;
 import android.widget.ArrayAdapter;
 import android.widget.Spinner;
+import android.widget.TextView;
 
 import com.example.hassaan.leadcrm.Activities.AddContactsActivity;
-import com.example.hassaan.leadcrm.Activities.AddTaskActivity;
 import com.example.hassaan.leadcrm.R;
+import com.example.hassaan.leadcrm.RecyclerViews.ContactsRecycler;
+import com.example.hassaan.leadcrm.RecyclerViews.LeadsRecycler;
+
+import java.util.ArrayList;
+import java.util.List;
 
 
 public class ContactsFragment extends Fragment implements AdapterView.OnItemSelectedListener {
@@ -24,7 +31,7 @@ public class ContactsFragment extends Fragment implements AdapterView.OnItemSele
     public String[] sample={"Red","Blue","Green","Yellow","White","Black","Orange","Purple","Blue","Pink"};
     SearchView searchView;
     Spinner spinner;
-
+    private List<String> list=new ArrayList<String>();
 
     public ContactsFragment() {
         // Required empty public constructor
@@ -44,11 +51,21 @@ public class ContactsFragment extends Fragment implements AdapterView.OnItemSele
         searchView.setQueryHint("Search...");
         searchView.onActionViewExpanded();
 
-        spinner = view.findViewById(R.id.spinnerContacts);
+        spinner = view.findViewById(R.id.spinner_contacts);
         spinner.setOnItemSelectedListener(this);
         ArrayAdapter arrayAdapter=new ArrayAdapter<String>(getActivity(), android.R.layout.simple_spinner_item,sample);
         arrayAdapter.setDropDownViewResource(android.R.layout.simple_spinner_dropdown_item);
         spinner.setAdapter(arrayAdapter);
+
+        list.add("Red\n\n\n\n\n\n\n");
+        list.add("Blue\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n");
+        list.add("Green\n\n\n\n\n\n");
+        list.add("Yellow\n\n\n\n\n\n");
+
+        RecyclerView recyclerView=view.findViewById(R.id.recycler_contacts);
+        recyclerView.setLayoutManager(new LinearLayoutManager(getContext()));
+        recyclerView.setAdapter(new ContactsRecycler(list));
+
 
         FloatingActionButton fab = view.findViewById(R.id.fbContacts);
         fab.setOnClickListener(new View.OnClickListener() {
@@ -64,7 +81,7 @@ public class ContactsFragment extends Fragment implements AdapterView.OnItemSele
 
     @Override
     public void onItemSelected(AdapterView<?> adapterView, View view, int i, long l) {
-
+        ((TextView) adapterView.getChildAt(0)).setTextColor(getResources().getColor(R.color.colorPrimary));
     }
 
     @Override

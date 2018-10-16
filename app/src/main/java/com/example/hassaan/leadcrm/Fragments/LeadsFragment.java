@@ -5,6 +5,8 @@ import android.content.Intent;
 import android.os.Bundle;
 import android.support.design.widget.FloatingActionButton;
 import android.support.v4.app.Fragment;
+import android.support.v7.widget.LinearLayoutManager;
+import android.support.v7.widget.RecyclerView;
 import android.view.LayoutInflater;
 import android.view.View;
 import android.view.ViewGroup;
@@ -15,12 +17,18 @@ import android.widget.TextView;
 
 import com.example.hassaan.leadcrm.Activities.AddLeadActivity;
 import com.example.hassaan.leadcrm.R;
+import com.example.hassaan.leadcrm.RecyclerViews.LeadsRecycler;
+
+import java.util.ArrayList;
+import java.util.List;
 
 public class LeadsFragment extends Fragment implements AdapterView.OnItemSelectedListener {
 
     public String[] sample={"Red","Blue","Green","Yellow","White","Black","Orange","Purple","Blue","Pink"};
-    private Context context;
+    private List<String> list=new ArrayList<String>();
     Spinner spinner;
+
+
     public LeadsFragment() {
         // Required empty public constructor
     }
@@ -35,16 +43,20 @@ public class LeadsFragment extends Fragment implements AdapterView.OnItemSelecte
                              Bundle savedInstanceState) {
         // Inflate the layout for this fragment
        View view=inflater.inflate(R.layout.fragment_leads, container, false);
-//        spinner=view.findViewById(R.id.spinner);
-//        spinner.setOnItemSelectedListener(this);
-//        ArrayAdapter arrayAdapter=new ArrayAdapter<String>(getActivity(), android.R.layout.simple_spinner_item,sample);
-//        arrayAdapter.setDropDownViewResource(android.R.layout.simple_spinner_dropdown_item);
-//        spinner.setAdapter(arrayAdapter);
+        spinner=view.findViewById(R.id.spinner_leads);
+        spinner.setOnItemSelectedListener(this);
+        ArrayAdapter arrayAdapter=new ArrayAdapter<String>(getActivity(), android.R.layout.simple_spinner_item,sample);
+        arrayAdapter.setDropDownViewResource(android.R.layout.simple_spinner_dropdown_item);
+        spinner.setAdapter(arrayAdapter);
 
+        list.add("Red\n\n\n\n\n\n\n");
+        list.add("Blue\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n");
+        list.add("Green\n\n\n\n\n\n");
+        list.add("Yellow\n\n\n\n\n\n");
 
-        //((AppCompatActivity)getActivity()).getSupportActionBar().setDisplayHomeAsUpEnabled(true);
-
-
+        RecyclerView recyclerView=view.findViewById(R.id.recycler_leads);
+        recyclerView.setLayoutManager(new LinearLayoutManager(getContext()));
+        recyclerView.setAdapter(new LeadsRecycler(list));
 
         FloatingActionButton fab = (FloatingActionButton) view.findViewById(R.id.floating_leads);
         fab.setOnClickListener(new View.OnClickListener() {

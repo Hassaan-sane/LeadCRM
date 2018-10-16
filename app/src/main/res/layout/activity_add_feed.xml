@@ -16,22 +16,21 @@
             android:id="@+id/et_addfeed_feed"
             android:layout_width="match_parent"
             android:layout_height="match_parent"
-            android:layout_above="@id/bt_addfeed_feed"
             android:gravity="top"
             android:paddingTop="5dp"
             android:paddingLeft="5dp"
             android:backgroundTint="#edeff2"
             android:hint="Status here...."/>
 
-        <Button
-            android:id="@+id/bt_addfeed_feed"
-            android:layout_width="wrap_content"
-            android:layout_height="wrap_content"
-            android:layout_alignParentEnd="true"
-            android:layout_alignParentBottom="true"
-            android:layout_marginEnd="10dp"
-            android:text="Ok"
-            android:layout_marginBottom="5dp" />
+        <!--<Button-->
+            <!--android:id="@+id/bt_addfeed_feed"-->
+            <!--android:layout_width="wrap_content"-->
+            <!--android:layout_height="wrap_content"-->
+            <!--android:layout_alignParentEnd="true"-->
+            <!--android:layout_alignParentBottom="true"-->
+            <!--android:layout_marginEnd="10dp"-->
+            <!--android:text="Ok"-->
+            <!--android:layout_marginBottom="5dp" />-->
 
     </RelativeLayout>
 
