@@ -8,13 +8,21 @@ import android.os.Bundle;
 import android.support.design.widget.FloatingActionButton;
 import android.support.v4.app.Fragment;
 import android.support.v4.content.ContextCompat;
+import android.support.v7.widget.LinearLayoutManager;
+import android.support.v7.widget.RecyclerView;
 import android.view.LayoutInflater;
 import android.view.View;
 import android.view.ViewGroup;
+import android.widget.AdapterView;
+import android.widget.ArrayAdapter;
 import android.widget.SearchView;
+import android.widget.Spinner;
+import android.widget.TextView;
 
 import com.example.hassaan.leadcrm.Activities.AddTaskActivity;
 import com.example.hassaan.leadcrm.R;
+import com.example.hassaan.leadcrm.RecyclerViews.AccountsRecycler;
+import com.example.hassaan.leadcrm.RecyclerViews.TaskRecycler;
 import com.github.tibolte.agendacalendarview.AgendaCalendarView;
 import com.github.tibolte.agendacalendarview.CalendarPickerController;
 import com.github.tibolte.agendacalendarview.models.BaseCalendarEvent;
@@ -26,9 +34,12 @@ import java.util.Calendar;
 import java.util.List;
 import java.util.Locale;
 
-public class TasksFragment extends Fragment {
+public class TasksFragment extends Fragment implements AdapterView.OnItemSelectedListener {
 
+    public String[] sample={"Red","Blue","Green","Yellow","White","Black","Orange","Purple","Blue","Pink"};
+    private List<String> list=new ArrayList<String>();
     SearchView searchView;
+    Spinner spinner;
 
     public TasksFragment() {
         // Required empty public constructor
@@ -49,6 +60,24 @@ public class TasksFragment extends Fragment {
         searchView.setQueryHint("Search...");
         searchView.onActionViewExpanded();
 
+
+        spinner = view.findViewById(R.id.spinnerTask);
+        spinner.setOnItemSelectedListener(this);
+        ArrayAdapter arrayAdapter=new ArrayAdapter<String>(getActivity(), android.R.layout.simple_spinner_item,sample);
+        arrayAdapter.setDropDownViewResource(android.R.layout.simple_spinner_dropdown_item);
+        spinner.setAdapter(arrayAdapter);
+
+        list.add("Red");
+        list.add("Blue");
+        list.add("Green");
+        list.add("Yellow");
+
+
+
+        RecyclerView recyclerView=view.findViewById(R.id.recyclerTask);
+        recyclerView.setLayoutManager(new LinearLayoutManager(getContext()));
+        recyclerView.setAdapter(new TaskRecycler(list));
+
         FloatingActionButton fab = view.findViewById(R.id.floating_Task);
         fab.setOnClickListener(new View.OnClickListener() {
             @Override
@@ -58,5 +87,15 @@ public class TasksFragment extends Fragment {
             }
         });
         return view;
+    }
+
+    @Override
+    public void onItemSelected(AdapterView<?> parent, View view, int position, long id) {
+        ((TextView) parent.getChildAt(0)).setTextColor(getResources().getColor(R.color.colorPrimary));
+    }
+
+    @Override
+    public void onNothingSelected(AdapterView<?> parent) {
+
     }
 }
