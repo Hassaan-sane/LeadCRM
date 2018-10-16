@@ -92,6 +92,7 @@
                         android:gravity="fill"
                         android:paddingLeft="20dp"
                         android:textColor="#b0b1b2"
+                        android:drawableRight="@drawable/ic_chevron_right_black_24dp"
                         android:background="@drawable/button_design"/>
                 </LinearLayout>
             </LinearLayout>
@@ -201,6 +202,7 @@
                         android:id="@+id/bt_parentAccount_account"
                         android:layout_width="match_parent"
                         android:layout_height="match_parent"
+                        android:drawableRight="@drawable/ic_chevron_right_black_24dp"
                         android:background="@android:color/transparent"
                         android:paddingLeft="20dp"
                         android:gravity="fill"
@@ -314,6 +316,7 @@
                         android:layout_width="match_parent"
                         android:layout_height="match_parent"
                         android:text="Select Account Type..."
+                        android:drawableRight="@drawable/ic_chevron_right_black_24dp"
                         android:gravity="fill"
                         android:textColor="#b0b1b2"
                         android:paddingLeft="20dp"
@@ -341,6 +344,7 @@
                     android:layout_height="match_parent"
                     android:orientation="horizontal">
                     <Button
+                        android:drawableRight="@drawable/ic_chevron_right_black_24dp"
                         android:id="@+id/bt_ownership_account"
                         android:layout_width="match_parent"
                         android:layout_height="match_parent"
@@ -373,9 +377,10 @@
                     android:orientation="horizontal">
                     <Button
                         android:id="@+id/bt_industry_lead"
-                        android:layout_width="wrap_content"
+                        android:layout_width="match_parent"
                         android:layout_height="match_parent"
                         android:text="Select Industry..."
+                        android:drawableRight="@drawable/ic_chevron_right_black_24dp"
                         android:gravity="fill"
                         android:paddingLeft="20dp"
                         android:textColor="#b0b1b2"

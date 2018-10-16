@@ -6,6 +6,28 @@
     xmlns:app="http://schemas.android.com/apk/res-auto"
     tools:context=".Fragments.AccountsFragment">
 
+    <android.support.v7.widget.SearchView
+        android:id="@+id/searchAccounts"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        >
+
+    </android.support.v7.widget.SearchView>
+
+    <Spinner
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:id="@+id/spinnerAccounts"
+        android:layout_below="@+id/searchAccounts"
+        ></Spinner>
+
+    <android.support.v7.widget.RecyclerView
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:id="@+id/recyclerAccounts"
+        android:layout_below="@id/spinnerAccounts"
+        ></android.support.v7.widget.RecyclerView>
+
     <android.support.design.widget.FloatingActionButton
         android:id="@+id/floating_accounts"
         android:layout_width="wrap_content"

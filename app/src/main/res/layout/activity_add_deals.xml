@@ -168,6 +168,7 @@
                     android:layout_height="match_parent"
                     android:orientation="horizontal">
                     <Button
+                        android:drawableRight="@drawable/ic_chevron_right_black_24dp"
                         android:id="@+id/bt_closingDate_deals"
                         android:layout_width="match_parent"
                         android:layout_height="match_parent"
@@ -199,6 +200,7 @@
                     android:layout_height="match_parent"
                     android:orientation="horizontal">
                     <Button
+                        android:drawableRight="@drawable/ic_chevron_right_black_24dp"
                         android:id="@+id/bt_accountName_deals"
                         android:layout_width="match_parent"
                         android:layout_height="match_parent"
@@ -230,6 +232,7 @@
                     android:layout_height="match_parent"
                     android:orientation="horizontal">
                     <Button
+                        android:drawableRight="@drawable/ic_chevron_right_black_24dp"
                         android:id="@+id/bt_stage_deals"
                         android:layout_width="match_parent"
                         android:layout_height="match_parent"
@@ -261,6 +264,7 @@
                     android:layout_height="match_parent"
                     android:orientation="horizontal">
                     <Button
+                        android:drawableRight="@drawable/ic_chevron_right_black_24dp"
                         android:id="@+id/bt_type_deals"
                         android:layout_width="match_parent"
                         android:layout_height="match_parent"
@@ -374,6 +378,7 @@
                     android:layout_height="match_parent"
                     android:orientation="horizontal">
                     <Button
+                        android:drawableRight="@drawable/ic_chevron_right_black_24dp"
                         android:id="@+id/bt_leadSource_deals"
                         android:layout_width="match_parent"
                         android:layout_height="match_parent"
@@ -405,6 +410,7 @@
                     android:layout_height="match_parent"
                     android:orientation="horizontal">
                     <Button
+                        android:drawableRight="@drawable/ic_chevron_right_black_24dp"
                         android:id="@+id/bt_campaignSource_deals"
                         android:layout_width="match_parent"
                         android:layout_height="match_parent"
@@ -436,6 +442,7 @@
                     android:layout_height="match_parent"
                     android:orientation="horizontal">
                     <Button
+                        android:drawableRight="@drawable/ic_chevron_right_black_24dp"
                         android:id="@+id/bt_contactName_deals"
                         android:layout_width="match_parent"
                         android:layout_height="match_parent"

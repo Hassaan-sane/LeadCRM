@@ -355,8 +355,9 @@
                     android:orientation="horizontal">
                     <Button
                         android:id="@+id/bt_leadSource_lead"
-                        android:layout_width="wrap_content"
+                        android:layout_width="match_parent"
                         android:layout_height="match_parent"
+                        android:drawableRight="@drawable/ic_chevron_right_black_24dp"
                         android:text="Select Lead Source..."
                         android:textColor="#b0b1b2"
                         android:paddingLeft="20dp"
@@ -385,8 +386,9 @@
                     android:orientation="horizontal">
                     <Button
                         android:id="@+id/bt_industry_lead"
-                        android:layout_width="wrap_content"
+                        android:layout_width="match_parent"
                         android:layout_height="match_parent"
+                        android:drawableRight="@drawable/ic_chevron_right_black_24dp"
                         android:text="Select Industry..."
                         android:paddingLeft="20dp"
                         android:textColor="#b0b1b2"
