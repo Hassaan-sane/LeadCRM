@@ -2,16 +2,22 @@
 <LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
     android:layout_width="match_parent"
     android:layout_height="wrap_content"
-    android:paddingBottom="15dp"
+    android:paddingBottom="5dp"
     xmlns:app="http://schemas.android.com/apk/res-auto"
     xmlns:tools="http://schemas.android.com/tools"
+    android:background="#e8e8e8"
     android:orientation="vertical"
     tools:context=".Fragments.FeedsFragment">
 
     <RelativeLayout
+        android:layout_marginTop="8dp"
+        android:layout_marginLeft="8dp"
+        android:layout_marginRight="8dp"
         android:layout_width="match_parent"
         android:layout_height="wrap_content"
-        android:background="@drawable/layout_design_recyclerview">
+        android:elevation="20dp"
+        android:padding="8dp"
+        android:background="#fcfcfc">
 
         <ImageView
             android:id="@+id/iv_image_feeds"
@@ -24,6 +30,9 @@
             android:layout_width="wrap_content"
             android:layout_height="wrap_content"
             android:text="Full name"
+            android:textColor="#000"
+            android:textStyle="bold"
+            android:textSize="16sp"
             android:layout_alignTop="@+id/iv_image_feeds"
             android:layout_alignParentStart="true"
             android:layout_marginStart="40dp" />
@@ -79,11 +88,18 @@
     <RelativeLayout
         android:layout_width="match_parent"
         android:layout_height="wrap_content"
-        android:background="@drawable/layout_design_recyclerview">
+        android:layout_marginTop="1dp"
+        android:layout_marginLeft="8dp"
+        android:layout_marginRight="8dp"
+        android:padding="8dp"
+        android:elevation="20dp"
+        android:background="#fcfcfc">
         <TextView
             android:id="@+id/tv_message_feeds"
             android:layout_width="wrap_content"
             android:layout_height="wrap_content"
+            android:textSize="14sp"
+            android:textColor="#000"
             android:paddingTop="10dp"
             android:paddingBottom="10dp"
             android:text="Message here"/>

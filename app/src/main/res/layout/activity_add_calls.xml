@@ -49,11 +49,13 @@
                     android:paddingBottom="20dp"
                     android:text="Type" />
 
-                <TextView
+                <Button
                     android:id="@+id/type_calls"
                     android:layout_width="match_parent"
                     android:layout_height="match_parent"
+                    android:hint="Completed Call"
                     android:drawableRight="@drawable/ic_chevron_right_black_24dp"
+                    android:background="@android:color/transparent"
                     android:paddingTop="10dp"
                     android:paddingRight="10dp"
                     android:paddingBottom="20dp" />
@@ -80,10 +82,11 @@
                     android:layout_height="match_parent"
                     android:orientation="horizontal">
 
-                    <TextView
+                    <Button
                         android:id="@+id/contact_calls"
                         android:layout_width="match_parent"
                         android:layout_height="match_parent"
+                        android:background="@android:color/transparent"
                         android:drawableRight="@drawable/ic_chevron_right_black_24dp"
                         android:paddingTop="10dp"
                         android:paddingRight="10dp"
@@ -142,11 +145,13 @@
                     android:layout_height="match_parent"
                     android:orientation="horizontal">
 
-                    <TextView
+                    <Button
                         android:id="@+id/call_purpose_calls"
                         android:layout_width="match_parent"
                         android:layout_height="match_parent"
+                        android:hint="-None-"
                         android:drawableRight="@drawable/ic_chevron_right_black_24dp"
+                        android:background="@android:color/transparent"
                         android:paddingTop="10dp"
                         android:paddingRight="10dp"
                         android:paddingBottom="20dp" />
@@ -174,10 +179,11 @@
                     android:layout_height="match_parent"
                     android:orientation="horizontal">
 
-                    <TextView
+                    <Button
                         android:id="@+id/account_calls"
                         android:layout_width="match_parent"
                         android:layout_height="match_parent"
+                        android:background="@android:color/transparent"
                         android:drawableRight="@drawable/ic_chevron_right_black_24dp"
                         android:paddingTop="10dp"
                         android:paddingRight="10dp"
@@ -206,11 +212,13 @@
                     android:layout_height="match_parent"
                     android:orientation="horizontal">
 
-                    <TextView
+                    <Button
                         android:id="@+id/calltype_calls"
                         android:layout_width="match_parent"
                         android:layout_height="match_parent"
+                        android:hint="Outbound"
                         android:drawableRight="@drawable/ic_chevron_right_black_24dp"
+                        android:background="@android:color/transparent"
                         android:paddingTop="10dp"
                         android:paddingRight="10dp"
                         android:paddingBottom="20dp" />
@@ -238,11 +246,12 @@
                     android:layout_height="match_parent"
                     android:orientation="horizontal">
 
-                    <DatePicker
+                    <Button
+                        android:background="@android:color/transparent"
                         android:id="@+id/cst_calls"
                         android:layout_width="match_parent"
                         android:layout_height="match_parent"
-                        app:backgroundTint="#edeff2" />
+                        />
                 </LinearLayout>
             </LinearLayout>
 
@@ -378,10 +387,12 @@
                     android:layout_height="match_parent"
                     android:orientation="horizontal">
 
-                    <TextView
+                    <Button
                         android:id="@+id/reminder_calls"
                         android:layout_width="match_parent"
                         android:layout_height="match_parent"
+                        android:hint="None"
+                        android:background="@android:color/transparent"
                         android:drawableRight="@drawable/ic_chevron_right_black_24dp"
                         android:paddingTop="10dp"
                         android:paddingRight="10dp"
