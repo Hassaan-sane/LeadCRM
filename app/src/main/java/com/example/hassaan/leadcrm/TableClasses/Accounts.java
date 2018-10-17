@@ -9,7 +9,7 @@ public class Accounts {
     public static final String KEY_ID = "ID";
     public static final String KEY_Address = "Address";
     public static final String KEY_PhoneNO = "PhoneNo";
-    public static final String KEY_BOD = "BOD";
+    public static final String KEY_DOB = "DOB";
     public static final String KEY_Password = "Password";
     public static final String KEY_Salt = "Salt";
     public static final String KEY_DateCreated = "DateCreated";
@@ -22,7 +22,7 @@ public class Accounts {
     private Integer ID;
     private String Address;
     private String PhoneNO;
-    private Date BOD;
+    private Date DOB;
     private String Password;
     private String Salt;
     private Date DateCreated;
@@ -32,23 +32,22 @@ public class Accounts {
 
 
 
-
-    public Accounts(String Name,Integer ID, String Address, String PhoneNo, Date BOD, String Password, String Salt, Date DateCreated, Integer RoleID, String Email, String Desigination) {
-        this.Name = Name;
-        this.ID = ID;
-        this.Address = Address;
-        this.PhoneNO = PhoneNo;
-        this.BOD = BOD;
-        this.Password = Password;
-        this.Salt = Salt;
-        this.DateCreated = DateCreated;
-        this.RoleID = RoleID;
-        this.Email = Email;
-        this.Desigination = Desigination;
-    }
-
     public Accounts() {
 
+    }
+
+    public Accounts(String name, Integer ID, String address, String phoneNO, Date DOB, String password, String salt, Date dateCreated, Integer roleID, String email, String desigination) {
+        Name = name;
+        this.ID = ID;
+        Address = address;
+        PhoneNO = phoneNO;
+        this.DOB = DOB;
+        Password = password;
+        Salt = salt;
+        DateCreated = dateCreated;
+        RoleID = roleID;
+        Email = email;
+        Desigination = desigination;
     }
 
     public String getName() {
@@ -83,12 +82,12 @@ public class Accounts {
         PhoneNO = phoneNO;
     }
 
-    public Date getBOD() {
-        return BOD;
+    public Date getDOB() {
+        return DOB;
     }
 
-    public void setBOD(Date BOD) {
-        this.BOD = BOD;
+    public void setDOB(Date DOB) {
+        this.DOB = DOB;
     }
 
     public String getPassword() {

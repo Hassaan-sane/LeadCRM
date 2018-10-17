@@ -25,14 +25,14 @@ public class AccountsRepo {
                 " (" + Accounts.KEY_ID + " INTEGER PRIMARY KEY AUTOINCREMENT, " +
                 Accounts.KEY_Name + " VARCHAR, " +
                 Accounts.KEY_Address + " VARCHAR, " +
-                Accounts.KEY_BOD + " DATETIME, "+
+                Accounts.KEY_DOB + " DATETIME, "+
                 Accounts.KEY_Email + " VARCHAR, "+
                 Accounts.KEY_PhoneNO + " VARCHAR, "+
                 Accounts.KEY_Password + " VARCHAR, "+
                 Accounts.KEY_Salt + " VARCHAR, "+
                 Accounts.KEY_DateCreated + " DATETIME, "+
                 Accounts.KEY_RoleID + " INTEGER, "+
-                Accounts.KEY_Desigination + " VARCHAR, FOREIGN KEY(" + Accounts.KEY_ID + ")REFERENCES " + Role.TABLE_NAME + "(" + Role.KEY_ID + ") )";
+                Accounts.KEY_Desigination + " VARCHAR, FOREIGN KEY(" + Accounts.KEY_RoleID + ")REFERENCES " + Role.TABLE_NAME + "(" + Role.KEY_ID + ") )";
     }
     public int insertInAccounts(Accounts accounts1){
         SQLiteDatabase db = DatabaseManager.getInstance().openDatabase();
@@ -40,7 +40,7 @@ public class AccountsRepo {
         values.put(Accounts.KEY_ID, accounts1.getID());
         values.put(Accounts.KEY_Name, accounts1.getName());
         values.put(Accounts.KEY_Address, accounts1.getAddress());
-        values.put(Accounts.KEY_BOD, accounts1.getBOD().toString());
+        values.put(Accounts.KEY_DOB, accounts1.getDOB().toString());
         values.put(Accounts.KEY_Email, accounts1.getEmail());
         values.put(Accounts.KEY_PhoneNO, accounts1.getPhoneNO());
         values.put(Accounts.KEY_Password, accounts1.getPassword());
@@ -78,11 +78,10 @@ public class AccountsRepo {
                 GetAccounts.setPhoneNO(cursor.getString(cursor.getColumnIndex(Accounts.KEY_PhoneNO)));
                 GetAccounts.setPassword(cursor.getString(cursor.getColumnIndex(Accounts.KEY_Password)));
                 GetAccounts.setSalt(cursor.getString(cursor.getColumnIndex(Accounts.KEY_Salt)));
-
                 GetAccounts.setRoleID(Integer.parseInt(cursor.getString(cursor.getColumnIndex(Accounts.KEY_RoleID))));
                 GetAccounts.setDesigination(cursor.getString(cursor.getColumnIndex(Accounts.KEY_Desigination)));
                 try {
-                    GetAccounts.setBOD(sdf.parse(cursor.getString(cursor.getColumnIndex(Accounts.KEY_BOD))));
+                    GetAccounts.setDOB(sdf.parse(cursor.getString(cursor.getColumnIndex(Accounts.KEY_DOB))));
                     GetAccounts.setDateCreated(sdf.parse(cursor.getString(cursor.getColumnIndex(Accounts.KEY_DateCreated))));
                 } catch (ParseException e) {
                     e.printStackTrace();
