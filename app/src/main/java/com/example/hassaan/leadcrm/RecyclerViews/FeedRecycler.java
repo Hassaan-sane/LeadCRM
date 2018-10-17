@@ -1,4 +1,4 @@
-package com.example.hassaan.leadcrm.Adapters;
+package com.example.hassaan.leadcrm.RecyclerViews;
 
 import android.support.annotation.NonNull;
 import android.support.v7.widget.RecyclerView;
@@ -13,25 +13,25 @@ import com.example.hassaan.leadcrm.R;
 import java.util.ArrayList;
 import java.util.List;
 
-public class FeedAdapter extends RecyclerView.Adapter<FeedAdapter.ViewHolder> {
+public class FeedRecycler extends RecyclerView.Adapter<FeedRecycler.ViewHolder> {
 
     private List<String> list=new ArrayList<String>();
 
-    public FeedAdapter(List<String> list){
+    public FeedRecycler(List<String> list){
         this.list=list;
     }
 
     @NonNull
     @Override
-    public FeedAdapter.ViewHolder onCreateViewHolder(@NonNull ViewGroup viewGroup, int i) {
+    public FeedRecycler.ViewHolder onCreateViewHolder(@NonNull ViewGroup viewGroup, int i) {
         LayoutInflater layoutInflater=LayoutInflater.from(viewGroup.getContext());
-        View view=layoutInflater.inflate(R.layout.feeds_baselayout,viewGroup,false);
+        View view=layoutInflater.inflate(R.layout.recycler_feeds,viewGroup,false);
 
         return new ViewHolder(view);
     }
 
     @Override
-    public void onBindViewHolder(@NonNull FeedAdapter.ViewHolder viewHolder, int i) {
+    public void onBindViewHolder(@NonNull FeedRecycler.ViewHolder viewHolder, int i) {
         viewHolder.tv_name.setText("Zohaib Javed");
         viewHolder.tv_time.setText("2h ago");
         viewHolder.tv_posted.setText("posted a status");

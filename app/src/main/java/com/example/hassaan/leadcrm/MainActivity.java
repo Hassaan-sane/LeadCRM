@@ -12,6 +12,7 @@ import android.view.MenuItem;
 
 import com.example.hassaan.leadcrm.Data.DBHelper;
 import com.example.hassaan.leadcrm.Fragments.AboutusFragment;
+import com.example.hassaan.leadcrm.Fragments.AccountDetailsFragment;
 import com.example.hassaan.leadcrm.Fragments.AccountsFragment;
 import com.example.hassaan.leadcrm.Fragments.CallsFragment;
 import com.example.hassaan.leadcrm.Fragments.ContactsFragment;
@@ -168,7 +169,7 @@ public class MainActivity extends AppCompatActivity
             getSupportActionBar().setTitle("Contacts");
 
         } else if (id == R.id.nav_accounts) {
-            fragmentManager.beginTransaction().replace(R.id.container, new AccountsFragment()).commit();
+            fragmentManager.beginTransaction().replace(R.id.container, new AccountDetailsFragment()).commit();
             getSupportActionBar().setTitle("Accounts");
 
         } else if (id == R.id.nav_deals) {

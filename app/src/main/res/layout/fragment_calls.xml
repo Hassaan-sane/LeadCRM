@@ -19,12 +19,14 @@
         android:layout_height="wrap_content"
         android:id="@+id/spinnercalls"
         android:layout_below="@+id/searchcalls"
+        android:paddingTop="20dp"
+        android:paddingBottom="20dp"
         ></Spinner>
 
     <android.support.v7.widget.RecyclerView
         android:layout_width="match_parent"
         android:layout_height="match_parent"
-        android:id="@+id/recyclerDeals"
+        android:id="@+id/recyclercalls"
         android:layout_below="@id/spinnercalls"
         ></android.support.v7.widget.RecyclerView>
 
