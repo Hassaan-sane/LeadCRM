@@ -1,5 +1,6 @@
 package com.example.hassaan.leadcrm;
 
+import android.content.Intent;
 import android.os.Bundle;
 import android.support.v4.app.FragmentManager;
 import android.support.design.widget.NavigationView;
@@ -10,6 +11,9 @@ import android.support.v7.app.AppCompatActivity;
 import android.support.v7.widget.Toolbar;
 import android.view.MenuItem;
 
+import com.example.hassaan.leadcrm.Activities.EditAccountActivity;
+import com.example.hassaan.leadcrm.Activities.EditCallActivity;
+import com.example.hassaan.leadcrm.Activities.EditContactsActivity;
 import com.example.hassaan.leadcrm.Data.DBHelper;
 import com.example.hassaan.leadcrm.Fragments.AboutusFragment;
 import com.example.hassaan.leadcrm.Fragments.AccountDetailsFragment;
@@ -165,10 +169,14 @@ public class MainActivity extends AppCompatActivity
 
         } else if (id == R.id.nav_contacts) {
 
+            Intent intent=new Intent(this,EditContactsActivity.class);
+            startActivity(intent);
             fragmentManager.beginTransaction().replace(R.id.container, new ContactsFragment()).commit();
             getSupportActionBar().setTitle("Contacts");
 
         } else if (id == R.id.nav_accounts) {
+            Intent intent=new Intent(this,EditAccountActivity.class);
+            startActivity(intent);
             fragmentManager.beginTransaction().replace(R.id.container, new AccountsFragment()).commit();
             getSupportActionBar().setTitle("Accounts");
 
@@ -188,6 +196,8 @@ public class MainActivity extends AppCompatActivity
 
         } else if (id == R.id.nav_Calls) {
 
+            Intent intent=new Intent(this,EditCallActivity.class);
+            startActivity(intent);
             fragmentManager.beginTransaction().replace(R.id.container, new CallsFragment()).commit();
             getSupportActionBar().setTitle("Calls");
 
