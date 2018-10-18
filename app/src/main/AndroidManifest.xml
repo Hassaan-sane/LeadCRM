@@ -34,15 +34,22 @@
             android:parentActivityName=".Activities.AddAccountActivity" />
         <activity android:name=".Activities.SignInActivity" />
         <activity android:name=".Activities.SignUpActivity" />
-        <activity android:name=".Activities.AddContactsActivity"
-            android:parentActivityName=".Activities.AddContactsActivity"/>
-        <activity android:name=".Activities.StickyListView"/>
-        <activity android:name=".Activities.AddCallActivity"
-            android:parentActivityName=".Activities.AddCallActivity"/>
-        <activity android:name=".Activities.AddTaskActivity"
-            android:parentActivityName=".Activities.AddTaskActivity"/>
-        <activity android:name=".Activities.AddDealsActivity"
-            android:parentActivityName=".Activities.AddDealsActivity"/>
+        <activity
+            android:name=".Activities.AddContactsActivity"
+            android:parentActivityName=".Activities.AddContactsActivity" />
+        <activity android:name=".Activities.StickyListView" />
+        <activity
+            android:name=".Activities.AddCallActivity"
+            android:parentActivityName=".Activities.AddCallActivity" />
+        <activity
+            android:name=".Activities.AddTaskActivity"
+            android:parentActivityName=".Activities.AddTaskActivity" />
+        <activity
+            android:name=".Activities.AddDealsActivity"
+            android:parentActivityName=".Activities.AddDealsActivity" />
+        <activity android:name=".Activities.EditCallActivity" />
+        <activity android:name=".Activities.EditAccountActivity" />
+        <activity android:name=".Activities.EditContactsActivity"></activity>
     </application>
 
 </manifest>

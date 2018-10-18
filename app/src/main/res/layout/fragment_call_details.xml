@@ -6,7 +6,7 @@
     android:layout_height="match_parent"
     android:fillViewport="true"
     android:scrollbars="vertical"
-    tools:context=".Activities.AddCallActivity">
+    tools:context=".Fragments.CallDetailsFragment">
 
     <LinearLayout
         android:layout_width="match_parent"
@@ -49,15 +49,13 @@
                     android:paddingBottom="20dp"
                     android:text="Type" />
 
-                <Button
-                    android:id="@+id/type_calls"
+                <TextView
+                    android:id="@+id/type_callsDetails"
                     android:layout_width="match_parent"
                     android:layout_height="match_parent"
-                    android:hint="Completed Call"
-                    android:drawableRight="@drawable/ic_chevron_right_black_24dp"
                     android:background="@drawable/button_design"
                     android:paddingTop="20dp"
-                    android:paddingRight="10dp"
+                    android:paddingLeft="20dp"
                     android:paddingBottom="20dp" />
 
             </LinearLayout>
@@ -82,15 +80,14 @@
                     android:layout_height="match_parent"
                     android:orientation="horizontal">
 
-                    <Button
-                        android:id="@+id/contact_calls"
+                    <TextView
+                        android:id="@+id/contact_callsDetails"
                         android:layout_width="match_parent"
                         android:layout_height="match_parent"
                         android:background="@drawable/button_design"
-                        android:drawableRight="@drawable/ic_chevron_right_black_24dp"
                         android:paddingTop="20dp"
-                        android:paddingRight="10dp"
-                        android:paddingBottom="20dp" />
+                        android:paddingLeft="20dp"
+                        android:paddingBottom="20dp"  />
 
                 </LinearLayout>
 
@@ -117,11 +114,14 @@
                     android:layout_height="match_parent"
                     android:orientation="horizontal">
 
-                    <EditText
-                        android:id="@+id/et_subject_calls"
+                    <TextView
+                        android:id="@+id/subject_callsDetails"
                         android:layout_width="match_parent"
                         android:layout_height="match_parent"
-                        android:background="@drawable/button_design"/>
+                        android:background="@drawable/button_design"
+                        android:paddingTop="20dp"
+                        android:paddingLeft="20dp"
+                        android:paddingBottom="20dp"  />
                 </LinearLayout>
             </LinearLayout>
 
@@ -145,15 +145,13 @@
                     android:layout_height="match_parent"
                     android:orientation="horizontal">
 
-                    <Button
-                        android:id="@+id/call_purpose_calls"
+                    <TextView
+                        android:id="@+id/call_purpose_callsDetails"
                         android:layout_width="match_parent"
                         android:layout_height="match_parent"
-                        android:hint="-None-"
-                        android:drawableRight="@drawable/ic_chevron_right_black_24dp"
                         android:background="@drawable/button_design"
                         android:paddingTop="20dp"
-                        android:paddingRight="10dp"
+                        android:paddingLeft="20dp"
                         android:paddingBottom="20dp" />
 
                 </LinearLayout>
@@ -179,14 +177,13 @@
                     android:layout_height="match_parent"
                     android:orientation="horizontal">
 
-                    <Button
-                        android:id="@+id/account_calls"
+                    <TextView
+                        android:id="@+id/account_callsDetails"
                         android:layout_width="match_parent"
                         android:layout_height="match_parent"
                         android:background="@drawable/button_design"
-                        android:drawableRight="@drawable/ic_chevron_right_black_24dp"
                         android:paddingTop="20dp"
-                        android:paddingRight="10dp"
+                        android:paddingLeft="20dp"
                         android:paddingBottom="20dp" />
 
                 </LinearLayout>
@@ -212,16 +209,14 @@
                     android:layout_height="match_parent"
                     android:orientation="horizontal">
 
-                    <Button
-                        android:id="@+id/calltype_calls"
+                    <TextView
+                        android:id="@+id/calltype_callsDetails"
                         android:layout_width="match_parent"
                         android:layout_height="match_parent"
-                        android:hint="Outbound"
-                        android:drawableRight="@drawable/ic_chevron_right_black_24dp"
                         android:background="@drawable/button_design"
                         android:paddingTop="20dp"
-                        android:paddingRight="10dp"
-                        android:paddingBottom="20dp" />
+                        android:paddingLeft="20dp"
+                        android:paddingBottom="20dp"  />
 
                 </LinearLayout>
             </LinearLayout>
@@ -246,12 +241,14 @@
                     android:layout_height="match_parent"
                     android:orientation="horizontal">
 
-                    <Button
-                        android:background="@drawable/button_design"
-                        android:id="@+id/cst_calls"
+                    <TextView
+                        android:id="@+id/cst_callsDetails"
                         android:layout_width="match_parent"
                         android:layout_height="match_parent"
-                        />
+                        android:background="@drawable/button_design"
+                        android:paddingTop="20dp"
+                        android:paddingLeft="20dp"
+                        android:paddingBottom="20dp"  />
                 </LinearLayout>
             </LinearLayout>
 
@@ -275,11 +272,14 @@
                     android:layout_height="match_parent"
                     android:orientation="horizontal">
 
-                    <EditText
-                        android:id="@+id/callDuration_calls"
+                    <TextView
+                        android:id="@+id/callDuration_callsDetails"
                         android:layout_width="match_parent"
                         android:layout_height="match_parent"
-                        android:background="@drawable/button_design"/>
+                        android:background="@drawable/button_design"
+                        android:paddingTop="20dp"
+                        android:paddingLeft="20dp"
+                        android:paddingBottom="20dp" />
                 </LinearLayout>
             </LinearLayout>
 
@@ -303,11 +303,14 @@
                     android:layout_height="match_parent"
                     android:orientation="horizontal">
 
-                    <EditText
-                        android:id="@+id/description_calls"
+                    <TextView
+                        android:id="@+id/description_callsDetails"
                         android:layout_width="match_parent"
                         android:layout_height="match_parent"
-                        android:background="@drawable/button_design" />
+                        android:background="@drawable/button_design"
+                        android:paddingTop="20dp"
+                        android:paddingLeft="20dp"
+                        android:paddingBottom="20dp"  />
                 </LinearLayout>
             </LinearLayout>
 
@@ -331,11 +334,14 @@
                     android:layout_height="match_parent"
                     android:orientation="horizontal">
 
-                    <EditText
-                        android:id="@+id/callResult_calls"
+                    <TextView
+                        android:id="@+id/callResult_callsDetails"
                         android:layout_width="match_parent"
                         android:layout_height="match_parent"
-                        android:background="@drawable/button_design" />
+                        android:background="@drawable/button_design"
+                        android:paddingTop="20dp"
+                        android:paddingLeft="20dp"
+                        android:paddingBottom="20dp"  />
                 </LinearLayout>
             </LinearLayout>
 
@@ -359,11 +365,14 @@
                     android:layout_height="match_parent"
                     android:orientation="horizontal">
 
-                    <Switch
-                        android:id="@+id/billable_calls"
+                    <TextView
+                        android:id="@+id/billable_callsDetails"
                         android:layout_width="match_parent"
                         android:layout_height="match_parent"
-                        android:background="@drawable/button_design" />
+                        android:background="@drawable/button_design"
+                        android:paddingTop="20dp"
+                        android:paddingLeft="20dp"
+                        android:paddingBottom="20dp"  />
                 </LinearLayout>
             </LinearLayout>
 
@@ -387,16 +396,14 @@
                     android:layout_height="match_parent"
                     android:orientation="horizontal">
 
-                    <Button
-                        android:id="@+id/reminder_calls"
+                    <TextView
+                        android:id="@+id/reminder_callsDetails"
                         android:layout_width="match_parent"
                         android:layout_height="match_parent"
-                        android:hint="None"
                         android:background="@drawable/button_design"
-                        android:drawableRight="@drawable/ic_chevron_right_black_24dp"
                         android:paddingTop="20dp"
-                        android:paddingRight="10dp"
-                        android:paddingBottom="20dp" />
+                        android:paddingLeft="20dp"
+                        android:paddingBottom="20dp"  />
 
                 </LinearLayout>
             </LinearLayout>

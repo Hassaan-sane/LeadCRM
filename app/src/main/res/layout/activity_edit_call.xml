@@ -6,7 +6,7 @@
     android:layout_height="match_parent"
     android:fillViewport="true"
     android:scrollbars="vertical"
-    tools:context=".Activities.AddCallActivity">
+    tools:context=".Activities.EditCallActivity">
 
     <LinearLayout
         android:layout_width="match_parent"
@@ -50,7 +50,7 @@
                     android:text="Type" />
 
                 <Button
-                    android:id="@+id/type_calls"
+                    android:id="@+id/type_callsEdit"
                     android:layout_width="match_parent"
                     android:layout_height="match_parent"
                     android:hint="Completed Call"
@@ -83,7 +83,7 @@
                     android:orientation="horizontal">
 
                     <Button
-                        android:id="@+id/contact_calls"
+                        android:id="@+id/contact_callsEdit"
                         android:layout_width="match_parent"
                         android:layout_height="match_parent"
                         android:background="@drawable/button_design"
@@ -118,7 +118,7 @@
                     android:orientation="horizontal">
 
                     <EditText
-                        android:id="@+id/et_subject_calls"
+                        android:id="@+id/et_subject_callsEdit"
                         android:layout_width="match_parent"
                         android:layout_height="match_parent"
                         android:background="@drawable/button_design"/>
@@ -146,7 +146,7 @@
                     android:orientation="horizontal">
 
                     <Button
-                        android:id="@+id/call_purpose_calls"
+                        android:id="@+id/call_purpose_callsEdit"
                         android:layout_width="match_parent"
                         android:layout_height="match_parent"
                         android:hint="-None-"
@@ -180,7 +180,7 @@
                     android:orientation="horizontal">
 
                     <Button
-                        android:id="@+id/account_calls"
+                        android:id="@+id/account_callsEdit"
                         android:layout_width="match_parent"
                         android:layout_height="match_parent"
                         android:background="@drawable/button_design"
@@ -213,7 +213,7 @@
                     android:orientation="horizontal">
 
                     <Button
-                        android:id="@+id/calltype_calls"
+                        android:id="@+id/calltype_callsEdit"
                         android:layout_width="match_parent"
                         android:layout_height="match_parent"
                         android:hint="Outbound"
@@ -248,7 +248,7 @@
 
                     <Button
                         android:background="@drawable/button_design"
-                        android:id="@+id/cst_calls"
+                        android:id="@+id/cst_callsEdit"
                         android:layout_width="match_parent"
                         android:layout_height="match_parent"
                         />
@@ -276,7 +276,7 @@
                     android:orientation="horizontal">
 
                     <EditText
-                        android:id="@+id/callDuration_calls"
+                        android:id="@+id/callDuration_callsEdit"
                         android:layout_width="match_parent"
                         android:layout_height="match_parent"
                         android:background="@drawable/button_design"/>
@@ -304,7 +304,7 @@
                     android:orientation="horizontal">
 
                     <EditText
-                        android:id="@+id/description_calls"
+                        android:id="@+id/description_callsEdit"
                         android:layout_width="match_parent"
                         android:layout_height="match_parent"
                         android:background="@drawable/button_design" />
@@ -332,7 +332,7 @@
                     android:orientation="horizontal">
 
                     <EditText
-                        android:id="@+id/callResult_calls"
+                        android:id="@+id/callResult_callsEdit"
                         android:layout_width="match_parent"
                         android:layout_height="match_parent"
                         android:background="@drawable/button_design" />
@@ -360,7 +360,7 @@
                     android:orientation="horizontal">
 
                     <Switch
-                        android:id="@+id/billable_calls"
+                        android:id="@+id/billable_callsEdit"
                         android:layout_width="match_parent"
                         android:layout_height="match_parent"
                         android:background="@drawable/button_design" />
@@ -388,7 +388,7 @@
                     android:orientation="horizontal">
 
                     <Button
-                        android:id="@+id/reminder_calls"
+                        android:id="@+id/reminder_callsEdit"
                         android:layout_width="match_parent"
                         android:layout_height="match_parent"
                         android:hint="None"

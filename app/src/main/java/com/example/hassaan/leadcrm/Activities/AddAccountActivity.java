@@ -129,7 +129,7 @@ public class AddAccountActivity extends AppCompatActivity implements View.OnClic
                 intent.putStringArrayListExtra("list", (ArrayList<String>) list);
                 intent.putExtra("Button","ownership");
                 break;
-            case R.id.bt_industry_lead:
+            case R.id.bt_industry_accounts:
                 intent.putStringArrayListExtra("list", (ArrayList<String>) list);
                 intent.putExtra("Button","industry");
                 break;
