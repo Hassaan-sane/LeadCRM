@@ -169,7 +169,7 @@ public class MainActivity extends AppCompatActivity
             getSupportActionBar().setTitle("Contacts");
 
         } else if (id == R.id.nav_accounts) {
-            fragmentManager.beginTransaction().replace(R.id.container, new AccountDetailsFragment()).commit();
+            fragmentManager.beginTransaction().replace(R.id.container, new AccountsFragment()).commit();
             getSupportActionBar().setTitle("Accounts");
 
         } else if (id == R.id.nav_deals) {
