@@ -169,14 +169,14 @@ public class MainActivity extends AppCompatActivity
 
         } else if (id == R.id.nav_contacts) {
 
-            Intent intent=new Intent(this,EditContactsActivity.class);
-            startActivity(intent);
+//            Intent intent=new Intent(this,EditContactsActivity.class);
+//            startActivity(intent);
             fragmentManager.beginTransaction().replace(R.id.container, new ContactsFragment()).commit();
             getSupportActionBar().setTitle("Contacts");
 
         } else if (id == R.id.nav_accounts) {
-            Intent intent=new Intent(this,EditAccountActivity.class);
-            startActivity(intent);
+//            Intent intent=new Intent(this,EditAccountActivity.class);
+//            startActivity(intent);
             fragmentManager.beginTransaction().replace(R.id.container, new AccountsFragment()).commit();
             getSupportActionBar().setTitle("Accounts");
 
@@ -196,8 +196,8 @@ public class MainActivity extends AppCompatActivity
 
         } else if (id == R.id.nav_Calls) {
 
-            Intent intent=new Intent(this,EditCallActivity.class);
-            startActivity(intent);
+//            Intent intent=new Intent(this,EditCallActivity.class);
+//            startActivity(intent);
             fragmentManager.beginTransaction().replace(R.id.container, new CallsFragment()).commit();
             getSupportActionBar().setTitle("Calls");
 

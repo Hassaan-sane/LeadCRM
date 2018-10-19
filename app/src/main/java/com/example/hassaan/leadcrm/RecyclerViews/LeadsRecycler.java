@@ -1,5 +1,7 @@
 package com.example.hassaan.leadcrm.RecyclerViews;
 
+import android.content.Context;
+import android.content.Intent;
 import android.support.annotation.NonNull;
 import android.support.v7.widget.RecyclerView;
 import android.view.LayoutInflater;
@@ -7,6 +9,8 @@ import android.view.View;
 import android.view.ViewGroup;
 import android.widget.ImageView;
 import android.widget.TextView;
+
+import com.example.hassaan.leadcrm.Activities.DetailLeadActivity;
 import com.example.hassaan.leadcrm.R;
 
 import java.util.ArrayList;
@@ -15,6 +19,12 @@ import java.util.List;
 public class LeadsRecycler extends RecyclerView.Adapter<LeadsRecycler.ViewHolder> {
 
     private List<String> list = new ArrayList<String>();
+    private Context context;
+
+    public LeadsRecycler(List<String> list, Context context) {
+        this.list = list;
+        this.context = context;
+    }
 
     public LeadsRecycler(List<String> list) {
         this.list = list;
@@ -33,7 +43,14 @@ public class LeadsRecycler extends RecyclerView.Adapter<LeadsRecycler.ViewHolder
     public void onBindViewHolder(@NonNull ViewHolder viewHolder, int i) {
         viewHolder.tv_name_leadrecycler.setText("Zohaib Javed");
         viewHolder.tv_email_leadrecycler.setText("My name is khan and I am not a terrorist");
-       // viewHolder.iv_image_leadrecycler.setImageIcon(list.get(i));
+       // viewHolder.iv_image_leadrecycler.setImageIcon(list.get(i));e
+        viewHolder.itemView.setOnClickListener(new View.OnClickListener() {
+            @Override
+            public void onClick(View view) {
+                Intent intent = new Intent(context, DetailLeadActivity.class);
+                context.startActivity(intent);
+            }
+        });
     }
 
     @Override

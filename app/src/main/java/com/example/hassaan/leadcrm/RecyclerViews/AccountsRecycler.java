@@ -1,5 +1,7 @@
 package com.example.hassaan.leadcrm.RecyclerViews;
 
+import android.content.Context;
+import android.content.Intent;
 import android.support.annotation.NonNull;
 import android.support.v7.widget.RecyclerView;
 import android.view.LayoutInflater;
@@ -7,6 +9,7 @@ import android.view.View;
 import android.view.ViewGroup;
 import android.widget.TextView;
 
+import com.example.hassaan.leadcrm.Activities.DetailAccountActivity;
 import com.example.hassaan.leadcrm.R;
 import com.example.hassaan.leadcrm.TableClasses.Accounts;
 
@@ -16,9 +19,11 @@ import java.util.List;
 public class AccountsRecycler extends RecyclerView.Adapter<AccountsRecycler.ViewHolder> {
 
     private List<String> list = new ArrayList<String>();
+    private Context context;
 
-    public AccountsRecycler(List<String> list) {
+    public AccountsRecycler(List<String> list, Context context) {
         this.list = list;
+        this.context = context;
     }
 
     @NonNull
@@ -33,6 +38,14 @@ public class AccountsRecycler extends RecyclerView.Adapter<AccountsRecycler.View
     @Override
     public void onBindViewHolder(@NonNull AccountsRecycler.ViewHolder viewHolder, int i) {
         viewHolder.tv_name_accountrecycler.setText("Zohaib Javed");
+
+        viewHolder.itemView.setOnClickListener(new View.OnClickListener() {
+            @Override
+            public void onClick(View view) {
+                Intent intent = new Intent(context, DetailAccountActivity.class);
+                context.startActivity(intent);
+            }
+        });
     }
 
     @Override

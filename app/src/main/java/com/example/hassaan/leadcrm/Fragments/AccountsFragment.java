@@ -64,7 +64,7 @@ public class AccountsFragment extends Fragment implements AdapterView.OnItemSele
 
         RecyclerView recyclerView=view.findViewById(R.id.recyclerAccounts);
         recyclerView.setLayoutManager(new LinearLayoutManager(getContext()));
-        recyclerView.setAdapter(new AccountsRecycler(list));
+        recyclerView.setAdapter(new AccountsRecycler(list,getContext()));
 
         FloatingActionButton fab = (FloatingActionButton) view.findViewById(R.id.floating_accounts);
         fab.setOnClickListener(new View.OnClickListener() {

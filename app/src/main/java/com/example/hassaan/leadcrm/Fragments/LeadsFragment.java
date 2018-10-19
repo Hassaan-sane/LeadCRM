@@ -27,6 +27,7 @@ public class LeadsFragment extends Fragment implements AdapterView.OnItemSelecte
     public String[] sample={"Red","Blue","Green","Yellow","White","Black","Orange","Purple","Blue","Pink"};
     private List<String> list=new ArrayList<String>();
     Spinner spinner;
+    private Context context= getContext();
 
 
     public LeadsFragment() {
@@ -56,7 +57,7 @@ public class LeadsFragment extends Fragment implements AdapterView.OnItemSelecte
 
         RecyclerView recyclerView=view.findViewById(R.id.recycler_leads);
         recyclerView.setLayoutManager(new LinearLayoutManager(getContext()));
-        recyclerView.setAdapter(new LeadsRecycler(list));
+        recyclerView.setAdapter(new LeadsRecycler(list,getActivity()));
 
         FloatingActionButton fab = (FloatingActionButton) view.findViewById(R.id.floating_leads);
         fab.setOnClickListener(new View.OnClickListener() {

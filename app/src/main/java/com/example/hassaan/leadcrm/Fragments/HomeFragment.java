@@ -47,36 +47,14 @@ public class HomeFragment extends Fragment {
         View view = inflater.inflate(R.layout.fragment_home, container, false);
         mAgendaCalendarView = view.findViewById(R.id.agenda_calendar_view);
 
-//        Calendar minDate = Calendar.getInstance();
-//        Calendar maxDate = Calendar.getInstance();
-//
-//        minDate.add(Calendar.MONTH, -1);
-//        minDate.set(Calendar.DAY_OF_MONTH, 1);
-//        maxDate.add(Calendar.YEAR, 1);
-//
-//        List<CalendarEvent> eventList = new ArrayList<>();
+
         new MyAsyncTask().execute(eventList);
-//
-//
-//        mAgendaCalendarView.init(eventList, minDate, maxDate, Locale.getDefault(), this);
+
         return view;
     }
 
 
-//    @Override
-//    public void onDaySelected(DayItem dayItem) {
-//
-//    }
-//
-//    @Override
-//    public void onEventSelected(CalendarEvent event) {
-//
-//    }
-//
-//    @Override
-//    public void onScrollToDate(Calendar calendar) {
-//
-//    }
+
 
     private class MyAsyncTask extends AsyncTask<List<CalendarEvent>, Integer, Long> implements CalendarPickerController {
 

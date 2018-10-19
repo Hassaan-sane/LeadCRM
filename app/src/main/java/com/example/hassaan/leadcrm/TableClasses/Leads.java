@@ -121,7 +121,6 @@ public class Leads {
         AnnualRevenue = annualRevenue;
     }
 
-
     public String getCompanyName() {
         return CompanyName;
     }

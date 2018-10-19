@@ -47,9 +47,15 @@
         <activity
             android:name=".Activities.AddDealsActivity"
             android:parentActivityName=".Activities.AddDealsActivity" />
-        <activity android:name=".Activities.EditCallActivity" />
-        <activity android:name=".Activities.EditAccountActivity" />
-        <activity android:name=".Activities.EditContactsActivity"></activity>
+        <activity
+            android:name=".Activities.DetailLeadActivity"
+            android:parentActivityName=".Activities.DetailLeadActivity"
+            android:theme="@style/AppTheme.NoActionBar" />
+        <activity
+            android:name=".Activities.DetailAccountActivity"
+            android:parentActivityName=".Activities.DetailAccountActivity"
+            android:theme="@style/AppTheme.NoActionBar" />
+        <activity android:name=".Activities.DetailTaskActivity"></activity>
     </application>
 
 </manifest>
