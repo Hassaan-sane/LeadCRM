@@ -97,7 +97,7 @@ public class AddAccountActivity extends AppCompatActivity implements View.OnClic
         bt_rating_account=findViewById(R.id.bt_rating_account);
         bt_parentAccount_account=findViewById(R.id.bt_parentAccount_account);
         bt_ownership_account=findViewById(R.id.bt_ownership_account);
-        bt_industry_account=findViewById(R.id.bt_industry_lead);
+        bt_industry_account=findViewById(R.id.bt_industry_accounts);
 
 
 
@@ -129,7 +129,7 @@ public class AddAccountActivity extends AppCompatActivity implements View.OnClic
                 intent.putStringArrayListExtra("list", (ArrayList<String>) list);
                 intent.putExtra("Button","ownership");
                 break;
-            case R.id.bt_industry_lead:
+            case R.id.bt_industry_accounts:
                 intent.putStringArrayListExtra("list", (ArrayList<String>) list);
                 intent.putExtra("Button","industry");
                 break;

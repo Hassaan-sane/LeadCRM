@@ -1,0 +1,107 @@
+<?xml version="1.0" encoding="utf-8"?>
+<RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    android:layout_width="match_parent"
+    android:layout_height="wrap_content"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    android:background="@drawable/button_design">
+
+    <TextView
+        android:id="@+id/tv_subject_callrecycler"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:paddingLeft="50dp"
+        android:paddingTop="10dp"
+        android:text="Subject"
+        android:textColor="#000"
+        android:textSize="16sp"
+        android:textStyle="bold"/>
+    <TextView
+        android:id="@+id/tv_time_callrecycler"
+        android:layout_width="wrap_content"
+        android:layout_below="@id/tv_subject_callrecycler"
+        android:layout_height="wrap_content"
+        android:paddingLeft="50dp"
+        android:textSize="14sp"
+        android:text="1:29 PM"
+        android:textStyle="normal"/>
+
+    <TextView
+        android:id="@+id/tv_to_callrecycler"
+        android:layout_width="wrap_content"
+        android:layout_below="@id/tv_subject_callrecycler"
+        android:layout_height="wrap_content"
+        android:layout_toRightOf="@id/tv_time_callrecycler"
+        android:paddingLeft="10dp"
+        android:paddingBottom="10dp"
+        android:textSize="14sp"
+        android:text="To:"
+        android:textStyle="normal"/>
+    <TextView
+        android:id="@+id/tv_customerName_callrecycler"
+        android:layout_width="wrap_content"
+        android:layout_below="@id/tv_subject_callrecycler"
+        android:layout_height="wrap_content"
+        android:layout_toRightOf="@id/tv_to_callrecycler"
+        android:paddingLeft="10dp"
+        android:paddingBottom="10dp"
+        android:textSize="14sp"
+        android:textColor="#000"
+        android:text="Customer Name"
+        android:textStyle="normal"/>
+
+    <LinearLayout
+        android:id="@+id/linearLayout_callrecycler"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:paddingLeft="10dp"
+        android:paddingTop="20dp">
+        <ImageView
+            android:id="@+id/iv_image_callrecycler"
+            android:layout_width="20dp"
+            android:layout_height="20dp"
+            android:layout_alignBottom="@+id/tv_time_callrecycler"
+            android:paddingLeft="10dp"
+            android:paddingRight="20dp"
+            android:paddingBottom="10dp"
+            android:background="@drawable/incoming2" />
+    </LinearLayout>
+
+
+    <TextView
+        android:id="@+id/tv_date_callrecycler"
+        android:layout_width="wrap_content"
+        android:layout_below="@id/tv_time_callrecycler"
+        android:layout_height="wrap_content"
+        android:layout_toRightOf="@id/linearLayout_callrecycler"
+        android:paddingBottom="30dp"
+        android:paddingLeft="20dp"
+        android:textSize="14sp"
+        android:text="Oct 2,2018"
+        android:textStyle="normal"/>
+
+    <TextView
+        android:id="@+id/tv_employeeName_callrecycler"
+        android:layout_width="wrap_content"
+        android:layout_below="@id/tv_time_callrecycler"
+        android:layout_height="wrap_content"
+        android:layout_toRightOf="@id/tv_date_callrecycler"
+        android:paddingBottom="30dp"
+        android:paddingLeft="10dp"
+        android:textSize="14sp"
+        android:text="Employee Name"
+        android:textColor="#000"
+        android:textStyle="normal"/>
+
+    <TextView
+        android:id="@+id/tv_duration_callrecycler"
+        android:layout_width="wrap_content"
+        android:layout_below="@id/tv_subject_callrecycler"
+        android:layout_height="wrap_content"
+        android:layout_alignParentEnd="true"
+        android:paddingRight="10dp"
+        android:paddingBottom="10dp"
+        android:textSize="14sp"
+        android:text="00:15"
+        android:textStyle="normal"/>
+
+</RelativeLayout>

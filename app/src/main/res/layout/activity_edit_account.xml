@@ -6,7 +6,7 @@
     android:layout_height="match_parent"
     android:fillViewport="true"
     android:scrollbars = "vertical"
-    tools:context=".Activities.AddAccountActivity">
+    tools:context=".Activities.EditAccountActivity">
 
     <LinearLayout
         android:layout_width="match_parent"
@@ -42,7 +42,6 @@
                 android:orientation="horizontal">
 
                 <TextView
-                    android:id="@+id/tv_accountOwner_account"
                     android:layout_width="150dp"
                     android:layout_height="wrap_content"
                     android:text="Account Owner"
@@ -56,7 +55,7 @@
                     android:layout_height="match_parent"
                     android:orientation="horizontal">
                     <EditText
-                        android:id="@+id/et_accountOwner_account"
+                        android:id="@+id/et_accountOwner_accountEdit"
                         android:layout_width="match_parent"
                         android:layout_height="match_parent"
                         android:background="@drawable/button_design"/>
@@ -71,7 +70,6 @@
                 android:orientation="horizontal">
 
                 <TextView
-                    android:id="@+id/tv_rating_account"
                     android:layout_width="150dp"
                     android:layout_height="wrap_content"
                     android:text="Rating"
@@ -85,7 +83,7 @@
                     android:layout_height="match_parent"
                     android:orientation="horizontal">
                     <Button
-                        android:id="@+id/bt_rating_account"
+                        android:id="@+id/bt_rating_accountEdit"
                         android:layout_width="match_parent"
                         android:layout_height="match_parent"
                         android:text="Select Rating..."
@@ -103,7 +101,6 @@
                 android:orientation="horizontal">
 
                 <TextView
-                    android:id="@+id/tv_accountName_account"
                     android:layout_width="150dp"
                     android:layout_height="wrap_content"
                     android:text="Account Name"
@@ -117,7 +114,7 @@
                     android:layout_height="match_parent"
                     android:orientation="horizontal">
                     <EditText
-                        android:id="@+id/et_accountName_account"
+                        android:id="@+id/et_accountName_accountEdit"
                         android:layout_width="match_parent"
                         android:layout_height="match_parent"
                         android:background="@drawable/button_design"/>
@@ -130,7 +127,6 @@
                 android:orientation="horizontal">
 
                 <TextView
-                    android:id="@+id/tv_phone_account"
                     android:layout_width="150dp"
                     android:layout_height="wrap_content"
                     android:text="Phone"
@@ -144,7 +140,7 @@
                     android:layout_height="match_parent"
                     android:orientation="horizontal">
                     <EditText
-                        android:id="@+id/et_phone_account"
+                        android:id="@+id/et_phone_accountEdit"
                         android:layout_width="match_parent"
                         android:layout_height="match_parent"
                         android:background="@drawable/button_design"/>
@@ -157,7 +153,6 @@
                 android:orientation="horizontal">
 
                 <TextView
-                    android:id="@+id/tv_accountSite_account"
                     android:layout_width="150dp"
                     android:layout_height="wrap_content"
                     android:text="Account Site"
@@ -171,7 +166,7 @@
                     android:layout_height="match_parent"
                     android:orientation="horizontal">
                     <EditText
-                        android:id="@+id/et_accountSite_account"
+                        android:id="@+id/et_accountSite_accountEdit"
                         android:layout_width="match_parent"
                         android:layout_height="match_parent"
                         android:background="@drawable/button_design"/>
@@ -184,7 +179,6 @@
                 android:orientation="horizontal">
 
                 <TextView
-                    android:id="@+id/tv_parentAccount_account"
                     android:layout_width="150dp"
                     android:layout_height="wrap_content"
                     android:text="Parent Account"
@@ -199,7 +193,7 @@
                     android:orientation="horizontal">
 
                     <Button
-                        android:id="@+id/bt_parentAccount_account"
+                        android:id="@+id/bt_parentAccount_accountEdit"
                         android:layout_width="match_parent"
                         android:layout_height="match_parent"
                         android:drawableRight="@drawable/ic_chevron_right_black_24dp"
@@ -217,7 +211,6 @@
                 android:orientation="horizontal">
 
                 <TextView
-                    android:id="@+id/tv_accountnumber_account"
                     android:layout_width="150dp"
                     android:layout_height="wrap_content"
                     android:text="Account Number"
@@ -231,7 +224,7 @@
                     android:layout_height="match_parent"
                     android:orientation="horizontal">
                     <EditText
-                        android:id="@+id/et_accountNumber_account"
+                        android:id="@+id/et_accountNumber_accountEdit"
                         android:layout_width="match_parent"
                         android:layout_height="match_parent"
                         android:background="@drawable/button_design"/>
@@ -244,7 +237,6 @@
                 android:orientation="horizontal">
 
                 <TextView
-                    android:id="@+id/tv_website_account"
                     android:layout_width="150dp"
                     android:layout_height="wrap_content"
                     android:text="Website"
@@ -258,7 +250,7 @@
                     android:layout_height="match_parent"
                     android:orientation="horizontal">
                     <EditText
-                        android:id="@+id/et_website_account"
+                        android:id="@+id/et_website_accountEdit"
                         android:layout_width="match_parent"
                         android:layout_height="match_parent"
                         android:background="@drawable/button_design"/>
@@ -271,7 +263,6 @@
                 android:orientation="horizontal">
 
                 <TextView
-                    android:id="@+id/tv_tickerSymbol_account"
                     android:layout_width="150dp"
                     android:layout_height="wrap_content"
                     android:text="Ticker Symbol"
@@ -285,7 +276,7 @@
                     android:layout_height="match_parent"
                     android:orientation="horizontal">
                     <EditText
-                        android:id="@+id/et_tickerSymbol_account"
+                        android:id="@+id/et_tickerSymbol_accountEdit"
                         android:layout_width="match_parent"
                         android:layout_height="match_parent"
                         android:background="@drawable/button_design"/>
@@ -298,7 +289,6 @@
                 android:orientation="horizontal">
 
                 <TextView
-                    android:id="@+id/tv_accounType_account"
                     android:layout_width="150dp"
                     android:layout_height="wrap_content"
                     android:text="Account Type"
@@ -312,7 +302,7 @@
                     android:layout_height="match_parent"
                     android:orientation="horizontal">
                     <Button
-                        android:id="@+id/bt_accountType_account"
+                        android:id="@+id/bt_accountType_accountEdit"
                         android:layout_width="match_parent"
                         android:layout_height="match_parent"
                         android:text="Select Account Type..."
@@ -330,7 +320,6 @@
                 android:orientation="horizontal">
 
                 <TextView
-                    android:id="@+id/tv_ownership_account"
                     android:layout_width="150dp"
                     android:layout_height="wrap_content"
                     android:text="Ownership"
@@ -345,7 +334,7 @@
                     android:orientation="horizontal">
                     <Button
                         android:drawableRight="@drawable/ic_chevron_right_black_24dp"
-                        android:id="@+id/bt_ownership_account"
+                        android:id="@+id/bt_ownership_accountEdit"
                         android:layout_width="match_parent"
                         android:layout_height="match_parent"
                         android:text="Select Ownership..."
@@ -362,7 +351,6 @@
                 android:orientation="horizontal">
 
                 <TextView
-                    android:id="@+id/tv_industry_accounts"
                     android:layout_width="150dp"
                     android:layout_height="wrap_content"
                     android:text="Industry"
@@ -376,7 +364,7 @@
                     android:layout_height="match_parent"
                     android:orientation="horizontal">
                     <Button
-                        android:id="@+id/bt_industry_accounts"
+                        android:id="@+id/bt_industry_accountsEdit"
                         android:layout_width="match_parent"
                         android:layout_height="match_parent"
                         android:text="Select Industry..."
@@ -394,7 +382,6 @@
                 android:orientation="horizontal">
 
                 <TextView
-                    android:id="@+id/tv_employees_account"
                     android:layout_width="150dp"
                     android:layout_height="wrap_content"
                     android:text="Employees"
@@ -408,7 +395,7 @@
                     android:layout_height="match_parent"
                     android:orientation="horizontal">
                     <EditText
-                        android:id="@+id/et_employees_account"
+                        android:id="@+id/et_employees_accountEdit"
                         android:layout_width="match_parent"
                         android:layout_height="match_parent"
                         android:background="@drawable/button_design"/>
@@ -423,7 +410,6 @@
                 android:orientation="horizontal">
 
                 <TextView
-                    android:id="@+id/tv_annualRevenue_account"
                     android:layout_width="150dp"
                     android:layout_height="wrap_content"
                     android:text="Annual Revenue"
@@ -437,7 +423,7 @@
                     android:layout_height="match_parent"
                     android:orientation="horizontal">
                     <EditText
-                        android:id="@+id/et_annualRevenue_account"
+                        android:id="@+id/et_annualRevenue_accountEdit"
                         android:layout_width="match_parent"
                         android:layout_height="match_parent"
                         android:background="@drawable/button_design"/>
@@ -452,7 +438,6 @@
                 android:orientation="horizontal">
 
                 <TextView
-                    android:id="@+id/tv_sicCode_account"
                     android:layout_width="150dp"
                     android:layout_height="wrap_content"
                     android:text="SIC Code"
@@ -466,7 +451,7 @@
                     android:layout_height="match_parent"
                     android:orientation="horizontal">
                     <EditText
-                        android:id="@+id/et_sicCode_account"
+                        android:id="@+id/et_sicCode_accountEdit"
                         android:layout_width="match_parent"
                         android:layout_height="match_parent"
                         android:background="@drawable/button_design"/>
@@ -496,7 +481,6 @@
                 android:orientation="horizontal">
 
                 <TextView
-                    android:id="@+id/tv_addressBilling_account"
                     android:layout_width="150dp"
                     android:layout_height="wrap_content"
                     android:text="Billing Address"
@@ -510,7 +494,7 @@
                     android:layout_height="match_parent"
                     android:orientation="horizontal">
                     <EditText
-                        android:id="@+id/et_streetBilling_account"
+                        android:id="@+id/et_streetBilling_accountEdit"
                         android:layout_width="match_parent"
                         android:layout_height="match_parent"
                         android:hint="Street"
@@ -537,7 +521,7 @@
                     android:layout_height="match_parent"
                     android:orientation="horizontal">
                     <EditText
-                        android:id="@+id/et_cityBilling_account"
+                        android:id="@+id/et_cityBilling_accountEdit"
                         android:layout_width="match_parent"
                         android:layout_height="match_parent"
                         android:paddingLeft="20dp"
@@ -564,7 +548,7 @@
                     android:layout_height="match_parent"
                     android:orientation="horizontal">
                     <EditText
-                        android:id="@+id/et_stateBilling_account"
+                        android:id="@+id/et_stateBilling_accountEdit"
                         android:layout_width="match_parent"
                         android:layout_height="match_parent"
                         android:paddingLeft="20dp"
@@ -590,7 +574,7 @@
                     android:layout_height="match_parent"
                     android:orientation="horizontal">
                     <EditText
-                        android:id="@+id/et_codeBilling_account"
+                        android:id="@+id/et_codeBilling_accountEdit"
                         android:layout_width="match_parent"
                         android:layout_height="match_parent"
                         android:paddingLeft="20dp"
@@ -617,7 +601,7 @@
                     android:layout_height="match_parent"
                     android:orientation="horizontal">
                     <EditText
-                        android:id="@+id/et_countryBilling_account"
+                        android:id="@+id/et_countryBilling_accountEdit"
                         android:layout_width="match_parent"
                         android:layout_height="match_parent"
                         android:paddingLeft="20dp"
@@ -632,7 +616,6 @@
                 android:orientation="horizontal">
 
                 <TextView
-                    android:id="@+id/tv_addressShipping_account"
                     android:layout_width="150dp"
                     android:layout_height="wrap_content"
                     android:text="Shipping Address"
@@ -646,7 +629,7 @@
                     android:layout_height="match_parent"
                     android:orientation="horizontal">
                     <EditText
-                        android:id="@+id/et_streetShipping_account"
+                        android:id="@+id/et_streetShipping_accountEdit"
                         android:layout_width="match_parent"
                         android:layout_height="match_parent"
                         android:hint="Street"
@@ -673,7 +656,7 @@
                     android:layout_height="match_parent"
                     android:orientation="horizontal">
                     <EditText
-                        android:id="@+id/et_cityShipping_account"
+                        android:id="@+id/et_cityShipping_accountEdit"
                         android:layout_width="match_parent"
                         android:layout_height="match_parent"
                         android:paddingLeft="20dp"
@@ -700,7 +683,7 @@
                     android:layout_height="match_parent"
                     android:orientation="horizontal">
                     <EditText
-                        android:id="@+id/et_stateShipping_account"
+                        android:id="@+id/et_stateShipping_accountEdit"
                         android:layout_width="match_parent"
                         android:layout_height="match_parent"
                         android:paddingLeft="20dp"
@@ -726,7 +709,7 @@
                     android:layout_height="match_parent"
                     android:orientation="horizontal">
                     <EditText
-                        android:id="@+id/et_codeShipping_account"
+                        android:id="@+id/et_codeShipping_accountEdit"
                         android:layout_width="match_parent"
                         android:layout_height="match_parent"
                         android:paddingLeft="20dp"
@@ -753,7 +736,7 @@
                     android:layout_height="match_parent"
                     android:orientation="horizontal">
                     <EditText
-                        android:id="@+id/et_countryShipping_account"
+                        android:id="@+id/et_countryShipping_accountEdit"
                         android:layout_width="match_parent"
                         android:layout_height="match_parent"
                         android:paddingLeft="20dp"
@@ -784,7 +767,6 @@
                 android:orientation="horizontal">
 
                 <TextView
-                    android:id="@+id/tv_description_account"
                     android:layout_width="150dp"
                     android:layout_height="wrap_content"
                     android:text="Description"
@@ -798,7 +780,7 @@
                     android:layout_height="match_parent"
                     android:orientation="horizontal">
                     <EditText
-                        android:id="@+id/et_description_account"
+                        android:id="@+id/et_description_accountEdit"
                         android:layout_width="match_parent"
                         android:layout_height="match_parent"
                         android:background="@drawable/button_design"/>
@@ -808,7 +790,7 @@
 
 
 
-    </LinearLayout>
+        </LinearLayout>
 
     </LinearLayout>
 

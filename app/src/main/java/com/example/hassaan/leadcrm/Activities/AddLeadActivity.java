@@ -9,6 +9,7 @@ import android.view.Menu;
 import android.view.MenuItem;
 import android.view.View;
 import android.widget.Button;
+import android.widget.EditText;
 import android.widget.Toast;
 
 import com.example.hassaan.leadcrm.Fragments.LeadsFragment;
@@ -19,8 +20,9 @@ import java.util.List;
 
 public class AddLeadActivity extends AppCompatActivity implements View.OnClickListener{
 
-    Button leadsource, industry;
-
+    Button bt_leadsource_lead, bt_industry_lead;
+    EditText et_leadOwner_lead,et_company_lead,et_title_lead,et_mobile_lead,et_phone_lead,et_annualRevenue_lead,et_email_lead;
+    EditText et_website_lead,et_noOfEmployee_lead,et_skypeId_lead;
     private List<String> list=new ArrayList<String>();
 
     private String buttonName;
@@ -29,17 +31,32 @@ public class AddLeadActivity extends AppCompatActivity implements View.OnClickLi
     protected void onCreate(Bundle savedInstanceState) {
         super.onCreate(savedInstanceState);
         setContentView(R.layout.activity_add_lead);
+        createReferences();
 
-        leadsource=findViewById(R.id.bt_leadSource_lead);
-        industry=findViewById(R.id.bt_industry_lead);
-        leadsource.setOnClickListener(this);
-        industry.setOnClickListener(this);
         list.add("Red");
         list.add("Blue");
         list.add("Green");
         list.add("Yellow");
         list.add("Black");
         java.util.Collections.sort(list);
+    }
+
+    private void createReferences(){
+        et_leadOwner_lead=findViewById(R.id.et_leadOwner_lead);
+        et_company_lead=findViewById(R.id.et_company_lead);
+        et_title_lead=findViewById(R.id.et_title_lead);
+        et_mobile_lead=findViewById(R.id.et_mobile_lead);
+        et_phone_lead=findViewById(R.id.et_phone_lead);
+        et_annualRevenue_lead=findViewById(R.id.et_annualRevenue_lead);
+        et_email_lead=findViewById(R.id.et_email_lead);
+        et_website_lead=findViewById(R.id.et_website_lead);
+        et_noOfEmployee_lead=findViewById(R.id.et_noOfEmployee_lead);
+        et_skypeId_lead=findViewById(R.id.et_skypeId_lead);
+
+        bt_leadsource_lead=findViewById(R.id.bt_leadSource_lead);
+        bt_industry_lead=findViewById(R.id.bt_industry_lead);
+        bt_leadsource_lead.setOnClickListener(this);
+        bt_industry_lead.setOnClickListener(this);
     }
 
 
@@ -102,10 +119,10 @@ public class AddLeadActivity extends AppCompatActivity implements View.OnClickLi
 
     private void setData(int indexValue) {
         if(buttonName.equals("leadSource")){
-            leadsource.setText(list.get(indexValue));
+            bt_leadsource_lead.setText(list.get(indexValue));
         }
         else if(buttonName.equals("industry")){
-            industry.setText(list.get(indexValue));
+            bt_industry_lead.setText(list.get(indexValue));
         }
     }
 }

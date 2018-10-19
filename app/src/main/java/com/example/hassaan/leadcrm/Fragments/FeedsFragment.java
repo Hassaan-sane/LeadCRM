@@ -1,8 +1,6 @@
 package com.example.hassaan.leadcrm.Fragments;
 
-import android.content.Context;
 import android.content.Intent;
-import android.net.Uri;
 import android.os.Bundle;
 import android.support.design.widget.FloatingActionButton;
 import android.support.v4.app.Fragment;
@@ -11,11 +9,9 @@ import android.support.v7.widget.RecyclerView;
 import android.view.LayoutInflater;
 import android.view.View;
 import android.view.ViewGroup;
-import android.widget.AdapterView;
 
 import com.example.hassaan.leadcrm.Activities.AddFeedActivity;
-import com.example.hassaan.leadcrm.Activities.AddLeadActivity;
-import com.example.hassaan.leadcrm.Adapters.FeedAdapter;
+import com.example.hassaan.leadcrm.RecyclerViews.FeedRecycler;
 import com.example.hassaan.leadcrm.R;
 
 import java.util.ArrayList;
@@ -48,7 +44,7 @@ public class FeedsFragment extends Fragment {
 
         RecyclerView recyclerView=view.findViewById(R.id.recycler_feeds);
         recyclerView.setLayoutManager(new LinearLayoutManager(getContext()));
-        recyclerView.setAdapter(new FeedAdapter(list));
+        recyclerView.setAdapter(new FeedRecycler(list));
 
         FloatingActionButton fab = (FloatingActionButton) view.findViewById(R.id.floating_feeds);
         fab.setOnClickListener(new View.OnClickListener() {
