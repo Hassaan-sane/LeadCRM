@@ -24,6 +24,7 @@ public class AddCallActivity extends AppCompatActivity implements View.OnClickLi
     Button type_butt, contact_butt, call_purpose_butt, account_butt, callType_butt, reminder_butt, cst_butt;
     EditText subject_et, callDuration_et, description_et, calResult_et;
     Switch billable_Switch;
+    
 
     @Override
     protected void onCreate(Bundle savedInstanceState) {

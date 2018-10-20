@@ -7,6 +7,7 @@ import android.support.v4.app.FragmentStatePagerAdapter;
 import com.example.hassaan.leadcrm.Fragments.AccountDetailsFragment;
 import com.example.hassaan.leadcrm.Fragments.HomeFragment;
 import com.example.hassaan.leadcrm.Fragments.LeadDetailsFragment;
+import com.example.hassaan.leadcrm.Fragments.LeadRelatedFragment;
 
 public class LeadPagerAdapter extends FragmentStatePagerAdapter {
     int mNumOfTabs;
@@ -23,12 +24,9 @@ public class LeadPagerAdapter extends FragmentStatePagerAdapter {
             case 0:
                 LeadDetailsFragment leadDetailsFragment = new LeadDetailsFragment();
                 return leadDetailsFragment;
-
             case 1:
-                HomeFragment homeFragment = new HomeFragment();
-                return  homeFragment;
-
-
+                LeadRelatedFragment leadRelatedFragment = new LeadRelatedFragment();
+                return  leadRelatedFragment;
             default:
                 return null;
         }
