@@ -40,6 +40,7 @@ public class TasksFragment extends Fragment implements AdapterView.OnItemSelecte
     private List<String> list=new ArrayList<String>();
     SearchView searchView;
     Spinner spinner;
+    private Context context=getContext();
 
     public TasksFragment() {
         // Required empty public constructor
@@ -76,7 +77,7 @@ public class TasksFragment extends Fragment implements AdapterView.OnItemSelecte
 
         RecyclerView recyclerView=view.findViewById(R.id.recyclerTask);
         recyclerView.setLayoutManager(new LinearLayoutManager(getContext()));
-        recyclerView.setAdapter(new TaskRecycler(list));
+        recyclerView.setAdapter(new TaskRecycler(list,getContext()));
 
         FloatingActionButton fab = view.findViewById(R.id.floating_Task);
         fab.setOnClickListener(new View.OnClickListener() {

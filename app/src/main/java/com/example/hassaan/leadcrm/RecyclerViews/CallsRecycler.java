@@ -1,5 +1,7 @@
 package com.example.hassaan.leadcrm.RecyclerViews;
 
+import android.content.Context;
+import android.content.Intent;
 import android.support.annotation.NonNull;
 import android.support.v7.widget.RecyclerView;
 import android.view.LayoutInflater;
@@ -7,6 +9,7 @@ import android.view.View;
 import android.view.ViewGroup;
 import android.widget.TextView;
 
+import com.example.hassaan.leadcrm.Activities.DetailCallActivity;
 import com.example.hassaan.leadcrm.R;
 
 import java.util.ArrayList;
@@ -16,8 +19,11 @@ public class CallsRecycler  extends RecyclerView.Adapter<CallsRecycler.ViewHolde
 
     private List<String> list = new ArrayList<String>();
 
-    public CallsRecycler(List<String> list) {
+    private Context context;
+
+    public CallsRecycler(List<String> list, Context context) {
         this.list = list;
+        this.context = context;
     }
 
     @NonNull
@@ -38,6 +44,14 @@ public class CallsRecycler  extends RecyclerView.Adapter<CallsRecycler.ViewHolde
         viewHolder.tv_to_callrecycler.setText("From");
         viewHolder.tv_employeeName_callrecycler.setText("Zohaib Javed");
         viewHolder.tv_customerName_callrecycler.setText("Abdul Razzaq");
+
+        viewHolder.itemView.setOnClickListener(new View.OnClickListener() {
+            @Override
+            public void onClick(View view) {
+                Intent intent = new Intent(context, DetailCallActivity.class);
+                context.startActivity(intent);
+            }
+        });
     }
 
     @Override

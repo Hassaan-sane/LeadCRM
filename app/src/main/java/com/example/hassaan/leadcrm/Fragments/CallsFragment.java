@@ -69,7 +69,7 @@ public class CallsFragment extends Fragment implements AdapterView.OnItemSelecte
 
         RecyclerView recyclerView=view.findViewById(R.id.recyclercalls);
         recyclerView.setLayoutManager(new LinearLayoutManager(getContext()));
-        recyclerView.setAdapter(new CallsRecycler(list));
+        recyclerView.setAdapter(new CallsRecycler(list,getContext()));
 
 
 

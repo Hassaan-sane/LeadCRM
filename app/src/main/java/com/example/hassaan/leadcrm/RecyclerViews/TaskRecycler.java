@@ -1,5 +1,7 @@
 package com.example.hassaan.leadcrm.RecyclerViews;
 
+import android.content.Context;
+import android.content.Intent;
 import android.graphics.Color;
 import android.support.annotation.NonNull;
 import android.support.v7.widget.RecyclerView;
@@ -10,6 +12,7 @@ import android.widget.CheckBox;
 import android.widget.ImageView;
 import android.widget.TextView;
 
+import com.example.hassaan.leadcrm.Activities.DetailTaskActivity;
 import com.example.hassaan.leadcrm.R;
 
 import java.util.ArrayList;
@@ -18,9 +21,11 @@ import java.util.List;
 public class TaskRecycler extends RecyclerView.Adapter<TaskRecycler.ViewHolder> {
 
     private List<String> list = new ArrayList<String>();
+    private Context context;
 
-    public TaskRecycler(List<String> list) {
+    public TaskRecycler(List<String> list, Context context) {
         this.list = list;
+        this.context = context;
     }
 
     @NonNull
@@ -40,6 +45,14 @@ public class TaskRecycler extends RecyclerView.Adapter<TaskRecycler.ViewHolder> 
         viewHolder.tv_day_taskrecycler.setText("Tommorow");
         viewHolder.cb_checkBox_taskrecycler.setChecked(false);
         // viewHolder.iv_image_leadrecycler.setImageIcon(list.get(i));
+
+        viewHolder.itemView.setOnClickListener(new View.OnClickListener() {
+            @Override
+            public void onClick(View view) {
+                Intent intent = new Intent(context, DetailTaskActivity.class);
+                context.startActivity(intent);
+            }
+        });
     }
 
     @Override

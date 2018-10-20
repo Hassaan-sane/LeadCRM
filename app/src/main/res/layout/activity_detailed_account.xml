@@ -28,7 +28,7 @@
         android:id="@+id/tab_layout_account"
         android:layout_width="match_parent"
         android:layout_height="wrap_content"
-        android:layout_below="@+id/appbarlayout"
+        android:layout_below="@+id/appbarlayoutaccount"
         android:background="?attr/colorPrimary"
         android:elevation="6dp"
         android:minHeight="?attr/actionBarSize"
@@ -38,7 +38,7 @@
         android:id="@+id/pager_account"
         android:layout_width="match_parent"
         android:layout_height="fill_parent"
-        android:layout_below="@id/tab_layout" />
+        android:layout_below="@id/tab_layout_account" />
 
 
 </RelativeLayout>

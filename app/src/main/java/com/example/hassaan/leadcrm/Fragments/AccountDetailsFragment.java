@@ -8,6 +8,7 @@ import android.view.View;
 import android.view.ViewGroup;
 import android.widget.Button;
 import android.widget.EditText;
+import android.widget.TextView;
 
 import com.example.hassaan.leadcrm.R;
 
@@ -16,13 +17,12 @@ import com.example.hassaan.leadcrm.R;
  */
 public class AccountDetailsFragment extends Fragment {
 
-    EditText tv_accountOwner_accountDetails, tv_accountName_accountDetails, tv_phone_accountDetails, tv_accountSite_accountDetails;
-    EditText tv_accountNumber_accountDetails, tv_website_accountDetails, tv_tickerSymbol_accountDetails, tv_employees_accountDetails;
-    EditText tv_annualRevenue_accountDetails, tv_sicCode_accountDetails, tv_streetBilling_accountDetails, tv_cityBilling_accountDetails, tv_stateBilling_accountDetails;
-    EditText tv_codeBilling_accountDetails, tv_countryBilling_accountDetails, tv_streetShipping_accountDetails, tv_cityShipping_accountDetails, tv_stateShipping_accountDetails;
-    EditText tv_codeShipping_accountDetails, tv_countryShipping_accountDetails, tv_description_accountDetails;
-
-    EditText tv_rating_accountDetails, tv_parentAccount_accountDetails, tv_accountType_accountDetails, tv_ownership_accountDetails, tv_industry_accountDetails;
+    TextView tv_accountOwner_accountDetails, tv_accountName_accountDetails, tv_phone_accountDetails, tv_accountSite_accountDetails;
+    TextView tv_accountNumber_accountDetails, tv_website_accountDetails, tv_tickerSymbol_accountDetails, tv_employees_accountDetails;
+    TextView tv_annualRevenue_accountDetails, tv_sicCode_accountDetails, tv_streetBilling_accountDetails, tv_cityBilling_accountDetails, tv_stateBilling_accountDetails;
+    TextView tv_codeBilling_accountDetails, tv_countryBilling_accountDetails, tv_streetShipping_accountDetails, tv_cityShipping_accountDetails, tv_stateShipping_accountDetails;
+    TextView tv_codeShipping_accountDetails, tv_countryShipping_accountDetails, tv_description_accountDetails;
+    TextView tv_rating_accountDetails, tv_parentAccount_accountDetails, tv_accountType_accountDetails, tv_ownership_accountDetails, tv_industry_accountDetails;
 
 
     public AccountDetailsFragment() {
