@@ -44,9 +44,9 @@
                     android:layout_height="wrap_content"
                     android:background="#edeff2"
                     android:gravity="right"
-                    android:paddingBottom="20dp"
+                    android:paddingBottom="10dp"
                     android:paddingRight="10dp"
-                    android:paddingTop="20dp"
+                    android:paddingTop="10dp"
                     android:text="Subject" />
 
                 <LinearLayout
@@ -59,7 +59,7 @@
                         android:layout_width="match_parent"
                         android:layout_height="match_parent"
                         android:paddingLeft="20dp"
-                        android:paddingTop="20dp"
+                        android:paddingTop="10dp"
                         android:background="@drawable/button_design"/>
                 </LinearLayout>
 
@@ -76,9 +76,9 @@
                     android:layout_height="wrap_content"
                     android:background="#edeff2"
                     android:gravity="right"
-                    android:paddingBottom="20dp"
+                    android:paddingBottom="10dp"
                     android:paddingRight="10dp"
-                    android:paddingTop="20dp"
+                    android:paddingTop="10dp"
                     android:text="Owner Name" />
 
                 <LinearLayout
@@ -91,7 +91,7 @@
                         android:layout_width="match_parent"
                         android:layout_height="match_parent"
                         android:paddingLeft="20dp"
-                        android:paddingTop="20dp"
+                        android:paddingTop="10dp"
                         android:background="@drawable/button_design" />
                 </LinearLayout>
             </LinearLayout>
@@ -106,9 +106,9 @@
                     android:layout_height="wrap_content"
                     android:background="#edeff2"
                     android:gravity="right"
-                    android:paddingBottom="20dp"
+                    android:paddingBottom="10dp"
                     android:paddingRight="10dp"
-                    android:paddingTop="20dp"
+                    android:paddingTop="10dp"
                     android:text="Due Date" />
 
                 <LinearLayout
@@ -121,7 +121,7 @@
                         android:layout_width="match_parent"
                         android:layout_height="match_parent"
                         android:paddingLeft="20dp"
-                        android:paddingTop="20dp"
+                        android:paddingTop="10dp"
                         android:background="@drawable/button_design"/>
                 </LinearLayout>
             </LinearLayout>
@@ -136,9 +136,9 @@
                     android:layout_height="wrap_content"
                     android:background="#edeff2"
                     android:gravity="right"
-                    android:paddingBottom="20dp"
+                    android:paddingBottom="10dp"
                     android:paddingRight="10dp"
-                    android:paddingTop="20dp"
+                    android:paddingTop="10dp"
                     android:text="Priority" />
 
                 <LinearLayout
@@ -151,7 +151,7 @@
                         android:layout_width="match_parent"
                         android:layout_height="match_parent"
                         android:paddingLeft="20dp"
-                        android:paddingTop="20dp"
+                        android:paddingTop="10dp"
                         android:background="@drawable/button_design"/>
                 </LinearLayout>
             </LinearLayout>
@@ -166,9 +166,9 @@
                     android:layout_height="wrap_content"
                     android:background="#edeff2"
                     android:gravity="right"
-                    android:paddingBottom="20dp"
+                    android:paddingBottom="10dp"
                     android:paddingRight="10dp"
-                    android:paddingTop="20dp"
+                    android:paddingTop="10dp"
                     android:text="Status" />
 
                 <LinearLayout
@@ -181,7 +181,7 @@
                         android:layout_width="match_parent"
                         android:layout_height="match_parent"
                         android:paddingLeft="20dp"
-                        android:paddingTop="20dp"
+                        android:paddingTop="10dp"
                         android:background="@drawable/button_design" />
                 </LinearLayout>
             </LinearLayout>

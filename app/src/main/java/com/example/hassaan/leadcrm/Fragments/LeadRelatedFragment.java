@@ -12,6 +12,7 @@ import android.support.v4.app.Fragment;
 import android.widget.Button;
 
 import com.example.hassaan.leadcrm.R;
+import com.example.hassaan.leadcrm.RecyclerViews.NoteRecycler;
 import com.example.hassaan.leadcrm.RecyclerViews.TaskRecycler;
 
 import java.util.ArrayList;
@@ -31,7 +32,7 @@ public class LeadRelatedFragment extends android.support.v4.app.Fragment {
     private OnFragmentInteractionListener mListener;
     private List<String> list = new ArrayList<String>();
 
-    Button btn_add_task, btn_add_attachment;
+    Button btn_add_note, btn_add_task, btn_add_attachment;
 
     public LeadRelatedFragment() {
         // Required empty public constructor
@@ -43,9 +44,14 @@ public class LeadRelatedFragment extends android.support.v4.app.Fragment {
         // Inflate the layout for this fragment
         View view = inflater.inflate(R.layout.fragment_lead_related, container, false);
 
+        btn_add_note = view.findViewById(R.id.btn_add_note);
         btn_add_attachment = view.findViewById(R.id.btn_add_attachment);
         btn_add_task = view.findViewById(R.id.btn_add_task);
 
+        list.add("Red");
+        list.add("Blue");
+        list.add("Green");
+        list.add("Yellow");
         list.add("Red");
         list.add("Blue");
         list.add("Green");
@@ -56,6 +62,12 @@ public class LeadRelatedFragment extends android.support.v4.app.Fragment {
         recyclerView.setAdapter(new TaskRecycler(list, getContext()));
 
         recyclerView.setNestedScrollingEnabled(false);
+
+        RecyclerView recyclerView1 = view.findViewById(R.id.NoteLeadRelatedRecyclerView);
+        recyclerView1.setLayoutManager(new LinearLayoutManager(getContext()));
+        recyclerView1.setAdapter(new NoteRecycler(list, getContext()));
+
+        recyclerView1.setNestedScrollingEnabled(false);
 
         RecyclerView recyclerView2 = view.findViewById(R.id.AttachmentLeadRelatedRecyclerView);
         recyclerView2.setLayoutManager(new LinearLayoutManager(getContext()));

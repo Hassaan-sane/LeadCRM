@@ -59,8 +59,15 @@
             android:name=".Activities.DetailTaskActivity"
             android:parentActivityName=".Activities.DetailTaskActivity"
             android:theme="@style/AppTheme.NoActionBar" />
-        <activity android:name=".Activities.DetailCallActivity"
+        <activity
+            android:name=".Activities.DetailCallActivity"
             android:parentActivityName=".Activities.DetailCallActivity"
+            android:theme="@style/AppTheme.NoActionBar" />
+        <activity
+            android:name=".Activities.AddNoteActivity"
+            android:parentActivityName=".Activities.AddNoteActivity" />
+        <activity android:name=".Activities.DetailContactActivity"
+            android:parentActivityName=".Activities.DetailContactActivity"
             android:theme="@style/AppTheme.NoActionBar"></activity>
     </application>
 

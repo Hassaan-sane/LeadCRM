@@ -64,7 +64,7 @@ public class ContactsFragment extends Fragment implements AdapterView.OnItemSele
 
         RecyclerView recyclerView=view.findViewById(R.id.recycler_contacts);
         recyclerView.setLayoutManager(new LinearLayoutManager(getContext()));
-        recyclerView.setAdapter(new ContactsRecycler(list));
+        recyclerView.setAdapter(new ContactsRecycler(list,getContext()));
 
 
         FloatingActionButton fab = view.findViewById(R.id.fbContacts);

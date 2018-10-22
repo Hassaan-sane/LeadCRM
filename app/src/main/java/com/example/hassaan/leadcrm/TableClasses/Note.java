@@ -10,23 +10,45 @@ public class Note {
     public static final String KEY_DETAILS = "Details";
     public static final String KEY_LEADID = "LeadID";
     public static final String KEY_CREATED_DATE = "CreatedDate";
+    public static final String KEY_ACCOUNTID = "AccountID";
+    public static final String KEY_CONTACTID = "ContactID";
 
     private Integer ID;
     private String TitleName;
     private String Details;
     private Integer LeadID;
     private Date CreatedDate;
+    private int AccountID;
+    private int ContactID;
 
-    public Note(Integer ID, String titleName, String details, Integer leadID, Date createdDate) {
+    public Note(Integer ID, String titleName, String details, Integer leadID, Date createdDate, int accountID, int contactID) {
         this.ID = ID;
-        this.TitleName = titleName;
-        this.Details = details;
-        this.LeadID = leadID;
-        this.CreatedDate = createdDate;
+        TitleName = titleName;
+        Details = details;
+        LeadID = leadID;
+        CreatedDate = createdDate;
+        AccountID = accountID;
+        ContactID = contactID;
     }
 
     public Note()
     {}
+
+    public int getAccountID() {
+        return AccountID;
+    }
+
+    public void setAccountID(int accountID) {
+        AccountID = accountID;
+    }
+
+    public int getContactID() {
+        return ContactID;
+    }
+
+    public void setContactID(int contactID) {
+        ContactID = contactID;
+    }
 
     public Integer getID() {
         return ID;

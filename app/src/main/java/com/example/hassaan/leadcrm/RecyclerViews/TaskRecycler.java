@@ -20,9 +20,9 @@ import java.util.List;
 
 public class TaskRecycler extends RecyclerView.Adapter<TaskRecycler.ViewHolder> {
 
-    private List<String> list = new ArrayList<String>();
-    private Context context;
-    private int mExpandedPosition=-1;
+            private List<String> list = new ArrayList<String>();
+            private Context context;
+
 
     public TaskRecycler(List<String> list, Context context) {
         this.list = list;
@@ -47,16 +47,6 @@ public class TaskRecycler extends RecyclerView.Adapter<TaskRecycler.ViewHolder> 
         // viewHolder.iv_image_leadrecycler.setImageIcon(list.get(i));
 
 
-        final boolean isExpanded = i==mExpandedPosition;
-        viewHolder.tv_day_taskrecycler.setVisibility(isExpanded?View.VISIBLE:View.GONE);
-        viewHolder.itemView.setActivated(isExpanded);
-        viewHolder.itemView.setOnClickListener(new View.OnClickListener() {
-            @Override
-            public void onClick(View v) {
-                mExpandedPosition = isExpanded ? -1:i;
-                notifyItemChanged(i);
-            }
-        });
 
         viewHolder.itemView.setOnClickListener(new View.OnClickListener() {
             @Override

@@ -26,6 +26,7 @@ import com.example.hassaan.leadcrm.Fragments.FeedbackFragment;
 import com.example.hassaan.leadcrm.Fragments.FeedsFragment;
 import com.example.hassaan.leadcrm.Fragments.HomeFragment;
 import com.example.hassaan.leadcrm.Fragments.LeadsFragment;
+import com.example.hassaan.leadcrm.Fragments.NoteFragment;
 import com.example.hassaan.leadcrm.Fragments.SettingsFragment;
 import com.example.hassaan.leadcrm.Fragments.TasksFragment;
 
@@ -203,7 +204,7 @@ public class MainActivity extends AppCompatActivity
 
         } else if (id == R.id.nav_settings) {
 
-            fragmentManager.beginTransaction().replace(R.id.container, new SettingsFragment()).commit();
+            fragmentManager.beginTransaction().replace(R.id.container, new NoteFragment()).commit();
             getSupportActionBar().setTitle("Settings");
 
         } else if (id == R.id.nav_feedback) {
