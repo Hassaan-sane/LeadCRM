@@ -5,6 +5,7 @@ import android.support.v4.app.FragmentManager;
 import android.support.v4.app.FragmentStatePagerAdapter;
 
 import com.example.hassaan.leadcrm.Fragments.AccountDetailsFragment;
+import com.example.hassaan.leadcrm.Fragments.AccountRelatedFragment;
 import com.example.hassaan.leadcrm.Fragments.HomeFragment;
 
 public class AccountPagerAdapter extends FragmentStatePagerAdapter {
@@ -25,8 +26,8 @@ public class AccountPagerAdapter extends FragmentStatePagerAdapter {
                 AccountDetailsFragment accountDetailsFragment = new AccountDetailsFragment();
                 return accountDetailsFragment;
             case 1:
-                HomeFragment homeFragment = new HomeFragment();
-                return homeFragment;
+                AccountRelatedFragment accountRelatedFragment = new AccountRelatedFragment();
+                return accountRelatedFragment;
             default:
                 return null;
         }

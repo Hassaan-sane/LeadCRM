@@ -5,6 +5,7 @@ import android.support.v4.app.FragmentManager;
 import android.support.v4.app.FragmentStatePagerAdapter;
 
 import com.example.hassaan.leadcrm.Fragments.ContactDetailsFragment;
+import com.example.hassaan.leadcrm.Fragments.ContactRelatedFragment;
 import com.example.hassaan.leadcrm.Fragments.HomeFragment;
 
 public class ContactPagerAdapter extends FragmentStatePagerAdapter {
@@ -22,8 +23,8 @@ public class ContactPagerAdapter extends FragmentStatePagerAdapter {
                 ContactDetailsFragment  contactDetailsFragment = new ContactDetailsFragment() ;
                 return contactDetailsFragment;
             case 1:
-                HomeFragment homeFragment= new HomeFragment();
-                return homeFragment;
+                ContactRelatedFragment contactRelatedFragment= new ContactRelatedFragment();
+                return contactRelatedFragment;
             default:
                 return null;
         }

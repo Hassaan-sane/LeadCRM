@@ -76,11 +76,11 @@ public class NoteRepo {
                 GetNote = new Note();
                 SimpleDateFormat sdf = new SimpleDateFormat("yyyy-MM-dd HH:mm:ss");
                 GetNote.setID(Integer.parseInt(cursor.getString(cursor.getColumnIndex(Note.KEY_ID))));
-                GetNote.setLeadID(Integer.parseInt(cursor.getString(cursor.getColumnIndex(Note.KEY_LEADID))));
+//                GetNote.setLeadID(Integer.parseInt(cursor.getString(cursor.getColumnIndex(Note.KEY_LEADID))));
                 GetNote.setTitleName(cursor.getString(cursor.getColumnIndex(Note.KEY_TITLENAME)));
                 GetNote.setDetails(cursor.getString(cursor.getColumnIndex(Note.KEY_DETAILS)));
-                GetNote.setAccountID(cursor.getInt(cursor.getColumnIndex(Note.KEY_ACCOUNTID)));
-                GetNote.setContactID(cursor.getInt(cursor.getColumnIndex(Note.KEY_CONTACTID)));
+//                GetNote.setAccountID(cursor.getInt(cursor.getColumnIndex(Note.KEY_ACCOUNTID)));
+//                GetNote.setContactID(cursor.getInt(cursor.getColumnIndex(Note.KEY_CONTACTID)));
 
                 try {
                     GetNote.setCreatedDate(sdf.parse(cursor.getString(cursor.getColumnIndex(Note.KEY_CREATED_DATE))));

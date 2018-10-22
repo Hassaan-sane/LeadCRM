@@ -11,16 +11,17 @@ import android.widget.TextView;
 
 import com.example.hassaan.leadcrm.Activities.AddNoteActivity;
 import com.example.hassaan.leadcrm.R;
+import com.example.hassaan.leadcrm.TableClasses.Note;
 
 import java.util.ArrayList;
 import java.util.List;
 
 public class NoteRecycler extends RecyclerView.Adapter<NoteRecycler.ViewHolder> {
 
-    private List<String> list = new ArrayList<String>();
+    private List<Note> list = new ArrayList<>();
     private Context context;
 
-    public NoteRecycler(List<String> list, Context context) {
+    public NoteRecycler(List<Note> list, Context context) {
         this.list = list;
         this.context = context;
     }
@@ -34,8 +35,8 @@ public class NoteRecycler extends RecyclerView.Adapter<NoteRecycler.ViewHolder> 
     }
 
     @Override
-    public void onBindViewHolder(@NonNull final ViewHolder viewHolder, int i) {
-        viewHolder.tv_title_note.setText("SUBJECT NOTE");
+    public void onBindViewHolder(@NonNull final ViewHolder viewHolder, final int i) {
+        viewHolder.tv_title_note.setText(list.get(i).getTitleName());
         viewHolder.tv_date_note.setText("23-23-23");
 
         viewHolder.itemView.setOnClickListener(new View.OnClickListener() {
@@ -43,6 +44,7 @@ public class NoteRecycler extends RecyclerView.Adapter<NoteRecycler.ViewHolder> 
             public void onClick(View view) {
                 Intent intent = new Intent(context, AddNoteActivity.class);
                 intent.putExtra("Title",viewHolder.tv_title_note.getText());
+                intent.putExtra("Description", list.get(i).getDetails());
                 context.startActivity(intent);
             }
         });

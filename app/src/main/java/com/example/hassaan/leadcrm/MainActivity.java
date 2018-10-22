@@ -15,6 +15,7 @@ import com.example.hassaan.leadcrm.Activities.EditAccountActivity;
 import com.example.hassaan.leadcrm.Activities.EditCallActivity;
 import com.example.hassaan.leadcrm.Activities.EditContactsActivity;
 import com.example.hassaan.leadcrm.Data.DBHelper;
+import com.example.hassaan.leadcrm.Data.DatabaseManager;
 import com.example.hassaan.leadcrm.Fragments.AboutusFragment;
 import com.example.hassaan.leadcrm.Fragments.AccountDetailsFragment;
 import com.example.hassaan.leadcrm.Fragments.AccountsFragment;
@@ -35,6 +36,7 @@ public class MainActivity extends AppCompatActivity
 
     DBHelper dbHelper;
     DrawerLayout drawer;
+    DatabaseManager databaseManager;
 //
 //    EditText edit1, edit2, edit3;
 //
@@ -49,9 +51,10 @@ public class MainActivity extends AppCompatActivity
         Toolbar toolbar = (Toolbar) findViewById(R.id.toolbar);
         setSupportActionBar(toolbar);
         getSupportActionBar().setDisplayShowHomeEnabled(true);
-
-        //self code
-        dbHelper = new DBHelper(this);
+//
+//        self code
+//        dbHelper = new DBHelper(getApplicationContext());
+//        databaseManager.initialize(dbHelper);
         FragmentManager fragmentManager = getSupportFragmentManager();
         fragmentManager.beginTransaction().replace(R.id.container, new HomeFragment()).commit();
         getSupportActionBar().setTitle("Home");

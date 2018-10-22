@@ -1,18 +1,16 @@
 package com.example.hassaan.leadcrm.Fragments;
 
 import android.content.Context;
-import android.content.Intent;
 import android.net.Uri;
 import android.os.Bundle;
+import android.support.v4.app.Fragment;
 import android.support.v7.widget.LinearLayoutManager;
 import android.support.v7.widget.RecyclerView;
 import android.view.LayoutInflater;
 import android.view.View;
 import android.view.ViewGroup;
-import android.support.v4.app.Fragment;
 import android.widget.Button;
 
-import com.example.hassaan.leadcrm.Activities.AddNoteActivity;
 import com.example.hassaan.leadcrm.R;
 import com.example.hassaan.leadcrm.RecyclerViews.NoteRecycler;
 import com.example.hassaan.leadcrm.RecyclerViews.TaskRecycler;
@@ -22,8 +20,15 @@ import com.example.hassaan.leadcrm.TableClasses.Note;
 import java.util.ArrayList;
 import java.util.List;
 
-
-public class LeadRelatedFragment extends android.support.v4.app.Fragment {
+/**
+ * A simple {@link Fragment} subclass.
+ * Activities that contain this fragment must implement the
+ * {@link CallRelatedFragment.OnFragmentInteractionListener} interface
+ * to handle interaction events.
+ * Use the {@link CallRelatedFragment#newInstance} factory method to
+ * create an instance of this fragment.
+ */
+public class CallRelatedFragment extends Fragment {
     // TODO: Rename parameter arguments, choose names that match
     // the fragment initialization parameters, e.g. ARG_ITEM_NUMBER
     private static final String ARG_PARAM1 = "param1";
@@ -37,22 +42,50 @@ public class LeadRelatedFragment extends android.support.v4.app.Fragment {
     private List<String> list = new ArrayList<String>();
     private List<Note> listNote = new ArrayList<>();
 
-    Button btn_add_note, btn_add_task, btn_add_attachment;
+    Button btn_add_note_call, btn_add_task_call, btn_add_attachment_call;
 
-    public LeadRelatedFragment() {
+
+    public CallRelatedFragment() {
         // Required empty public constructor
     }
 
+    /**
+     * Use this factory method to create a new instance of
+     * this fragment using the provided parameters.
+     *
+     * @param param1 Parameter 1.
+     * @param param2 Parameter 2.
+     * @return A new instance of fragment CallRelatedFragment.
+     */
+    // TODO: Rename and change types and number of parameters
+    public static CallRelatedFragment newInstance(String param1, String param2) {
+        CallRelatedFragment fragment = new CallRelatedFragment();
+        Bundle args = new Bundle();
+        args.putString(ARG_PARAM1, param1);
+        args.putString(ARG_PARAM2, param2);
+        fragment.setArguments(args);
+        return fragment;
+    }
 
+    @Override
+    public void onCreate(Bundle savedInstanceState) {
+        super.onCreate(savedInstanceState);
+        if (getArguments() != null) {
+            mParam1 = getArguments().getString(ARG_PARAM1);
+            mParam2 = getArguments().getString(ARG_PARAM2);
+        }
+    }
+
+    @Override
     public View onCreateView(LayoutInflater inflater, ViewGroup container,
                              Bundle savedInstanceState) {
         // Inflate the layout for this fragment
-        View view = inflater.inflate(R.layout.fragment_lead_related, container, false);
+        View view= inflater.inflate(R.layout.fragment_call_related, container, false);
 
         NoteRepo noteRepo= new NoteRepo();
-        btn_add_note = view.findViewById(R.id.btn_add_note);
-        btn_add_attachment = view.findViewById(R.id.btn_add_attachment);
-        btn_add_task = view.findViewById(R.id.btn_add_task);
+        btn_add_note_call = view.findViewById(R.id.btn_add_note_call);
+        btn_add_attachment_call = view.findViewById(R.id.btn_add_attachment_call);
+        btn_add_task_call = view.findViewById(R.id.btn_add_task_call);
 
         list.add("Red");
         list.add("Blue");
@@ -65,32 +98,23 @@ public class LeadRelatedFragment extends android.support.v4.app.Fragment {
 
         listNote = noteRepo.getNoteList();
 
-        RecyclerView recyclerView = view.findViewById(R.id.TaskLeadRelatedRecyclerView);
+        RecyclerView recyclerView = view.findViewById(R.id.TaskCallRelatedRecyclerView);
         recyclerView.setLayoutManager(new LinearLayoutManager(getContext()));
         recyclerView.setAdapter(new TaskRecycler(list, getContext()));
 
         recyclerView.setNestedScrollingEnabled(false);
 
-        RecyclerView recyclerView1 = view.findViewById(R.id.NoteLeadRelatedRecyclerView);
+        RecyclerView recyclerView1 = view.findViewById(R.id.NoteCallRelatedRecyclerView);
         recyclerView1.setLayoutManager(new LinearLayoutManager(getContext()));
         recyclerView1.setAdapter(new NoteRecycler(listNote, getContext()));
 
         recyclerView1.setNestedScrollingEnabled(false);
 
-        RecyclerView recyclerView2 = view.findViewById(R.id.AttachmentLeadRelatedRecyclerView);
+        RecyclerView recyclerView2 = view.findViewById(R.id.AttachmentCallRelatedRecyclerView);
         recyclerView2.setLayoutManager(new LinearLayoutManager(getContext()));
         recyclerView2.setAdapter(new TaskRecycler(list, getContext()));
 
         recyclerView2.setNestedScrollingEnabled(false);
-
-
-        btn_add_note.setOnClickListener(new View.OnClickListener() {
-            @Override
-            public void onClick(View view) {
-                Intent intent = new Intent(getContext(), AddNoteActivity.class);
-                startActivity(intent);
-            }
-        });
 
         return view;
     }
@@ -100,6 +124,23 @@ public class LeadRelatedFragment extends android.support.v4.app.Fragment {
         if (mListener != null) {
             mListener.onFragmentInteraction(uri);
         }
+    }
+
+    @Override
+    public void onAttach(Context context) {
+        super.onAttach(context);
+        if (context instanceof OnFragmentInteractionListener) {
+            mListener = (OnFragmentInteractionListener) context;
+        } else {
+            throw new RuntimeException(context.toString()
+                    + " must implement OnFragmentInteractionListener");
+        }
+    }
+
+    @Override
+    public void onDetach() {
+        super.onDetach();
+        mListener = null;
     }
 
     /**

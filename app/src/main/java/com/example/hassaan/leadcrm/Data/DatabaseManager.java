@@ -1,6 +1,5 @@
 package com.example.hassaan.leadcrm.Data;
 
-
 import android.database.sqlite.SQLiteDatabase;
 import android.database.sqlite.SQLiteOpenHelper;
 
@@ -11,10 +10,10 @@ public class DatabaseManager {
     private static SQLiteOpenHelper mDatabaseHelper;
     private SQLiteDatabase mDatabase;
 
-    public static synchronized void initializeInstance(SQLiteOpenHelper helper) {
+    public static synchronized void initialize(SQLiteOpenHelper sqLiteOpenHelper) {
         if (instance == null) {
             instance = new DatabaseManager();
-            mDatabaseHelper = helper;
+            mDatabaseHelper = sqLiteOpenHelper;
         }
     }
 
@@ -28,8 +27,8 @@ public class DatabaseManager {
     }
 
     public synchronized SQLiteDatabase openDatabase() {
-        mOpenCounter+=1;
-        if(mOpenCounter == 1) {
+        mOpenCounter += 1;
+        if (mOpenCounter == 1) {
             // Opening new database
             mDatabase = mDatabaseHelper.getWritableDatabase();
         }
@@ -37,8 +36,8 @@ public class DatabaseManager {
     }
 
     public synchronized void closeDatabase() {
-        mOpenCounter-=1;
-        if(mOpenCounter == 0) {
+        mOpenCounter -= 1;
+        if (mOpenCounter == 0) {
             // Closing database
             mDatabase.close();
 

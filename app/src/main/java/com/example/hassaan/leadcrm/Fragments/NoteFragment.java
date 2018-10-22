@@ -12,6 +12,7 @@ import android.view.ViewGroup;
 import com.example.hassaan.leadcrm.R;
 import com.example.hassaan.leadcrm.RecyclerViews.NoteRecycler;
 import com.example.hassaan.leadcrm.RecyclerViews.TaskRecycler;
+import com.example.hassaan.leadcrm.TableClasses.Note;
 
 import java.util.ArrayList;
 import java.util.List;
@@ -21,7 +22,7 @@ import java.util.List;
  */
 public class NoteFragment extends Fragment {
 
-    private List<String> list=new ArrayList<String>();
+    private List<Note> list= new ArrayList<>();
 
 
     public NoteFragment() {
@@ -36,23 +37,23 @@ public class NoteFragment extends Fragment {
         View view= inflater.inflate(R.layout.fragment_note, container, false);
 
 
-        list.add("Red");
-        list.add("Blue");
-        list.add("Green");
-        list.add("Yellow");
-        list.add("Red");
-        list.add("Blue");
-        list.add("Green");
-        list.add("Yellow");
-        list.add("Red");
-        list.add("Blue");
-        list.add("Green");
-        list.add("Yellow");
-
-
-        RecyclerView recyclerView=view.findViewById(R.id.note_recy);
-        recyclerView.setLayoutManager(new LinearLayoutManager(getContext()));
-        recyclerView.setAdapter(new NoteRecycler(list,getContext()));
+//        list.add("Red");
+//        list.add("Blue");
+//        list.add("Green");
+//        list.add("Yellow");
+//        list.add("Red");
+//        list.add("Blue");
+//        list.add("Green");
+//        list.add("Yellow");
+//        list.add("Red");
+//        list.add("Blue");
+//        list.add("Green");
+//        list.add("Yellow");
+//
+//
+//        RecyclerView recyclerView=view.findViewById(R.id.note_recy);
+//        recyclerView.setLayoutManager(new LinearLayoutManager(getContext()));
+//        recyclerView.setAdapter(new NoteRecycler(list,getContext()));
 
         return view;
     }

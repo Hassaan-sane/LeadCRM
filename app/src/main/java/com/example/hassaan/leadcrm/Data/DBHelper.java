@@ -7,7 +7,7 @@ import android.database.sqlite.SQLiteDatabase;
 import android.database.sqlite.SQLiteOpenHelper;
 import android.util.Log;
 
-import com.example.hassaan.leadcrm.App.app;
+import com.example.hassaan.leadcrm.app;
 import com.example.hassaan.leadcrm.Repo.AccountsRepo;
 import com.example.hassaan.leadcrm.Repo.ActivityRepo;
 import com.example.hassaan.leadcrm.Repo.EventParticipientRepo;
@@ -40,17 +40,15 @@ public class DBHelper extends SQLiteOpenHelper {
     //version number to upgrade database version
     //each time if you Add, Edit table, you need to change the
     //version number.
-    private static final int DATABASE_VERSION =1;
+    private static final int DATABASE_VERSION =3;
     // Database Name
-    private static final String DATABASE_NAME = "leadcrm.db";
+    private static final String DATABASE_NAME = "leadcrmdb.db";
     private Context context;
 
 
-
     public DBHelper(Context context) {
-        super(context, DATABASE_NAME, null, DATABASE_VERSION);
+        super(context.getApplicationContext(), DATABASE_NAME, null, DATABASE_VERSION);
         Log.e("Tag","In Constructor");
-       // this.context=context;
     }
 
     @Override
