@@ -22,6 +22,7 @@ public class TaskRecycler extends RecyclerView.Adapter<TaskRecycler.ViewHolder> 
 
     private List<String> list = new ArrayList<String>();
     private Context context;
+    private int mExpandedPosition=-1;
 
     public TaskRecycler(List<String> list, Context context) {
         this.list = list;
@@ -33,18 +34,29 @@ public class TaskRecycler extends RecyclerView.Adapter<TaskRecycler.ViewHolder> 
     public TaskRecycler.ViewHolder onCreateViewHolder(@NonNull ViewGroup viewGroup, int i) {
         LayoutInflater layoutInflater = LayoutInflater.from(viewGroup.getContext());
         View view = layoutInflater.inflate(R.layout.recycler_tasks, viewGroup, false);
-
         return new TaskRecycler.ViewHolder(view);
     }
 
     @Override
-    public void onBindViewHolder(@NonNull TaskRecycler.ViewHolder viewHolder, int i) {
+    public void onBindViewHolder(@NonNull TaskRecycler.ViewHolder viewHolder, final int i) {
         viewHolder.tv_name_taskrecycler.setText("Zohaib Javed");
         viewHolder.tv_priority_taskrecycler.setText("High");
         viewHolder.tv_dot_taskrecycler.setTextColor(Color.RED);
         viewHolder.tv_day_taskrecycler.setText("Tommorow");
         viewHolder.cb_checkBox_taskrecycler.setChecked(false);
         // viewHolder.iv_image_leadrecycler.setImageIcon(list.get(i));
+
+
+        final boolean isExpanded = i==mExpandedPosition;
+        viewHolder.tv_day_taskrecycler.setVisibility(isExpanded?View.VISIBLE:View.GONE);
+        viewHolder.itemView.setActivated(isExpanded);
+        viewHolder.itemView.setOnClickListener(new View.OnClickListener() {
+            @Override
+            public void onClick(View v) {
+                mExpandedPosition = isExpanded ? -1:i;
+                notifyItemChanged(i);
+            }
+        });
 
         viewHolder.itemView.setOnClickListener(new View.OnClickListener() {
             @Override
