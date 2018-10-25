@@ -1,5 +1,5 @@
 <?xml version="1.0" encoding="utf-8"?>
-<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+<RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
     xmlns:app="http://schemas.android.com/apk/res-auto"
     xmlns:tools="http://schemas.android.com/tools"
     android:layout_width="match_parent"
@@ -7,472 +7,469 @@
     android:orientation="vertical"
     tools:context=".Activities.AddLeadActivity">
 
-
-    <ScrollView
-        android:layout_width="match_parent"
-        android:layout_height="match_parent"
-        android:fillViewport="true"
-        android:scrollbars="vertical">
-
-        <LinearLayout
+        <ScrollView
             android:layout_width="match_parent"
             android:layout_height="wrap_content"
-            android:orientation="vertical">
+            android:fillViewport="true"
+            android:scrollbars="vertical">
 
             <LinearLayout
-                android:id="@+id/Header"
                 android:layout_width="match_parent"
                 android:layout_height="wrap_content"
-                android:background="#d4d6d8"
-                android:orientation="vertical">
+                android:orientation="vertical"
+                android:paddingBottom="50dp">
 
-                <TextView
+                <LinearLayout
+                    android:id="@+id/Header"
                     android:layout_width="match_parent"
                     android:layout_height="wrap_content"
-                    android:paddingBottom="10dp"
-                    android:paddingLeft="10dp"
-                    android:paddingTop="15dp"
-                    android:text="LEAD INFORMATION" />
-            </LinearLayout>
+                    android:background="#d4d6d8"
+                    android:orientation="vertical">
 
-            <LinearLayout
-                android:layout_width="match_parent"
-                android:layout_height="match_parent"
-                android:orientation="vertical">
+                    <TextView
+                        android:layout_width="match_parent"
+                        android:layout_height="wrap_content"
+                        android:paddingBottom="10dp"
+                        android:paddingLeft="10dp"
+                        android:paddingTop="15dp"
+                        android:text="LEAD INFORMATION" />
+                </LinearLayout>
 
-                <!--<LinearLayout-->
+                <LinearLayout
+                    android:layout_width="match_parent"
+                    android:layout_height="match_parent"
+                    android:orientation="vertical">
+
+                    <!--<LinearLayout-->
                     <!--android:layout_width="match_parent"-->
                     <!--android:layout_height="wrap_content"-->
                     <!--android:orientation="horizontal">-->
 
                     <!--<TextView-->
-                        <!--android:id="@+id/tv_photo_lead"-->
-                        <!--android:layout_width="150dp"-->
-                        <!--android:layout_height="wrap_content"-->
-                        <!--android:background="#edeff2"-->
-                        <!--android:gravity="right"-->
-                        <!--android:paddingBottom="50dp"-->
-                        <!--android:paddingRight="10dp"-->
-                        <!--android:paddingTop="10dp"-->
-                        <!--android:text="Photo" />-->
+                    <!--android:id="@+id/tv_photo_lead"-->
+                    <!--android:layout_width="150dp"-->
+                    <!--android:layout_height="wrap_content"-->
+                    <!--android:background="#edeff2"-->
+                    <!--android:gravity="right"-->
+                    <!--android:paddingBottom="50dp"-->
+                    <!--android:paddingRight="10dp"-->
+                    <!--android:paddingTop="10dp"-->
+                    <!--android:text="Photo" />-->
 
                     <!--<ImageButton-->
-                        <!--android:id="@+id/ib_image_lead"-->
-                        <!--android:layout_width="wrap_content"-->
-                        <!--android:layout_height="wrap_content"-->
-                        <!--android:layout_marginHorizontal="20dp"-->
-                        <!--android:layout_marginTop="10dp"-->
-                        <!--android:background="@drawable/ic_add_camera"-->
-                        <!--android:paddingLeft="20dp"-->
-                        <!--android:paddingTop="20dp" />-->
+                    <!--android:id="@+id/ib_image_lead"-->
+                    <!--android:layout_width="wrap_content"-->
+                    <!--android:layout_height="wrap_content"-->
+                    <!--android:layout_marginHorizontal="20dp"-->
+                    <!--android:layout_marginTop="10dp"-->
+                    <!--android:background="@drawable/ic_add_camera"-->
+                    <!--android:paddingLeft="20dp"-->
+                    <!--android:paddingTop="20dp" />-->
 
-                <!--</LinearLayout>-->
-
-                <LinearLayout
-                    android:layout_width="match_parent"
-                    android:layout_height="wrap_content"
-                    android:orientation="horizontal">
-
-                    <TextView
-                        android:id="@+id/tv_leadOwner_lead"
-                        android:layout_width="150dp"
-                        android:layout_height="wrap_content"
-                        android:background="#edeff2"
-                        android:gravity="right"
-                        android:paddingBottom="20dp"
-                        android:paddingRight="10dp"
-                        android:paddingTop="20dp"
-                        android:text="Lead Owner" />
+                    <!--</LinearLayout>-->
 
                     <LinearLayout
                         android:layout_width="match_parent"
-                        android:layout_height="match_parent"
+                        android:layout_height="wrap_content"
                         android:orientation="horizontal">
 
-                        <EditText
-                            android:id="@+id/et_leadOwner_lead"
+                        <TextView
+                            android:id="@+id/tv_leadOwner_lead"
+                            android:layout_width="150dp"
+                            android:layout_height="wrap_content"
+                            android:background="#edeff2"
+                            android:gravity="right"
+                            android:paddingBottom="20dp"
+                            android:paddingRight="10dp"
+                            android:paddingTop="20dp"
+                            android:text="Lead Owner" />
+
+                        <LinearLayout
                             android:layout_width="match_parent"
                             android:layout_height="match_parent"
-                            android:backgroundTint="#edeff2" />
+                            android:orientation="horizontal">
+
+                            <EditText
+                                android:id="@+id/et_leadOwner_lead"
+                                android:layout_width="match_parent"
+                                android:layout_height="match_parent"
+                                android:backgroundTint="#edeff2" />
+                        </LinearLayout>
+
+
                     </LinearLayout>
-
-
-                </LinearLayout>
-
-                <LinearLayout
-                    android:layout_width="match_parent"
-                    android:layout_height="wrap_content"
-                    android:orientation="horizontal">
-
-                    <TextView
-                        android:id="@+id/tv_company_lead"
-                        android:layout_width="150dp"
-                        android:layout_height="wrap_content"
-                        android:background="#edeff2"
-                        android:gravity="right"
-                        android:paddingBottom="20dp"
-                        android:paddingRight="10dp"
-                        android:paddingTop="20dp"
-                        android:text="Company" />
 
                     <LinearLayout
                         android:layout_width="match_parent"
-                        android:layout_height="match_parent"
+                        android:layout_height="wrap_content"
                         android:orientation="horizontal">
 
-                        <EditText
-                            android:id="@+id/et_company_lead"
+                        <TextView
+                            android:id="@+id/tv_company_lead"
+                            android:layout_width="150dp"
+                            android:layout_height="wrap_content"
+                            android:background="#edeff2"
+                            android:gravity="right"
+                            android:paddingBottom="20dp"
+                            android:paddingRight="10dp"
+                            android:paddingTop="20dp"
+                            android:text="Company" />
+
+                        <LinearLayout
                             android:layout_width="match_parent"
                             android:layout_height="match_parent"
-                            android:backgroundTint="#edeff2" />
+                            android:orientation="horizontal">
+
+                            <EditText
+                                android:id="@+id/et_company_lead"
+                                android:layout_width="match_parent"
+                                android:layout_height="match_parent"
+                                android:backgroundTint="#edeff2" />
+                        </LinearLayout>
                     </LinearLayout>
-                </LinearLayout>
-
-                <LinearLayout
-                    android:layout_width="match_parent"
-                    android:layout_height="wrap_content"
-                    android:orientation="horizontal">
-
-                    <TextView
-                        android:id="@+id/tv_title_lead"
-                        android:layout_width="150dp"
-                        android:layout_height="wrap_content"
-                        android:background="#edeff2"
-                        android:gravity="right"
-                        android:paddingBottom="20dp"
-                        android:paddingRight="10dp"
-                        android:paddingTop="20dp"
-                        android:text="Title" />
 
                     <LinearLayout
                         android:layout_width="match_parent"
-                        android:layout_height="match_parent"
+                        android:layout_height="wrap_content"
                         android:orientation="horizontal">
 
-                        <EditText
-                            android:id="@+id/et_title_lead"
+                        <TextView
+                            android:id="@+id/tv_title_lead"
+                            android:layout_width="150dp"
+                            android:layout_height="wrap_content"
+                            android:background="#edeff2"
+                            android:gravity="right"
+                            android:paddingBottom="20dp"
+                            android:paddingRight="10dp"
+                            android:paddingTop="20dp"
+                            android:text="Title" />
+
+                        <LinearLayout
                             android:layout_width="match_parent"
                             android:layout_height="match_parent"
-                            android:backgroundTint="#edeff2" />
+                            android:orientation="horizontal">
+
+                            <EditText
+                                android:id="@+id/et_title_lead"
+                                android:layout_width="match_parent"
+                                android:layout_height="match_parent"
+                                android:backgroundTint="#edeff2" />
+                        </LinearLayout>
                     </LinearLayout>
-                </LinearLayout>
-
-                <LinearLayout
-                    android:layout_width="match_parent"
-                    android:layout_height="wrap_content"
-                    android:orientation="horizontal">
-
-                    <TextView
-                        android:id="@+id/tv_leadname_lead"
-                        android:layout_width="150dp"
-                        android:layout_height="wrap_content"
-                        android:background="#edeff2"
-                        android:gravity="right"
-                        android:paddingBottom="20dp"
-                        android:paddingRight="10dp"
-                        android:paddingTop="20dp"
-                        android:text="Lead Name" />
 
                     <LinearLayout
                         android:layout_width="match_parent"
-                        android:layout_height="match_parent"
+                        android:layout_height="wrap_content"
                         android:orientation="horizontal">
 
-                        <EditText
-                            android:id="@+id/et_leadname_lead"
+                        <TextView
+                            android:id="@+id/tv_leadname_lead"
+                            android:layout_width="150dp"
+                            android:layout_height="wrap_content"
+                            android:background="#edeff2"
+                            android:gravity="right"
+                            android:paddingBottom="20dp"
+                            android:paddingRight="10dp"
+                            android:paddingTop="20dp"
+                            android:text="Lead Name" />
+
+                        <LinearLayout
                             android:layout_width="match_parent"
                             android:layout_height="match_parent"
-                            android:backgroundTint="#edeff2" />
+                            android:orientation="horizontal">
+
+                            <EditText
+                                android:id="@+id/et_leadname_lead"
+                                android:layout_width="match_parent"
+                                android:layout_height="match_parent"
+                                android:backgroundTint="#edeff2" />
+                        </LinearLayout>
                     </LinearLayout>
-                </LinearLayout>
-
-                <LinearLayout
-                    android:layout_width="match_parent"
-                    android:layout_height="wrap_content"
-                    android:orientation="horizontal">
-
-                    <TextView
-                        android:id="@+id/tv_mobile_lead"
-                        android:layout_width="150dp"
-                        android:layout_height="wrap_content"
-                        android:background="#edeff2"
-                        android:gravity="right"
-                        android:paddingBottom="20dp"
-                        android:paddingRight="10dp"
-                        android:paddingTop="20dp"
-                        android:text="Mobile" />
 
                     <LinearLayout
                         android:layout_width="match_parent"
-                        android:layout_height="match_parent"
+                        android:layout_height="wrap_content"
                         android:orientation="horizontal">
 
-                        <EditText
-                            android:id="@+id/et_mobile_lead"
+                        <TextView
+                            android:id="@+id/tv_mobile_lead"
+                            android:layout_width="150dp"
+                            android:layout_height="wrap_content"
+                            android:background="#edeff2"
+                            android:gravity="right"
+                            android:paddingBottom="20dp"
+                            android:paddingRight="10dp"
+                            android:paddingTop="20dp"
+                            android:text="Mobile" />
+
+                        <LinearLayout
                             android:layout_width="match_parent"
                             android:layout_height="match_parent"
-                            android:backgroundTint="#edeff2" />
+                            android:orientation="horizontal">
+
+                            <EditText
+                                android:id="@+id/et_mobile_lead"
+                                android:layout_width="match_parent"
+                                android:layout_height="match_parent"
+                                android:backgroundTint="#edeff2" />
+                        </LinearLayout>
                     </LinearLayout>
-                </LinearLayout>
-
-                <LinearLayout
-                    android:layout_width="match_parent"
-                    android:layout_height="wrap_content"
-                    android:orientation="horizontal">
-
-                    <TextView
-                        android:id="@+id/tv_phone_lead"
-                        android:layout_width="150dp"
-                        android:layout_height="wrap_content"
-                        android:background="#edeff2"
-                        android:gravity="right"
-                        android:paddingBottom="20dp"
-                        android:paddingRight="10dp"
-                        android:paddingTop="20dp"
-                        android:text="Phone" />
 
                     <LinearLayout
                         android:layout_width="match_parent"
-                        android:layout_height="match_parent"
+                        android:layout_height="wrap_content"
                         android:orientation="horizontal">
 
-                        <EditText
-                            android:id="@+id/et_phone_lead"
+                        <TextView
+                            android:id="@+id/tv_phone_lead"
+                            android:layout_width="150dp"
+                            android:layout_height="wrap_content"
+                            android:background="#edeff2"
+                            android:gravity="right"
+                            android:paddingBottom="20dp"
+                            android:paddingRight="10dp"
+                            android:paddingTop="20dp"
+                            android:text="Phone" />
+
+                        <LinearLayout
                             android:layout_width="match_parent"
                             android:layout_height="match_parent"
-                            android:backgroundTint="#edeff2" />
+                            android:orientation="horizontal">
+
+                            <EditText
+                                android:id="@+id/et_phone_lead"
+                                android:layout_width="match_parent"
+                                android:layout_height="match_parent"
+                                android:backgroundTint="#edeff2" />
+                        </LinearLayout>
                     </LinearLayout>
-                </LinearLayout>
-
-                <LinearLayout
-                    android:layout_width="match_parent"
-                    android:layout_height="wrap_content"
-                    android:orientation="horizontal">
-
-                    <TextView
-                        android:id="@+id/tv_annualRevenue_lead"
-                        android:layout_width="150dp"
-                        android:layout_height="wrap_content"
-                        android:background="#edeff2"
-                        android:gravity="right"
-                        android:paddingBottom="20dp"
-                        android:paddingRight="10dp"
-                        android:paddingTop="20dp"
-                        android:text="Annual Revenue" />
 
                     <LinearLayout
                         android:layout_width="match_parent"
-                        android:layout_height="match_parent"
+                        android:layout_height="wrap_content"
                         android:orientation="horizontal">
 
-                        <EditText
-                            android:id="@+id/et_annualRevenue_lead"
+                        <TextView
+                            android:id="@+id/tv_annualRevenue_lead"
+                            android:layout_width="150dp"
+                            android:layout_height="wrap_content"
+                            android:background="#edeff2"
+                            android:gravity="right"
+                            android:paddingBottom="20dp"
+                            android:paddingRight="10dp"
+                            android:paddingTop="20dp"
+                            android:text="Annual Revenue" />
+
+                        <LinearLayout
                             android:layout_width="match_parent"
                             android:layout_height="match_parent"
-                            android:backgroundTint="#edeff2" />
+                            android:orientation="horizontal">
+
+                            <EditText
+                                android:id="@+id/et_annualRevenue_lead"
+                                android:layout_width="match_parent"
+                                android:layout_height="match_parent"
+                                android:backgroundTint="#edeff2" />
+                        </LinearLayout>
                     </LinearLayout>
-                </LinearLayout>
-
-                <LinearLayout
-                    android:layout_width="match_parent"
-                    android:layout_height="wrap_content"
-                    android:orientation="horizontal">
-
-                    <TextView
-                        android:id="@+id/tv_email_lead"
-                        android:layout_width="150dp"
-                        android:layout_height="wrap_content"
-                        android:background="#edeff2"
-                        android:gravity="right"
-                        android:paddingBottom="20dp"
-                        android:paddingRight="10dp"
-                        android:paddingTop="20dp"
-                        android:text="Email" />
 
                     <LinearLayout
                         android:layout_width="match_parent"
-                        android:layout_height="match_parent"
+                        android:layout_height="wrap_content"
                         android:orientation="horizontal">
 
-                        <EditText
-                            android:id="@+id/et_email_lead"
+                        <TextView
+                            android:id="@+id/tv_email_lead"
+                            android:layout_width="150dp"
+                            android:layout_height="wrap_content"
+                            android:background="#edeff2"
+                            android:gravity="right"
+                            android:paddingBottom="20dp"
+                            android:paddingRight="10dp"
+                            android:paddingTop="20dp"
+                            android:text="Email" />
+
+                        <LinearLayout
                             android:layout_width="match_parent"
                             android:layout_height="match_parent"
-                            android:backgroundTint="#edeff2" />
+                            android:orientation="horizontal">
+
+                            <EditText
+                                android:id="@+id/et_email_lead"
+                                android:layout_width="match_parent"
+                                android:layout_height="match_parent"
+                                android:backgroundTint="#edeff2" />
+                        </LinearLayout>
                     </LinearLayout>
-                </LinearLayout>
-
-                <LinearLayout
-                    android:layout_width="match_parent"
-                    android:layout_height="wrap_content"
-                    android:orientation="horizontal">
-
-                    <TextView
-                        android:id="@+id/tv_website_lead"
-                        android:layout_width="150dp"
-                        android:layout_height="wrap_content"
-                        android:background="#edeff2"
-                        android:gravity="right"
-                        android:paddingBottom="20dp"
-                        android:paddingRight="10dp"
-                        android:paddingTop="20dp"
-                        android:text="Website" />
 
                     <LinearLayout
                         android:layout_width="match_parent"
-                        android:layout_height="match_parent"
+                        android:layout_height="wrap_content"
                         android:orientation="horizontal">
 
-                        <EditText
-                            android:id="@+id/et_website_lead"
+                        <TextView
+                            android:id="@+id/tv_website_lead"
+                            android:layout_width="150dp"
+                            android:layout_height="wrap_content"
+                            android:background="#edeff2"
+                            android:gravity="right"
+                            android:paddingBottom="20dp"
+                            android:paddingRight="10dp"
+                            android:paddingTop="20dp"
+                            android:text="Website" />
+
+                        <LinearLayout
                             android:layout_width="match_parent"
                             android:layout_height="match_parent"
-                            android:backgroundTint="#edeff2" />
+                            android:orientation="horizontal">
+
+                            <EditText
+                                android:id="@+id/et_website_lead"
+                                android:layout_width="match_parent"
+                                android:layout_height="match_parent"
+                                android:backgroundTint="#edeff2" />
+                        </LinearLayout>
                     </LinearLayout>
-                </LinearLayout>
-
-                <LinearLayout
-                    android:layout_width="match_parent"
-                    android:layout_height="wrap_content"
-                    android:orientation="horizontal">
-
-                    <TextView
-                        android:id="@+id/tv_noOfEmployee_lead"
-                        android:layout_width="150dp"
-                        android:layout_height="wrap_content"
-                        android:background="#edeff2"
-                        android:gravity="right"
-                        android:paddingBottom="20dp"
-                        android:paddingRight="10dp"
-                        android:paddingTop="20dp"
-                        android:text="No Of Employees" />
 
                     <LinearLayout
                         android:layout_width="match_parent"
-                        android:layout_height="match_parent"
+                        android:layout_height="wrap_content"
                         android:orientation="horizontal">
 
-                        <EditText
-                            android:id="@+id/et_noOfEmployee_lead"
+                        <TextView
+                            android:id="@+id/tv_noOfEmployee_lead"
+                            android:layout_width="150dp"
+                            android:layout_height="wrap_content"
+                            android:background="#edeff2"
+                            android:gravity="right"
+                            android:paddingBottom="20dp"
+                            android:paddingRight="10dp"
+                            android:paddingTop="20dp"
+                            android:text="No Of Employees" />
+
+                        <LinearLayout
                             android:layout_width="match_parent"
                             android:layout_height="match_parent"
-                            android:backgroundTint="#edeff2" />
+                            android:orientation="horizontal">
+
+                            <EditText
+                                android:id="@+id/et_noOfEmployee_lead"
+                                android:layout_width="match_parent"
+                                android:layout_height="match_parent"
+                                android:backgroundTint="#edeff2" />
+                        </LinearLayout>
                     </LinearLayout>
-                </LinearLayout>
-
-                <LinearLayout
-                    android:layout_width="match_parent"
-                    android:layout_height="wrap_content"
-                    android:orientation="horizontal">
-
-                    <TextView
-                        android:id="@+id/tv_skypeId_lead"
-                        android:layout_width="150dp"
-                        android:layout_height="wrap_content"
-                        android:background="#edeff2"
-                        android:gravity="right"
-                        android:paddingBottom="20dp"
-                        android:paddingRight="10dp"
-                        android:paddingTop="20dp"
-                        android:text="Skype ID" />
 
                     <LinearLayout
                         android:layout_width="match_parent"
-                        android:layout_height="match_parent"
+                        android:layout_height="wrap_content"
                         android:orientation="horizontal">
 
-                        <EditText
-                            android:id="@+id/et_skypeId_lead"
+                        <TextView
+                            android:id="@+id/tv_skypeId_lead"
+                            android:layout_width="150dp"
+                            android:layout_height="wrap_content"
+                            android:background="#edeff2"
+                            android:gravity="right"
+                            android:paddingBottom="20dp"
+                            android:paddingRight="10dp"
+                            android:paddingTop="20dp"
+                            android:text="Skype ID" />
+
+                        <LinearLayout
                             android:layout_width="match_parent"
                             android:layout_height="match_parent"
-                            android:backgroundTint="#edeff2" />
+                            android:orientation="horizontal">
+
+                            <EditText
+                                android:id="@+id/et_skypeId_lead"
+                                android:layout_width="match_parent"
+                                android:layout_height="match_parent"
+                                android:backgroundTint="#edeff2" />
+                        </LinearLayout>
                     </LinearLayout>
-                </LinearLayout>
-
-                <LinearLayout
-                    android:layout_width="match_parent"
-                    android:layout_height="wrap_content"
-                    android:orientation="horizontal">
-
-                    <TextView
-                        android:id="@+id/tv_leadSource_lead"
-                        android:layout_width="150dp"
-                        android:layout_height="wrap_content"
-                        android:background="#edeff2"
-                        android:gravity="right"
-                        android:paddingBottom="20dp"
-                        android:paddingRight="10dp"
-                        android:paddingTop="20dp"
-                        android:text="Lead Source" />
 
                     <LinearLayout
                         android:layout_width="match_parent"
-                        android:layout_height="match_parent"
+                        android:layout_height="wrap_content"
                         android:orientation="horizontal">
 
-                        <Button
-                            android:id="@+id/bt_leadSource_lead"
+                        <TextView
+                            android:id="@+id/tv_leadSource_lead"
+                            android:layout_width="150dp"
+                            android:layout_height="wrap_content"
+                            android:background="#edeff2"
+                            android:gravity="right"
+                            android:paddingBottom="20dp"
+                            android:paddingRight="10dp"
+                            android:paddingTop="20dp"
+                            android:text="Lead Source" />
+
+                        <LinearLayout
                             android:layout_width="match_parent"
                             android:layout_height="match_parent"
-                            android:background="@android:color/transparent"
-                            android:drawableRight="@drawable/ic_chevron_right_black_24dp"
-                            android:hint="Select Lead Source..."
-                            android:paddingLeft="20dp"
-                            android:textColor="#b0b1b2" />
+                            android:orientation="horizontal">
+
+                            <Button
+                                android:id="@+id/bt_leadSource_lead"
+                                android:layout_width="match_parent"
+                                android:layout_height="match_parent"
+                                android:background="@android:color/transparent"
+                                android:drawableRight="@drawable/ic_chevron_right_black_24dp"
+                                android:hint="Select Lead Source..."
+                                android:paddingLeft="20dp"
+                                android:textColor="#b0b1b2" />
+                        </LinearLayout>
                     </LinearLayout>
-                </LinearLayout>
-
-                <LinearLayout
-                    android:layout_width="match_parent"
-                    android:layout_height="wrap_content"
-                    android:orientation="horizontal">
-
-                    <TextView
-                        android:id="@+id/tv_industry_lead"
-                        android:layout_width="150dp"
-                        android:layout_height="wrap_content"
-                        android:background="#edeff2"
-                        android:gravity="right"
-                        android:paddingBottom="20dp"
-                        android:paddingRight="10dp"
-                        android:paddingTop="20dp"
-                        android:text="Industry" />
 
                     <LinearLayout
                         android:layout_width="match_parent"
-                        android:layout_height="match_parent"
+                        android:layout_height="wrap_content"
                         android:orientation="horizontal">
 
-                        <Button
-                            android:id="@+id/bt_industry_lead"
+                        <TextView
+                            android:id="@+id/tv_industry_lead"
+                            android:layout_width="150dp"
+                            android:layout_height="wrap_content"
+                            android:background="#edeff2"
+                            android:gravity="right"
+                            android:paddingBottom="20dp"
+                            android:paddingRight="10dp"
+                            android:paddingTop="20dp"
+                            android:text="Industry" />
+
+                        <LinearLayout
                             android:layout_width="match_parent"
                             android:layout_height="match_parent"
-                            android:background="@android:color/transparent"
-                            android:drawableRight="@drawable/ic_chevron_right_black_24dp"
-                            android:hint="Select Industry..."
-                            android:paddingLeft="20dp"
-                            android:textColor="#b0b1b2" />
-                    </LinearLayout>
-                </LinearLayout>
-                <LinearLayout
-                    android:layout_width="match_parent"
-                    android:layout_height="wrap_content">
+                            android:orientation="horizontal">
 
-                    <Button
-                        android:id="@+id/bt_lead_hide"
-                        android:layout_width="match_parent"
-                        android:layout_height="wrap_content"
-                        android:text="Hide Extra"/>
+                            <Button
+                                android:id="@+id/bt_industry_lead"
+                                android:layout_width="match_parent"
+                                android:layout_height="match_parent"
+                                android:background="@android:color/transparent"
+                                android:drawableRight="@drawable/ic_chevron_right_black_24dp"
+                                android:hint="Select Industry..."
+                                android:paddingLeft="20dp"
+                                android:textColor="#b0b1b2" />
+                        </LinearLayout>
+                    </LinearLayout>
+
 
                 </LinearLayout>
 
 
             </LinearLayout>
+        </ScrollView>
+
+    <Button
+        android:id="@+id/bt_lead_hide"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_alignParentBottom="true"
+        android:layout_alignParentStart="true"
+        android:text="Hide Extra" />
 
 
-        </LinearLayout>
-    </ScrollView>
 
-
-
-</LinearLayout>
+</RelativeLayout>

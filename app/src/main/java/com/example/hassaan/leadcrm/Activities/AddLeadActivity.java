@@ -80,7 +80,7 @@ public class AddLeadActivity extends AppCompatActivity implements View.OnClickLi
 
              et_email_lead.setVisibility(View.VISIBLE);         tv_email_lead.setVisibility(View.VISIBLE);
              et_mobile_lead.setVisibility(View.VISIBLE);        tv_mobile_lead.setVisibility(View.VISIBLE);
-             et_phone_lead.setVisibility(View.GONE);            tv_phone_lead.setVisibility(View.VISIBLE);
+             et_phone_lead.setVisibility(View.VISIBLE);         tv_phone_lead.setVisibility(View.VISIBLE);
              et_annualRevenue_lead.setVisibility(View.VISIBLE); tv_annualRevenue_lead.setVisibility(View.VISIBLE);
              et_website_lead.setVisibility(View.VISIBLE);       tv_website_lead.setVisibility(View.VISIBLE);
              et_noOfEmployee_lead.setVisibility(View.VISIBLE);  tv_noOfEmployee_lead.setVisibility(View.VISIBLE);
