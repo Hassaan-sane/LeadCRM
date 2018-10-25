@@ -6,8 +6,8 @@ import android.database.sqlite.SQLiteDatabase;
 import android.util.Log;
 
 import com.example.hassaan.leadcrm.Data.DatabaseManager;
-import com.example.hassaan.leadcrm.TableClasses.Accounts;
-import com.example.hassaan.leadcrm.TableClasses.Role;
+import com.example.hassaan.leadcrm.TableClasses.Account;
+import com.example.hassaan.leadcrm.TableClasses.User;
 
 import java.text.ParseException;
 import java.text.SimpleDateFormat;
@@ -15,52 +15,121 @@ import java.util.ArrayList;
 import java.util.List;
 
 public class AccountsRepo {
-    private Accounts accounts;
+    private Account account;
+
     public AccountsRepo() {
-        accounts = new Accounts();
+        this.account = account;
     }
 
     public static String createTable() {
-        return "CREATE TABLE " + Accounts.TABLE_NAME +
-                " (" + Accounts.KEY_ID + " INTEGER PRIMARY KEY AUTOINCREMENT, " +
-                Accounts.KEY_Name + " VARCHAR, " +
-                Accounts.KEY_Address + " VARCHAR, " +
-                Accounts.KEY_DOB + " DATETIME, "+
-                Accounts.KEY_Email + " VARCHAR, "+
-                Accounts.KEY_PhoneNO + " VARCHAR, "+
-                Accounts.KEY_Password + " VARCHAR, "+
-                Accounts.KEY_Salt + " VARCHAR, "+
-                Accounts.KEY_DateCreated + " DATETIME, "+
-                Accounts.KEY_RoleID + " INTEGER, "+
-                Accounts.KEY_Desigination + " VARCHAR, FOREIGN KEY(" + Accounts.KEY_RoleID + ")REFERENCES " + Role.TABLE_NAME + "(" + Role.KEY_ID + ") )";
+        return "CREATE TABLE " + Account.TABLE_NAME+
+                " ( " +Account.KEY_ID +" INTEGER PRIMARY KEY AUTOINCREMENT , "+
+                Account.KEY_USERID + " INTEGER, " +
+                Account.KEY_ACCOUNTNAME + " VARCHAR, " +
+                Account.KEY_ACCOUNTNO + " INTEGER, " +
+                Account.KEY_INDUSTRY + " VARCHAR, " +
+                Account.KEY_RATING + " VARCHAR, " +
+                Account.KEY_PHONENO + " VARCHAR, " +
+                Account.KEY_WEBSITE + " VARCHAR, " +
+                Account.KEY_OWNERSHIP + " VARCHAR, " +
+                Account.KEY_EMPLOYEENO + " INTEGER, " +
+                Account.KEY_ANNUALREVENUE + " INTEGER, " +
+                Account.KEY_CREATEDBY + " DATETIME, " +
+                Account.KEY_MODIFIEDBY + " DATETIME, " +
+                Account.KEY_BILLINGSTREET + " VARCHAR, " +
+                Account.KEY_BILLINGSTATE + " VARCHAR, " +
+                Account.KEY_BILLINGZIP + " INTEGER, " +
+                Account.KEY_BILLINGCITY + " VARCHAR, " +
+                Account.KEY_BILLINGCOUNTRY + " VARCHAR, " +
+                Account.KEY_SHIPPINGCITY + " VARCHAR, " +
+                Account.KEY_SHIPPINGCOUNTRY + " VARCHAR, " +
+                Account.KEY_SHIPPINGZIP + " VARCHAR, " +
+                Account.KEY_SHIPPINGSTATE + " VARCHAR, " +
+                Account.KEY_SHIPPINGSTREET + " VARCHAR, " +
+                Account.KEY_DESCRIPTION + " VARCHAR, " +
+                " VARCHAR, FOREIGN KEY(" + Account.KEY_USERID + ")REFERENCES " + User.TABLE_NAME + "(" + User.KEY_ID + ") )";
+
     }
-    public int insertInAccounts(Accounts accounts1){
+
+    public int insertInAccount(Account account){
         SQLiteDatabase db = DatabaseManager.getInstance().openDatabase();
         ContentValues values = new ContentValues();
-        values.put(Accounts.KEY_ID, accounts1.getID());
-        values.put(Accounts.KEY_Name, accounts1.getName());
-        values.put(Accounts.KEY_Address, accounts1.getAddress());
-        values.put(Accounts.KEY_DOB, accounts1.getDOB().toString());
-        values.put(Accounts.KEY_Email, accounts1.getEmail());
-        values.put(Accounts.KEY_PhoneNO, accounts1.getPhoneNO());
-        values.put(Accounts.KEY_Password, accounts1.getPassword());
-        values.put(Accounts.KEY_Salt, accounts1.getSalt());
-        values.put(Accounts.KEY_DateCreated, accounts1.getDateCreated().toString());
-        values.put(Accounts.KEY_RoleID, accounts1.getRoleID());
-        values.put(Accounts.KEY_Desigination, accounts1.getDesigination());
+
+        values.put(Account.KEY_ID, account.getID());
+        values.put(Account.KEY_USERID,account.getUserID());
+        values.put(Account.KEY_ACCOUNTNAME,account.getAccountName());
+        values.put(Account.KEY_ACCOUNTNO,account.getAccountNo());
+        values.put(Account.KEY_INDUSTRY,account.getIndustry());
+        values.put(Account.KEY_RATING,account.getRating());
+        values.put(Account.KEY_PHONENO,account.getPhoneNo());
+        values.put(Account.KEY_WEBSITE,account.getWebsite());
+        values.put(Account.KEY_OWNERSHIP,account.getOwnerShip());
+        values.put(Account.KEY_EMPLOYEENO,account.getEmployeeNo());
+        values.put(Account.KEY_ANNUALREVENUE,account.getAnnualRevenue());
+        values.put(Account.KEY_CREATEDBY,account.getCreatedBy().toString());
+        values.put(Account.KEY_MODIFIEDBY,account.getModifiedBy().toString());
+        values.put(Account.KEY_BILLINGSTREET,account.getBillingStreet());
+        values.put(Account.KEY_BILLINGSTATE,account.getBillingState());
+        values.put(Account.KEY_BILLINGZIP,account.getBillingZip());
+        values.put(Account.KEY_BILLINGCITY,account.getBillingCity());
+        values.put(Account.KEY_BILLINGCOUNTRY,account.getBillingCountry());
+        values.put(Account.KEY_SHIPPINGCOUNTRY,account.getShippingCountry());
+        values.put(Account.KEY_SHIPPINGCITY,account.getShippingCity());
+        values.put(Account.KEY_SHIPPINGZIP,account.getShippingZip());
+        values.put(Account.KEY_SHIPPINGSTATE,account.getShippingState());
+        values.put(Account.KEY_SHIPPINGSTREET,account.getShippingState());
+        values.put(Account.KEY_DESCRIPTION,account.getDescription());
 
 
-        int AccountsId =(int)db.insert(accounts1.TABLE_NAME, null, values);
+        int AccountsId =(int)db.insert(account.TABLE_NAME, null, values);
         DatabaseManager.getInstance().closeDatabase();
         return AccountsId;
     }
-    public List<Accounts> getAccountsList() {
 
-        Accounts GetAccounts;
-        List<Accounts> AccountsLists = new ArrayList<>();
+
+    public int insertShortInAccount(Account account){
+        SQLiteDatabase db = DatabaseManager.getInstance().openDatabase();
+        ContentValues values = new ContentValues();
+
+        values.put(Account.KEY_ID, account.getID());
+        values.put(Account.KEY_USERID,account.getUserID());
+        values.put(Account.KEY_ACCOUNTNAME,account.getAccountName());
+        values.put(Account.KEY_CREATEDBY,account.getCreatedBy().toString());
+        values.put(Account.KEY_MODIFIEDBY,account.getModifiedBy().toString());
+
+
+        int AccountsId =(int)db.insert(account.TABLE_NAME, null, values);
+        DatabaseManager.getInstance().closeDatabase();
+        return AccountsId;
+    }
+
+    public int updateAccountShort(Account account){
+
+        int AccountId;
 
         SQLiteDatabase db = DatabaseManager.getInstance().openDatabase();
-        String selectQuery = "SELECT * FROM " + Accounts.TABLE_NAME;
+        ContentValues values = new ContentValues();
+        values.put(Account.KEY_ID, account.getID());
+        values.put(Account.KEY_USERID,account.getUserID());
+        values.put(Account.KEY_ACCOUNTNAME,account.getAccountName());
+        values.put(Account.KEY_CREATEDBY,account.getCreatedBy().toString());
+        values.put(Account.KEY_MODIFIEDBY,account.getModifiedBy().toString());
+
+        // update-ing Row
+        AccountId = db.update(Account.TABLE_NAME, values, Account.KEY_ID + " = " + account.getID(), null);
+        DatabaseManager.getInstance().closeDatabase();
+        return AccountId;
+
+    }
+
+
+    public List<Account> getAccountShortList() {
+
+        Account getAccount;
+        List<Account> accountLists = new ArrayList<>();
+
+        SQLiteDatabase db = DatabaseManager.getInstance().openDatabase();
+        String selectQuery = "SELECT * FROM " + Account.TABLE_NAME;
 
         Log.d("TAG", selectQuery);
         Cursor cursor = db.rawQuery(selectQuery, null);
@@ -69,42 +138,40 @@ public class AccountsRepo {
         if (cursor.moveToFirst()) {
             do {
 
-                GetAccounts = new Accounts();
+                getAccount = new Account();
                 SimpleDateFormat sdf=new SimpleDateFormat("yyyy-MM-dd HH:mm:ss");
-                GetAccounts.setID(Integer.parseInt(cursor.getString(cursor.getColumnIndex(Accounts.KEY_ID))));
-                GetAccounts.setName(cursor.getString(cursor.getColumnIndex(Accounts.KEY_Name)));
-                GetAccounts.setAddress(cursor.getString(cursor.getColumnIndex(Accounts.KEY_Address)));
-                GetAccounts.setEmail(cursor.getString(cursor.getColumnIndex(Accounts.KEY_Email)));
-                GetAccounts.setPhoneNO(cursor.getString(cursor.getColumnIndex(Accounts.KEY_PhoneNO)));
-                GetAccounts.setPassword(cursor.getString(cursor.getColumnIndex(Accounts.KEY_Password)));
-                GetAccounts.setSalt(cursor.getString(cursor.getColumnIndex(Accounts.KEY_Salt)));
-                GetAccounts.setRoleID(Integer.parseInt(cursor.getString(cursor.getColumnIndex(Accounts.KEY_RoleID))));
-                GetAccounts.setDesigination(cursor.getString(cursor.getColumnIndex(Accounts.KEY_Desigination)));
+                getAccount.setID(Integer.parseInt(cursor.getString(cursor.getColumnIndex(Account.KEY_ID))));
+                getAccount.setAccountName(cursor.getString(cursor.getColumnIndex(Account.KEY_ACCOUNTNAME)));
+                getAccount.setUserID(cursor.getInt(cursor.getColumnIndex(Account.KEY_USERID)));
                 try {
-                    GetAccounts.setDOB(sdf.parse(cursor.getString(cursor.getColumnIndex(Accounts.KEY_DOB))));
-                    GetAccounts.setDateCreated(sdf.parse(cursor.getString(cursor.getColumnIndex(Accounts.KEY_DateCreated))));
-                } catch (ParseException e) {
+
+                    getAccount.setCreatedBy(sdf.parse(cursor.getString(cursor.getColumnIndex(Account.KEY_CREATEDBY))));
+                    getAccount.setModifiedBy(sdf.parse(cursor.getString(cursor.getColumnIndex(Account.KEY_MODIFIEDBY))));
+                   } catch (ParseException e) {
                     e.printStackTrace();
                 }
 
 
-                AccountsLists.add(GetAccounts);
+                accountLists.add(getAccount);
             } while (cursor.moveToNext());
         }
 
         cursor.close();
         DatabaseManager.getInstance().closeDatabase();
 
-        return AccountsLists;
+        return accountLists;
     }
 
-    public long deletefromAccounts(Integer id) {
+
+
+    public long deletefromAccount(Integer id) {
 
         SQLiteDatabase db = DatabaseManager.getInstance().openDatabase();
         String[] whereArgs= {id.toString()};
-        long deleteId = db.delete(Accounts.TABLE_NAME,"ID=?",whereArgs );
+        long deleteId = db.delete(Account.TABLE_NAME,"ID=?",whereArgs );
         DatabaseManager.getInstance().closeDatabase();
 
         return deleteId;
     }
+
 }

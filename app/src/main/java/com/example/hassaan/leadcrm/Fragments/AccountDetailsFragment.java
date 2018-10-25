@@ -11,6 +11,11 @@ import android.widget.EditText;
 import android.widget.TextView;
 
 import com.example.hassaan.leadcrm.R;
+import com.example.hassaan.leadcrm.Repo.AccountsRepo;
+import com.example.hassaan.leadcrm.TableClasses.Account;
+
+import java.util.ArrayList;
+import java.util.List;
 
 /**
  * A simple {@link Fragment} subclass.
@@ -24,7 +29,7 @@ public class AccountDetailsFragment extends Fragment {
     TextView tv_codeShipping_accountDetails, tv_countryShipping_accountDetails, tv_description_accountDetails;
     TextView tv_rating_accountDetails, tv_parentAccount_accountDetails, tv_accountType_accountDetails, tv_ownership_accountDetails, tv_industry_accountDetails;
 
-
+    private List<Account> accountList = new ArrayList<>();
     public AccountDetailsFragment() {
         // Required empty public constructor
     }
@@ -36,6 +41,13 @@ public class AccountDetailsFragment extends Fragment {
         // Inflate the layout for this fragment
         View view=inflater.inflate(R.layout.fragment_account_details, container, false);
         createReferences(view);
+
+        AccountsRepo accountsRepo = new AccountsRepo();
+
+        accountList = accountsRepo.getAccountShortList();
+
+        tv_accountName_accountDetails.setText(accountList.get(0).getAccountName());
+
         return view;
     }
 

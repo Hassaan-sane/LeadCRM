@@ -182,7 +182,7 @@ public class MainActivity extends AppCompatActivity
 //            Intent intent=new Intent(this,EditAccountActivity.class);
 //            startActivity(intent);
             fragmentManager.beginTransaction().replace(R.id.container, new AccountsFragment()).commit();
-            getSupportActionBar().setTitle("Accounts");
+            getSupportActionBar().setTitle("User");
 
         } else if (id == R.id.nav_deals) {
             fragmentManager.beginTransaction().replace(R.id.container, new DealsFragment()).commit();

@@ -12,22 +12,19 @@ import android.widget.TextView;
 
 import com.example.hassaan.leadcrm.Activities.DetailLeadActivity;
 import com.example.hassaan.leadcrm.R;
+import com.example.hassaan.leadcrm.TableClasses.Leads;
 
 import java.util.ArrayList;
 import java.util.List;
 
 public class LeadsRecycler extends RecyclerView.Adapter<LeadsRecycler.ViewHolder> {
 
-    private List<String> list = new ArrayList<String>();
+    private List<Leads> list = new ArrayList<>();
     private Context context;
 
-    public LeadsRecycler(List<String> list, Context context) {
+    public LeadsRecycler(List<Leads> list, Context context) {
         this.list = list;
         this.context = context;
-    }
-
-    public LeadsRecycler(List<String> list) {
-        this.list = list;
     }
 
     @NonNull
@@ -40,14 +37,15 @@ public class LeadsRecycler extends RecyclerView.Adapter<LeadsRecycler.ViewHolder
     }
 
     @Override
-    public void onBindViewHolder(@NonNull ViewHolder viewHolder, int i) {
-        viewHolder.tv_name_leadrecycler.setText("Zohaib Javed");
-        viewHolder.tv_email_leadrecycler.setText("My name is khan and I am not a terrorist");
+    public void onBindViewHolder(@NonNull ViewHolder viewHolder, final int i) {
+        viewHolder.tv_name_leadrecycler.setText(list.get(i).getLeadName());
+        viewHolder.tv_email_leadrecycler.setText(list.get(i).getCompanyName());
        // viewHolder.iv_image_leadrecycler.setImageIcon(list.get(i));e
         viewHolder.itemView.setOnClickListener(new View.OnClickListener() {
             @Override
             public void onClick(View view) {
                 Intent intent = new Intent(context, DetailLeadActivity.class);
+                intent.putExtra("LeadPosition",i);
                 context.startActivity(intent);
             }
         });

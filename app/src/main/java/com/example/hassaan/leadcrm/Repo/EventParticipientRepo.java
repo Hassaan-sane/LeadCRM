@@ -7,7 +7,6 @@ import android.database.sqlite.SQLiteDatabase;
 import android.util.Log;
 
 import com.example.hassaan.leadcrm.Data.DatabaseManager;
-import com.example.hassaan.leadcrm.TableClasses.Accounts;
 import com.example.hassaan.leadcrm.TableClasses.Event;
 import com.example.hassaan.leadcrm.TableClasses.EventParticipents;
 import com.example.hassaan.leadcrm.TableClasses.Participient;

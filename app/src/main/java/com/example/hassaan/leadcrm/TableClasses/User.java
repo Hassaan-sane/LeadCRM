@@ -2,9 +2,9 @@ package com.example.hassaan.leadcrm.TableClasses;
 
 import java.util.Date;
 
-public class Accounts {
+public class User {
 
-    public static final String TABLE_NAME = "tbl_Accounts";
+    public static final String TABLE_NAME = "tbl_User";
     public static final String KEY_Name = "Name";
     public static final String KEY_ID = "ID";
     public static final String KEY_Address = "Address";
@@ -32,11 +32,11 @@ public class Accounts {
 
 
 
-    public Accounts() {
+    public User() {
 
     }
 
-    public Accounts(String name, Integer ID, String address, String phoneNO, Date DOB, String password, String salt, Date dateCreated, Integer roleID, String email, String desigination) {
+    public User(String name, Integer ID, String address, String phoneNO, Date DOB, String password, String salt, Date dateCreated, Integer roleID, String email, String desigination) {
         Name = name;
         this.ID = ID;
         Address = address;

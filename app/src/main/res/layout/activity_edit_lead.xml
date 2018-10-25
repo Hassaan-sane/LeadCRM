@@ -4,9 +4,7 @@
     xmlns:tools="http://schemas.android.com/tools"
     android:layout_width="match_parent"
     android:layout_height="match_parent"
-    android:fillViewport="true"
-    android:scrollbars = "vertical"
-    tools:context=".Fragments.LeadDetailsFragment">
+    tools:context=".Activities.EditLeadActivity">
 
     <LinearLayout
         android:layout_width="match_parent"
@@ -14,24 +12,24 @@
         android:orientation="vertical">
 
         <LinearLayout
+            android:id="@+id/Header_edit"
             android:layout_width="match_parent"
             android:layout_height="wrap_content"
-            android:orientation="vertical"
             android:background="#d4d6d8"
-            android:id="@+id/Header">
+            android:orientation="vertical">
 
             <TextView
                 android:layout_width="match_parent"
                 android:layout_height="wrap_content"
-                android:paddingTop="15dp"
-                android:paddingLeft="10dp"
                 android:paddingBottom="10dp"
-                android:text="LEAD INFORMATION"/>
+                android:paddingLeft="10dp"
+                android:paddingTop="15dp"
+                android:text="LEAD INFORMATION" />
         </LinearLayout>
 
         <LinearLayout
             android:layout_width="match_parent"
-            android:layout_height="wrap_content"
+            android:layout_height="match_parent"
             android:orientation="vertical">
 
             <LinearLayout
@@ -40,26 +38,54 @@
                 android:orientation="horizontal">
 
                 <TextView
+                    android:id="@+id/tv_photo_lead_edit"
                     android:layout_width="150dp"
                     android:layout_height="wrap_content"
-                    android:text="Lead Owner"
-                    android:paddingTop="10dp"
-                    android:gravity="right"
                     android:background="#edeff2"
+                    android:gravity="right"
+                    android:paddingBottom="50dp"
                     android:paddingRight="10dp"
-                    android:paddingBottom="10dp"/>
+                    android:paddingTop="10dp"
+                    android:text="Photo" />
+
+                <ImageButton
+                    android:id="@+id/ib_image_lead"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_marginHorizontal="20dp"
+                    android:layout_marginTop="10dp"
+                    android:background="@drawable/ic_add_camera"
+                    android:paddingLeft="20dp"
+                    android:paddingTop="20dp" />
+
+            </LinearLayout>
+
+            <LinearLayout
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:orientation="horizontal">
+
+                <TextView
+                    android:id="@+id/tv_leadOwner_lead_edit"
+                    android:layout_width="150dp"
+                    android:layout_height="wrap_content"
+                    android:background="#edeff2"
+                    android:gravity="right"
+                    android:paddingBottom="20dp"
+                    android:paddingRight="10dp"
+                    android:paddingTop="20dp"
+                    android:text="Lead Owner" />
+
                 <LinearLayout
                     android:layout_width="match_parent"
                     android:layout_height="match_parent"
                     android:orientation="horizontal">
-                    <TextView
-                        android:id="@+id/tv_leadOwner_leadDetail"
+
+                    <EditText
+                        android:id="@+id/et_leadOwner_lead_edit"
                         android:layout_width="match_parent"
                         android:layout_height="match_parent"
-                        android:paddingTop="10dp"
-                        android:paddingLeft="20dp"
-                        android:text="asdfgdsfjcxvcb"
-                        android:background="@drawable/button_design" />
+                        android:backgroundTint="#edeff2" />
                 </LinearLayout>
 
 
@@ -71,25 +97,26 @@
                 android:orientation="horizontal">
 
                 <TextView
+                    android:id="@+id/tv_company_lead_edit"
                     android:layout_width="150dp"
                     android:layout_height="wrap_content"
-                    android:text="Company"
-                    android:paddingTop="10dp"
-                    android:gravity="right"
                     android:background="#edeff2"
+                    android:gravity="right"
+                    android:paddingBottom="20dp"
                     android:paddingRight="10dp"
-                    android:paddingBottom="10dp"/>
+                    android:paddingTop="20dp"
+                    android:text="Company" />
+
                 <LinearLayout
                     android:layout_width="match_parent"
                     android:layout_height="match_parent"
                     android:orientation="horizontal">
-                    <TextView
-                        android:id="@+id/tv_company_leadDetail"
+
+                    <EditText
+                        android:id="@+id/et_company_lead_edit"
                         android:layout_width="match_parent"
                         android:layout_height="match_parent"
-                        android:paddingTop="10dp"
-                        android:paddingLeft="20dp"
-                        android:background="@drawable/button_design"/>
+                        android:backgroundTint="#edeff2" />
                 </LinearLayout>
             </LinearLayout>
 
@@ -99,51 +126,52 @@
                 android:orientation="horizontal">
 
                 <TextView
+                    android:id="@+id/tv_title_lead_edit"
                     android:layout_width="150dp"
                     android:layout_height="wrap_content"
-                    android:text="Title"
-                    android:paddingTop="10dp"
-                    android:gravity="right"
                     android:background="#edeff2"
+                    android:gravity="right"
+                    android:paddingBottom="20dp"
                     android:paddingRight="10dp"
-                    android:paddingBottom="10dp"/>
+                    android:paddingTop="20dp"
+                    android:text="Title" />
+
                 <LinearLayout
                     android:layout_width="match_parent"
                     android:layout_height="match_parent"
                     android:orientation="horizontal">
-                    <TextView
-                        android:id="@+id/tv_title_leadDetail"
+
+                    <EditText
+                        android:id="@+id/et_title_lead_edit"
                         android:layout_width="match_parent"
                         android:layout_height="match_parent"
-                        android:paddingTop="10dp"
-                        android:paddingLeft="20dp"
-                        android:background="@drawable/button_design"/>
+                        android:backgroundTint="#edeff2" />
                 </LinearLayout>
             </LinearLayout>
+
             <LinearLayout
                 android:layout_width="match_parent"
                 android:layout_height="wrap_content"
                 android:orientation="horizontal">
 
                 <TextView
+                    android:id="@+id/tv_leadname_lead_edit"
                     android:layout_width="150dp"
                     android:layout_height="wrap_content"
                     android:text="Lead Name"
-                    android:paddingTop="10dp"
+                    android:paddingTop="20dp"
                     android:gravity="right"
                     android:background="#edeff2"
                     android:paddingRight="10dp"
-                    android:paddingBottom="10dp"/>
+                    android:paddingBottom="20dp"/>
                 <LinearLayout
                     android:layout_width="match_parent"
                     android:layout_height="match_parent"
                     android:orientation="horizontal">
-                    <TextView
-                        android:id="@+id/tv_leadname_leadDetail"
+                    <EditText
+                        android:id="@+id/et_leadname_lead_edit"
                         android:layout_width="match_parent"
                         android:layout_height="match_parent"
-                        android:paddingTop="10dp"
-                        android:paddingLeft="20dp"
                         android:backgroundTint="#edeff2"/>
                 </LinearLayout>
             </LinearLayout>
@@ -154,25 +182,26 @@
                 android:orientation="horizontal">
 
                 <TextView
+                    android:id="@+id/tv_mobile_lead_edit"
                     android:layout_width="150dp"
                     android:layout_height="wrap_content"
-                    android:text="Mobile"
-                    android:paddingTop="10dp"
-                    android:gravity="right"
                     android:background="#edeff2"
+                    android:gravity="right"
+                    android:paddingBottom="20dp"
                     android:paddingRight="10dp"
-                    android:paddingBottom="10dp"/>
+                    android:paddingTop="20dp"
+                    android:text="Mobile" />
+
                 <LinearLayout
                     android:layout_width="match_parent"
                     android:layout_height="match_parent"
                     android:orientation="horizontal">
-                    <TextView
-                        android:id="@+id/tv_mobile_leadDetail"
+
+                    <EditText
+                        android:id="@+id/et_mobile_lead_edit"
                         android:layout_width="match_parent"
                         android:layout_height="match_parent"
-                        android:paddingTop="10dp"
-                        android:paddingLeft="20dp"
-                        android:background="@drawable/button_design"/>
+                        android:backgroundTint="#edeff2" />
                 </LinearLayout>
             </LinearLayout>
 
@@ -182,25 +211,26 @@
                 android:orientation="horizontal">
 
                 <TextView
+                    android:id="@+id/tv_phone_lead_edit"
                     android:layout_width="150dp"
                     android:layout_height="wrap_content"
-                    android:text="Phone"
-                    android:paddingTop="10dp"
-                    android:gravity="right"
                     android:background="#edeff2"
+                    android:gravity="right"
+                    android:paddingBottom="20dp"
                     android:paddingRight="10dp"
-                    android:paddingBottom="10dp"/>
+                    android:paddingTop="20dp"
+                    android:text="Phone" />
+
                 <LinearLayout
                     android:layout_width="match_parent"
                     android:layout_height="match_parent"
                     android:orientation="horizontal">
-                    <TextView
-                        android:id="@+id/tv_phone_leadDetail"
+
+                    <EditText
+                        android:id="@+id/et_phone_lead_edit"
                         android:layout_width="match_parent"
                         android:layout_height="match_parent"
-                        android:paddingTop="10dp"
-                        android:paddingLeft="20dp"
-                        android:background="@drawable/button_design"/>
+                        android:backgroundTint="#edeff2" />
                 </LinearLayout>
             </LinearLayout>
 
@@ -210,25 +240,26 @@
                 android:orientation="horizontal">
 
                 <TextView
+                    android:id="@+id/tv_annualRevenue_lead_edit"
                     android:layout_width="150dp"
                     android:layout_height="wrap_content"
-                    android:text="Annual Revenue"
-                    android:paddingTop="10dp"
-                    android:gravity="right"
                     android:background="#edeff2"
+                    android:gravity="right"
+                    android:paddingBottom="20dp"
                     android:paddingRight="10dp"
-                    android:paddingBottom="10dp"/>
+                    android:paddingTop="20dp"
+                    android:text="Annual Revenue" />
+
                 <LinearLayout
                     android:layout_width="match_parent"
                     android:layout_height="match_parent"
                     android:orientation="horizontal">
-                    <TextView
-                        android:id="@+id/tv_annualRevenue_leadDetail"
+
+                    <EditText
+                        android:id="@+id/et_annualRevenue_lead_edit"
                         android:layout_width="match_parent"
                         android:layout_height="match_parent"
-                        android:paddingTop="10dp"
-                        android:paddingLeft="20dp"
-                        android:background="@drawable/button_design"/>
+                        android:backgroundTint="#edeff2" />
                 </LinearLayout>
             </LinearLayout>
 
@@ -238,25 +269,26 @@
                 android:orientation="horizontal">
 
                 <TextView
+                    android:id="@+id/tv_email_lead_edit"
                     android:layout_width="150dp"
                     android:layout_height="wrap_content"
-                    android:text="Email"
-                    android:paddingTop="10dp"
-                    android:gravity="right"
                     android:background="#edeff2"
+                    android:gravity="right"
+                    android:paddingBottom="20dp"
                     android:paddingRight="10dp"
-                    android:paddingBottom="10dp"/>
+                    android:paddingTop="20dp"
+                    android:text="Email" />
+
                 <LinearLayout
                     android:layout_width="match_parent"
                     android:layout_height="match_parent"
                     android:orientation="horizontal">
-                    <TextView
-                        android:id="@+id/tv_email_leadDetail"
+
+                    <EditText
+                        android:id="@+id/et_email_lead_edit"
                         android:layout_width="match_parent"
                         android:layout_height="match_parent"
-                        android:paddingTop="10dp"
-                        android:paddingLeft="20dp"
-                        android:background="@drawable/button_design"/>
+                        android:backgroundTint="#edeff2" />
                 </LinearLayout>
             </LinearLayout>
 
@@ -266,25 +298,26 @@
                 android:orientation="horizontal">
 
                 <TextView
+                    android:id="@+id/tv_website_lead_edit"
                     android:layout_width="150dp"
                     android:layout_height="wrap_content"
-                    android:text="Website"
-                    android:paddingTop="10dp"
-                    android:gravity="right"
                     android:background="#edeff2"
+                    android:gravity="right"
+                    android:paddingBottom="20dp"
                     android:paddingRight="10dp"
-                    android:paddingBottom="10dp"/>
+                    android:paddingTop="20dp"
+                    android:text="Website" />
+
                 <LinearLayout
                     android:layout_width="match_parent"
                     android:layout_height="match_parent"
                     android:orientation="horizontal">
-                    <TextView
-                        android:id="@+id/tv_website_leadDetail"
+
+                    <EditText
+                        android:id="@+id/et_website_lead_edit"
                         android:layout_width="match_parent"
                         android:layout_height="match_parent"
-                        android:paddingTop="10dp"
-                        android:paddingLeft="20dp"
-                        android:background="@drawable/button_design"/>
+                        android:backgroundTint="#edeff2" />
                 </LinearLayout>
             </LinearLayout>
 
@@ -294,25 +327,26 @@
                 android:orientation="horizontal">
 
                 <TextView
+                    android:id="@+id/tv_noOfEmployee_lead_edit"
                     android:layout_width="150dp"
                     android:layout_height="wrap_content"
-                    android:text="No Of Employees"
-                    android:paddingTop="10dp"
-                    android:gravity="right"
                     android:background="#edeff2"
+                    android:gravity="right"
+                    android:paddingBottom="20dp"
                     android:paddingRight="10dp"
-                    android:paddingBottom="10dp"/>
+                    android:paddingTop="20dp"
+                    android:text="No Of Employees" />
+
                 <LinearLayout
                     android:layout_width="match_parent"
                     android:layout_height="match_parent"
                     android:orientation="horizontal">
-                    <TextView
-                        android:id="@+id/tv_noOfEmployee_leadDetail"
+
+                    <EditText
+                        android:id="@+id/et_noOfEmployee_lead_edit"
                         android:layout_width="match_parent"
                         android:layout_height="match_parent"
-                        android:paddingTop="10dp"
-                        android:paddingLeft="20dp"
-                        android:background="@drawable/button_design"/>
+                        android:backgroundTint="#edeff2" />
                 </LinearLayout>
             </LinearLayout>
 
@@ -322,25 +356,26 @@
                 android:orientation="horizontal">
 
                 <TextView
+                    android:id="@+id/tv_skypeId_lead_edit"
                     android:layout_width="150dp"
                     android:layout_height="wrap_content"
-                    android:text="Skype ID"
-                    android:paddingTop="10dp"
-                    android:gravity="right"
                     android:background="#edeff2"
+                    android:gravity="right"
+                    android:paddingBottom="20dp"
                     android:paddingRight="10dp"
-                    android:paddingBottom="10dp"/>
+                    android:paddingTop="20dp"
+                    android:text="Skype ID" />
+
                 <LinearLayout
                     android:layout_width="match_parent"
                     android:layout_height="match_parent"
                     android:orientation="horizontal">
-                    <TextView
-                        android:id="@+id/tv_skypeId_leadDetail"
+
+                    <EditText
+                        android:id="@+id/et_skypeId_lead_edit"
                         android:layout_width="match_parent"
                         android:layout_height="match_parent"
-                        android:paddingTop="10dp"
-                        android:paddingLeft="20dp"
-                        android:background="@drawable/button_design"/>
+                        android:backgroundTint="#edeff2" />
                 </LinearLayout>
             </LinearLayout>
 
@@ -350,25 +385,30 @@
                 android:orientation="horizontal">
 
                 <TextView
+                    android:id="@+id/tv_leadSource_lead_edit"
                     android:layout_width="150dp"
                     android:layout_height="wrap_content"
-                    android:text="Lead Source"
-                    android:paddingTop="10dp"
-                    android:gravity="right"
                     android:background="#edeff2"
+                    android:gravity="right"
+                    android:paddingBottom="20dp"
                     android:paddingRight="10dp"
-                    android:paddingBottom="10dp"/>
+                    android:paddingTop="20dp"
+                    android:text="Lead Source" />
+
                 <LinearLayout
                     android:layout_width="match_parent"
                     android:layout_height="match_parent"
                     android:orientation="horizontal">
-                    <TextView
-                        android:id="@+id/tv_leadSource_leadDetail"
+
+                    <Button
+                        android:id="@+id/bt_leadSource_lead_edit"
                         android:layout_width="match_parent"
                         android:layout_height="match_parent"
-                        android:paddingTop="10dp"
+                        android:background="@android:color/transparent"
+                        android:drawableEnd="@drawable/ic_chevron_right_black_24dp"
                         android:paddingLeft="20dp"
-                        android:background="@drawable/button_design"/>
+                        android:hint="Select Lead Source..."
+                        android:textColor="#b0b1b2" />
                 </LinearLayout>
             </LinearLayout>
 
@@ -378,25 +418,29 @@
                 android:orientation="horizontal">
 
                 <TextView
+                    android:id="@+id/tv_industry_lead_edit"
                     android:layout_width="150dp"
                     android:layout_height="wrap_content"
-                    android:text="Industry"
-                    android:paddingTop="10dp"
-                    android:gravity="right"
                     android:background="#edeff2"
+                    android:gravity="end"
+                    android:paddingBottom="20dp"
                     android:paddingRight="10dp"
-                    android:paddingBottom="10dp"/>
+                    android:paddingTop="20dp"
+                    android:text="Industry" />
+
                 <LinearLayout
                     android:layout_width="match_parent"
                     android:layout_height="match_parent"
                     android:orientation="horizontal">
-                    <TextView
-                        android:id="@+id/tv_industry_leadDetail"
+
+                    <Button
+                        android:id="@+id/bt_industry_lead_edit"
                         android:layout_width="match_parent"
                         android:layout_height="match_parent"
-                        android:paddingTop="10dp"
-                        android:paddingLeft="20dp"
-                        android:background="@drawable/button_design"/>
+                        android:background="@android:color/transparent"
+                        android:drawableEnd="@drawable/ic_chevron_right_black_24dp"
+                        android:hint="Select Industry..."
+                        android:textColor="#b0b1b2" />
                 </LinearLayout>
             </LinearLayout>
 
@@ -404,8 +448,6 @@
 
 
     </LinearLayout>
-
-
 
 
 </ScrollView>

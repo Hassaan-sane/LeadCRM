@@ -20,6 +20,8 @@ import android.widget.TextView;
 import com.example.hassaan.leadcrm.Activities.AddAccountActivity;
 import com.example.hassaan.leadcrm.R;
 import com.example.hassaan.leadcrm.RecyclerViews.AccountsRecycler;
+import com.example.hassaan.leadcrm.Repo.AccountsRepo;
+import com.example.hassaan.leadcrm.TableClasses.Account;
 
 import java.util.ArrayList;
 import java.util.List;
@@ -28,7 +30,7 @@ import java.util.List;
 public class AccountsFragment extends Fragment implements AdapterView.OnItemSelectedListener{
 
     public String[] sample={"Red","Blue","Green","Yellow","White","Black","Orange","Purple","Blue","Pink"};
-    private List<String> list=new ArrayList<String>();
+    private List<Account> list= new ArrayList<>();
     SearchView searchView;
     Spinner spinner;
     public AccountsFragment() {
@@ -54,13 +56,14 @@ public class AccountsFragment extends Fragment implements AdapterView.OnItemSele
         ArrayAdapter arrayAdapter=new ArrayAdapter<String>(getActivity(), android.R.layout.simple_spinner_item,sample);
         arrayAdapter.setDropDownViewResource(android.R.layout.simple_spinner_dropdown_item);
         spinner.setAdapter(arrayAdapter);
+//
+//        list.add("Red\n\n\n\n\n\n\n");
+//        list.add("Blue\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n");
+//        list.add("Green\n\n\n\n\n\n");
+//        list.add("Yellow\n\n\n\n\n\n");
 
-        list.add("Red\n\n\n\n\n\n\n");
-        list.add("Blue\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n");
-        list.add("Green\n\n\n\n\n\n");
-        list.add("Yellow\n\n\n\n\n\n");
-
-
+        AccountsRepo accountsRepo = new AccountsRepo();
+        list=accountsRepo.getAccountShortList();
 
         RecyclerView recyclerView=view.findViewById(R.id.recyclerAccounts);
         recyclerView.setLayoutManager(new LinearLayoutManager(getContext()));

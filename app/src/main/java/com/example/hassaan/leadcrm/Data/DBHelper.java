@@ -7,8 +7,8 @@ import android.database.sqlite.SQLiteDatabase;
 import android.database.sqlite.SQLiteOpenHelper;
 import android.util.Log;
 
-import com.example.hassaan.leadcrm.app;
 import com.example.hassaan.leadcrm.Repo.AccountsRepo;
+import com.example.hassaan.leadcrm.Repo.UserRepo;
 import com.example.hassaan.leadcrm.Repo.ActivityRepo;
 import com.example.hassaan.leadcrm.Repo.EventParticipientRepo;
 import com.example.hassaan.leadcrm.Repo.EventRepo;
@@ -22,19 +22,8 @@ import com.example.hassaan.leadcrm.Repo.ReminderRepo;
 import com.example.hassaan.leadcrm.Repo.RoleRepo;
 import com.example.hassaan.leadcrm.Repo.StatusRepo;
 import com.example.hassaan.leadcrm.Repo.TaskRepo;
-import com.example.hassaan.leadcrm.TableClasses.Accounts;
-import com.example.hassaan.leadcrm.TableClasses.Activity;
 import com.example.hassaan.leadcrm.TableClasses.Event;
-import com.example.hassaan.leadcrm.TableClasses.LeadStatus;
 import com.example.hassaan.leadcrm.TableClasses.Leads;
-import com.example.hassaan.leadcrm.TableClasses.Note;
-import com.example.hassaan.leadcrm.TableClasses.POIStatus;
-import com.example.hassaan.leadcrm.TableClasses.Participient;
-import com.example.hassaan.leadcrm.TableClasses.Priority;
-import com.example.hassaan.leadcrm.TableClasses.Reminder;
-import com.example.hassaan.leadcrm.TableClasses.Role;
-import com.example.hassaan.leadcrm.TableClasses.Status;
-import com.example.hassaan.leadcrm.TableClasses.Task;
 
 public class DBHelper extends SQLiteOpenHelper {
     //version number to upgrade database version
@@ -63,7 +52,7 @@ public class DBHelper extends SQLiteOpenHelper {
         Log.e("Tag","AfterSatus");
         db.execSQL(TaskRepo.createTable());
         Log.e("Tag","Aftertask");
-        db.execSQL(AccountsRepo.createTable());
+        db.execSQL(UserRepo.createTable());
         Log.e("Tag","AfterAccounts");
         db.execSQL(EventRepo.createTable());
         Log.e("Tag","AfterEventRepo");
@@ -74,6 +63,7 @@ public class DBHelper extends SQLiteOpenHelper {
         db.execSQL(LeadStatusRepo.createTable());
         db.execSQL(ActivityRepo.createTable());
         Log.e("Tag","Finish OnCreate");
+        db.execSQL(AccountsRepo.createTable());
 
     }
 

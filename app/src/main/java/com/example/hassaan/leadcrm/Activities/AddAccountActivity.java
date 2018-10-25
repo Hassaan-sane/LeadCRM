@@ -13,11 +13,14 @@ import android.widget.EditText;
 import android.widget.Toast;
 
 import com.example.hassaan.leadcrm.R;
+import com.example.hassaan.leadcrm.Repo.AccountsRepo;
+import com.example.hassaan.leadcrm.TableClasses.Account;
 
 import java.util.ArrayList;
+import java.util.Calendar;
 import java.util.List;
 
-public class AddAccountActivity extends AppCompatActivity implements View.OnClickListener{
+public class AddAccountActivity extends AppCompatActivity implements View.OnClickListener {
 
     EditText et_accountOwner_account, et_accountName_account, et_phone_account, et_accountSite_account;
     EditText et_accountNumber_account, et_website_account, et_tickerSymbol_account, et_employees_account;
@@ -27,7 +30,7 @@ public class AddAccountActivity extends AppCompatActivity implements View.OnClic
 
     Button bt_rating_account, bt_parentAccount_account, bt_accountType_account, bt_ownership_account, bt_industry_account;
 
-    private List<String> list=new ArrayList<String>();
+    private List<String> list = new ArrayList<String>();
 
     private String buttonName;
 
@@ -62,7 +65,18 @@ public class AddAccountActivity extends AppCompatActivity implements View.OnClic
 
         //noinspection SimplifiableIfStatement
         if (id == R.id.ok) {
-            Toast.makeText(this,"ok",Toast.LENGTH_SHORT).show();
+            Toast.makeText(this, "ok", Toast.LENGTH_SHORT).show();
+            AccountsRepo accountsRepo = new AccountsRepo();
+            Account account = new Account();
+
+            account.setAccountName(et_accountName_account.getText().toString());
+            account.setCreatedBy(Calendar.getInstance().getTime());
+            account.setModifiedBy(Calendar.getInstance().getTime());
+            account.setUserID(1);
+
+            accountsRepo.insertShortInAccount(account);
+
+
             finish();
             return true;
         }
@@ -76,7 +90,7 @@ public class AddAccountActivity extends AppCompatActivity implements View.OnClic
         et_annualRevenue_account = findViewById(R.id.et_annualRevenue_account);
         et_codeBilling_account = findViewById(R.id.et_codeBilling_account);
         et_codeShipping_account = findViewById(R.id.et_codeShipping_account);
-        et_accountName_account=findViewById(R.id.et_accountName_account);
+        et_accountName_account = findViewById(R.id.et_accountName_account);
         et_website_account = findViewById(R.id.et_website_account);
         et_sicCode_account = findViewById(R.id.et_sicCode_account);
         et_countryBilling_account = findViewById(R.id.et_countryBilling_account);
@@ -91,14 +105,13 @@ public class AddAccountActivity extends AppCompatActivity implements View.OnClic
         et_cityShipping_account = findViewById(R.id.et_cityShipping_account);
         et_stateBilling_account = findViewById(R.id.et_stateBilling_account);
         et_stateShipping_account = findViewById(R.id.et_stateShipping_account);
-        et_description_account= findViewById(R.id.et_description_account);
+        et_description_account = findViewById(R.id.et_description_account);
 
-        bt_accountType_account=findViewById(R.id.bt_accountType_account);
-        bt_rating_account=findViewById(R.id.bt_rating_account);
-        bt_parentAccount_account=findViewById(R.id.bt_parentAccount_account);
-        bt_ownership_account=findViewById(R.id.bt_ownership_account);
-        bt_industry_account=findViewById(R.id.bt_industry_accounts);
-
+        bt_accountType_account = findViewById(R.id.bt_accountType_account);
+        bt_rating_account = findViewById(R.id.bt_rating_account);
+        bt_parentAccount_account = findViewById(R.id.bt_parentAccount_account);
+        bt_ownership_account = findViewById(R.id.bt_ownership_account);
+        bt_industry_account = findViewById(R.id.bt_industry_accounts);
 
 
         bt_industry_account.setOnClickListener(this);
@@ -110,43 +123,42 @@ public class AddAccountActivity extends AppCompatActivity implements View.OnClic
 
     @Override
     public void onClick(View v) {
-        Intent intent=new Intent(this,StickyListView.class);
-        switch (v.getId())
-        {
+        Intent intent = new Intent(this, StickyListView.class);
+        switch (v.getId()) {
             case R.id.bt_accountType_account:
                 intent.putStringArrayListExtra("list", (ArrayList<String>) list);
-                intent.putExtra("Button","accountType");
+                intent.putExtra("Button", "accountType");
                 break;
             case R.id.bt_rating_account:
                 intent.putStringArrayListExtra("list", (ArrayList<String>) list);
-                intent.putExtra("Button","rating");
+                intent.putExtra("Button", "rating");
                 break;
             case R.id.bt_parentAccount_account:
                 intent.putStringArrayListExtra("list", (ArrayList<String>) list);
-                intent.putExtra("Button","parentAccount");
+                intent.putExtra("Button", "parentAccount");
                 break;
             case R.id.bt_ownership_account:
                 intent.putStringArrayListExtra("list", (ArrayList<String>) list);
-                intent.putExtra("Button","ownership");
+                intent.putExtra("Button", "ownership");
                 break;
             case R.id.bt_industry_accounts:
                 intent.putStringArrayListExtra("list", (ArrayList<String>) list);
-                intent.putExtra("Button","industry");
+                intent.putExtra("Button", "industry");
                 break;
         }
-        startActivityForResult(intent,2);
+        startActivityForResult(intent, 2);
     }
 
     @Override
     protected void onActivityResult(int requestCode, int resultCode, @Nullable Intent data) {
         super.onActivityResult(requestCode, resultCode, data);
         if (requestCode == 2) {
-            if(resultCode == RESULT_OK) {
-                int indexValue = data.getIntExtra("index",-1);
-                buttonName=data.getStringExtra("Button");
+            if (resultCode == RESULT_OK) {
+                int indexValue = data.getIntExtra("index", -1);
+                buttonName = data.getStringExtra("Button");
                 //Toast.makeText(AddLeadActivity.this, "item clicked "+indexValue, Toast.LENGTH_SHORT).show();
-                Log.e("index",""+indexValue);
-                Log.e("Button",buttonName);
+                Log.e("index", "" + indexValue);
+                Log.e("Button", buttonName);
                 setData(indexValue);
             }
         }
@@ -154,20 +166,18 @@ public class AddAccountActivity extends AppCompatActivity implements View.OnClic
     }
 
     private void setData(int indexValue) {
-        if(buttonName.equals("accountType")){
+        if (buttonName.equals("accountType")) {
             bt_accountType_account.setText(list.get(indexValue));
-        }
-        else if(buttonName.equals("ownership")){
+        } else if (buttonName.equals("ownership")) {
             bt_ownership_account.setText(list.get(indexValue));
-        }
-        else if(buttonName.equals("rating")){
+        } else if (buttonName.equals("rating")) {
             bt_rating_account.setText(list.get(indexValue));
-        }
-        else if(buttonName.equals("parentAccount")){
+        } else if (buttonName.equals("parentAccount")) {
             bt_parentAccount_account.setText(list.get(indexValue));
-        }
-        else if(buttonName.equals("industry")){
+        } else if (buttonName.equals("industry")) {
             bt_industry_account.setText(list.get(indexValue));
         }
     }
+
+
 }

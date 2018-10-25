@@ -66,6 +66,23 @@ public class LeadsRepo {
         return LeadId;
     }
 
+    public int inserShortinLeads(Leads lead){
+        SQLiteDatabase db = DatabaseManager.getInstance().openDatabase();
+        ContentValues values = new ContentValues();
+        values.put(Leads.KEY_LeadOwner, lead.getLeadOwner());
+        values.put(Leads.KEY_Title, lead.getTitle());
+
+        values.put(Leads.KEY_CompanyName, lead.getCompanyName());
+        values.put(Leads.KEY_LeadName, lead.getLeadName());
+        values.put(Leads.KEY_ModifiedBy, lead.getModifiedBy().toString());
+        values.put(Leads.KEY_CreatedBy, lead.getCreatedBy().toString());
+
+        int LeadId =(int)db.insert(Leads.TABLE_NAME, null, values);
+        DatabaseManager.getInstance().closeDatabase();
+        return LeadId;
+
+    }
+
     public List<Leads> getLeadsList() {
 
         Leads GetLeads;
@@ -84,19 +101,19 @@ public class LeadsRepo {
                 GetLeads= new Leads();
                 SimpleDateFormat sdf=new SimpleDateFormat("yyyy-MM-dd HH:mm:ss");
                 GetLeads.setID(Integer.parseInt(cursor.getString(cursor.getColumnIndex(Leads.KEY_ID))));
-                GetLeads.setNo_of_Employees(Integer.parseInt(cursor.getString(cursor.getColumnIndex(Leads.KEY_No_of_Employees))));
+//                GetLeads.setNo_of_Employees(Integer.parseInt(cursor.getString(cursor.getColumnIndex(Leads.KEY_No_of_Employees))));
                 GetLeads.setLeadOwner(cursor.getString(cursor.getColumnIndex(Leads.KEY_LeadOwner)));
                 GetLeads.setLeadName(cursor.getString(cursor.getColumnIndex(Leads.KEY_LeadName)));
-                GetLeads.setLeadSource(cursor.getString(cursor.getColumnIndex(Leads.KEY_LeadSource)));
+//                GetLeads.setLeadSource(cursor.getString(cursor.getColumnIndex(Leads.KEY_LeadSource)));
                 GetLeads.setTitle(cursor.getString(cursor.getColumnIndex(Leads.KEY_Title)));
-                GetLeads.setPhone(cursor.getString(cursor.getColumnIndex(Leads.KEY_Phone)));
-                GetLeads.setMobile(cursor.getString(cursor.getColumnIndex(Leads.KEY_Mobile)));
-                GetLeads.setIndustry(cursor.getString(cursor.getColumnIndex(Leads.KEY_Industry)));
-                GetLeads.setAnnualRevenue(Integer.parseInt(cursor.getString(cursor.getColumnIndex(Leads.KEY_AnnualRevenue))));
+//                GetLeads.setPhone(cursor.getString(cursor.getColumnIndex(Leads.KEY_Phone)));
+//                GetLeads.setMobile(cursor.getString(cursor.getColumnIndex(Leads.KEY_Mobile)));
+//                GetLeads.setIndustry(cursor.getString(cursor.getColumnIndex(Leads.KEY_Industry)));
+//                GetLeads.setAnnualRevenue(Integer.parseInt(cursor.getString(cursor.getColumnIndex(Leads.KEY_AnnualRevenue))));
                 GetLeads.setCompanyName(cursor.getString(cursor.getColumnIndex(Leads.KEY_CompanyName)));
-                GetLeads.setEmail(cursor.getString(cursor.getColumnIndex(Leads.KEY_Email)));
-                GetLeads.setWebsite(cursor.getString(cursor.getColumnIndex(Leads.KEY_Website)));
-                GetLeads.setSkypeID(cursor.getString(cursor.getColumnIndex(Leads.KEY_SkypeID)));
+//                GetLeads.setEmail(cursor.getString(cursor.getColumnIndex(Leads.KEY_Email)));
+//                GetLeads.setWebsite(cursor.getString(cursor.getColumnIndex(Leads.KEY_Website)));
+//                GetLeads.setSkypeID(cursor.getString(cursor.getColumnIndex(Leads.KEY_SkypeID)));
                 try {
                     GetLeads.setCreatedBy(sdf.parse(cursor.getString(cursor.getColumnIndex(Leads.KEY_CreatedBy))));
                     GetLeads.setModifiedBy(sdf.parse(cursor.getString(cursor.getColumnIndex(Leads.KEY_ModifiedBy))));
@@ -114,6 +131,29 @@ public class LeadsRepo {
         DatabaseManager.getInstance().closeDatabase();
 
         return LeadsLists;
+    }
+
+    public int updateLead(Leads lead){
+
+        int LeadId;
+
+        SQLiteDatabase db = DatabaseManager.getInstance().openDatabase();
+        ContentValues values = new ContentValues();
+
+        values.put(Leads.KEY_ID, lead.getID());
+
+        values.put(Leads.KEY_LeadOwner, lead.getLeadOwner());
+        values.put(Leads.KEY_Title, lead.getTitle());
+
+        values.put(Leads.KEY_CompanyName, lead.getCompanyName());
+        values.put(Leads.KEY_LeadName, lead.getLeadName());
+        values.put(Leads.KEY_ModifiedBy, lead.getModifiedBy().toString());
+
+        // update-ing Row
+        LeadId = db.update(Leads.TABLE_NAME, values, Leads.KEY_ID + " = " + lead.getID(), null);
+        DatabaseManager.getInstance().closeDatabase();
+        return LeadId;
+
     }
 
     public long deletefromLeads(Integer id) {

@@ -11,17 +11,17 @@ import android.widget.TextView;
 
 import com.example.hassaan.leadcrm.Activities.DetailAccountActivity;
 import com.example.hassaan.leadcrm.R;
-import com.example.hassaan.leadcrm.TableClasses.Accounts;
+import com.example.hassaan.leadcrm.TableClasses.Account;
 
 import java.util.ArrayList;
 import java.util.List;
 
 public class AccountsRecycler extends RecyclerView.Adapter<AccountsRecycler.ViewHolder> {
 
-    private List<String> list = new ArrayList<String>();
+    private List<Account> list = new ArrayList<>();
     private Context context;
 
-    public AccountsRecycler(List<String> list, Context context) {
+    public AccountsRecycler(List<Account> list, Context context) {
         this.list = list;
         this.context = context;
     }
@@ -37,7 +37,7 @@ public class AccountsRecycler extends RecyclerView.Adapter<AccountsRecycler.View
 
     @Override
     public void onBindViewHolder(@NonNull AccountsRecycler.ViewHolder viewHolder, int i) {
-        viewHolder.tv_name_accountrecycler.setText("Zohaib Javed");
+        viewHolder.tv_name_accountrecycler.setText(list.get(i).getAccountName());
 
         viewHolder.itemView.setOnClickListener(new View.OnClickListener() {
             @Override

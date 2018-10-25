@@ -1,0 +1,1092 @@
+<?xml version="1.0" encoding="utf-8"?>
+<ScrollView xmlns:android="http://schemas.android.com/apk/res/android"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent">
+
+
+    <LinearLayout
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        android:orientation="vertical">
+
+        <LinearLayout
+            android:id="@+id/Header"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:background="#d4d6d8"
+            android:orientation="vertical">
+
+            <TextView
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:paddingBottom="10dp"
+                android:paddingLeft="10dp"
+                android:paddingTop="15dp"
+                android:text="CONTACT INFORMATION" />
+        </LinearLayout>
+
+        <LinearLayout
+            android:layout_width="match_parent"
+            android:layout_height="match_parent"
+            android:orientation="vertical">
+
+            <LinearLayout
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:orientation="horizontal">
+
+                <TextView
+                    android:id="@+id/tv_photo_contacts_edit"
+                    android:layout_width="150dp"
+                    android:layout_height="wrap_content"
+                    android:background="#edeff2"
+                    android:gravity="right"
+                    android:paddingBottom="50dp"
+                    android:paddingRight="10dp"
+                    android:paddingTop="10dp"
+                    android:text="Photo" />
+
+                <ImageButton
+                    android:id="@+id/iv_image_contacts_edit"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_marginHorizontal="20dp"
+                    android:layout_marginTop="10dp"
+                    android:background="@drawable/ic_add_camera"
+                    android:paddingLeft="20dp"
+                    android:paddingTop="20dp" />
+
+            </LinearLayout>
+
+            <LinearLayout
+                android:layout_width="match_parent"
+                android:layout_height="match_parent"
+                android:orientation="vertical">
+
+
+                <LinearLayout
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:orientation="horizontal">
+
+                    <TextView
+                        android:id="@+id/tv_contactOwner_contact_edit"
+                        android:layout_width="150dp"
+                        android:layout_height="wrap_content"
+                        android:background="#edeff2"
+                        android:gravity="right"
+                        android:paddingBottom="20dp"
+                        android:paddingRight="10dp"
+                        android:paddingTop="20dp"
+                        android:text="Contact Owner" />
+
+                    <LinearLayout
+                        android:layout_width="match_parent"
+                        android:layout_height="match_parent"
+                        android:orientation="horizontal">
+
+                        <EditText
+                            android:id="@+id/et_contactOwner_contact_edit"
+                            android:layout_width="match_parent"
+                            android:layout_height="match_parent"
+                            android:background="@drawable/button_design" />
+                    </LinearLayout>
+
+
+                </LinearLayout>
+
+                <LinearLayout
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:orientation="horizontal">
+
+                    <TextView
+                        android:id="@+id/tv_leadSource_contact_edit"
+                        android:layout_width="150dp"
+                        android:layout_height="wrap_content"
+                        android:background="#edeff2"
+                        android:gravity="right"
+                        android:paddingBottom="20dp"
+                        android:paddingRight="10dp"
+                        android:paddingTop="20dp"
+                        android:text="Lead Source" />
+
+                    <LinearLayout
+                        android:layout_width="match_parent"
+                        android:layout_height="match_parent"
+                        android:orientation="horizontal">
+
+                        <Button
+                            android:id="@+id/bt_leadSource_contacts_edit"
+                            android:layout_width="match_parent"
+                            android:layout_height="match_parent"
+                            android:background="@drawable/button_design"
+                            android:drawableRight="@drawable/ic_chevron_right_black_24dp"
+                            android:gravity="fill"
+                            android:paddingLeft="20dp"
+                            android:text="Select Lead Source..."
+                            android:textColor="#b0b1b2" />
+                    </LinearLayout>
+                </LinearLayout>
+
+                <LinearLayout
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:orientation="horizontal">
+
+                    <TextView
+                        android:id="@+id/tv_firstName_contacts_edit"
+                        android:layout_width="150dp"
+                        android:layout_height="wrap_content"
+                        android:background="#edeff2"
+                        android:gravity="right"
+                        android:paddingBottom="20dp"
+                        android:paddingRight="10dp"
+                        android:paddingTop="20dp"
+                        android:text="First Name" />
+
+                    <LinearLayout
+                        android:layout_width="match_parent"
+                        android:layout_height="match_parent"
+                        android:orientation="horizontal">
+
+                        <EditText
+                            android:id="@+id/et_firstName_contacts_edit"
+                            android:layout_width="match_parent"
+                            android:layout_height="match_parent"
+                            android:background="@drawable/button_design" />
+                    </LinearLayout>
+                </LinearLayout>
+
+                <LinearLayout
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:orientation="horizontal">
+
+                    <TextView
+                        android:id="@+id/tv_lastName_contacts_edit"
+                        android:layout_width="150dp"
+                        android:layout_height="wrap_content"
+                        android:background="#edeff2"
+                        android:gravity="right"
+                        android:paddingBottom="20dp"
+                        android:paddingRight="10dp"
+                        android:paddingTop="20dp"
+                        android:text="Last Name" />
+
+                    <LinearLayout
+                        android:layout_width="match_parent"
+                        android:layout_height="match_parent"
+                        android:orientation="horizontal">
+
+                        <EditText
+                            android:id="@+id/et_lastName_contacts_edit"
+                            android:layout_width="match_parent"
+                            android:layout_height="match_parent"
+                            android:background="@drawable/button_design" />
+                    </LinearLayout>
+                </LinearLayout>
+
+                <LinearLayout
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:orientation="horizontal">
+
+                    <TextView
+                        android:id="@+id/tv_accountName_contacts_edit"
+                        android:layout_width="150dp"
+                        android:layout_height="wrap_content"
+                        android:background="#edeff2"
+                        android:gravity="right"
+                        android:paddingBottom="20dp"
+                        android:paddingRight="10dp"
+                        android:paddingTop="20dp"
+                        android:text="Account Name" />
+
+                    <LinearLayout
+                        android:layout_width="match_parent"
+                        android:layout_height="match_parent"
+                        android:orientation="horizontal">
+
+                        <Button
+                            android:id="@+id/bt_accountName_contacts_edit"
+                            android:layout_width="match_parent"
+                            android:layout_height="match_parent"
+                            android:background="@android:color/transparent"
+                            android:drawableRight="@drawable/ic_chevron_right_black_24dp"
+                            android:gravity="fill"
+                            android:paddingLeft="20dp"
+                            android:text="Select Account Name..."
+                            android:textColor="#b0b1b2" />
+                    </LinearLayout>
+                </LinearLayout>
+
+                <LinearLayout
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:orientation="horizontal">
+
+                    <TextView
+                        android:id="@+id/tv_email_contacts_edit"
+                        android:layout_width="150dp"
+                        android:layout_height="wrap_content"
+                        android:background="#edeff2"
+                        android:gravity="right"
+                        android:paddingBottom="20dp"
+                        android:paddingRight="10dp"
+                        android:paddingTop="20dp"
+                        android:text="Email" />
+
+                    <LinearLayout
+                        android:layout_width="match_parent"
+                        android:layout_height="match_parent"
+                        android:orientation="horizontal">
+
+                        <EditText
+                            android:id="@+id/et_email_contacts_edit"
+                            android:layout_width="match_parent"
+                            android:layout_height="match_parent"
+                            android:background="@drawable/button_design" />
+                    </LinearLayout>
+                </LinearLayout>
+
+                <LinearLayout
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:orientation="horizontal">
+
+                    <TextView
+                        android:id="@+id/tv_title_contacts_edit"
+                        android:layout_width="150dp"
+                        android:layout_height="wrap_content"
+                        android:background="#edeff2"
+                        android:gravity="right"
+                        android:paddingBottom="20dp"
+                        android:paddingRight="10dp"
+                        android:paddingTop="20dp"
+                        android:text="Title" />
+
+                    <LinearLayout
+                        android:layout_width="match_parent"
+                        android:layout_height="match_parent"
+                        android:orientation="horizontal">
+
+                        <EditText
+                            android:id="@+id/et_title_contacts_edit"
+                            android:layout_width="match_parent"
+                            android:layout_height="match_parent"
+                            android:background="@drawable/button_design" />
+                    </LinearLayout>
+                </LinearLayout>
+
+                <LinearLayout
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:orientation="horizontal">
+
+                    <TextView
+                        android:id="@+id/tv_department_contacts_edit"
+                        android:layout_width="150dp"
+                        android:layout_height="wrap_content"
+                        android:background="#edeff2"
+                        android:gravity="right"
+                        android:paddingBottom="20dp"
+                        android:paddingRight="10dp"
+                        android:paddingTop="20dp"
+                        android:text="Department" />
+
+                    <LinearLayout
+                        android:layout_width="match_parent"
+                        android:layout_height="match_parent"
+                        android:orientation="horizontal">
+
+                        <EditText
+                            android:id="@+id/et_department_contacts_edit"
+                            android:layout_width="match_parent"
+                            android:layout_height="match_parent"
+                            android:background="@drawable/button_design" />
+                    </LinearLayout>
+                </LinearLayout>
+
+                <LinearLayout
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:orientation="horizontal">
+
+                    <TextView
+                        android:id="@+id/tv_phone_contacts_edit"
+                        android:layout_width="150dp"
+                        android:layout_height="wrap_content"
+                        android:background="#edeff2"
+                        android:gravity="right"
+                        android:paddingBottom="20dp"
+                        android:paddingRight="10dp"
+                        android:paddingTop="20dp"
+                        android:text="Phone" />
+
+                    <LinearLayout
+                        android:layout_width="match_parent"
+                        android:layout_height="match_parent"
+                        android:orientation="horizontal">
+
+                        <EditText
+                            android:id="@+id/et_phone_contacts_edit"
+                            android:layout_width="match_parent"
+                            android:layout_height="match_parent"
+                            android:background="@drawable/button_design" />
+                    </LinearLayout>
+                </LinearLayout>
+
+                <LinearLayout
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:orientation="horizontal">
+
+                    <TextView
+                        android:id="@+id/tv_homePhone_contacts_edit"
+                        android:layout_width="150dp"
+                        android:layout_height="wrap_content"
+                        android:background="#edeff2"
+                        android:gravity="right"
+                        android:paddingBottom="20dp"
+                        android:paddingRight="10dp"
+                        android:paddingTop="20dp"
+                        android:text="Home Phone" />
+
+                    <LinearLayout
+                        android:layout_width="match_parent"
+                        android:layout_height="match_parent"
+                        android:orientation="horizontal">
+
+                        <EditText
+                            android:id="@+id/et_homePhone_contacts_edit"
+                            android:layout_width="match_parent"
+                            android:layout_height="match_parent"
+                            android:background="@drawable/button_design" />
+                    </LinearLayout>
+                </LinearLayout>
+
+                <LinearLayout
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:orientation="horizontal">
+
+                    <TextView
+                        android:id="@+id/tv_otherPhone_contacts_edit"
+                        android:layout_width="150dp"
+                        android:layout_height="wrap_content"
+                        android:background="#edeff2"
+                        android:gravity="right"
+                        android:paddingBottom="20dp"
+                        android:paddingRight="10dp"
+                        android:paddingTop="20dp"
+                        android:text="Other Phone" />
+
+                    <LinearLayout
+                        android:layout_width="match_parent"
+                        android:layout_height="match_parent"
+                        android:orientation="horizontal">
+
+                        <EditText
+                            android:id="@+id/et_otherPhone_contacts_edit"
+                            android:layout_width="match_parent"
+                            android:layout_height="match_parent"
+                            android:background="@drawable/button_design" />
+                    </LinearLayout>
+                </LinearLayout>
+
+                <LinearLayout
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:orientation="horizontal">
+
+                    <TextView
+                        android:id="@+id/tv_fax_contacts_edit"
+                        android:layout_width="150dp"
+                        android:layout_height="wrap_content"
+                        android:background="#edeff2"
+                        android:gravity="right"
+                        android:paddingBottom="20dp"
+                        android:paddingRight="10dp"
+                        android:paddingTop="20dp"
+                        android:text="Fax" />
+
+                    <LinearLayout
+                        android:layout_width="match_parent"
+                        android:layout_height="match_parent"
+                        android:orientation="horizontal">
+
+                        <EditText
+                            android:id="@+id/et_fax_contacts_edit"
+                            android:layout_width="match_parent"
+                            android:layout_height="match_parent"
+                            android:background="@drawable/button_design" />
+                    </LinearLayout>
+                </LinearLayout>
+
+                <LinearLayout
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:orientation="horizontal">
+
+                    <TextView
+                        android:id="@+id/tv_mobile_contacts_edit"
+                        android:layout_width="150dp"
+                        android:layout_height="wrap_content"
+                        android:background="#edeff2"
+                        android:gravity="right"
+                        android:paddingBottom="20dp"
+                        android:paddingRight="10dp"
+                        android:paddingTop="20dp"
+                        android:text="Mobile" />
+
+                    <LinearLayout
+                        android:layout_width="match_parent"
+                        android:layout_height="match_parent"
+                        android:orientation="horizontal">
+
+                        <EditText
+                            android:id="@+id/et_mobile_contacts_edit"
+                            android:layout_width="match_parent"
+                            android:layout_height="match_parent"
+                            android:background="@drawable/button_design" />
+                    </LinearLayout>
+                </LinearLayout>
+
+                <LinearLayout
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:orientation="horizontal">
+
+                    <TextView
+                        android:id="@+id/tv_dob_contacts_edit"
+                        android:layout_width="150dp"
+                        android:layout_height="wrap_content"
+                        android:background="#edeff2"
+                        android:gravity="right"
+                        android:paddingBottom="20dp"
+                        android:paddingRight="10dp"
+                        android:paddingTop="20dp"
+                        android:text="Date of Birth" />
+
+                    <LinearLayout
+                        android:layout_width="match_parent"
+                        android:layout_height="match_parent"
+                        android:orientation="horizontal">
+
+                        <Button
+                            android:id="@+id/bt_dob_contacts_edit"
+                            android:layout_width="match_parent"
+                            android:layout_height="match_parent"
+                            android:background="@drawable/button_design"
+                            android:drawableRight="@drawable/ic_chevron_right_black_24dp"
+                            android:gravity="fill"
+                            android:paddingLeft="20dp"
+                            android:text="Select Date of Birth..."
+                            android:textColor="#b0b1b2" />
+                    </LinearLayout>
+                </LinearLayout>
+
+                <LinearLayout
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:orientation="horizontal">
+
+                    <TextView
+                        android:id="@+id/tv_assistant_contacts_edit"
+                        android:layout_width="150dp"
+                        android:layout_height="wrap_content"
+                        android:background="#edeff2"
+                        android:gravity="right"
+                        android:paddingBottom="20dp"
+                        android:paddingRight="10dp"
+                        android:paddingTop="20dp"
+                        android:text="Assistant" />
+
+                    <LinearLayout
+                        android:layout_width="match_parent"
+                        android:layout_height="match_parent"
+                        android:orientation="horizontal">
+
+                        <EditText
+                            android:id="@+id/et_assistant_contacts_edit"
+                            android:layout_width="match_parent"
+                            android:layout_height="match_parent"
+                            android:background="@drawable/button_design" />
+                    </LinearLayout>
+                </LinearLayout>
+
+                <LinearLayout
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:orientation="horizontal">
+
+                    <TextView
+                        android:id="@+id/tv_asstPhone_contacts_edit"
+                        android:layout_width="150dp"
+                        android:layout_height="wrap_content"
+                        android:background="#edeff2"
+                        android:gravity="right"
+                        android:paddingBottom="20dp"
+                        android:paddingRight="10dp"
+                        android:paddingTop="20dp"
+                        android:text="Asst Phone" />
+
+                    <LinearLayout
+                        android:layout_width="match_parent"
+                        android:layout_height="match_parent"
+                        android:orientation="horizontal">
+
+                        <EditText
+                            android:id="@+id/et_asstphone_contacts_edit"
+                            android:layout_width="match_parent"
+                            android:layout_height="match_parent"
+                            android:background="@drawable/button_design" />
+                    </LinearLayout>
+                </LinearLayout>
+
+
+                <LinearLayout
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:orientation="horizontal">
+
+                    <TextView
+                        android:id="@+id/tv_reportsTo_contacts_edit"
+                        android:layout_width="150dp"
+                        android:layout_height="wrap_content"
+                        android:background="#edeff2"
+                        android:gravity="right"
+                        android:paddingBottom="20dp"
+                        android:paddingRight="10dp"
+                        android:paddingTop="20dp"
+                        android:text="Reports To" />
+
+                    <LinearLayout
+                        android:layout_width="match_parent"
+                        android:layout_height="match_parent"
+                        android:orientation="horizontal">
+
+                        <EditText
+                            android:id="@+id/et_reportsTo_contacts_edit"
+                            android:layout_width="match_parent"
+                            android:layout_height="match_parent"
+                            android:background="@drawable/button_design" />
+                    </LinearLayout>
+                </LinearLayout>
+
+                <LinearLayout
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:orientation="horizontal">
+
+                    <TextView
+                        android:id="@+id/tv_emailOpt_contacts_edit"
+                        android:layout_width="150dp"
+                        android:layout_height="wrap_content"
+                        android:background="#edeff2"
+                        android:gravity="right"
+                        android:paddingBottom="20dp"
+                        android:paddingRight="10dp"
+                        android:paddingTop="20dp"
+                        android:text="Email Opt Out" />
+
+                    <LinearLayout
+                        android:layout_width="match_parent"
+                        android:layout_height="match_parent"
+                        android:orientation="horizontal">
+
+                        <Switch
+                            android:id="@+id/switch_emailOpt_contacts_edit"
+                            android:layout_width="match_parent"
+                            android:layout_height="match_parent"
+                            android:background="@drawable/button_design"
+                            android:checked="false"
+                            android:theme="@style/SCBSwitch" />
+                    </LinearLayout>
+                </LinearLayout>
+
+                <LinearLayout
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:orientation="horizontal">
+
+                    <TextView
+                        android:id="@+id/tv_skypeId_contacts_edit"
+                        android:layout_width="150dp"
+                        android:layout_height="wrap_content"
+                        android:background="#edeff2"
+                        android:gravity="right"
+                        android:paddingBottom="20dp"
+                        android:paddingRight="10dp"
+                        android:paddingTop="20dp"
+                        android:text="Skype ID" />
+
+                    <LinearLayout
+                        android:layout_width="match_parent"
+                        android:layout_height="match_parent"
+                        android:orientation="horizontal">
+
+                        <EditText
+                            android:id="@+id/et_skypeId_contacts_edit"
+                            android:layout_width="match_parent"
+                            android:layout_height="match_parent"
+                            android:background="@drawable/button_design" />
+                    </LinearLayout>
+                </LinearLayout>
+
+                <LinearLayout
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:orientation="horizontal">
+
+                    <TextView
+                        android:id="@+id/tv_salutaion_contacts_edit"
+                        android:layout_width="150dp"
+                        android:layout_height="wrap_content"
+                        android:background="#edeff2"
+                        android:gravity="right"
+                        android:paddingBottom="20dp"
+                        android:paddingRight="10dp"
+                        android:paddingTop="20dp"
+                        android:text="Salutaion" />
+
+                    <LinearLayout
+                        android:layout_width="match_parent"
+                        android:layout_height="match_parent"
+                        android:orientation="horizontal">
+
+                        <Button
+                            android:id="@+id/bt_salutation_contacts_edit"
+                            android:layout_width="match_parent"
+                            android:layout_height="match_parent"
+                            android:background="@drawable/button_design"
+                            android:drawableRight="@drawable/ic_chevron_right_black_24dp"
+                            android:gravity="fill"
+                            android:paddingLeft="20dp"
+                            android:text="Select Salutation..."
+                            android:textColor="#b0b1b2" />
+
+                    </LinearLayout>
+                </LinearLayout>
+
+                <LinearLayout
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:orientation="horizontal">
+
+                    <TextView
+                        android:id="@+id/tv_secondaryEmail_contacts_edit"
+                        android:layout_width="150dp"
+                        android:layout_height="wrap_content"
+                        android:background="#edeff2"
+                        android:gravity="right"
+                        android:paddingBottom="20dp"
+                        android:paddingRight="10dp"
+                        android:paddingTop="20dp"
+                        android:text="Secondary Email" />
+
+                    <LinearLayout
+                        android:layout_width="match_parent"
+                        android:layout_height="match_parent"
+                        android:orientation="horizontal">
+
+                        <EditText
+                            android:id="@+id/et_secondaryEmail_contacts_edit"
+                            android:layout_width="match_parent"
+                            android:layout_height="match_parent"
+                            android:background="@drawable/button_design" />
+                    </LinearLayout>
+                </LinearLayout>
+
+                <LinearLayout
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:orientation="horizontal">
+
+                    <TextView
+                        android:id="@+id/tv_twitter_contacts_edit"
+                        android:layout_width="150dp"
+                        android:layout_height="wrap_content"
+                        android:background="#edeff2"
+                        android:gravity="right"
+                        android:paddingBottom="20dp"
+                        android:paddingRight="10dp"
+                        android:paddingTop="20dp"
+                        android:text="Twitter" />
+
+                    <LinearLayout
+                        android:layout_width="match_parent"
+                        android:layout_height="match_parent"
+                        android:orientation="horizontal">
+
+                        <EditText
+                            android:id="@+id/et_twitter_contacts_edit"
+                            android:layout_width="match_parent"
+                            android:layout_height="match_parent"
+                            android:background="@drawable/button_design" />
+                    </LinearLayout>
+                </LinearLayout>
+
+                <LinearLayout
+                    android:id="@+id/header2"
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:background="#d4d6d8"
+                    android:orientation="vertical">
+
+                    <TextView
+                        android:layout_width="match_parent"
+                        android:layout_height="wrap_content"
+                        android:paddingBottom="10dp"
+                        android:paddingLeft="10dp"
+                        android:paddingTop="15dp"
+                        android:text="ADDRESS INFORMATION" />
+                </LinearLayout>
+
+                <LinearLayout
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:orientation="horizontal">
+
+                    <TextView
+                        android:id="@+id/tv_addressBilling_contacts_edit"
+                        android:layout_width="150dp"
+                        android:layout_height="wrap_content"
+                        android:background="#edeff2"
+                        android:gravity="right"
+                        android:paddingBottom="20dp"
+                        android:paddingRight="10dp"
+                        android:paddingTop="20dp"
+                        android:text="Billing Address" />
+
+                    <LinearLayout
+                        android:layout_width="match_parent"
+                        android:layout_height="match_parent"
+                        android:orientation="horizontal">
+
+                        <EditText
+                            android:id="@+id/et_streetBilling_contacts_edit"
+                            android:layout_width="match_parent"
+                            android:layout_height="match_parent"
+                            android:background="@drawable/button_design"
+                            android:hint="Street"
+                            android:paddingLeft="20dp" />
+                    </LinearLayout>
+
+
+                </LinearLayout>
+
+                <LinearLayout
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:orientation="horizontal">
+
+                    <TextView
+                        android:layout_width="150dp"
+                        android:layout_height="wrap_content"
+                        android:background="#edeff2"
+                        android:paddingBottom="20dp"
+                        android:paddingTop="20dp" />
+
+                    <LinearLayout
+                        android:layout_width="match_parent"
+                        android:layout_height="match_parent"
+                        android:orientation="horizontal">
+
+                        <EditText
+                            android:id="@+id/et_cityBilling_contacts_edit"
+                            android:layout_width="match_parent"
+                            android:layout_height="match_parent"
+                            android:background="@drawable/button_design"
+                            android:hint="City"
+                            android:paddingLeft="20dp" />
+                    </LinearLayout>
+
+
+                </LinearLayout>
+
+                <LinearLayout
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:orientation="horizontal">
+
+                    <TextView
+                        android:layout_width="150dp"
+                        android:layout_height="wrap_content"
+                        android:background="#edeff2"
+                        android:paddingBottom="20dp"
+                        android:paddingTop="20dp" />
+
+                    <LinearLayout
+                        android:layout_width="match_parent"
+                        android:layout_height="match_parent"
+                        android:orientation="horizontal">
+
+                        <EditText
+                            android:id="@+id/et_stateBilling_contacts_edit"
+                            android:layout_width="match_parent"
+                            android:layout_height="match_parent"
+                            android:background="@drawable/button_design"
+                            android:hint="State"
+                            android:paddingLeft="20dp" />
+                    </LinearLayout>
+                </LinearLayout>
+
+                <LinearLayout
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:orientation="horizontal">
+
+                    <TextView
+                        android:layout_width="150dp"
+                        android:layout_height="wrap_content"
+                        android:background="#edeff2"
+                        android:paddingBottom="20dp"
+                        android:paddingTop="20dp" />
+
+                    <LinearLayout
+                        android:layout_width="match_parent"
+                        android:layout_height="match_parent"
+                        android:orientation="horizontal">
+
+                        <EditText
+                            android:id="@+id/et_codeBilling_contacts_edit"
+                            android:layout_width="match_parent"
+                            android:layout_height="match_parent"
+                            android:background="@drawable/button_design"
+                            android:hint="Code"
+                            android:paddingLeft="20dp" />
+                    </LinearLayout>
+
+
+                </LinearLayout>
+
+                <LinearLayout
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:orientation="horizontal">
+
+                    <TextView
+                        android:layout_width="150dp"
+                        android:layout_height="wrap_content"
+                        android:background="#edeff2"
+                        android:paddingBottom="20dp"
+                        android:paddingTop="20dp" />
+
+                    <LinearLayout
+                        android:layout_width="match_parent"
+                        android:layout_height="match_parent"
+                        android:orientation="horizontal">
+
+                        <EditText
+                            android:id="@+id/et_countryBilling_contacts_edit"
+                            android:layout_width="match_parent"
+                            android:layout_height="match_parent"
+                            android:background="@drawable/button_design"
+                            android:hint="Country"
+                            android:paddingLeft="20dp" />
+                    </LinearLayout>
+                </LinearLayout>
+
+                <LinearLayout
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:orientation="horizontal">
+
+                    <TextView
+                        android:id="@+id/tv_addressShipping_contacts_edit"
+                        android:layout_width="150dp"
+                        android:layout_height="wrap_content"
+                        android:background="#edeff2"
+                        android:gravity="right"
+                        android:paddingBottom="20dp"
+                        android:paddingRight="10dp"
+                        android:paddingTop="20dp"
+                        android:text="Shipping Address" />
+
+                    <LinearLayout
+                        android:layout_width="match_parent"
+                        android:layout_height="match_parent"
+                        android:orientation="horizontal">
+
+                        <EditText
+                            android:id="@+id/et_streetShipping_contacts_edit"
+                            android:layout_width="match_parent"
+                            android:layout_height="match_parent"
+                            android:background="@drawable/button_design"
+                            android:hint="Street"
+                            android:paddingLeft="20dp" />
+                    </LinearLayout>
+
+
+                </LinearLayout>
+
+                <LinearLayout
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:orientation="horizontal">
+
+                    <TextView
+                        android:layout_width="150dp"
+                        android:layout_height="wrap_content"
+                        android:background="#edeff2"
+                        android:paddingBottom="20dp"
+                        android:paddingTop="20dp" />
+
+                    <LinearLayout
+                        android:layout_width="match_parent"
+                        android:layout_height="match_parent"
+                        android:orientation="horizontal">
+
+                        <EditText
+                            android:id="@+id/et_cityShipping_contacts_edit"
+                            android:layout_width="match_parent"
+                            android:layout_height="match_parent"
+                            android:background="@drawable/button_design"
+                            android:hint="City"
+                            android:paddingLeft="20dp" />
+                    </LinearLayout>
+
+
+                </LinearLayout>
+
+                <LinearLayout
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:orientation="horizontal">
+
+                    <TextView
+                        android:layout_width="150dp"
+                        android:layout_height="wrap_content"
+                        android:background="#edeff2"
+                        android:paddingBottom="20dp"
+                        android:paddingTop="20dp" />
+
+                    <LinearLayout
+                        android:layout_width="match_parent"
+                        android:layout_height="match_parent"
+                        android:orientation="horizontal">
+
+                        <EditText
+                            android:id="@+id/et_stateShipping_contacts_edit"
+                            android:layout_width="match_parent"
+                            android:layout_height="match_parent"
+                            android:background="@drawable/button_design"
+                            android:hint="State"
+                            android:paddingLeft="20dp" />
+                    </LinearLayout>
+                </LinearLayout>
+
+                <LinearLayout
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:orientation="horizontal">
+
+                    <TextView
+                        android:layout_width="150dp"
+                        android:layout_height="wrap_content"
+                        android:background="#edeff2"
+                        android:paddingBottom="20dp"
+                        android:paddingTop="20dp" />
+
+                    <LinearLayout
+                        android:layout_width="match_parent"
+                        android:layout_height="match_parent"
+                        android:orientation="horizontal">
+
+                        <EditText
+                            android:id="@+id/et_codeShipping_contacts_edit"
+                            android:layout_width="match_parent"
+                            android:layout_height="match_parent"
+                            android:background="@drawable/button_design"
+                            android:hint="Code"
+                            android:paddingLeft="20dp" />
+                    </LinearLayout>
+
+
+                </LinearLayout>
+
+                <LinearLayout
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:orientation="horizontal">
+
+                    <TextView
+                        android:layout_width="150dp"
+                        android:layout_height="wrap_content"
+                        android:background="#edeff2"
+                        android:paddingBottom="20dp"
+                        android:paddingTop="20dp" />
+
+                    <LinearLayout
+                        android:layout_width="match_parent"
+                        android:layout_height="match_parent"
+                        android:orientation="horizontal">
+
+                        <EditText
+                            android:id="@+id/et_countryShipping_contacts_edit"
+                            android:layout_width="match_parent"
+                            android:layout_height="match_parent"
+                            android:background="@drawable/button_design"
+                            android:hint="Country"
+                            android:paddingLeft="20dp" />
+                    </LinearLayout>
+                </LinearLayout>
+
+                <LinearLayout
+                    android:id="@+id/header3"
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:background="#d4d6d8"
+                    android:orientation="vertical">
+
+                    <TextView
+                        android:layout_width="match_parent"
+                        android:layout_height="wrap_content"
+                        android:paddingBottom="10dp"
+                        android:paddingLeft="10dp"
+                        android:paddingTop="15dp"
+                        android:text="DESCRIPTION INFORMATION" />
+                </LinearLayout>
+
+                <LinearLayout
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:orientation="horizontal">
+
+                    <TextView
+                        android:id="@+id/tv_description_contacts_edit"
+                        android:layout_width="150dp"
+                        android:layout_height="wrap_content"
+                        android:background="#edeff2"
+                        android:gravity="right"
+                        android:paddingBottom="20dp"
+                        android:paddingRight="10dp"
+                        android:paddingTop="20dp"
+                        android:text="Description" />
+
+                    <LinearLayout
+                        android:layout_width="match_parent"
+                        android:layout_height="match_parent"
+                        android:orientation="horizontal">
+
+                        <EditText
+                            android:id="@+id/et_description_contacts_edit"
+                            android:layout_width="match_parent"
+                            android:layout_height="match_parent"
+                            android:background="@drawable/button_design" />
+                    </LinearLayout>
+
+                </LinearLayout>
+
+
+            </LinearLayout>
+
+
+        </LinearLayout>
+
+    </LinearLayout>
+
+
+</ScrollView>

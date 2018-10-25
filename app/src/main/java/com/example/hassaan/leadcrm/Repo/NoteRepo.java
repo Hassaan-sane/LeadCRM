@@ -1,13 +1,12 @@
 package com.example.hassaan.leadcrm.Repo;
 
-import android.accounts.Account;
 import android.content.ContentValues;
 import android.database.Cursor;
 import android.database.sqlite.SQLiteDatabase;
 import android.util.Log;
 
 import com.example.hassaan.leadcrm.Data.DatabaseManager;
-import com.example.hassaan.leadcrm.TableClasses.Accounts;
+import com.example.hassaan.leadcrm.TableClasses.Account;
 import com.example.hassaan.leadcrm.TableClasses.Activity;
 import com.example.hassaan.leadcrm.TableClasses.Contact;
 import com.example.hassaan.leadcrm.TableClasses.LeadStatus;
@@ -37,7 +36,7 @@ public class NoteRepo {
                 Note.KEY_ACCOUNTID + " INTEGER, " +
                 Note.KEY_CONTACTID + " INTEGER, " +
                 "FOREIGN KEY (" + Note.KEY_LEADID + ") REFERENCES " + Leads.TABLE_NAME + "(" + Leads.KEY_ID + ")" +
-                "FOREIGN KEY (" + Note.KEY_ACCOUNTID + ") REFERENCES " + Accounts.TABLE_NAME + "(" + Accounts.KEY_ID + ")" +
+                "FOREIGN KEY (" + Note.KEY_ACCOUNTID + ") REFERENCES " + Account.TABLE_NAME + "(" + Account.KEY_ID + ")" +
                 "FOREIGN KEY (" + Note.KEY_CONTACTID + ") REFERENCES " + Contact.TABLE_NAME + "(" + Contact.KEY_ID + ") )";
     }
 
