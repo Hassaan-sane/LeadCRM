@@ -91,6 +91,7 @@
                             android:id="@+id/et_leadOwner_lead_edit"
                             android:layout_width="match_parent"
                             android:layout_height="match_parent"
+                            android:inputType="text"
                             android:backgroundTint="#edeff2" />
                     </LinearLayout>
 
@@ -122,6 +123,7 @@
                             android:id="@+id/et_company_lead_edit"
                             android:layout_width="match_parent"
                             android:layout_height="match_parent"
+                            android:inputType="text"
                             android:backgroundTint="#edeff2" />
                     </LinearLayout>
                 </LinearLayout>
@@ -151,6 +153,7 @@
                             android:id="@+id/et_title_lead_edit"
                             android:layout_width="match_parent"
                             android:layout_height="match_parent"
+                            android:inputType="text"
                             android:backgroundTint="#edeff2" />
                     </LinearLayout>
                 </LinearLayout>
@@ -180,6 +183,7 @@
                             android:id="@+id/et_leadname_lead_edit"
                             android:layout_width="match_parent"
                             android:layout_height="match_parent"
+                            android:inputType="text"
                             android:backgroundTint="#edeff2" />
                     </LinearLayout>
                 </LinearLayout>
@@ -209,6 +213,7 @@
                             android:id="@+id/et_mobile_lead_edit"
                             android:layout_width="match_parent"
                             android:layout_height="match_parent"
+                            android:inputType="number"
                             android:backgroundTint="#edeff2" />
                     </LinearLayout>
                 </LinearLayout>
@@ -238,6 +243,7 @@
                             android:id="@+id/et_phone_lead_edit"
                             android:layout_width="match_parent"
                             android:layout_height="match_parent"
+                            android:inputType="number"
                             android:backgroundTint="#edeff2" />
                     </LinearLayout>
                 </LinearLayout>
@@ -267,6 +273,7 @@
                             android:id="@+id/et_annualRevenue_lead_edit"
                             android:layout_width="match_parent"
                             android:layout_height="match_parent"
+                            android:inputType="number"
                             android:backgroundTint="#edeff2" />
                     </LinearLayout>
                 </LinearLayout>
@@ -296,6 +303,7 @@
                             android:id="@+id/et_email_lead_edit"
                             android:layout_width="match_parent"
                             android:layout_height="match_parent"
+                            android:inputType="textEmailAddress"
                             android:backgroundTint="#edeff2" />
                     </LinearLayout>
                 </LinearLayout>
@@ -325,6 +333,7 @@
                             android:id="@+id/et_website_lead_edit"
                             android:layout_width="match_parent"
                             android:layout_height="match_parent"
+                            android:inputType="text"
                             android:backgroundTint="#edeff2" />
                     </LinearLayout>
                 </LinearLayout>
@@ -354,6 +363,7 @@
                             android:id="@+id/et_noOfEmployee_lead_edit"
                             android:layout_width="match_parent"
                             android:layout_height="match_parent"
+                            android:inputType="number"
                             android:backgroundTint="#edeff2" />
                     </LinearLayout>
                 </LinearLayout>
@@ -383,6 +393,7 @@
                             android:id="@+id/et_skypeId_lead_edit"
                             android:layout_width="match_parent"
                             android:layout_height="match_parent"
+                            android:inputType="text"
                             android:backgroundTint="#edeff2" />
                     </LinearLayout>
                 </LinearLayout>

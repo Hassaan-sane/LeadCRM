@@ -1,12 +1,16 @@
 <?xml version="1.0" encoding="utf-8"?>
-<ScrollView xmlns:android="http://schemas.android.com/apk/res/android"
+<RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
     xmlns:app="http://schemas.android.com/apk/res-auto"
     xmlns:tools="http://schemas.android.com/tools"
     android:layout_width="match_parent"
     android:layout_height="match_parent"
-    android:fillViewport="true"
-    android:scrollbars = "vertical"
     tools:context=".Activities.AddAccountActivity">
+
+    <ScrollView
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        android:fillViewport="true"
+        android:scrollbars = "vertical">
 
     <LinearLayout
         android:layout_width="match_parent"
@@ -34,8 +38,6 @@
             android:layout_height="match_parent"
             android:orientation="vertical">
 
-
-
             <LinearLayout
                 android:layout_width="match_parent"
                 android:layout_height="wrap_content"
@@ -59,9 +61,9 @@
                         android:id="@+id/et_accountOwner_account"
                         android:layout_width="match_parent"
                         android:layout_height="match_parent"
+                        android:inputType="text"
                         android:background="@drawable/button_design"/>
                 </LinearLayout>
-
 
             </LinearLayout>
 
@@ -120,6 +122,7 @@
                         android:id="@+id/et_accountName_account"
                         android:layout_width="match_parent"
                         android:layout_height="match_parent"
+                        android:inputType="text"
                         android:background="@drawable/button_design"/>
                 </LinearLayout>
             </LinearLayout>
@@ -147,6 +150,7 @@
                         android:id="@+id/et_phone_account"
                         android:layout_width="match_parent"
                         android:layout_height="match_parent"
+                        android:inputType="number"
                         android:background="@drawable/button_design"/>
                 </LinearLayout>
             </LinearLayout>
@@ -174,6 +178,7 @@
                         android:id="@+id/et_accountSite_account"
                         android:layout_width="match_parent"
                         android:layout_height="match_parent"
+                        android:inputType="text"
                         android:background="@drawable/button_design"/>
                 </LinearLayout>
             </LinearLayout>
@@ -234,6 +239,7 @@
                         android:id="@+id/et_accountNumber_account"
                         android:layout_width="match_parent"
                         android:layout_height="match_parent"
+                        android:inputType="number"
                         android:background="@drawable/button_design"/>
                 </LinearLayout>
             </LinearLayout>
@@ -261,6 +267,7 @@
                         android:id="@+id/et_website_account"
                         android:layout_width="match_parent"
                         android:layout_height="match_parent"
+                        android:inputType="text"
                         android:background="@drawable/button_design"/>
                 </LinearLayout>
             </LinearLayout>
@@ -298,7 +305,7 @@
                 android:orientation="horizontal">
 
                 <TextView
-                    android:id="@+id/tv_accounType_account"
+                    android:id="@+id/tv_accountType_account"
                     android:layout_width="150dp"
                     android:layout_height="wrap_content"
                     android:text="Account Type"
@@ -411,6 +418,7 @@
                         android:id="@+id/et_employees_account"
                         android:layout_width="match_parent"
                         android:layout_height="match_parent"
+                        android:inputType="number"
                         android:background="@drawable/button_design"/>
                 </LinearLayout>
 
@@ -440,6 +448,7 @@
                         android:id="@+id/et_annualRevenue_account"
                         android:layout_width="match_parent"
                         android:layout_height="match_parent"
+                        android:inputType="number"
                         android:background="@drawable/button_design"/>
                 </LinearLayout>
 
@@ -469,6 +478,7 @@
                         android:id="@+id/et_sicCode_account"
                         android:layout_width="match_parent"
                         android:layout_height="match_parent"
+                        android:inputType="number"
                         android:background="@drawable/button_design"/>
                 </LinearLayout>
 
@@ -482,6 +492,7 @@
                 android:id="@+id/header2">
 
                 <TextView
+                    android:id="@+id/tv_account_AI"
                     android:layout_width="match_parent"
                     android:layout_height="wrap_content"
                     android:paddingTop="15dp"
@@ -515,6 +526,7 @@
                         android:layout_height="match_parent"
                         android:hint="Street"
                         android:paddingLeft="20dp"
+                        android:inputType="text"
                         android:background="@drawable/button_design"/>
                 </LinearLayout>
 
@@ -527,6 +539,7 @@
                 android:orientation="horizontal">
 
                 <TextView
+                    android:id="@+id/tv_cityBilling_account"
                     android:layout_width="150dp"
                     android:layout_height="wrap_content"
                     android:paddingTop="20dp"
@@ -542,6 +555,7 @@
                         android:layout_height="match_parent"
                         android:paddingLeft="20dp"
                         android:hint="City"
+                        android:inputType="text"
                         android:background="@drawable/button_design"/>
                 </LinearLayout>
 
@@ -554,6 +568,7 @@
                 android:orientation="horizontal">
 
                 <TextView
+                    android:id="@+id/tv_stateBilling_account"
                     android:layout_width="150dp"
                     android:layout_height="wrap_content"
                     android:paddingTop="20dp"
@@ -569,6 +584,7 @@
                         android:layout_height="match_parent"
                         android:paddingLeft="20dp"
                         android:hint="State"
+                        android:inputType="text"
                         android:background="@drawable/button_design"/>
                 </LinearLayout>
             </LinearLayout>
@@ -580,6 +596,7 @@
                 android:orientation="horizontal">
 
                 <TextView
+                    android:id="@+id/tv_codeBilling_account"
                     android:layout_width="150dp"
                     android:layout_height="wrap_content"
                     android:paddingTop="20dp"
@@ -595,6 +612,7 @@
                         android:layout_height="match_parent"
                         android:paddingLeft="20dp"
                         android:hint="Code"
+                        android:inputType="number"
                         android:background="@drawable/button_design"/>
                 </LinearLayout>
 
@@ -607,6 +625,7 @@
                 android:orientation="horizontal">
 
                 <TextView
+                    android:id="@+id/tv_countryBilling_account"
                     android:layout_width="150dp"
                     android:layout_height="wrap_content"
                     android:paddingTop="20dp"
@@ -622,6 +641,7 @@
                         android:layout_height="match_parent"
                         android:paddingLeft="20dp"
                         android:hint="Country"
+                        android:inputType="text"
                         android:background="@drawable/button_design"/>
                 </LinearLayout>
             </LinearLayout>
@@ -651,6 +671,7 @@
                         android:layout_height="match_parent"
                         android:hint="Street"
                         android:paddingLeft="20dp"
+                        android:inputType="text"
                         android:background="@drawable/button_design"/>
                 </LinearLayout>
 
@@ -663,6 +684,7 @@
                 android:orientation="horizontal">
 
                 <TextView
+                    android:id="@+id/tv_cityShipping_account"
                     android:layout_width="150dp"
                     android:layout_height="wrap_content"
                     android:paddingTop="20dp"
@@ -678,6 +700,7 @@
                         android:layout_height="match_parent"
                         android:paddingLeft="20dp"
                         android:hint="City"
+                        android:inputType="text"
                         android:background="@drawable/button_design"/>
                 </LinearLayout>
 
@@ -690,6 +713,7 @@
                 android:orientation="horizontal">
 
                 <TextView
+                    android:id="@+id/tv_stateShipping_account"
                     android:layout_width="150dp"
                     android:layout_height="wrap_content"
                     android:paddingTop="20dp"
@@ -705,6 +729,7 @@
                         android:layout_height="match_parent"
                         android:paddingLeft="20dp"
                         android:hint="State"
+                        android:inputType="text"
                         android:background="@drawable/button_design"/>
                 </LinearLayout>
             </LinearLayout>
@@ -716,6 +741,7 @@
                 android:orientation="horizontal">
 
                 <TextView
+                    android:id="@+id/tv_codeShipping_account"
                     android:layout_width="150dp"
                     android:layout_height="wrap_content"
                     android:paddingTop="20dp"
@@ -731,6 +757,7 @@
                         android:layout_height="match_parent"
                         android:paddingLeft="20dp"
                         android:hint="Code"
+                        android:inputType="number"
                         android:background="@drawable/button_design"/>
                 </LinearLayout>
 
@@ -743,6 +770,7 @@
                 android:orientation="horizontal">
 
                 <TextView
+                    android:id="@+id/tv_countryShipping_account"
                     android:layout_width="150dp"
                     android:layout_height="wrap_content"
                     android:paddingTop="20dp"
@@ -758,6 +786,7 @@
                         android:layout_height="match_parent"
                         android:paddingLeft="20dp"
                         android:hint="Country"
+                        android:inputType="text"
                         android:background="@drawable/button_design"/>
                 </LinearLayout>
             </LinearLayout>
@@ -770,6 +799,7 @@
                 android:id="@+id/header3">
 
                 <TextView
+                    android:id="@+id/tv_account_DI"
                     android:layout_width="match_parent"
                     android:layout_height="wrap_content"
                     android:paddingTop="15dp"
@@ -801,6 +831,7 @@
                         android:id="@+id/et_description_account"
                         android:layout_width="match_parent"
                         android:layout_height="match_parent"
+                        android:inputType="text"
                         android:background="@drawable/button_design"/>
                 </LinearLayout>
 
@@ -812,5 +843,13 @@
 
     </LinearLayout>
 
+    </ScrollView>
 
-</ScrollView>
+    <Button
+        android:id="@+id/bt_account_hide"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_alignParentBottom="true"
+        android:layout_alignParentStart="true"
+        android:text="Hide Extra" />
+</RelativeLayout>

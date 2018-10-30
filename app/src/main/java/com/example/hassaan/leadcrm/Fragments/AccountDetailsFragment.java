@@ -42,11 +42,14 @@ public class AccountDetailsFragment extends Fragment {
         View view=inflater.inflate(R.layout.fragment_account_details, container, false);
         createReferences(view);
 
-        AccountsRepo accountsRepo = new AccountsRepo();
+        if (getArguments() != null) {
 
-        accountList = accountsRepo.getAccountShortList();
+            int getArgument = getArguments().getInt("AccountPostion");
 
-        tv_accountName_accountDetails.setText(accountList.get(0).getAccountName());
+            AccountsRepo accountsRepo = new AccountsRepo();
+            accountList = accountsRepo.getAccountShortList();
+            tv_accountName_accountDetails.setText(accountList.get(getArgument).getAccountName());
+        }
 
         return view;
     }

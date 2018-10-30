@@ -67,6 +67,7 @@ public class EditLeadActivity extends AppCompatActivity implements View.OnClickL
         bt_lead_edit_hide.setOnClickListener(new View.OnClickListener() {
             @Override
             public void onClick(View view) {
+
                 if(show_hide==true){
                     show_hide=false;
                     toggleFields(show_hide);
@@ -140,9 +141,28 @@ public class EditLeadActivity extends AppCompatActivity implements View.OnClickL
 
         bt_leadsource_lead_edit = findViewById(R.id.bt_leadSource_lead_edit);           tv_leadsource_lead_edit = findViewById(R.id.tv_leadSource_lead_edit);
         bt_industry_lead_edit = findViewById(R.id.bt_industry_lead_edit);               tv_industry_lead_edit = findViewById(R.id.tv_industry_lead_edit);
+
         bt_lead_edit_hide=findViewById(R.id.bt_lead_edit_hide);
+
         bt_leadsource_lead_edit.setOnClickListener(this);
         bt_industry_lead_edit.setOnClickListener(this);
+    }
+
+    private void validate(){
+
+        if(et_leadOwner_lead_edit.length()==0){
+            et_leadOwner_lead_edit.setError("This Field is Required");
+        }
+        if(et_company_lead_edit.length()==0){
+            et_company_lead_edit.setError("This Field is Required");
+        }
+        if(et_title_lead_edit.length()==0){
+            et_title_lead_edit.setError("This Field is Required");
+        }
+        if(et_leadname_lead_edit.length()==0){
+            et_leadname_lead_edit.setError("This Field is Required");
+        }
+
     }
 
     @Override
@@ -171,7 +191,6 @@ public class EditLeadActivity extends AppCompatActivity implements View.OnClickL
                 setData(indexValue);
             }
         }
-
     }
 
     private void setData(int indexValue) {
@@ -195,21 +214,21 @@ public class EditLeadActivity extends AppCompatActivity implements View.OnClickL
 
         if (id == R.id.ok) {
             Leads leads= new Leads();
-
-            leads.setID(Leadlist.get(LeadPosition).getID());
-            leads.setLeadName(et_leadname_lead_edit.getText().toString());
-            leads.setCompanyName(et_company_lead_edit.getText().toString());
-            leads.setTitle(et_title_lead_edit.getText().toString());
-            leads.setLeadOwner(et_leadOwner_lead_edit.getText().toString());
-
-            leads.setModifiedBy(Calendar.getInstance().getTime());
-
-            LeadsRepo leadsRepo = new LeadsRepo();
-
-            leadsRepo.updateLead(leads);
-
-            finish();
-
+//
+//            leads.setID(Leadlist.get(LeadPosition).getID());
+//            leads.setLeadName(et_leadname_lead_edit.getText().toString());
+//            leads.setCompanyName(et_company_lead_edit.getText().toString());
+//            leads.setTitle(et_title_lead_edit.getText().toString());
+//            leads.setLeadOwner(et_leadOwner_lead_edit.getText().toString());
+//
+//            leads.setModifiedBy(Calendar.getInstance().getTime());
+//
+//            LeadsRepo leadsRepo = new LeadsRepo();
+//
+//            leadsRepo.updateLead(leads);
+//
+//            finish();
+            validate();
         }
 
 

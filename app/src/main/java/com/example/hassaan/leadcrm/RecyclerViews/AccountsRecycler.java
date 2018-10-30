@@ -36,13 +36,14 @@ public class AccountsRecycler extends RecyclerView.Adapter<AccountsRecycler.View
     }
 
     @Override
-    public void onBindViewHolder(@NonNull AccountsRecycler.ViewHolder viewHolder, int i) {
+    public void onBindViewHolder(@NonNull AccountsRecycler.ViewHolder viewHolder, final int i) {
         viewHolder.tv_name_accountrecycler.setText(list.get(i).getAccountName());
 
         viewHolder.itemView.setOnClickListener(new View.OnClickListener() {
             @Override
             public void onClick(View view) {
                 Intent intent = new Intent(context, DetailAccountActivity.class);
+                intent.putExtra("AccountPosition", i);
                 context.startActivity(intent);
             }
         });

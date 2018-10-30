@@ -109,7 +109,7 @@ public class AddLeadActivity extends AppCompatActivity implements View.OnClickLi
     }
 
     private void createReferences(){
-        et_leadOwner_lead=findViewById(R.id.et_leadOwner_lead);         tv_leadOwner_lead=findViewById(R.id.tv_leadOwner_lead);
+         et_leadOwner_lead=findViewById(R.id.et_leadOwner_lead);         tv_leadOwner_lead=findViewById(R.id.tv_leadOwner_lead);
         et_company_lead=findViewById(R.id.et_company_lead);             tv_company_lead=findViewById(R.id.tv_company_lead);
         et_title_lead=findViewById(R.id.et_title_lead);                 tv_title_lead=findViewById(R.id.tv_title_lead);
         et_leadname_lead=findViewById(R.id.et_leadname_lead);           tv_leadname_lead=findViewById(R.id.tv_leadname_lead);
@@ -129,6 +129,21 @@ public class AddLeadActivity extends AppCompatActivity implements View.OnClickLi
 //        bt_lead_hide.setOnClickListener(this);
     }
 
+    private void validate(){
+
+        if(et_leadOwner_lead.length()==0){
+            et_leadOwner_lead.setError("This Field is Required");
+        }
+        if(et_company_lead.length()==0){
+            et_company_lead.setError("This Field is Required");
+        }
+        if(et_title_lead.length()==0){
+            et_title_lead.setError("This Field is Required");
+        }
+        if(et_leadname_lead.length()==0){
+            et_leadname_lead.setError("This Field is Required");
+        }
+    }
 
     @Override
     public void onClick(View v) {
@@ -164,23 +179,24 @@ public class AddLeadActivity extends AppCompatActivity implements View.OnClickLi
 
         //noinspection SimplifiableIfStatement
         if (id == R.id.ok) {
-            Toast.makeText(this,"ok",Toast.LENGTH_SHORT).show();
-            LeadsRepo leadsRepo= new LeadsRepo();
-            Leads leads = new Leads();
-
-            leads.setCompanyName(et_company_lead.getText().toString());
-            leads.setTitle(et_title_lead.getText().toString());
-            leads.setLeadOwner(et_leadOwner_lead.getText().toString());
-            leads.setLeadName(et_leadname_lead.getText().toString());
-
-            leads.setCreatedBy(Calendar.getInstance().getTime());
-            leads.setModifiedBy(Calendar.getInstance().getTime());
-
-             leadsRepo.inserShortinLeads(leads);
-
-
-
-            finish();
+//            Toast.makeText(this,"ok",Toast.LENGTH_SHORT).show();
+//            LeadsRepo leadsRepo= new LeadsRepo();
+//            Leads leads = new Leads();
+//
+//            leads.setCompanyName(et_company_lead.getText().toString());
+//            leads.setTitle(et_title_lead.getText().toString());
+//            leads.setLeadOwner(et_leadOwner_lead.getText().toString());
+//            leads.setLeadName(et_leadname_lead.getText().toString());
+//
+//            leads.setCreatedBy(Calendar.getInstance().getTime());
+//            leads.setModifiedBy(Calendar.getInstance().getTime());
+//
+//             leadsRepo.inserShortinLeads(leads);
+//
+//
+//
+//            finish();
+            validate();
             return true;
         }
 

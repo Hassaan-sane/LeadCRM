@@ -16,16 +16,22 @@ import com.example.hassaan.leadcrm.R;
 
 public class DetailAccountActivity extends AppCompatActivity {
 
+    private int AccountPosition;
+
     @Override
     protected void onCreate(Bundle savedInstanceState) {
         super.onCreate(savedInstanceState);
         setContentView(R.layout.activity_detailed_account);
 
-        Toolbar toolbar= findViewById(R.id.toolbar_account);
+        Toolbar toolbar = findViewById(R.id.toolbar_account);
         setSupportActionBar(toolbar);
         getSupportActionBar().setDisplayHomeAsUpEnabled(true);
 
-        getWindow().setStatusBarColor(ContextCompat.getColor(this,R.color.colorPrimaryDark)); //status bar or the time bar at the top
+        if (getIntent() != null) {
+            AccountPosition = getIntent().getIntExtra("AccountPosition", 0);
+        }
+
+        getWindow().setStatusBarColor(ContextCompat.getColor(this, R.color.colorPrimaryDark)); //status bar or the time bar at the top
 
         TabLayout tabLayout = findViewById(R.id.tab_layout_account);
         tabLayout.addTab(tabLayout.newTab().setText("Account Details"));
@@ -33,7 +39,7 @@ public class DetailAccountActivity extends AppCompatActivity {
         tabLayout.setTabGravity(TabLayout.GRAVITY_FILL);
 
         final ViewPager viewPager = findViewById(R.id.pager_account);
-        final AccountPagerAdapter accountPagerAdapter = new AccountPagerAdapter(getSupportFragmentManager(), tabLayout.getTabCount());
+        final AccountPagerAdapter accountPagerAdapter = new AccountPagerAdapter(getSupportFragmentManager(), tabLayout.getTabCount(),AccountPosition);
         viewPager.setAdapter(accountPagerAdapter);
         viewPager.addOnPageChangeListener(new TabLayout.TabLayoutOnPageChangeListener(tabLayout));
         tabLayout.addOnTabSelectedListener(new TabLayout.OnTabSelectedListener() {
@@ -53,6 +59,7 @@ public class DetailAccountActivity extends AppCompatActivity {
             }
         });
     }
+
     @Override
     public boolean onCreateOptionsMenu(Menu menu) {
 
@@ -66,7 +73,8 @@ public class DetailAccountActivity extends AppCompatActivity {
         int id = item.getItemId();
 
         if (id == R.id.btn_edit_menu) {
-            Intent intent = new Intent(getApplicationContext(),EditAccountActivity.class);
+            Intent intent = new Intent(getApplicationContext(), EditAccountActivity.class);
+            intent.putExtra("AccountPosition",AccountPosition);
             startActivity(intent);
             finish();
         }
