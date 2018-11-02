@@ -49,6 +49,8 @@ public class AccountDetailsFragment extends Fragment {
             AccountsRepo accountsRepo = new AccountsRepo();
             accountList = accountsRepo.getAccountShortList();
             tv_accountName_accountDetails.setText(accountList.get(getArgument).getAccountName());
+            tv_phone_accountDetails.setText(accountList.get(getArgument).getPhoneNo());
+            tv_website_accountDetails.setText(accountList.get(getArgument).getWebsite());
         }
 
         return view;

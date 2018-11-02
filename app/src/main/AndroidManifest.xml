@@ -71,10 +71,13 @@
             android:name=".Activities.DetailContactActivity"
             android:parentActivityName=".Activities.DetailContactActivity"
             android:theme="@style/AppTheme.NoActionBar" />
-        <activity android:name=".Activities.EditLeadActivity"></activity>
-        <activity android:name=".Activities.EditAccountActivity"></activity>
-        <activity android:name=".Activities.EditContactsActivity"></activity>
-        <activity android:name=".Activities.EditCallActivity"></activity>
+        <activity android:name=".Activities.EditLeadActivity" />
+        <activity android:name=".Activities.EditAccountActivity" />
+        <activity android:name=".Activities.EditContactsActivity" />
+        <activity android:name=".Activities.EditCallActivity" />
+        <activity android:name=".Activities.ListSelectActivity" />
+        <activity android:name=".Activities.EditTaskActivity" />
+        <activity android:name=".Activities.ReportActivity"></activity>
     </application>
 
 </manifest>

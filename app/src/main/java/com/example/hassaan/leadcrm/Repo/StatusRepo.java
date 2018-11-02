@@ -76,4 +76,10 @@ public class StatusRepo {
 
         return deleteId;
     }
+
+    public void delete() {
+        SQLiteDatabase db = DatabaseManager.getInstance().openDatabase();
+        db.delete(Status.TABLE_NAME, null, null);
+        DatabaseManager.getInstance().closeDatabase();
+    }
 }

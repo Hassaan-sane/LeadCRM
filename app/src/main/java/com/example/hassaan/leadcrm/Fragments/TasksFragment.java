@@ -23,6 +23,8 @@ import com.example.hassaan.leadcrm.Activities.AddTaskActivity;
 import com.example.hassaan.leadcrm.R;
 import com.example.hassaan.leadcrm.RecyclerViews.AccountsRecycler;
 import com.example.hassaan.leadcrm.RecyclerViews.TaskRecycler;
+import com.example.hassaan.leadcrm.Repo.TaskRepo;
+import com.example.hassaan.leadcrm.TableClasses.Task;
 import com.github.tibolte.agendacalendarview.AgendaCalendarView;
 import com.github.tibolte.agendacalendarview.CalendarPickerController;
 import com.github.tibolte.agendacalendarview.models.BaseCalendarEvent;
@@ -41,6 +43,7 @@ public class TasksFragment extends Fragment implements AdapterView.OnItemSelecte
     SearchView searchView;
     Spinner spinner;
     private Context context=getContext();
+    private List<Task> tasks;
 
     public TasksFragment() {
         // Required empty public constructor
@@ -68,16 +71,18 @@ public class TasksFragment extends Fragment implements AdapterView.OnItemSelecte
         arrayAdapter.setDropDownViewResource(android.R.layout.simple_spinner_dropdown_item);
         spinner.setAdapter(arrayAdapter);
 
-        list.add("Red");
-        list.add("Blue");
-        list.add("Green");
-        list.add("Yellow");
+//        list.add("Red");
+//        list.add("Blue");
+//        list.add("Green");
+//        list.add("Yellow");
+        TaskRepo taskRepo = new TaskRepo();
+        tasks =taskRepo.getTaskList();
 
 
 
         RecyclerView recyclerView=view.findViewById(R.id.recyclerTask);
         recyclerView.setLayoutManager(new LinearLayoutManager(getContext()));
-        recyclerView.setAdapter(new TaskRecycler(list,getContext()));
+        recyclerView.setAdapter(new TaskRecycler(tasks,getContext()));
 
         FloatingActionButton fab = view.findViewById(R.id.floating_Task);
         fab.setOnClickListener(new View.OnClickListener() {

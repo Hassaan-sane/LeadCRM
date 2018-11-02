@@ -22,7 +22,7 @@ public class TaskRepo {
 
     public Task task;
 
-    private TaskRepo() {
+    public TaskRepo() {
         task = new Task();
     }
 
@@ -102,5 +102,26 @@ public class TaskRepo {
         DatabaseManager.getInstance().closeDatabase();
 
         return deleteId;
+    }
+    public void delete() {
+        SQLiteDatabase db = DatabaseManager.getInstance().openDatabase();
+        db.delete(Task.TABLE_NAME, null, null);
+        DatabaseManager.getInstance().closeDatabase();
+    }
+
+    public int updateTask(Task task){
+        SQLiteDatabase db = DatabaseManager.getInstance().openDatabase();
+        ContentValues values = new ContentValues();
+        values.put(Task.KEY_ID, task.getID());
+        values.put(Task.KEY_SUBJECT, task.getSubject());
+        values.put(Task.KEY_DUEDATE, task.getDueDate().toString());
+        values.put(Task.KEY_OWNERNAME, task.getOwnerName());
+        values.put(Task.KEY_PRIORITYID, task.getPriorityID());
+        values.put(Task.KEY_STATUSID, task.getStatusID());
+
+
+        int TaskId =(int)db.update(Task.TABLE_NAME, values,Task.KEY_ID + " = " + task.getID(), null);
+        DatabaseManager.getInstance().closeDatabase();
+        return TaskId;
     }
 }

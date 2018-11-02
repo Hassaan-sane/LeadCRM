@@ -11,13 +11,11 @@ import android.support.v7.app.AppCompatActivity;
 import android.support.v7.widget.Toolbar;
 import android.view.MenuItem;
 
-import com.example.hassaan.leadcrm.Activities.EditAccountActivity;
-import com.example.hassaan.leadcrm.Activities.EditCallActivity;
-import com.example.hassaan.leadcrm.Activities.EditContactsActivity;
+
+import com.example.hassaan.leadcrm.Activities.ReportActivity;
 import com.example.hassaan.leadcrm.Data.DBHelper;
 import com.example.hassaan.leadcrm.Data.DatabaseManager;
 import com.example.hassaan.leadcrm.Fragments.AboutusFragment;
-import com.example.hassaan.leadcrm.Fragments.AccountDetailsFragment;
 import com.example.hassaan.leadcrm.Fragments.AccountsFragment;
 import com.example.hassaan.leadcrm.Fragments.CallsFragment;
 import com.example.hassaan.leadcrm.Fragments.ContactsFragment;
@@ -28,7 +26,6 @@ import com.example.hassaan.leadcrm.Fragments.FeedsFragment;
 import com.example.hassaan.leadcrm.Fragments.HomeFragment;
 import com.example.hassaan.leadcrm.Fragments.LeadsFragment;
 import com.example.hassaan.leadcrm.Fragments.NoteFragment;
-import com.example.hassaan.leadcrm.Fragments.SettingsFragment;
 import com.example.hassaan.leadcrm.Fragments.TasksFragment;
 
 public class MainActivity extends AppCompatActivity
@@ -217,8 +214,11 @@ public class MainActivity extends AppCompatActivity
 
         } else if (id == R.id.nav_aboutus) {
 
-            fragmentManager.beginTransaction().replace(R.id.container, new AboutusFragment()).commit();
-            getSupportActionBar().setTitle("About Us");
+            Intent intent=new Intent(this,ReportActivity.class);
+            startActivity(intent);
+
+//            fragmentManager.beginTransaction().replace(R.id.container, new AboutusFragment()).commit();
+//            getSupportActionBar().setTitle("About Us");
         }
 
         DrawerLayout drawer = (DrawerLayout) findViewById(R.id.drawer_layout);

@@ -46,7 +46,7 @@ public class LeadListViewAdapter extends BaseAdapter implements StickyListHeader
         if (convertView == null) {
             holder = new ViewHolder();
             convertView = inflater.inflate(R.layout.listview_sample_items, parent, false);
-            holder.text = (TextView) convertView.findViewById(R.id.text);
+            holder.text = convertView.findViewById(R.id.text);
             convertView.setTag(holder);
         } else {
             holder = (ViewHolder) convertView.getTag();

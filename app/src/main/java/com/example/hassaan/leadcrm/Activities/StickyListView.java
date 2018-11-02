@@ -31,7 +31,7 @@ public class StickyListView extends AppCompatActivity {
         list=getIntent().getStringArrayListExtra("list");
         buttonName=getIntent().getStringExtra("Button");
 
-        expandableStickyList = (ExpandableStickyListHeadersListView) findViewById(R.id.listView_default);
+        expandableStickyList = findViewById(R.id.listView_default);
         StickyListHeadersAdapter adapter = new LeadListViewAdapter(this,list);
         expandableStickyList.setAdapter(adapter);
         expandableStickyList.setOnHeaderClickListener(new StickyListHeadersListView.OnHeaderClickListener() {

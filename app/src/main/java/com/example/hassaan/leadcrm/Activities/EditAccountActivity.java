@@ -67,6 +67,8 @@ public class EditAccountActivity extends AppCompatActivity implements View.OnCli
             AccountsRepo accountsRepo = new AccountsRepo();
             accountList = accountsRepo.getAccountShortList();
             et_accountName_accountEdit.setText(accountList.get(AccountPosition).getAccountName());
+            et_phone_accountEdit.setText(accountList.get(AccountPosition).getPhoneNo());
+            et_website_accountEdit.setText(accountList.get(AccountPosition).getWebsite());
         }
 
 

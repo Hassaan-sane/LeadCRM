@@ -9,6 +9,7 @@ import com.example.hassaan.leadcrm.Data.DatabaseManager;
 import com.example.hassaan.leadcrm.TableClasses.POIStatus;
 import com.example.hassaan.leadcrm.TableClasses.Participient;
 import com.example.hassaan.leadcrm.TableClasses.Priority;
+import com.example.hassaan.leadcrm.TableClasses.Task;
 
 import java.util.ArrayList;
 import java.util.List;
@@ -75,5 +76,11 @@ public class PriorityRepo {
         DatabaseManager.getInstance().closeDatabase();
 
         return deleteId;
+    }
+
+    public void delete() {
+        SQLiteDatabase db = DatabaseManager.getInstance().openDatabase();
+        db.delete(Task.TABLE_NAME, null, null);
+        DatabaseManager.getInstance().closeDatabase();
     }
 }

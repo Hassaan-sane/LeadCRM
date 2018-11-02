@@ -1,10 +1,10 @@
 <?xml version="1.0" encoding="utf-8"?>
-<ScrollView xmlns:android="http://schemas.android.com/apk/res/android"
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
     xmlns:app="http://schemas.android.com/apk/res-auto"
     xmlns:tools="http://schemas.android.com/tools"
     android:layout_width="match_parent"
     android:layout_height="match_parent"
-    tools:context=".Activities.AddTaskActivity">
+    tools:context=".Activities.EditTaskActivity">
 
 
     <LinearLayout
@@ -40,7 +40,7 @@
                 android:orientation="horizontal">
 
                 <TextView
-                    android:id="@+id/tv_Subject_task"
+                    android:id="@+id/tv_Subject_taskEdit"
                     android:layout_width="150dp"
                     android:layout_height="wrap_content"
                     android:background="#edeff2"
@@ -56,7 +56,7 @@
                     android:orientation="horizontal">
 
                     <EditText
-                        android:id="@+id/et_Subject_task"
+                        android:id="@+id/et_Subject_taskEdit"
                         android:layout_width="match_parent"
                         android:layout_height="match_parent"
                         android:backgroundTint="#edeff2" />
@@ -71,7 +71,7 @@
                 android:orientation="horizontal">
 
                 <TextView
-                    android:id="@+id/tv_ownerName_Task"
+                    android:id="@+id/tv_ownerName_TaskEdit"
                     android:layout_width="150dp"
                     android:layout_height="wrap_content"
                     android:background="#edeff2"
@@ -87,7 +87,7 @@
                     android:orientation="horizontal">
 
                     <EditText
-                        android:id="@+id/et_ownerName_Task"
+                        android:id="@+id/et_ownerName_TaskEdit"
                         android:layout_width="match_parent"
                         android:layout_height="match_parent"
                         android:backgroundTint="#edeff2" />
@@ -100,7 +100,7 @@
                 android:orientation="horizontal">
 
                 <TextView
-                    android:id="@+id/tv_dueDate_Task"
+                    android:id="@+id/tv_dueDate_TaskEdit"
                     android:layout_width="150dp"
                     android:layout_height="wrap_content"
                     android:background="#edeff2"
@@ -116,7 +116,7 @@
                     android:orientation="horizontal">
 
                     <EditText
-                        android:id="@+id/et_dueDate_Task"
+                        android:id="@+id/et_dueDate_TaskEdit"
                         android:layout_width="match_parent"
                         android:layout_height="match_parent"
                         android:backgroundTint="#edeff2" />
@@ -129,7 +129,7 @@
                 android:orientation="horizontal">
 
                 <TextView
-                    android:id="@+id/tv_priority_Task"
+                    android:id="@+id/tv_priority_TaskEdit"
                     android:layout_width="150dp"
                     android:layout_height="wrap_content"
                     android:background="#edeff2"
@@ -145,7 +145,7 @@
                     android:orientation="horizontal">
 
                     <Button
-                        android:id="@+id/btn_priority_Task"
+                        android:id="@+id/btn_priority_TaskEdit"
                         android:layout_width="match_parent"
                         android:layout_height="match_parent"
                         android:background="@drawable/button_design"
@@ -159,7 +159,7 @@
                 android:orientation="horizontal">
 
                 <TextView
-                    android:id="@+id/tv_status_Task"
+                    android:id="@+id/tv_status_TaskEdit"
                     android:layout_width="150dp"
                     android:layout_height="wrap_content"
                     android:background="#edeff2"
@@ -175,7 +175,7 @@
                     android:orientation="horizontal">
 
                     <Button
-                        android:id="@+id/btn_status_Task"
+                        android:id="@+id/btn_status_TaskEdit"
                         android:layout_width="match_parent"
                         android:layout_height="match_parent"
                         android:background="@drawable/button_design"
@@ -187,4 +187,5 @@
     </LinearLayout>
 
 
-</ScrollView>
+
+</LinearLayout>

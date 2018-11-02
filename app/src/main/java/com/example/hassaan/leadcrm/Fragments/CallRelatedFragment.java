@@ -97,12 +97,12 @@ public class CallRelatedFragment extends Fragment {
         list.add("Yellow");
 
         listNote = noteRepo.getNoteList();
+//
+//        RecyclerView recyclerView = view.findViewById(R.id.TaskCallRelatedRecyclerView);
+//        recyclerView.setLayoutManager(new LinearLayoutManager(getContext()));
+//        recyclerView.setAdapter(new TaskRecycler(list, getContext()));
 
-        RecyclerView recyclerView = view.findViewById(R.id.TaskCallRelatedRecyclerView);
-        recyclerView.setLayoutManager(new LinearLayoutManager(getContext()));
-        recyclerView.setAdapter(new TaskRecycler(list, getContext()));
-
-        recyclerView.setNestedScrollingEnabled(false);
+//        recyclerView.setNestedScrollingEnabled(false);
 
         RecyclerView recyclerView1 = view.findViewById(R.id.NoteCallRelatedRecyclerView);
         recyclerView1.setLayoutManager(new LinearLayoutManager(getContext()));
@@ -110,11 +110,11 @@ public class CallRelatedFragment extends Fragment {
 
         recyclerView1.setNestedScrollingEnabled(false);
 
-        RecyclerView recyclerView2 = view.findViewById(R.id.AttachmentCallRelatedRecyclerView);
-        recyclerView2.setLayoutManager(new LinearLayoutManager(getContext()));
-        recyclerView2.setAdapter(new TaskRecycler(list, getContext()));
-
-        recyclerView2.setNestedScrollingEnabled(false);
+//        RecyclerView recyclerView2 = view.findViewById(R.id.AttachmentCallRelatedRecyclerView);
+//        recyclerView2.setLayoutManager(new LinearLayoutManager(getContext()));
+//        recyclerView2.setAdapter(new TaskRecycler(list, getContext()));
+//
+//        recyclerView2.setNestedScrollingEnabled(false);
 
         return view;
     }

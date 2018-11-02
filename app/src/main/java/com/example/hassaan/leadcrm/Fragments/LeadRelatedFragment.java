@@ -65,23 +65,23 @@ public class LeadRelatedFragment extends android.support.v4.app.Fragment {
 
         listNote = noteRepo.getNoteList();
 
-        RecyclerView recyclerView = view.findViewById(R.id.TaskLeadRelatedRecyclerView);
-        recyclerView.setLayoutManager(new LinearLayoutManager(getContext()));
-        recyclerView.setAdapter(new TaskRecycler(list, getContext()));
-
-        recyclerView.setNestedScrollingEnabled(false);
+//        RecyclerView recyclerView = view.findViewById(R.id.TaskLeadRelatedRecyclerView);
+//        recyclerView.setLayoutManager(new LinearLayoutManager(getContext()));
+//        recyclerView.setAdapter(new TaskRecycler(list, getContext()));
+//
+//        recyclerView.setNestedScrollingEnabled(false);
 
         RecyclerView recyclerView1 = view.findViewById(R.id.NoteLeadRelatedRecyclerView);
         recyclerView1.setLayoutManager(new LinearLayoutManager(getContext()));
         recyclerView1.setAdapter(new NoteRecycler(listNote, getContext()));
 
         recyclerView1.setNestedScrollingEnabled(false);
-
-        RecyclerView recyclerView2 = view.findViewById(R.id.AttachmentLeadRelatedRecyclerView);
-        recyclerView2.setLayoutManager(new LinearLayoutManager(getContext()));
-        recyclerView2.setAdapter(new TaskRecycler(list, getContext()));
-
-        recyclerView2.setNestedScrollingEnabled(false);
+//
+//        RecyclerView recyclerView2 = view.findViewById(R.id.AttachmentLeadRelatedRecyclerView);
+//        recyclerView2.setLayoutManager(new LinearLayoutManager(getContext()));
+//        recyclerView2.setAdapter(new TaskRecycler(list, getContext()));
+//
+//        recyclerView2.setNestedScrollingEnabled(false);
 
 
         btn_add_note.setOnClickListener(new View.OnClickListener() {
