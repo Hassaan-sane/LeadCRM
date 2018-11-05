@@ -87,7 +87,7 @@ public class HomeFragment extends Fragment {
             endTime1.add(Calendar.MONTH, 1);
             BaseCalendarEvent event1;
             for (Task task:tasks) {
-               event1  = new BaseCalendarEvent(task.getSubject(), "A wonderful journey! ", "Iceland ",
+               event1  = new BaseCalendarEvent(task.getSubject(), "A wonderful journey! ", "Pakistan",
                         ContextCompat.getColor(getContext(), R.color.orange_dark), startTime1, endTime1, true);
 
                 eventList.add(event1);

@@ -18,12 +18,12 @@ import java.util.List;
 public class EventRepo {
 
     private Event event;
-    public EventRepo()
-    {
+
+    public EventRepo() {
         event = new Event();
     }
 
-    public static String createTable(){
+    public static String createTable() {
         return "CREATE TABLE " + Event.TABLE_NAME +
                 " (" + Event.KEY_ID + " INTEGER PRIMARY KEY AUTOINCREMENT, " +
                 Event.KEY_LOCATIONS + " VARCHAR, " +
@@ -32,13 +32,13 @@ public class EventRepo {
                 Event.KEY_HOSTNAME + " VARCHAR, " +
                 Event.KEY_EVENTNAME + " VARCHAR, " +
                 Event.KEY_STARTTIME + " TIME, " +
-                Event.KEY_ENDTIME + " TIME )" ;
+                Event.KEY_ENDTIME + " TIME )";
     }
 
-    public int insertInEvent(Event event1){
+    public int insertInEvent(Event event1) {
         SQLiteDatabase db = DatabaseManager.getInstance().openDatabase();
         ContentValues values = new ContentValues();
-        values.put(Event.KEY_ID, event1.getID());
+//        values.put(Event.KEY_ID, event1.getID());
         values.put(Event.KEY_LOCATIONS, event1.getLocation());
         values.put(Event.KEY_STARTDATE, event1.getStartDate().toString());
         values.put(Event.KEY_ENDDATE, event1.getEndDate().toString());
@@ -47,8 +47,7 @@ public class EventRepo {
         values.put(Event.KEY_STARTTIME, event1.getStartTime().toString());
         values.put(Event.KEY_ENDTIME, event1.getEndTime().toString());
 
-
-        int EventId =(int)db.insert(Event.TABLE_NAME, null, values);
+        int EventId = (int) db.insert(Event.TABLE_NAME, null, values);
         DatabaseManager.getInstance().closeDatabase();
         return EventId;
     }
@@ -68,22 +67,18 @@ public class EventRepo {
         if (cursor.moveToFirst()) {
             do {
 
-                GetEvent= new Event();
-                SimpleDateFormat sdf=new SimpleDateFormat("yyyy-MM-dd HH:mm:ss");
-                SimpleDateFormat time=new SimpleDateFormat("HH:mm:ss");
+                GetEvent = new Event();
+//                SimpleDateFormat sdf=new SimpleDateFormat("yyyy-MM-dd HH:mm:ss");
+//                SimpleDateFormat time=new SimpleDateFormat("HH:mm:ss");
                 GetEvent.setID(Integer.parseInt(cursor.getString(cursor.getColumnIndex(Event.KEY_ID))));
                 GetEvent.setLocation(cursor.getString(cursor.getColumnIndex(Event.KEY_LOCATIONS)));
                 GetEvent.setHostName(cursor.getString(cursor.getColumnIndex(Event.KEY_HOSTNAME)));
                 GetEvent.setEventName(cursor.getString(cursor.getColumnIndex(Event.KEY_EVENTNAME)));
-                try {
-                    GetEvent.setStartDate(sdf.parse(cursor.getString(cursor.getColumnIndex(Event.KEY_STARTDATE))));
-                    GetEvent.setEndDate(sdf.parse(cursor.getString(cursor.getColumnIndex(Event.KEY_ENDDATE))));
-                    GetEvent.setStartTime(time.parse(cursor.getString(cursor.getColumnIndex(Event.KEY_ENDTIME))));
-                    GetEvent.setEndTime(time.parse(cursor.getString(cursor.getColumnIndex(Event.KEY_STARTTIME))));
 
-                } catch (ParseException e) {
-                    e.printStackTrace();
-                }
+                GetEvent.setStartDate(cursor.getString(cursor.getColumnIndex(Event.KEY_STARTDATE)));
+                GetEvent.setEndDate(cursor.getString(cursor.getColumnIndex(Event.KEY_ENDDATE)));
+                GetEvent.setStartTime(cursor.getString(cursor.getColumnIndex(Event.KEY_ENDTIME)));
+                GetEvent.setEndTime(cursor.getString(cursor.getColumnIndex(Event.KEY_STARTTIME)));
 
 
                 EventLists.add(GetEvent);
@@ -99,8 +94,8 @@ public class EventRepo {
     public long deletefromEvent(Integer id) {
 
         SQLiteDatabase db = DatabaseManager.getInstance().openDatabase();
-        String[] whereArgs= {id.toString()};
-        long deleteId = db.delete(Event.TABLE_NAME,"ID=?",whereArgs );
+        String[] whereArgs = {id.toString()};
+        long deleteId = db.delete(Event.TABLE_NAME, "ID=?", whereArgs);
         DatabaseManager.getInstance().closeDatabase();
 
         return deleteId;

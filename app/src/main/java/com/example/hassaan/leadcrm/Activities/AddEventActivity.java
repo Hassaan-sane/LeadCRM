@@ -17,8 +17,11 @@ import android.widget.Toast;
 import com.example.hassaan.leadcrm.Fragments.DatePickerFragment;
 import com.example.hassaan.leadcrm.Fragments.TimePickerFragment;
 import com.example.hassaan.leadcrm.R;
+import com.example.hassaan.leadcrm.Repo.EventRepo;
+import com.example.hassaan.leadcrm.TableClasses.Event;
 
 import java.text.DateFormat;
+import java.text.Format;
 import java.text.ParseException;
 import java.text.SimpleDateFormat;
 import java.util.ArrayList;
@@ -26,35 +29,60 @@ import java.util.Calendar;
 import java.util.Date;
 import java.util.List;
 
-public class AddEventActivity extends AppCompatActivity implements View.OnClickListener,DatePickerDialog.OnDateSetListener, TimePickerDialog.OnTimeSetListener {
+public class AddEventActivity extends AppCompatActivity implements View.OnClickListener, DatePickerDialog.OnDateSetListener, TimePickerDialog.OnTimeSetListener {
 
     Button startDate;
     Button endDate;
     Button starttime;
     Button endtime;
 
+    String startDateStr;
+    String endDateStr;
+    String starttimeStr;
+    String endtimeStr;
+
     EditText title;
     EditText location;
     EditText hostname;
-    private  int choice;
+    private int choice;
 
     @Override
     protected void onCreate(Bundle savedInstanceState) {
         super.onCreate(savedInstanceState);
         setContentView(R.layout.activity_add_event);
-        startDate=findViewById(R.id.bt_startdate_event);
-        endDate=findViewById(R.id.bt_enddate_event);
-        starttime=findViewById(R.id.bt_starttime_event);
-        endtime=findViewById(R.id.bt_endtime_event);
-        title=findViewById(R.id.et_eventname_event);
-        location=findViewById(R.id.et_location_event);
-        hostname=findViewById(R.id.et_hostname_event);
+
+        startDate = findViewById(R.id.bt_startdate_event);
+        endDate = findViewById(R.id.bt_enddate_event);
+        starttime = findViewById(R.id.bt_starttime_event);
+        endtime = findViewById(R.id.bt_endtime_event);
+        title = findViewById(R.id.et_eventname_event);
+        location = findViewById(R.id.et_location_event);
+        hostname = findViewById(R.id.et_hostname_event);
 
         startDate.setOnClickListener(this);
         endDate.setOnClickListener(this);
         starttime.setOnClickListener(this);
         endtime.setOnClickListener(this);
 
+
+    }
+
+    private boolean validate() {
+
+        boolean bool = true;
+        if (title.length() == 0) {
+            title.setError("This Field is Required");
+            bool = false;
+        }
+        if (location.length() == 0) {
+            location.setError("This Field is Required");
+            bool = false;
+        }
+        if (hostname.length() == 0) {
+            hostname.setError("This Field is Required");
+            bool = false;
+        }
+        return bool;
 
     }
 
@@ -74,41 +102,59 @@ public class AddEventActivity extends AppCompatActivity implements View.OnClickL
 
         //noinspection SimplifiableIfStatement
         if (id == R.id.ok) {
-            Toast.makeText(this,"ok",Toast.LENGTH_SHORT).show();
-            finish();
-            return true;
+            boolean bool = validate();
+            if (bool == false) {
+                Toast.makeText(this, "Please Fill the fields First", Toast.LENGTH_SHORT).show();
+            } else {
+                Toast.makeText(this, "ok", Toast.LENGTH_SHORT).show();
+                EventRepo eventRepo = new EventRepo();
+                Event event = new Event();
+
+                event.setEventName(title.getText().toString());
+                event.setLocation(location.getText().toString());
+                event.setHostName(hostname.getText().toString());
+
+                event.setStartDate(startDateStr);
+                event.setEndDate(endDateStr);
+                event.setEndTime(endtimeStr);
+                event.setStartTime(starttimeStr);
+
+                eventRepo.insertInEvent(event);
+                finish();
+                return true;
+            }
+
         }
 
         return super.onOptionsItemSelected(item);
     }
 
 
-
     @Override
     public void onClick(View v) {
         android.support.v4.app.DialogFragment startDatePicker;
         android.support.v4.app.DialogFragment startTimePicker;
-        switch (v.getId()){
+        switch (v.getId()) {
             case R.id.bt_startdate_event:
-                choice=1;
+                choice = 1;
                 startDatePicker = new DatePickerFragment();
                 startDatePicker.show(getSupportFragmentManager(), "Start Date of Event");
                 break;
 
             case R.id.bt_enddate_event:
-                choice=2;
+                choice = 2;
                 startDatePicker = new DatePickerFragment();
                 startDatePicker.show(getSupportFragmentManager(), "End Date of Event");
                 break;
 
             case R.id.bt_starttime_event:
-                choice=3;
+                choice = 3;
                 startTimePicker = new TimePickerFragment();
                 startTimePicker.show(getSupportFragmentManager(), "Start Time of Event");
                 break;
 
             case R.id.bt_endtime_event:
-                choice=4;
+                choice = 4;
                 startTimePicker = new TimePickerFragment();
                 startTimePicker.show(getSupportFragmentManager(), "End Time of Event");
                 break;
@@ -122,17 +168,28 @@ public class AddEventActivity extends AppCompatActivity implements View.OnClickL
         Calendar c = Calendar.getInstance();
         String pickedDate;
 
+        SimpleDateFormat Formatout = new SimpleDateFormat("yyyy-MM-dd HH:mm:ss");
+        SimpleDateFormat Format = new SimpleDateFormat("dd MMM yyyy");
         switch (choice) {
 
             case 1: //startdate
 
                 c.set(Calendar.YEAR, year);
                 c.set(Calendar.MONTH, month);
-                c.set(Calendar.DAY_OF_MONTH,dayOfMonth);
+                c.set(Calendar.DAY_OF_MONTH, dayOfMonth);
+
                 pickedDate = DateFormat.getDateInstance().format(c.getTime());//this will be displayed
-
-
                 startDate.setText(pickedDate);
+
+                try {
+                    Date startDate = Format.parse(pickedDate);
+                    startDateStr = Formatout.format(startDate);//this will go to database
+                } catch (ParseException e) {
+                    e.printStackTrace();
+                }
+
+                Toast.makeText(this, startDateStr, Toast.LENGTH_SHORT).show();
+
 
                 break;
 
@@ -140,11 +197,18 @@ public class AddEventActivity extends AppCompatActivity implements View.OnClickL
 
                 c.set(Calendar.YEAR, year);
                 c.set(Calendar.MONTH, month);
-                c.set(Calendar.DAY_OF_MONTH,dayOfMonth);
+                c.set(Calendar.DAY_OF_MONTH, dayOfMonth);
+
                 pickedDate = DateFormat.getDateInstance().format(c.getTime());//this will be displayed
-
-
                 endDate.setText(pickedDate);
+
+                try {
+                    Date endDate = Format.parse(pickedDate);
+                    endDateStr = Formatout.format(endDate);//this will go to database
+                } catch (ParseException e) {
+                    e.printStackTrace();
+                }
+
 
                 break;
         }
@@ -154,6 +218,8 @@ public class AddEventActivity extends AppCompatActivity implements View.OnClickL
     public void onTimeSet(TimePicker view, int hourOfDay, int minute) {
         Calendar c = Calendar.getInstance();
         String pickedDate;
+        SimpleDateFormat Formatout = new SimpleDateFormat("HH:mm:ss");
+        SimpleDateFormat Format = new SimpleDateFormat("HH:mm:ss");
 
         switch (choice) {
 
@@ -162,10 +228,17 @@ public class AddEventActivity extends AppCompatActivity implements View.OnClickL
                 c.set(Calendar.HOUR, hourOfDay);
                 c.set(Calendar.MINUTE, minute);
                 c.set(Calendar.SECOND, 0);
+
                 pickedDate = DateFormat.getTimeInstance().format(c.getTime());//this will be displayed
-
-
                 starttime.setText(pickedDate);
+
+                try {
+                    Date starttime = Format.parse(pickedDate);
+                    starttimeStr = Formatout.format(starttime);//this will go to database
+                } catch (ParseException e) {
+                    e.printStackTrace();
+                }
+
 
                 break;
 
@@ -174,10 +247,16 @@ public class AddEventActivity extends AppCompatActivity implements View.OnClickL
                 c.set(Calendar.HOUR, hourOfDay);
                 c.set(Calendar.MINUTE, minute);
                 c.set(Calendar.SECOND, 0);
+
                 pickedDate = DateFormat.getTimeInstance().format(c.getTime());//this will be displayed
-
-
                 endtime.setText(pickedDate);
+
+                try {
+                    Date endtime = Format.parse(pickedDate);
+                    endtimeStr = Formatout.format(endtime);//this will go to database
+                } catch (ParseException e) {
+                    e.printStackTrace();
+                }
 
                 break;
         }

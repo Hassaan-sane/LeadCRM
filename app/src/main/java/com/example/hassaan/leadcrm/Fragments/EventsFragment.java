@@ -8,13 +8,19 @@ import android.os.Bundle;
 import android.support.design.widget.FloatingActionButton;
 import android.support.v4.app.Fragment;
 import android.support.v4.content.ContextCompat;
+import android.support.v7.widget.LinearLayoutManager;
+import android.support.v7.widget.RecyclerView;
 import android.view.LayoutInflater;
 import android.view.View;
 import android.view.ViewGroup;
+import android.widget.Toast;
 
 import com.example.hassaan.leadcrm.Activities.AddEventActivity;
 import com.example.hassaan.leadcrm.Activities.AddLeadActivity;
 import com.example.hassaan.leadcrm.R;
+import com.example.hassaan.leadcrm.RecyclerViews.EventRecycler;
+import com.example.hassaan.leadcrm.Repo.EventRepo;
+import com.example.hassaan.leadcrm.TableClasses.Event;
 import com.github.tibolte.agendacalendarview.AgendaCalendarView;
 import com.github.tibolte.agendacalendarview.CalendarPickerController;
 import com.github.tibolte.agendacalendarview.models.BaseCalendarEvent;
@@ -33,6 +39,8 @@ public class EventsFragment extends Fragment {
     Calendar minDate;
     Calendar maxDate;
 
+    private List<Event> list;
+
     public EventsFragment() {
         // Required empty public constructor
     }
@@ -46,24 +54,32 @@ public class EventsFragment extends Fragment {
     public View onCreateView(LayoutInflater inflater, ViewGroup container,
                              Bundle savedInstanceState) {
         // Inflate the layout for this fragment
-        View view=inflater.inflate(R.layout.fragment_events, container, false);
+        View view = inflater.inflate(R.layout.fragment_events, container, false);
 
-        mAgendaCalendarView = view.findViewById(R.id.agenda_calendar_view_events);
-        new MyAsyncTask().execute(eventList);
+//        mAgendaCalendarView = view.findViewById(R.id.agenda_calendar_view_events);
+//        new MyAsyncTask().execute(eventList);
 
+        EventRepo eventRepo = new EventRepo();
+        list = eventRepo.getEventList();
 
+        Toast.makeText(getContext(), ""+list.size(), Toast.LENGTH_SHORT).show();
+
+        RecyclerView recyclerView = view.findViewById(R.id.recyclerEvents);
+        recyclerView.setLayoutManager(new LinearLayoutManager(getContext()));
+        recyclerView.setAdapter(new EventRecycler(list, getContext()));
 
         FloatingActionButton fab = (FloatingActionButton) view.findViewById(R.id.floating_event);
         fab.setOnClickListener(new View.OnClickListener() {
             @Override
             public void onClick(View view) {
-                Intent intent=new Intent(getContext(),AddEventActivity.class);
+                Intent intent = new Intent(getContext(), AddEventActivity.class);
                 startActivity(intent);
             }
         });
 
         return view;
     }
+
     private class MyAsyncTask extends AsyncTask<List<CalendarEvent>, Integer, Long> implements CalendarPickerController {
 
         @Override
@@ -102,7 +118,7 @@ public class EventsFragment extends Fragment {
         @Override
         protected void onPostExecute(Long aLong) {
             super.onPostExecute(aLong);
-           mAgendaCalendarView.init(eventList, minDate, maxDate, Locale.getDefault(), this);
+            mAgendaCalendarView.init(eventList, minDate, maxDate, Locale.getDefault(), this);
         }
 
         @Override

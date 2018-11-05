@@ -6,14 +6,12 @@
     xmlns:app="http://schemas.android.com/apk/res-auto"
     tools:context=".Fragments.ContactsFragment">
 
-    <!-- TODO: Update blank fragment layout -->
     <android.support.v7.widget.SearchView
         android:id="@+id/searchContacts"
         android:layout_width="match_parent"
         android:layout_height="wrap_content"
         android:background="#fff"
         android:elevation="1dp">
-
     </android.support.v7.widget.SearchView>
 
     <Spinner
@@ -24,15 +22,14 @@
         android:layout_marginTop="20dp"
         android:paddingLeft="15dp"
         android:layout_marginBottom="20dp">
-
     </Spinner>
 
     <android.support.v7.widget.RecyclerView
         android:layout_width="match_parent"
         android:layout_height="match_parent"
         android:id="@+id/recycler_contacts"
-        android:layout_below="@id/spinner_contacts"
-        ></android.support.v7.widget.RecyclerView>
+        android:layout_below="@id/spinner_contacts">
+    </android.support.v7.widget.RecyclerView>
 
     <android.support.design.widget.FloatingActionButton
         android:id="@+id/fbContacts"

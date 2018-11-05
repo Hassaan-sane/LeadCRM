@@ -15,22 +15,22 @@ public class Event {
 
     private Integer ID;
     private String Location;
-    private Date StartDate;
-    private Date EndDate;
+    private String StartDate;
+    private String EndDate;
     private String HostName;
     private String EventName;
-    private Date StartTime;
-    private Date EndTime;
+    private String StartTime;
+    private String EndTime;
 
-    public Event(Integer ID, String location, Date startDate, Date endDate, String hostName, String eventName, Date startTime, Date endTime) {
+    public Event(Integer ID, String location, String startDate, String endDate, String hostName, String eventName, String startTime, String endTime) {
         this.ID = ID;
-        this.Location = location;
-        this.StartDate = startDate;
-        this.EndDate = endDate;
-        this.HostName = hostName;
-        this.EventName = eventName;
-        this.StartTime = startTime;
-        this.EndTime = endTime;
+        Location = location;
+        StartDate = startDate;
+        EndDate = endDate;
+        HostName = hostName;
+        EventName = eventName;
+        StartTime = startTime;
+        EndTime = endTime;
     }
 
     public Event(){}
@@ -51,19 +51,19 @@ public class Event {
         Location = location;
     }
 
-    public Date getStartDate() {
+    public String getStartDate() {
         return StartDate;
     }
 
-    public void setStartDate(Date startDate) {
+    public void setStartDate(String startDate) {
         StartDate = startDate;
     }
 
-    public Date getEndDate() {
+    public String getEndDate() {
         return EndDate;
     }
 
-    public void setEndDate(Date endDate) {
+    public void setEndDate(String endDate) {
         EndDate = endDate;
     }
 
@@ -83,19 +83,19 @@ public class Event {
         EventName = eventName;
     }
 
-    public Date getStartTime() {
+    public String getStartTime() {
         return StartTime;
     }
 
-    public void setStartTime(Date startTime) {
+    public void setStartTime(String startTime) {
         StartTime = startTime;
     }
 
-    public Date getEndTime() {
+    public String getEndTime() {
         return EndTime;
     }
 
-    public void setEndTime(Date endTime) {
+    public void setEndTime(String endTime) {
         EndTime = endTime;
     }
 }

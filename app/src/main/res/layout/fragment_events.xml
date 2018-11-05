@@ -1,47 +1,46 @@
 <?xml version="1.0" encoding="utf-8"?>
 <RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:agendaCalendar="http://schemas.android.com/apk/res-auto"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
     xmlns:tools="http://schemas.android.com/tools"
     android:layout_width="match_parent"
     android:layout_height="match_parent"
-    xmlns:app="http://schemas.android.com/apk/res-auto"
-    xmlns:agendaCalendar="http://schemas.android.com/apk/res-auto"
     tools:context=".Fragments.EventsFragment">
-
-    <!-- TODO: Update blank fragment layout -->
 
     <android.support.v7.widget.SearchView
         android:id="@+id/searchEvents"
         android:layout_width="match_parent"
-        android:layout_height="wrap_content"
-        >
+        android:layout_height="wrap_content">
 
     </android.support.v7.widget.SearchView>
 
     <Spinner
+        android:id="@+id/spinnerEvents"
         android:layout_width="match_parent"
         android:layout_height="wrap_content"
-        android:id="@+id/spinnerEvents"
-        android:layout_below="@+id/searchEvents"
-        ></Spinner>
+        android:layout_below="@+id/searchEvents">
 
-    <!--<android.support.v7.widget.RecyclerView-->
-        <!--android:layout_width="match_parent"-->
-        <!--android:layout_height="wrap_content"-->
-        <!--android:id="@+id/recyclerEvents"-->
-        <!--android:layout_below="@id/spinnerEvents"-->
-        <!--&gt;</android.support.v7.widget.RecyclerView>-->
+    </Spinner>
 
-    <com.github.tibolte.agendacalendarview.AgendaCalendarView
-        android:id="@+id/agenda_calendar_view_events"
+    <android.support.v7.widget.RecyclerView
+        android:id="@+id/recyclerEvents"
         android:layout_width="match_parent"
-        android:layout_height="match_parent"
-        agendaCalendar:agendaCurrentDayTextColor="@color/theme_primary"
-        agendaCalendar:calendarColor="@color/theme_primary"
-        agendaCalendar:calendarCurrentDayTextColor="@color/calendar_text_current_day"
-        agendaCalendar:calendarDayTextColor="@color/theme_text_icons"
-        agendaCalendar:calendarHeaderColor="@color/theme_primary_dark"
-        agendaCalendar:calendarPastDayTextColor="@color/theme_light_primary"
-        agendaCalendar:fabColor="@color/theme_accent" />
+        android:layout_height="wrap_content"
+        android:layout_below="@id/spinnerEvents">
+
+    </android.support.v7.widget.RecyclerView>
+
+    <!--<com.github.tibolte.agendacalendarview.AgendaCalendarView-->
+        <!--android:id="@+id/agenda_calendar_view_events"-->
+        <!--android:layout_width="match_parent"-->
+        <!--android:layout_height="match_parent"-->
+        <!--agendaCalendar:agendaCurrentDayTextColor="@color/theme_primary"-->
+        <!--agendaCalendar:calendarColor="@color/theme_primary"-->
+        <!--agendaCalendar:calendarCurrentDayTextColor="@color/calendar_text_current_day"-->
+        <!--agendaCalendar:calendarDayTextColor="@color/theme_text_icons"-->
+        <!--agendaCalendar:calendarHeaderColor="@color/theme_primary_dark"-->
+        <!--agendaCalendar:calendarPastDayTextColor="@color/theme_light_primary"-->
+        <!--agendaCalendar:fabColor="@color/theme_accent" />-->
 
     <android.support.design.widget.FloatingActionButton
         android:id="@+id/floating_event"
